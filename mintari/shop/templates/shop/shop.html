@@ -1,0 +1,878 @@
+<!--extention base-->
+{% extends 'shop/base.html' %}
+
+<!--page title-->
+{% block title %}Shop | Mintari {% endblock %}
+
+{% block body %}
+
+{% load static %}
+<div id="qodef-page-outer">
+    <div class="qodef-page-title qodef-m qodef-title--standard-with-breadcrumbs qodef-alignment--left qodef-vertical-alignment--header-bottom">
+        <div class="qodef-m-inner">
+            <div class="qodef-m-content qodef-content-grid ">
+                <div class="qodef-m-content-title-area">
+                    <h1 class="qodef-m-title entry-title">Shop </h1>
+                </div>
+                <div itemprop="breadcrumb" class="qodef-breadcrumbs">
+                    <a itemprop="url" class="qodef-breadcrumbs-link" href="{% url 'landing:index' %}">
+                        <span itemprop="title">Home</span>
+                    </a>
+                    <span class="qodef-breadcrumbs-separator"></span>
+                    <span itemprop="title" class="qodef-breadcrumbs-current">Shop</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="qodef-page-inner" class="qodef-content-grid">
+        <main id="qodef-page-content" class="qodef-grid qodef-layout--template qodef--no-bottom-space qodef-gutter--normal">
+            <div class="qodef-grid-inner clear">
+                <div id="qodef-woo-page" class="qodef-grid-item qodef-page-content-section qodef-col--9 qodef--list">
+                    <header class="woocommerce-products-header"></header>
+                    <div class="woocommerce-notices-wrapper"></div>
+                    <div class="qodef-woo-results">
+                        <p class="woocommerce-result-count">
+                            Showing 1&ndash;12 of 71 results
+                        </p>
+
+                        <form class="woocommerce-ordering" method="get">
+                            <select name="orderby" class="orderby" aria-label="Shop order">
+                                <option value="menu_order" selected='selected'>Default sorting</option>
+                                <option value="popularity">Sort by popularity</option>
+                                <option value="rating">Sort by average rating</option>
+                                <option value="date">Sort by latest</option>
+                                <option value="price">Sort by price: low to high</option>
+                                <option value="price-desc">Sort by price: high to low</option>
+                            </select>
+                            <input type="hidden" name="paged" value="1"/>
+                        </form>
+                    </div>
+
+                    <div class="qodef-woo-product-list qodef-item-layout--info-below qodef-gutter--normal">
+                        <ul class="products columns-3">
+
+                            <li class="product type-product post-17 status-publish first outofstock product_cat-dinnerware product_tag-dishware has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                                <div class="qodef-woo-product-inner">
+                                    <div class="qodef-woo-product-image">
+                                        <div class="qodef-woo-product-mark-holder">
+                                            <span class="qodef-woo-product-mark qodef-out-of-stock">Sold</span></div>
+                                        <img width="600" height="600"
+                                             src="../wp-content/uploads/2020/11/shop-img1-1-600x600.jpg"
+                                             class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                             alt="a" loading="lazy"
+                                             srcset="https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-600x600.jpg 600w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-300x300.jpg 300w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-150x150.jpg 150w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-768x768.jpg 768w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-650x650.jpg 650w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-100x100.jpg 100w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1.jpg 800w"
+                                             sizes="(max-width: 600px) 100vw, 600px"/>
+                                        <div class="qodef-woo-product-image-inner">
+                                            <a href="../product/green-plates/index.html" data-quantity="1" class="button product_type_simple" data-product_id="17" data-product_sku="000" aria-label="Read more about &ldquo;Green Plates&rdquo;" rel="nofollow">
+                                                Read more
+                                            </a>
+                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-17  wishlist-fragment on-first-load" data-fragment-ref="17" data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:17,&quot;parent_product_id&quot;:17,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+                                                <div class="yith-wcwl-add-button">
+                                                    <a href="indexfbfa.html?add_to_wishlist=17&amp;_wpnonce=51ffb74114" class="add_to_wishlist single_add_to_wishlist" data-product-id="17" data-product-type="simple" data-original-product-id="17" data-title="Add to wishlist" rel="nofollow">
+                                                        <i class="yith-wcwl-icon fa fa-heart-o"></i>
+                                                        <span>Add to wishlist</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="button yith-wcqv-button" data-product_id="17">
+                                                Quick View
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="qodef-woo-product-content">
+                                        <div class="qodef-woo-product-title-price-wrapper">
+                                            <h5 class="qodef-woo-product-title woocommerce-loop-product__title">
+                                            Green Plates
+                                            </h5>
+                                            <span class="price"><span class="woocommerce-Price-amount amount"><bdi>
+                                                <span class="woocommerce-Price-currencySymbol">Ksh </span>60.00</bdi></span>
+                                            </span>
+                                        </div>
+                                        <div class="qodef-woo-product-categories">
+                                            <a href="../product-category/dinnerware/index.html" rel="tag">Dinnerware</a>
+                                        </div>
+                                    </div>
+                                    <a href="../product/green-plates/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+                                </div>
+                            </li>
+
+                            <li class="product type-product post-35 status-publish instock product_cat-dinnerware product_tag-dishware has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                                <div class="qodef-woo-product-inner">
+                                    <div class="qodef-woo-product-image">
+                                        <div class="qodef-woo-product-mark-holder"></div>
+                                        <img width="600" height="600"
+                                             src="../wp-content/uploads/2020/11/shop-img2-600x600.jpg"
+                                             class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                             alt="a" loading="lazy"
+                                             srcset="https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img2-600x600.jpg 600w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img2-300x300.jpg 300w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img2-150x150.jpg 150w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img2-768x768.jpg 768w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img2-650x650.jpg 650w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img2-100x100.jpg 100w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img2.jpg 800w"
+                                             sizes="(max-width: 600px) 100vw, 600px"/>
+                                        <div class="qodef-woo-product-image-inner"><a
+                                                href="index1c5c.html?add-to-cart=35" data-quantity="1"
+                                                class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                data-product_id="35" data-product_sku="001"
+                                                aria-label="Add &ldquo;Coffee Thermos&rdquo; to your cart"
+                                                rel="nofollow">Add to cart</a>
+                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-35  wishlist-fragment on-first-load"
+                                                 data-fragment-ref="35"
+                                                 data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:35,&quot;parent_product_id&quot;:35,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+
+                                                <div class="yith-wcwl-add-button">
+                                                    <a href="index1800.html?add_to_wishlist=35&amp;_wpnonce=51ffb74114"
+                                                       class="add_to_wishlist single_add_to_wishlist"
+                                                       data-product-id="35" data-product-type="simple"
+                                                       data-original-product-id="35" data-title="Add to wishlist"
+                                                       rel="nofollow">
+                                                        <i class="yith-wcwl-icon fa fa-heart-o"></i> <span>Add to wishlist</span>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <a href="#" class="button yith-wcqv-button" data-product_id="35">Quick
+                                                View</a></div>
+                                    </div>
+                                    <div class="qodef-woo-product-content">
+                                        <div class="qodef-woo-product-title-price-wrapper"><h5
+                                                class="qodef-woo-product-title woocommerce-loop-product__title">
+                                            Coffee Thermos</h5>
+                                            <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">Ksh </span>40.00</bdi></span></span>
+                                        </div>
+                                        <div class="qodef-woo-product-categories"><a
+                                                href="../product-category/dinnerware/index.html" rel="tag">Dinnerware</a>
+                                        </div>
+                                    </div>
+                                    <a href="../product/coffee-thermos/index.html"
+                                       class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+                                </div>
+                            </li>
+                            <li class="product type-product post-40 status-publish last instock product_cat-furniture product_tag-furnishing has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                                <div class="qodef-woo-product-inner">
+                                    <div class="qodef-woo-product-image">
+                                        <div class="qodef-woo-product-mark-holder"></div>
+                                        <img width="600" height="600"
+                                             src="../wp-content/uploads/2020/11/shop-img3-600x600.jpg"
+                                             class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                             alt="a" loading="lazy"
+                                             srcset="https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img3-600x600.jpg 600w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img3-300x300.jpg 300w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img3-150x150.jpg 150w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img3-768x768.jpg 768w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img3-650x650.jpg 650w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img3-100x100.jpg 100w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img3.jpg 800w"
+                                             sizes="(max-width: 600px) 100vw, 600px"/>
+                                        <div class="qodef-woo-product-image-inner"><a
+                                                href="index26b1.html?add-to-cart=40" data-quantity="1"
+                                                class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                data-product_id="40" data-product_sku="002"
+                                                aria-label="Add &ldquo;Night Table&rdquo; to your cart"
+                                                rel="nofollow">Add to cart</a>
+                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-40  wishlist-fragment on-first-load"
+                                                 data-fragment-ref="40"
+                                                 data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:40,&quot;parent_product_id&quot;:40,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+
+                                                <div class="yith-wcwl-add-button">
+                                                    <a href="indexd100.html?add_to_wishlist=40&amp;_wpnonce=51ffb74114"
+                                                       class="add_to_wishlist single_add_to_wishlist"
+                                                       data-product-id="40" data-product-type="simple"
+                                                       data-original-product-id="40" data-title="Add to wishlist"
+                                                       rel="nofollow">
+                                                        <i class="yith-wcwl-icon fa fa-heart-o"></i> <span>Add to wishlist</span>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <a href="#" class="button yith-wcqv-button" data-product_id="40">Quick
+                                                View</a></div>
+                                    </div>
+                                    <div class="qodef-woo-product-content">
+                                        <div class="qodef-woo-product-title-price-wrapper"><h5
+                                                class="qodef-woo-product-title woocommerce-loop-product__title">
+                                            Night Table</h5>
+                                            <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">Ksh </span>110.00</bdi></span></span>
+                                        </div>
+                                        <div class="qodef-woo-product-categories"><a
+                                                href="../product-category/furniture/index.html"
+                                                rel="tag">Furniture</a></div>
+                                    </div>
+                                    <a href="../product/night-table/index.html"
+                                       class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+                                </div>
+                            </li>
+                            <li class="product type-product post-45 status-publish first instock product_cat-furniture product_tag-furnishing has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                                <div class="qodef-woo-product-inner">
+                                    <div class="qodef-woo-product-image">
+                                        <div class="qodef-woo-product-mark-holder"></div>
+                                        <img width="600" height="600"
+                                             src="../wp-content/uploads/2020/11/shop-img4-600x600.jpg"
+                                             class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                             alt="a" loading="lazy"
+                                             srcset="https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img4-600x600.jpg 600w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img4-300x300.jpg 300w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img4-150x150.jpg 150w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img4-768x768.jpg 768w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img4-650x650.jpg 650w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img4-100x100.jpg 100w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img4.jpg 800w"
+                                             sizes="(max-width: 600px) 100vw, 600px"/>
+                                        <div class="qodef-woo-product-image-inner"><a
+                                                href="indexec93.html?add-to-cart=45" data-quantity="1"
+                                                class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                data-product_id="45" data-product_sku="003"
+                                                aria-label="Add &ldquo;Green Sofa&rdquo; to your cart"
+                                                rel="nofollow">Add to cart</a>
+                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-45  wishlist-fragment on-first-load"
+                                                 data-fragment-ref="45"
+                                                 data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:45,&quot;parent_product_id&quot;:45,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+
+                                                <div class="yith-wcwl-add-button">
+                                                    <a href="indexd489.html?add_to_wishlist=45&amp;_wpnonce=51ffb74114"
+                                                       class="add_to_wishlist single_add_to_wishlist"
+                                                       data-product-id="45" data-product-type="simple"
+                                                       data-original-product-id="45" data-title="Add to wishlist"
+                                                       rel="nofollow">
+                                                        <i class="yith-wcwl-icon fa fa-heart-o"></i> <span>Add to wishlist</span>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <a href="#" class="button yith-wcqv-button" data-product_id="45">Quick
+                                                View</a></div>
+                                    </div>
+                                    <div class="qodef-woo-product-content">
+                                        <div class="qodef-woo-product-title-price-wrapper"><h5
+                                                class="qodef-woo-product-title woocommerce-loop-product__title">
+                                            Green Sofa</h5>
+                                            <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">Ksh </span>250.00</bdi></span></span>
+                                        </div>
+                                        <div class="qodef-woo-product-categories"><a
+                                                href="../product-category/furniture/index.html"
+                                                rel="tag">Furniture</a></div>
+                                    </div>
+                                    <a href="../product/green-sofa/index.html"
+                                       class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+                                </div>
+                            </li>
+                            <li class="product type-product post-86 status-publish instock product_cat-furniture product_tag-furnishing has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+                                <div class="qodef-woo-product-inner">
+                                    <div class="qodef-woo-product-image">
+                                        <div class="qodef-woo-product-mark-holder">
+                                            <span class="qodef-woo-product-mark qodef-woo-onsale">Sale</span>
+                                        </div>
+                                        <img width="600" height="600"
+                                             src="../wp-content/uploads/2020/11/shop-img5-600x600.jpg"
+                                             class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                             alt="a" loading="lazy"
+                                             srcset="https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img5-600x600.jpg 600w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img5-300x300.jpg 300w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img5-150x150.jpg 150w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img5-768x768.jpg 768w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img5-650x650.jpg 650w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img5-100x100.jpg 100w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img5.jpg 800w"
+                                             sizes="(max-width: 600px) 100vw, 600px"/>
+                                        <div class="qodef-woo-product-image-inner"><a
+                                                href="index6b8f.html?add-to-cart=86" data-quantity="1"
+                                                class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                data-product_id="86" data-product_sku="004"
+                                                aria-label="Add &ldquo;Coffee Table&rdquo; to your cart"
+                                                rel="nofollow">Add to cart</a>
+                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-86  wishlist-fragment on-first-load"
+                                                 data-fragment-ref="86"
+                                                 data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:86,&quot;parent_product_id&quot;:86,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+
+                                                <div class="yith-wcwl-add-button">
+                                                    <a href="indexa608.html?add_to_wishlist=86&amp;_wpnonce=51ffb74114"
+                                                       class="add_to_wishlist single_add_to_wishlist"
+                                                       data-product-id="86" data-product-type="simple"
+                                                       data-original-product-id="86" data-title="Add to wishlist"
+                                                       rel="nofollow">
+                                                        <i class="yith-wcwl-icon fa fa-heart-o"></i> <span>Add to wishlist</span>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <a href="#" class="button yith-wcqv-button" data-product_id="86">Quick
+                                                View</a></div>
+                                    </div>
+                                    <div class="qodef-woo-product-content">
+                                        <div class="qodef-woo-product-title-price-wrapper"><h5
+                                                class="qodef-woo-product-title woocommerce-loop-product__title">
+                                            Coffee Table</h5>
+                                            <span class="price"><del aria-hidden="true"><span
+                                                    class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">Ksh </span>110.00</bdi></span></del> <ins><span
+                                                    class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">Ksh </span>100.00</bdi></span></ins></span>
+                                        </div>
+                                        <div class="qodef-woo-product-categories"><a
+                                                href="../product-category/furniture/index.html"
+                                                rel="tag">Furniture</a></div>
+                                    </div>
+                                    <a href="../product/coffee-table/index.html"
+                                       class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+                                </div>
+                            </li>
+                            <li class="new product type-product post-91 status-publish last instock product_cat-dinnerware product_tag-dishware has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                                <div class="qodef-woo-product-inner">
+                                    <div class="qodef-woo-product-image">
+                                        <div class="qodef-woo-product-mark-holder"><span
+                                                class="qodef-woo-product-mark qodef-new">New</span></div>
+                                        <img width="600" height="600"
+                                             src="../wp-content/uploads/2020/11/shop-img6-600x600.jpg"
+                                             class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                             alt="a" loading="lazy"
+                                             srcset="https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img6-600x600.jpg 600w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img6-300x300.jpg 300w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img6-150x150.jpg 150w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img6-768x768.jpg 768w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img6-650x650.jpg 650w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img6-100x100.jpg 100w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img6.jpg 800w"
+                                             sizes="(max-width: 600px) 100vw, 600px"/>
+                                        <div class="qodef-woo-product-image-inner"><a
+                                                href="indexa847.html?add-to-cart=91" data-quantity="1"
+                                                class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                data-product_id="91" data-product_sku="005"
+                                                aria-label="Add &ldquo;Sugar Bowl&rdquo; to your cart"
+                                                rel="nofollow">Add to cart</a>
+                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-91  wishlist-fragment on-first-load"
+                                                 data-fragment-ref="91"
+                                                 data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:91,&quot;parent_product_id&quot;:91,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+
+                                                <div class="yith-wcwl-add-button">
+                                                    <a href="index8648.html?add_to_wishlist=91&amp;_wpnonce=51ffb74114"
+                                                       class="add_to_wishlist single_add_to_wishlist"
+                                                       data-product-id="91" data-product-type="simple"
+                                                       data-original-product-id="91" data-title="Add to wishlist"
+                                                       rel="nofollow">
+                                                        <i class="yith-wcwl-icon fa fa-heart-o"></i> <span>Add to wishlist</span>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <a href="#" class="button yith-wcqv-button" data-product_id="91">Quick
+                                                View</a></div>
+                                    </div>
+                                    <div class="qodef-woo-product-content">
+                                        <div class="qodef-woo-product-title-price-wrapper"><h5
+                                                class="qodef-woo-product-title woocommerce-loop-product__title">
+                                            Sugar Bowl</h5>
+                                            <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">Ksh </span>70.00</bdi></span></span>
+                                        </div>
+                                        <div class="qodef-woo-product-categories"><a
+                                                href="../product-category/dinnerware/index.html" rel="tag">Dinnerware</a>
+                                        </div>
+                                    </div>
+                                    <a href="../product/sugar-bowl/index.html"
+                                       class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+                                </div>
+                            </li>
+                            <li class="product type-product post-96 status-publish first instock product_cat-dinnerware product_tag-dishware has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                                <div class="qodef-woo-product-inner">
+                                    <div class="qodef-woo-product-image">
+                                        <div class="qodef-woo-product-mark-holder"></div>
+                                        <img width="600" height="600"
+                                             src="../wp-content/uploads/2020/11/shop-img7-600x600.jpg"
+                                             class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                             alt="a" loading="lazy"
+                                             srcset="https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img7-600x600.jpg 600w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img7-300x300.jpg 300w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img7-150x150.jpg 150w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img7-768x768.jpg 768w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img7-650x650.jpg 650w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img7-100x100.jpg 100w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img7.jpg 800w"
+                                             sizes="(max-width: 600px) 100vw, 600px"/>
+                                        <div class="qodef-woo-product-image-inner"><a
+                                                href="index92a5.html?add-to-cart=96" data-quantity="1"
+                                                class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                data-product_id="96" data-product_sku="006"
+                                                aria-label="Add &ldquo;Water Jug&rdquo; to your cart"
+                                                rel="nofollow">Add to cart</a>
+                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-96  wishlist-fragment on-first-load"
+                                                 data-fragment-ref="96"
+                                                 data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:96,&quot;parent_product_id&quot;:96,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+
+                                                <div class="yith-wcwl-add-button">
+                                                    <a href="index3129.html?add_to_wishlist=96&amp;_wpnonce=51ffb74114"
+                                                       class="add_to_wishlist single_add_to_wishlist"
+                                                       data-product-id="96" data-product-type="simple"
+                                                       data-original-product-id="96" data-title="Add to wishlist"
+                                                       rel="nofollow">
+                                                        <i class="yith-wcwl-icon fa fa-heart-o"></i> <span>Add to wishlist</span>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <a href="#" class="button yith-wcqv-button" data-product_id="96">Quick
+                                                View</a></div>
+                                    </div>
+                                    <div class="qodef-woo-product-content">
+                                        <div class="qodef-woo-product-title-price-wrapper"><h5
+                                                class="qodef-woo-product-title woocommerce-loop-product__title">
+                                            Water Jug</h5>
+                                            <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">Ksh </span>65.00</bdi></span></span>
+                                        </div>
+                                        <div class="qodef-woo-product-categories"><a
+                                                href="../product-category/dinnerware/index.html" rel="tag">Dinnerware</a>
+                                        </div>
+                                    </div>
+                                    <a href="../product/water-jug/index.html"
+                                       class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+                                </div>
+                            </li>
+                            <li class="product type-product post-101 status-publish instock product_cat-lighting product_tag-lights has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                                <div class="qodef-woo-product-inner">
+                                    <div class="qodef-woo-product-image">
+                                        <div class="qodef-woo-product-mark-holder"></div>
+                                        <img width="600" height="600"
+                                             src="../wp-content/uploads/2020/11/shop-img8-600x600.jpg"
+                                             class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                             alt="a" loading="lazy"
+                                             srcset="https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img8-600x600.jpg 600w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img8-300x300.jpg 300w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img8-150x150.jpg 150w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img8-768x768.jpg 768w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img8-650x650.jpg 650w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img8-100x100.jpg 100w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img8.jpg 800w"
+                                             sizes="(max-width: 600px) 100vw, 600px"/>
+                                        <div class="qodef-woo-product-image-inner"><a
+                                                href="index6f19.html?add-to-cart=101" data-quantity="1"
+                                                class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                data-product_id="101" data-product_sku="007"
+                                                aria-label="Add &ldquo;Hanging Light&rdquo; to your cart"
+                                                rel="nofollow">Add to cart</a>
+                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-101  wishlist-fragment on-first-load"
+                                                 data-fragment-ref="101"
+                                                 data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:101,&quot;parent_product_id&quot;:101,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+
+                                                <div class="yith-wcwl-add-button">
+                                                    <a href="indexa8bb.html?add_to_wishlist=101&amp;_wpnonce=51ffb74114"
+                                                       class="add_to_wishlist single_add_to_wishlist"
+                                                       data-product-id="101" data-product-type="simple"
+                                                       data-original-product-id="101" data-title="Add to wishlist"
+                                                       rel="nofollow">
+                                                        <i class="yith-wcwl-icon fa fa-heart-o"></i> <span>Add to wishlist</span>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <a href="#" class="button yith-wcqv-button" data-product_id="101">Quick
+                                                View</a></div>
+                                    </div>
+                                    <div class="qodef-woo-product-content">
+                                        <div class="qodef-woo-product-title-price-wrapper"><h5
+                                                class="qodef-woo-product-title woocommerce-loop-product__title">
+                                            Hanging Light</h5>
+                                            <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">Ksh </span>45.00</bdi></span></span>
+                                        </div>
+                                        <div class="qodef-woo-product-categories"><a
+                                                href="../product-category/lighting/index.html"
+                                                rel="tag">Lighting</a></div>
+                                    </div>
+                                    <a href="../product/hanging-light/index.html"
+                                       class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+                                </div>
+                            </li>
+                            <li class="product type-product post-108 status-publish last instock product_cat-decoration product_tag-accessories has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                                <div class="qodef-woo-product-inner">
+                                    <div class="qodef-woo-product-image">
+                                        <div class="qodef-woo-product-mark-holder"></div>
+                                        <img width="600" height="600"
+                                             src="../wp-content/uploads/2020/11/shop-img9-600x600.jpg"
+                                             class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                             alt="a" loading="lazy"
+                                             srcset="https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img9-600x600.jpg 600w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img9-300x300.jpg 300w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img9-150x150.jpg 150w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img9-768x768.jpg 768w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img9-650x650.jpg 650w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img9-100x100.jpg 100w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img9.jpg 800w"
+                                             sizes="(max-width: 600px) 100vw, 600px"/>
+                                        <div class="qodef-woo-product-image-inner"><a
+                                                href="index0e88.html?add-to-cart=108" data-quantity="1"
+                                                class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                data-product_id="108" data-product_sku="008"
+                                                aria-label="Add &ldquo;Glass Vase&rdquo; to your cart"
+                                                rel="nofollow">Add to cart</a>
+                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-108  wishlist-fragment on-first-load"
+                                                 data-fragment-ref="108"
+                                                 data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:108,&quot;parent_product_id&quot;:108,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+
+                                                <div class="yith-wcwl-add-button">
+                                                    <a href="indexde7c.html?add_to_wishlist=108&amp;_wpnonce=51ffb74114"
+                                                       class="add_to_wishlist single_add_to_wishlist"
+                                                       data-product-id="108" data-product-type="simple"
+                                                       data-original-product-id="108" data-title="Add to wishlist"
+                                                       rel="nofollow">
+                                                        <i class="yith-wcwl-icon fa fa-heart-o"></i> <span>Add to wishlist</span>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <a href="#" class="button yith-wcqv-button" data-product_id="108">Quick
+                                                View</a></div>
+                                    </div>
+                                    <div class="qodef-woo-product-content">
+                                        <div class="qodef-woo-product-title-price-wrapper"><h5
+                                                class="qodef-woo-product-title woocommerce-loop-product__title">
+                                            Glass Vase</h5>
+                                            <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">Ksh </span>35.00</bdi></span></span>
+                                        </div>
+                                        <div class="qodef-woo-product-categories"><a
+                                                href="../product-category/decoration/index.html" rel="tag">Decoration</a>
+                                        </div>
+                                    </div>
+                                    <a href="../product/glass-vase/index.html"
+                                       class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+                                </div>
+                            </li>
+                            <li class="product type-product post-114 status-publish first instock product_cat-furniture product_tag-furnishing has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                                <div class="qodef-woo-product-inner">
+                                    <div class="qodef-woo-product-image">
+                                        <div class="qodef-woo-product-mark-holder"></div>
+                                        <img width="600" height="600"
+                                             src="../wp-content/uploads/2020/11/shop-img10-600x600.jpg"
+                                             class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                             alt="a" loading="lazy"
+                                             srcset="https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img10-600x600.jpg 600w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img10-300x300.jpg 300w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img10-150x150.jpg 150w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img10-768x768.jpg 768w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img10-650x650.jpg 650w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img10-100x100.jpg 100w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img10.jpg 800w"
+                                             sizes="(max-width: 600px) 100vw, 600px"/>
+                                        <div class="qodef-woo-product-image-inner"><a
+                                                href="index8799.html?add-to-cart=114" data-quantity="1"
+                                                class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                data-product_id="114" data-product_sku="009"
+                                                aria-label="Add &ldquo;Wooden Chair&rdquo; to your cart"
+                                                rel="nofollow">Add to cart</a>
+                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-114  wishlist-fragment on-first-load"
+                                                 data-fragment-ref="114"
+                                                 data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:114,&quot;parent_product_id&quot;:114,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+
+                                                <div class="yith-wcwl-add-button">
+                                                    <a href="index9497.html?add_to_wishlist=114&amp;_wpnonce=51ffb74114"
+                                                       class="add_to_wishlist single_add_to_wishlist"
+                                                       data-product-id="114" data-product-type="simple"
+                                                       data-original-product-id="114" data-title="Add to wishlist"
+                                                       rel="nofollow">
+                                                        <i class="yith-wcwl-icon fa fa-heart-o"></i> <span>Add to wishlist</span>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <a href="#" class="button yith-wcqv-button" data-product_id="114">Quick
+                                                View</a></div>
+                                    </div>
+                                    <div class="qodef-woo-product-content">
+                                        <div class="qodef-woo-product-title-price-wrapper"><h5
+                                                class="qodef-woo-product-title woocommerce-loop-product__title">
+                                            Wooden Chair</h5>
+                                            <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">Ksh </span>85.00</bdi></span></span>
+                                        </div>
+                                        <div class="qodef-woo-product-categories"><a
+                                                href="../product-category/furniture/index.html"
+                                                rel="tag">Furniture</a></div>
+                                    </div>
+                                    <a href="../product/wooden-chair/index.html"
+                                       class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+                                </div>
+                            </li>
+                            <li class="product type-product post-134 status-publish instock product_cat-decoration product_tag-accessories has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                                <div class="qodef-woo-product-inner">
+                                    <div class="qodef-woo-product-image">
+                                        <div class="qodef-woo-product-mark-holder"></div>
+                                        <img width="600" height="600"
+                                             src="../wp-content/uploads/2020/11/shop-img11-600x600.jpg"
+                                             class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                             alt="a" loading="lazy"
+                                             srcset="https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img11-600x600.jpg 600w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img11-300x300.jpg 300w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img11-150x150.jpg 150w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img11-768x768.jpg 768w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img11-650x650.jpg 650w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img11-100x100.jpg 100w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img11.jpg 800w"
+                                             sizes="(max-width: 600px) 100vw, 600px"/>
+                                        <div class="qodef-woo-product-image-inner"><a
+                                                href="index10cd.html?add-to-cart=134" data-quantity="1"
+                                                class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                data-product_id="134" data-product_sku="010"
+                                                aria-label="Add &ldquo;Gray Vase&rdquo; to your cart"
+                                                rel="nofollow">Add to cart</a>
+                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-134  wishlist-fragment on-first-load"
+                                                 data-fragment-ref="134"
+                                                 data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:134,&quot;parent_product_id&quot;:134,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+
+                                                <div class="yith-wcwl-add-button">
+                                                    <a href="index09c7.html?add_to_wishlist=134&amp;_wpnonce=51ffb74114"
+                                                       class="add_to_wishlist single_add_to_wishlist"
+                                                       data-product-id="134" data-product-type="simple"
+                                                       data-original-product-id="134" data-title="Add to wishlist"
+                                                       rel="nofollow">
+                                                        <i class="yith-wcwl-icon fa fa-heart-o"></i> <span>Add to wishlist</span>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <a href="#" class="button yith-wcqv-button" data-product_id="134">Quick
+                                                View</a></div>
+                                    </div>
+                                    <div class="qodef-woo-product-content">
+                                        <div class="qodef-woo-product-title-price-wrapper"><h5
+                                                class="qodef-woo-product-title woocommerce-loop-product__title">Gray
+                                            Vase</h5>
+                                            <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">Ksh </span>35.00</bdi></span></span>
+                                        </div>
+                                        <div class="qodef-woo-product-categories"><a
+                                                href="../product-category/decoration/index.html" rel="tag">Decoration</a>
+                                        </div>
+                                    </div>
+                                    <a href="../product/gray-vase/index.html"
+                                       class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+                                </div>
+                            </li>
+                            <li class="product type-product post-139 status-publish last instock product_cat-furniture product_tag-furnishing has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                                <div class="qodef-woo-product-inner">
+                                    <div class="qodef-woo-product-image">
+                                        <div class="qodef-woo-product-mark-holder"></div>
+                                        <img width="600" height="600"
+                                             src="../wp-content/uploads/2020/11/shop-img12-600x600.jpg"
+                                             class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                             alt="a" loading="lazy"
+                                             srcset="https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img12-600x600.jpg 600w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img12-300x300.jpg 300w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img12-150x150.jpg 150w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img12-768x768.jpg 768w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img12-650x650.jpg 650w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img12-100x100.jpg 100w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img12.jpg 800w"
+                                             sizes="(max-width: 600px) 100vw, 600px"/>
+                                        <div class="qodef-woo-product-image-inner"><a
+                                                href="indexe93a.html?add-to-cart=139" data-quantity="1"
+                                                class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                data-product_id="139" data-product_sku="011"
+                                                aria-label="Add &ldquo;Kids&#039; Chair&rdquo; to your cart"
+                                                rel="nofollow">Add to cart</a>
+                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-139  wishlist-fragment on-first-load"
+                                                 data-fragment-ref="139"
+                                                 data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:139,&quot;parent_product_id&quot;:139,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+
+                                                <div class="yith-wcwl-add-button">
+                                                    <a href="index365d.html?add_to_wishlist=139&amp;_wpnonce=51ffb74114"
+                                                       class="add_to_wishlist single_add_to_wishlist"
+                                                       data-product-id="139" data-product-type="simple"
+                                                       data-original-product-id="139" data-title="Add to wishlist"
+                                                       rel="nofollow">
+                                                        <i class="yith-wcwl-icon fa fa-heart-o"></i> <span>Add to wishlist</span>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <a href="#" class="button yith-wcqv-button" data-product_id="139">Quick
+                                                View</a></div>
+                                    </div>
+                                    <div class="qodef-woo-product-content">
+                                        <div class="qodef-woo-product-title-price-wrapper"><h5
+                                                class="qodef-woo-product-title woocommerce-loop-product__title">Kids&#8217;
+                                            Chair</h5>
+                                            <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">Ksh </span>95.00</bdi></span></span>
+                                        </div>
+                                        <div class="qodef-woo-product-categories"><a
+                                                href="../product-category/furniture/index.html"
+                                                rel="tag">Furniture</a></div>
+                                    </div>
+                                    <a href="../product/kids-chair/index.html"
+                                       class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <nav class="woocommerce-pagination">
+                        <span aria-current="page" class="page-numbers current">01</span>
+                        <a class="page-numbers" href="page/2/index.html">02</a>
+                        <a class="page-numbers" href="page/3/index.html">03</a>
+                        <a class="page-numbers" href="page/4/index.html">04</a>
+                        <a class="page-numbers" href="page/5/index.html">05</a>
+                        <a class="page-numbers" href="page/6/index.html">06</a>
+                        <a class="next page-numbers" href="page/2/index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="17px" height="14px" viewBox="0 0 17 14" enable-background="new 0 0 17 14" xml:space="preserve"><line fill="none" stroke="#000000" stroke-miterlimit="10" x1="15.83" y1="7.177" x2="1.023" y2="7.193" /><path
+                                    fill="#876060" d="M7.737,0.81"/><polyline fill="none" stroke="#000000"
+                                                                              stroke-linejoin="round"
+                                                                              stroke-miterlimit="10"
+                                                                              points="9.799,0.81 16.113,7.124 10.109,13.19 "/></svg>
+                        </a></nav>
+                </div>
+                <div class="qodef-grid-item qodef-page-sidebar-section qodef-col--3">
+                    <aside id="qodef-page-sidebar">
+                        <div class="widget widget_umea_core_separator" data-area="shop-sidebar">
+                            <div class="qodef-shortcode qodef-m qodef--disable-on-touch qodef-separator clear ">
+                                <div class="qodef-m-line"
+                                     style="width: 0px;border-bottom-width: 0px;margin-top: 55px"></div>
+                            </div>
+                        </div>
+                        <div class="widget woocommerce widget_price_filter" data-area="shop-sidebar"><h4
+                                class="qodef-widget-title">Filter by price</h4>
+                            <form method="get" action="https://umea.qodeinteractive.com/shop/">
+                                <div class="price_slider_wrapper">
+                                    <div class="price_slider" style="display:none;"></div>
+                                    <div class="price_slider_amount" data-step="10">
+                                        <label class="screen-reader-text" for="min_price">Min price</label>
+                                        <input type="text" id="min_price" name="min_price" value="20" data-min="20"
+                                               placeholder="Min price"/>
+                                        <label class="screen-reader-text" for="max_price">Max price</label>
+                                        <input type="text" id="max_price" name="max_price" value="400"
+                                               data-max="400" placeholder="Max price"/>
+                                        <button type="submit" class="button">Filter</button>
+                                        <div class="price_label" style="display:none;">
+                                            Price: <span class="from"></span> &mdash; <span class="to"></span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="widget widget_umea_core_separator" data-area="shop-sidebar">
+                            <div class="qodef-shortcode qodef-m  qodef-separator clear ">
+                                <div class="qodef-m-line"
+                                     style="width: 0px;border-bottom-width: 0px;margin-top: 4px"></div>
+                            </div>
+                        </div>
+                        <div class="widget woocommerce widget_product_categories" data-area="shop-sidebar"><h4
+                                class="qodef-widget-title">Categories</h4>
+                            <ul class="product-categories">
+                                <li class="cat-item cat-item-23"><a
+                                        href="../product-category/decoration/index.html">Decoration</a> <span
+                                        class="count">(18)</span></li>
+                                <li class="cat-item cat-item-18"><a
+                                        href="../product-category/dinnerware/index.html">Dinnerware</a> <span
+                                        class="count">(12)</span></li>
+                                <li class="cat-item cat-item-16"><a href="../product-category/furniture/index.html">Furniture</a>
+                                    <span class="count">(29)</span></li>
+                                <li class="cat-item cat-item-21"><a href="../product-category/lighting/index.html">Lighting</a>
+                                    <span class="count">(5)</span></li>
+                                <li class="cat-item cat-item-35"><a href="../product-category/special/index.html">Special</a>
+                                    <span class="count">(11)</span></li>
+                                <li class="cat-item cat-item-15"><a
+                                        href="../product-category/uncategorized/index.html">Uncategorized</a> <span
+                                        class="count">(0)</span></li>
+                            </ul>
+                        </div>
+                        <div class="widget woocommerce widget_product_search" data-area="shop-sidebar">
+                            <form role="search" method="get" class="qodef-search-form qodef-woo-product-search"
+                                  action="https://umea.qodeinteractive.com/">
+                                <label class="screen-reader-text" for="woocommerce-product-search-field-0">Search
+                                    for:</label>
+                                <div class="qodef-search-form-inner clear">
+                                    <input type="search" id="woocommerce-product-search-field-0"
+                                           class="qodef-search-form-field" placeholder="Search" value="" name="s"/>
+                                    <button type="submit" class="qodef-search-form-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><g><path d="M15.352,6.588c0,1.639-0.582,3.04-1.744,4.202c-1.162,1.163-2.563,1.744-4.203,1.744c-1.391,0-2.639-0.438-3.745-1.314 l-3.917,3.916c-0.114,0.134-0.262,0.2-0.443,0.2c-0.182,0-0.334-0.062-0.458-0.186c-0.124-0.124-0.186-0.276-0.186-0.457		c0-0.182,0.067-0.329,0.2-0.443l3.917-3.917C3.896,9.229,3.458,7.979,3.458,6.588c0-1.639,0.581-3.04,1.744-4.203		c1.163-1.162,2.563-1.744,4.202-1.744c1.641,0,3.041,0.582,4.203,1.744C14.77,3.548,15.352,4.949,15.352,6.588z M14.438,6.588		c0-1.391-0.492-2.578-1.473-3.56c-0.982-0.981-2.168-1.473-3.561-1.473c-1.391,0-2.577,0.491-3.559,1.473		C4.864,4.01,4.373,5.197,4.373,6.588c0,1.392,0.491,2.578,1.473,3.56c0.981,0.981,2.168,1.472,3.559,1.472		c1.393,0,2.578-0.49,3.561-1.472C13.945,9.166,14.438,7.979,14.438,6.588z" /></g></svg>
+                                    </button>
+                                </div>
+                                <input type="hidden" name="post_type" value="product"/>
+                            </form>
+                        </div>
+                        <div class="widget widget_umea_core_separator" data-area="shop-sidebar">
+                            <div class="qodef-shortcode qodef-m  qodef-separator clear ">
+                                <div class="qodef-m-line"
+                                     style="width: 0px;border-bottom-width: 0px;margin-top: 2px"></div>
+                            </div>
+                        </div>
+                        <div class="widget woocommerce widget_products" data-area="shop-sidebar"><h4
+                                class="qodef-widget-title">Products</h4>
+                            <ul class="product_list_widget">
+                                <li>
+                                    <div class="qodef-woo-product-image">
+                                        <a href="../product/green-plates/index.html">
+                                            <img width="600" height="600"
+                                                 src="../wp-content/uploads/2020/11/shop-img1-1-600x600.jpg"
+                                                 class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                 alt="a"
+                                                 srcset="https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-600x600.jpg 600w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-300x300.jpg 300w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-150x150.jpg 150w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-768x768.jpg 768w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-650x650.jpg 650w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-100x100.jpg 100w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1.jpg 800w"
+                                                 sizes="(max-width: 600px) 100vw, 600px"/> </a>
+                                    </div>
+                                    <div class="qodef-woo-product-content">
+                                        <h6 class="qodef-woo-product-title">
+                                            <a itemprop="url" href="../product/green-plates/index.html">Green
+                                                Plates</a>
+                                        </h6>
+                                        <div class="qodef-woo-product-price price">
+                                            <span class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">Ksh </span>60.00</bdi></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="qodef-woo-product-image">
+                                        <a href="../product/coffee-thermos/index.html">
+                                            <img width="600" height="600"
+                                                 src="../wp-content/uploads/2020/11/shop-img2-600x600.jpg"
+                                                 class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                 alt="a"
+                                                 srcset="https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img2-600x600.jpg 600w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img2-300x300.jpg 300w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img2-150x150.jpg 150w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img2-768x768.jpg 768w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img2-650x650.jpg 650w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img2-100x100.jpg 100w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img2.jpg 800w"
+                                                 sizes="(max-width: 600px) 100vw, 600px"/> </a>
+                                    </div>
+                                    <div class="qodef-woo-product-content">
+                                        <h6 class="qodef-woo-product-title">
+                                            <a itemprop="url" href="../product/coffee-thermos/index.html">Coffee
+                                                Thermos</a>
+                                        </h6>
+                                        <div class="qodef-woo-product-price price">
+                                            <span class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">Ksh </span>40.00</bdi></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="qodef-woo-product-image">
+                                        <a href="../product/night-table/index.html">
+                                            <img width="600" height="600"
+                                                 src="../wp-content/uploads/2020/11/shop-img3-600x600.jpg"
+                                                 class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                 alt="a"
+                                                 srcset="https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img3-600x600.jpg 600w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img3-300x300.jpg 300w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img3-150x150.jpg 150w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img3-768x768.jpg 768w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img3-650x650.jpg 650w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img3-100x100.jpg 100w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img3.jpg 800w"
+                                                 sizes="(max-width: 600px) 100vw, 600px"/> </a>
+                                    </div>
+                                    <div class="qodef-woo-product-content">
+                                        <h6 class="qodef-woo-product-title">
+                                            <a itemprop="url" href="../product/night-table/index.html">Night
+                                                Table</a>
+                                        </h6>
+                                        <div class="qodef-woo-product-price price">
+                                            <span class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">Ksh </span>110.00</bdi></span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="widget widget_umea_core_separator" data-area="shop-sidebar">
+                            <div class="qodef-shortcode qodef-m  qodef-separator clear qodef-position--center">
+                                <div class="qodef-m-line"
+                                     style="border-color: #ffffff;width: 0px;border-bottom-width: 0px;margin-top: 14px"></div>
+                            </div>
+                        </div>
+                        <div class="widget widget_umea_core_contact_form_7" data-area="shop-sidebar"><h4
+                                class="qodef-widget-title">Newsletter</h4>
+                            <div class="qodef-contact-form-7">
+                                <div role="form" class="wpcf7" id="wpcf7-f1025-o1" lang="en-US" dir="ltr">
+                                    <div class="screen-reader-response"><p role="status" aria-live="polite"
+                                                                           aria-atomic="true"></p>
+                                        <ul></ul>
+                                    </div>
+                                    <form action="https://umea.qodeinteractive.com/shop/#wpcf7-f1025-o1"
+                                          method="post" class="wpcf7-form init demo" novalidate="novalidate"
+                                          data-status="init">
+                                        <div style="display: none;">
+                                            <input type="hidden" name="_wpcf7" value="1025"/>
+                                            <input type="hidden" name="_wpcf7_version" value="5.6.4"/>
+                                            <input type="hidden" name="_wpcf7_locale" value="en_US"/>
+                                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f1025-o1"/>
+                                            <input type="hidden" name="_wpcf7_container_post" value="0"/>
+                                            <input type="hidden" name="_wpcf7_posted_data_hash" value=""/>
+                                        </div>
+                                        <div class="qodef-contact-form-7--single-line"><span
+                                                class="wpcf7-form-control-wrap" data-name="your-email"><input
+                                                type="email" name="your-email" value="" size="40"
+                                                class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                                                aria-required="true" aria-invalid="false" placeholder="Your Email"/></span>
+                                            <button type="submit"
+                                                    class="wpcf7-form-control wpcf7-submit qodef-button qodef-size--normal qodef-layout--filled qodef-m">
+                                                <span class="qodef-m-text">Submit</span></button>
+                                        </div>
+                                        <div class="wpcf7-response-output" aria-hidden="true"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget widget_umea_core_separator" data-area="shop-sidebar">
+                            <div class="qodef-shortcode qodef-m  qodef-separator clear ">
+                                <div class="qodef-m-line"
+                                     style="border-color: #ffffff;width: 0px;border-bottom-width: 0px;margin-top: 3px"></div>
+                            </div>
+                        </div>
+                        <div class="widget woocommerce widget_product_tag_cloud" data-area="shop-sidebar"><h4
+                                class="qodef-widget-title">Tags</h4>
+                            <div class="tagcloud"><a href="../product-tag/accessories/index.html"
+                                                     class="tag-cloud-link tag-link-24 tag-link-position-1"
+                                                     style="font-size: 18pt;"
+                                                     aria-label="Accessories (18 products)">Accessories</a>
+                                <a href="../product-tag/dishware/index.html"
+                                   class="tag-cloud-link tag-link-19 tag-link-position-2" style="font-size: 14.6pt;"
+                                   aria-label="Dishware (12 products)">Dishware</a>
+                                <a href="../product-tag/furnishing/index.html"
+                                   class="tag-cloud-link tag-link-17 tag-link-position-3" style="font-size: 22pt;"
+                                   aria-label="Furnishing (29 products)">Furnishing</a>
+                                <a href="../product-tag/lights/index.html"
+                                   class="tag-cloud-link tag-link-22 tag-link-position-4" style="font-size: 8pt;"
+                                   aria-label="Lights (5 products)">Lights</a>
+                                <a href="../product-tag/special/index.html"
+                                   class="tag-cloud-link tag-link-36 tag-link-position-5" style="font-size: 11.4pt;"
+                                   aria-label="Special (8 products)">Special</a></div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+
+{% endblock %}
