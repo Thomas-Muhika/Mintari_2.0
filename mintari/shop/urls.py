@@ -1,0 +1,11 @@
+from django.urls import path, re_path
+
+from . import views
+
+app_name = 'shop'
+
+urlpatterns = [
+    # mintarikenya.co.ke/shop/
+    re_path(r'^$', views.shop_index, name='shop_index'),
+
+]
