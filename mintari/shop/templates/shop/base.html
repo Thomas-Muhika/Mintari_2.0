@@ -385,12 +385,6 @@
         <!-- desktop header -->
         <header id="qodef-page-header">
             <div id="qodef-page-header-inner" class="">
-                <a itemprop="url" class="qodef-header-logo-link qodef-height--set" href="{% url 'landing:index' %}" style="height:21px" rel="home">
-                    <img width="114" height="42" src="{% static 'assets/images/Branding/logo_black.png' %}" class="qodef-header-logo-image qodef--main" alt="logo main" itemprop="image"/>
-                    <img width="114" height="42" src="{% static 'assets/images/Branding/logo_black.png' %}" class="qodef-header-logo-image qodef--dark" alt="logo dark" itemprop="image"/>
-                    <img width="114" height="42" src="{% static 'assets/images/Branding/logo_black.png' %}" class="qodef-header-logo-image qodef--light" alt="logo light" itemprop="image"/>
-                </a>
-
                 <nav class="qodef-header-navigation" role="navigation" aria-label="Top Menu">
                     <ul id="menu-main-menu-1" class="menu">
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59 qodef--hide-link qodef-menu-item--narrow">
@@ -424,6 +418,12 @@
                         </li>
                     </ul>
                 </nav>
+
+                <a itemprop="url" class="qodef-header-logo-link qodef-height--set" href="{% url 'landing:index' %}" style="height:21px" rel="home">
+                    <img width="114" height="42" src="{% static 'assets/images/Branding/logo_black.png' %}" class="qodef-header-logo-image qodef--main" alt="logo main" itemprop="image"/>
+                    <img width="114" height="42" src="{% static 'assets/images/Branding/logo_black.png' %}" class="qodef-header-logo-image qodef--dark" alt="logo dark" itemprop="image"/>
+                    <img width="114" height="42" src="{% static 'assets/images/Branding/logo_black.png' %}" class="qodef-header-logo-image qodef--light" alt="logo light" itemprop="image"/>
+                </a>
                 <div class="qodef-widget-holder qodef--one">
 
                     <!-- Search button -->

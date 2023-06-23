@@ -8,4 +8,6 @@ urlpatterns = [
     # mintarikenya.co.ke/shop/
     re_path(r'^$', views.shop_index, name='shop_index'),
 
+    # mintarikenya.co.ke/shop/product/
+    re_path(r'^product/$', views.single_product, name='product'),
 ]
