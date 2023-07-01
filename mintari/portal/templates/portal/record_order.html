@@ -1,0 +1,88 @@
+<!--extention base-->
+{% extends 'portal/base.html' %}
+{% load static %}
+<!--page title-->
+{% block title %}Shop | Mintari {% endblock %}
+
+{% block body %}
+<div class="content-wrapper transition-all duration-150 xl:ltr:ml-[248px] xl:rtl:mr-[248px]" id="content_wrapper">
+    <div class="page-content">
+        <div id="content_layout">
+
+
+            <!-- BEGIN: Breadcrumb -->
+            <div class="mb-5">
+                <ul class="m-0 p-0 list-none">
+                    <li class="inline-block relative top-[3px] text-base text-primary-500 font-Inter ">
+                        <a href="{% url 'portal:portal_index' %}">
+                            <iconify-icon icon="heroicons-outline:home"></iconify-icon>
+                            <iconify-icon icon="heroicons-outline:chevron-right" class="relative text-slate-500 text-sm rtl:rotate-180"></iconify-icon>
+                        </a>
+                    </li>
+                    <li class="inline-block relative text-sm text-slate-500 font-Inter dark:text-white">
+                        Record Orders
+                    </li>
+                </ul>
+            </div>
+
+            <!-- END: BreadCrumb -->
+            <div class="grid xl:grid-cols-2 grid-cols-1 gap-6">
+                <div class="card xl:col-span-2">
+                    <div class="card-body flex flex-col p-6">
+                        <header class="flex mb-5 items-center border-b border-slate-100 dark:border-slate-700 pb-5 -mx-6 px-6">
+                            <div class="flex-1">
+                                <div class="card-title text-slate-900 dark:text-white">Record Order</div>
+                            </div>
+                        </header>
+                        <div class="card-text h-full ">
+                            <form class="space-y-4">
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                                    <div class="input-area relative">
+                                        <label for="largeInput" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" placeholder="First Name">
+                                    </div>
+                                    <div class="input-area relative">
+                                        <label for="largeInput" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" placeholder="Last Name">
+                                    </div>
+                                    <div class="input-area relative">
+                                        <label for="largeInput" class="form-label">Email</label>
+                                        <input type="email" class="form-control" placeholder="Enter Your Email">
+                                    </div>
+                                    <div class="input-area relative">
+                                        <label for="largeInput" class="form-label">Phone</label>
+                                        <input type="tel" class="form-control" placeholder="Phone Number" pattern="[0-9]">
+                                    </div>
+                                    <div class="input-area relative">
+                                        <label for="largeInput" class="form-label">Stock Title</label>
+                                        <select name="basicSelect" id="basicSelect" class="form-control w-full mt-2">
+                                            <option selected="Selected" disabled="disabled" value="none" class="py-1 inline-block font-Inter font-normal text-sm text-slate-600">
+                                                Select an option
+                                            </option>
+                                            <option value="option1" class="py-1 inline-block font-Inter font-normal text-sm text-slate-600">
+                                                Option 1
+                                            </option>
+                                            <option value="option2" class="py-1 inline-block font-Inter font-normal text-sm text-slate-600">
+                                                Option 2
+                                            </option>
+                                            <option value="option3" class="py-1 inline-block font-Inter font-normal text-sm text-slate-600">
+                                                Option 3
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="input-area relative">
+                                        <label for="largeInput" class="form-label">Deposit Paid</label>
+                                        <input type="text" class="form-control" placeholder="Deposit Paid">
+                                    </div>
+                                </div>
+                                <button class="btn inline-flex justify-center btn-dark">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

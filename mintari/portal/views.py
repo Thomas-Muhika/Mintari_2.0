@@ -12,4 +12,19 @@ def add_stock(request):
     return render(request, 'portal/add_stock.html')
 
 
+# mintarikenya.com/portal/manage_stock/
+def manage_stock(request):
+    return render(request, 'portal/manage_stock.html')
+
+
+# mintarikenya.com/portal/record_order/
+def record_order(request):
+    return render(request, 'portal/record_order.html')
+
+
+# mintarikenya.com/portal/manage_orders/
+def manage_orders(request):
+    return render(request, 'portal/manage_orders.html')
+
+
 
