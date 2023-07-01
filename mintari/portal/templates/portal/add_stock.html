@@ -1,0 +1,239 @@
+<!--extention base-->
+{% extends 'portal/base.html' %}
+{% load static %}
+<!--page title-->
+{% block title %}Shop | Mintari {% endblock %}
+
+{% block body %}
+
+<div class="content-wrapper transition-all duration-150 xl:ltr:ml-[248px] xl:rtl:mr-[248px]" id="content_wrapper">
+    <div class="page-content">
+        <div id="content_layout">
+
+            <!-- BEGIN: Breadcrumb -->
+            <div class="mb-5">
+                <ul class="m-0 p-0 list-none">
+                    <li class="inline-block relative top-[3px] text-base text-primary-500 font-Inter ">
+                        <a href="index-2.html">
+                            <iconify-icon icon="heroicons-outline:home"></iconify-icon>
+                            <iconify-icon icon="heroicons-outline:chevron-right" class="relative text-slate-500 text-sm rtl:rotate-180"></iconify-icon>
+                        </a>
+                    </li>
+                    <li class="inline-block relative text-sm text-slate-500 font-Inter dark:text-white">
+                        Add Stock
+                    </li>
+                </ul>
+            </div>
+            <!-- END: BreadCrumb -->
+            <div class="space-y-6">
+
+                <!-- BEGIN: Step Form Verticle -->
+
+                <div class="wizard card">
+                    <div class="card-header">
+                        <h4 class="card-title">Add Stock wizard</h4>
+                    </div>
+
+                    <div class="card-body p-6">
+                        <div class="grid gap-5 grid-cols-12">
+                            <div class="lg:col-span-3 col-span-12">
+                                <div class="flex z-[5] items-start relative flex-col lg:min-h-full md:min-h-[300px] min-h-[250px] wizard-steps">
+
+                                    <div class="relative z-[1] flex-1 last:flex-none wizard-step">
+                                        <div class=" transition duration-150 icon-box md:h-12 md:w-12 h-8 w-8 rounded-full flex flex-col items-center justify-center relative z-[66] ring-1 md:text-lg text-base font-medium bg-white ring-slate-900 ring-opacity-70  text-slate-900 dark:text-slate-300 text-opacity-70 dark:bg-slate-700 dark:ring-slate-700">
+                                            <div class="number-box">
+                                                <span class="number"> 1</span>
+
+                                                <span class="text-3xl no-icon">
+                                                    <iconify-icon icon="bx:check-double"> </iconify-icon>
+                                                </span>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="bar-line2"></div>
+                                        <div class="absolute top-0 ltr:left-full rtl:right-full ltr:pl-4 rtl:pr-4 text-base leading-6 md:mt-3 mt-1 transition duration-150 w-full text-slate-500 dark:text-slate-300 dark:text-opacity-40">
+                                            <span class="w-max block">Product Details</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="relative z-[1] flex-1 last:flex-none wizard-step">
+                                        <div class=" transition duration-150 icon-box md:h-12 md:w-12 h-8 w-8 rounded-full flex flex-col items-center justify-center relative z-[66] ring-1 md:text-lg text-base font-medium bg-white ring-slate-900 ring-opacity-70  text-slate-900 dark:text-slate-300 text-opacity-70 dark:bg-slate-700 dark:ring-slate-700">
+                                            <div class="number-box">
+                                                <span class="number"> 2</span>
+
+                                                <span class="text-3xl no-icon">
+                                                    <iconify-icon icon="bx:check-double"> </iconify-icon>
+                                                </span>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="bar-line2"></div>
+                                        <div class="absolute top-0 ltr:left-full rtl:right-full ltr:pl-4 rtl:pr-4 text-base leading-6 md:mt-3 mt-1 transition duration-150 w-full text-slate-500 dark:text-slate-300 dark:text-opacity-40">
+                                            <span class="w-max block">Product info</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="relative z-[1] flex-1 last:flex-none wizard-step">
+                                        <div class=" transition duration-150 icon-box md:h-12 md:w-12 h-8 w-8 rounded-full flex flex-col items-center justify-center relative z-[66] ring-1 md:text-lg text-base font-medium bg-white ring-slate-900 ring-opacity-70  text-slate-900 dark:text-slate-300 text-opacity-70 dark:bg-slate-700 dark:ring-slate-700">
+                                            <div class="number-box">
+                                                <span class="number"> 3</span>
+
+                                                <span class="text-3xl no-icon">
+                                                    <iconify-icon icon="bx:check-double"> </iconify-icon>
+                                                </span>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="bar-line2"></div>
+                                        <div class="absolute top-0 ltr:left-full rtl:right-full ltr:pl-4 rtl:pr-4 text-base leading-6 md:mt-3 mt-1 transition duration-150 w-full text-slate-500 dark:text-slate-300 dark:text-opacity-40">
+                                            <span class="w-max block">Product Images</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="relative z-[1] flex-1 last:flex-none wizard-step">
+                                        <div class=" transition duration-150 icon-box md:h-12 md:w-12 h-8 w-8 rounded-full flex flex-col items-center justify-center relative z-[66] ring-1 md:text-lg text-base font-medium bg-white ring-slate-900 ring-opacity-70  text-slate-900 dark:text-slate-300 text-opacity-70 dark:bg-slate-700 dark:ring-slate-700">
+                                            <div class="number-box">
+                                                <span class="number"> 4</span>
+
+                                                <span class="text-3xl no-icon">
+                                                    <iconify-icon icon="bx:check-double"> </iconify-icon>
+                                                </span>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="bar-line2"></div>
+                                        <div class="absolute top-0 ltr:left-full rtl:right-full ltr:pl-4 rtl:pr-4 text-base leading-6 md:mt-3 mt-1 transition duration-150 w-full text-slate-500 dark:text-slate-300 dark:text-opacity-40">
+                                            <span class="w-max block">Product Review</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="conten-box lg:col-span-9 col-span-12 h-full">
+
+                                    <div class="wizard-form-step active" data-step="1">
+                                        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
+                                            <div class="lg:col-span-3 md:col-span-2 col-span-1">
+                                                <h4 class="text-base text-slate-800 dark:text-slate-300 my-6">
+                                                    Enter Your Product Details</h4>
+                                            </div>
+                                            <div class="input-area">
+                                                <label for="product_title" class="form-label">Product Title*</label>
+                                                <input id="product_title" type="text" class="form-control" placeholder="Product Title">
+                                            </div>
+                                            <div class="input-area">
+                                                <label for="product_code" class="form-label">Product Code*</label>
+                                                <input id="product_code" type="text" class="form-control" placeholder="Product Code">
+                                            </div>
+                                            <div class="input-area">
+                                                <label for="product_category" class="form-label">Product Category*</label>
+                                                <input id="product_category" type="text" class="form-control" placeholder="Product Category">
+                                            </div>
+                                            <div class="input-area">
+                                                <label for="product_tag" class="form-label">Product Tag*</label>
+                                                <input id="product_tag" type="text" class="form-control" placeholder="Product Tag">
+                                            </div>
+                                            <div class="input-area">
+                                                <label for="product_weight" class="form-label">Product Weight*</label>
+                                                <input id="product_weight" type="number" class="form-control" placeholder="Product Weight">
+                                            </div>
+                                            <div class="input-area">
+                                                <label for="product_dimension" class="form-label">Product Dimension*</label>
+                                                <input id="product_dimension" type="text" class="form-control" placeholder="Product Dimension">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wizard-form-step" data-step="2">
+                                        <div class="grid md:grid-cols-2 grid-cols-1 gap-5">
+                                            <div class="md:col-span-2 col-span-1">
+                                                <h4 class="text-base text-slate-800 dark:text-slate-300 my-6">
+                                                    Product Information</h4>
+                                            </div>
+                                            <div class="input-area">
+                                                <label for="short_description" class="form-label">Short Description</label>
+                                                <textarea id="short_description" rows="5" class="form-control" placeholder="Add Short Description Here"></textarea>
+                                            </div>
+                                            <div class="input-area">
+                                                <label for="detailed_description" class="form-label">Detailed Description</label>
+                                                <textarea id="detailed_description" rows="5" class="form-control" placeholder="Add Detailed Description Here"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wizard-form-step" data-step="3">
+                                        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
+                                            <div class="lg:col-span-3 md:col-span-2 col-span-1">
+                                                <h4 class="text-base text-slate-800 dark:text-slate-300 my-6">
+                                                    Add Product Images</h4>
+                                            </div>
+                                            <!-- BEGIN: File Dropzone -->
+                                            <div class="card rounded-md bg-white dark:bg-slate-800 lg:h-full shadow-base xl:col-span-2">
+                                                <div class="card-body flex flex-col p-6">
+                                                    <header class="flex mb-5 items-center border-b border-slate-100 dark:border-slate-700 pb-5 -mx-6 px-6">
+                                                        <div class="flex-1">
+                                                            <div class="card-title text-slate-900 dark:text-white">File Dropzone</div>
+                                                        </div>
+                                                    </header>
+                                                    <div class="card-text h-full space-y-6">
+                                                        <div class="w-full text-center border-dashed border border-secondary-500 rounded-md py-[52px] flex justify-center items-center">
+                                                            <div class="dz-default dz-message">
+                                                                <button class="dz-button" type="button">
+                                                                    <img src="{% static 'assets/images/svg/upload.svg' %}" alt="" class="mx-auto mb-4"/>
+                                                                    <p class="text-sm text-slate-500 dark:text-slate-300">
+                                                                        Drop files here or click to upload.</p>
+                                                                </button>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- END: File Dropzone -->
+                                        </div>
+                                    </div>
+                                    <div class="wizard-form-step" data-step="4">
+                                        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
+                                            <div class="lg:col-span-3 md:col-span-2 col-span-1">
+                                                <h4 class="text-base text-slate-800 dark:text-slate-300 my-6">
+                                                    Social Links</h4>
+                                            </div>
+                                            <div class="input-area">
+                                                <label for="fblink" class="form-label">Facebook
+                                                    Link*</label>
+                                                <input id="fblink" type="url" class="form-control" placeholder="Facebook Link">
+                                            </div>
+                                            <div class="input-area">
+                                                <label for="youtubelink" class="form-label">Youtube
+                                                    Link*</label>
+                                                <input id="youtubelink" type="url" class="form-control" placeholder="Youtube Link">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-6   space-x-3">
+                                        <button class="btn btn-dark prev-button" type="button">prev</button>
+                                        <button class="btn btn-dark next-button" type="button">next</button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END: Step Form Verticle -->
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
