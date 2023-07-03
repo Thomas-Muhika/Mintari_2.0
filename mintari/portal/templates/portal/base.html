@@ -67,7 +67,7 @@
                     <!-- Apps Area -->
                     <li class="sidebar-menu-title">APPS</li>
                     <li class="">
-                        <a href="calander.html" class="navItem">
+                        <a href="{% url 'portal:calender' %}" class="navItem">
                             <span class="flex items-center">
                                 <iconify-icon class=" nav-icon" icon="heroicons-outline:calendar"></iconify-icon>
                                 <span>Calander</span>
@@ -111,7 +111,7 @@
                                 <a href="{% url 'portal:manage_stock' %}">Manage Stock</a>
                             </li>
                             <li>
-                                <a href="{% url 'portal:add_stock' %}">Manage Categories</a>
+                                <a href="{% url 'portal:manage_categories' %}">Manage Categories</a>
                             </li>
                             <li>
                                 <a href="blog.html">Add Blog</a>

@@ -1,3 +1,7 @@
 from django.contrib import admin
+from portal.models import RecordOrder, StockCategories, Stock
 
-# Register your models here.
+
+admin.site.register(RecordOrder)
+admin.site.register(StockCategories)
+admin.site.register(Stock)

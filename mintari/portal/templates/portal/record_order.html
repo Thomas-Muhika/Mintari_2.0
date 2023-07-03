@@ -35,27 +35,28 @@
                             </div>
                         </header>
                         <div class="card-text h-full ">
-                            <form class="space-y-4">
+                            <form class="space-y-4" action="{% url 'portal:record_order' %}" method="POST">
+                                {% csrf_token %}
                                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
                                     <div class="input-area relative">
                                         <label for="largeInput" class="form-label">First Name</label>
-                                        <input type="text" class="form-control" placeholder="First Name">
+                                        <input name='FirstName' type="text" class="form-control" placeholder="First Name">
                                     </div>
                                     <div class="input-area relative">
                                         <label for="largeInput" class="form-label">Last Name</label>
-                                        <input type="text" class="form-control" placeholder="Last Name">
+                                        <input name='LastName' type="text" class="form-control" placeholder="Last Name">
                                     </div>
                                     <div class="input-area relative">
                                         <label for="largeInput" class="form-label">Email</label>
-                                        <input type="email" class="form-control" placeholder="Enter Your Email">
+                                        <input name="Email" type="email" class="form-control" placeholder="Enter Your Email">
                                     </div>
                                     <div class="input-area relative">
                                         <label for="largeInput" class="form-label">Phone</label>
-                                        <input type="tel" class="form-control" placeholder="Phone Number" pattern="[0-9]">
+                                        <input name="PhoneNumber" type="number" class="form-control" placeholder="Phone Number">
                                     </div>
                                     <div class="input-area relative">
                                         <label for="largeInput" class="form-label">Stock Title</label>
-                                        <select name="basicSelect" id="basicSelect" class="form-control w-full mt-2">
+                                        <select name="ProductTitle" id="basicSelect" class="form-control w-full mt-2">
                                             <option selected="Selected" disabled="disabled" value="none" class="py-1 inline-block font-Inter font-normal text-sm text-slate-600">
                                                 Select an option
                                             </option>
@@ -72,10 +73,10 @@
                                     </div>
                                     <div class="input-area relative">
                                         <label for="largeInput" class="form-label">Deposit Paid</label>
-                                        <input type="text" class="form-control" placeholder="Deposit Paid">
+                                        <input name="DepositPaid" type="text" class="form-control" placeholder="Deposit Paid">
                                     </div>
                                 </div>
-                                <button class="btn inline-flex justify-center btn-dark">Submit</button>
+                                <button name="submit" type="submit" class="btn inline-flex justify-center btn-dark" value="RecordOrder">Submit</button>
                             </form>
                         </div>
                     </div>
