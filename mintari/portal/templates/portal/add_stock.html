@@ -34,7 +34,25 @@
                                 <div class="card-title text-slate-900 dark:text-white">Add Product</div>
                             </div>
                         </header>
+
+                        {% for message in  messages %}
+                            {% if 'success' in message.tags %}
+                                <div class="py-[18px] px-6 font-normal text-sm rounded-md bg-white text-success-500 border border-success-500 dark:bg-slate-800">
+                                    <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                                        <iconify-icon class="text-2xl flex-0" icon="system-uicons:target"></iconify-icon>
+                                        <p class="flex-1 font-Inter">
+                                            {{ message }}
+                                        </p>
+                                        <div class="flex-0 text-xl cursor-pointer">
+                                            <iconify-icon icon="line-md:close"></iconify-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+
                         <div class="card-text h-full ">
+
                             <form class="space-y-4" action="{% url 'portal:add_stock' %}" method="POST">
                                 {% csrf_token %}
                                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
@@ -48,7 +66,11 @@
                                     </div>
                                     <div class="input-area relative">
                                         <label for="ProductCategory" class="form-label">Product Category</label>
-                                        <input name="ProductCategory" id="ProductCategory" type="text" class="form-control" placeholder="Enter Product Category">
+                                        <select name="ProductCategory" id="ProductCategory" class="form-control">
+                                            {% for data in CategoriesTable %}
+                                                <option value="{{ data.category }}" class="dark:bg-slate-700">{{ data.category }}</option>
+                                            {% endfor %}
+                                        </select>
                                     </div>
                                     <div class="input-area relative">
                                         <label for="ProductWeight" class="form-label">Product Weight</label>

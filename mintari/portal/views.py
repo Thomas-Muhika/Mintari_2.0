@@ -1,11 +1,19 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.db.models import Sum
 from portal.models import RecordOrder, StockCategories, Stock
 from django.contrib.auth.forms import AuthenticationForm
 
 
 # mintarikenya.com/portal/
 def portal_index(request):
-    return render(request, 'portal/dashboard.html')
+
+    total_deposit = RecordOrder.objects.aggregate(Sum('DepositPaid'))['DepositPaid__sum']
+    total_deposit = 'Ksh {:,.2f}'.format(total_deposit)
+
+    products_sold = len(RecordOrder.objects.all())
+
+    return render(request, 'portal/dashboard.html', {'revenue': total_deposit, 'products_sold': products_sold})
 
 
 def calender(request):
@@ -27,6 +35,9 @@ def manage_categories(request):
 
 # mintarikenya.com/portal/add_stock/
 def add_stock(request):
+
+    categories_table = StockCategories.objects.all()
+
     if request.method == 'POST':
         if request.POST.get('submit') == 'AddStock':
 
@@ -42,8 +53,10 @@ def add_stock(request):
                 ProductBaseImage=request.POST['MainImage'],
                 ProductImages=request.POST['AdditionalImages'],
             )
+            messages.info(request, "Stock item saved successfully", extra_tags="success")
+            # messages.error(request, 'Please verify your account from the link that was sent to your email.')
 
-    return render(request, 'portal/add_stock.html')
+    return render(request, 'portal/add_stock.html', {"CategoriesTable": categories_table})
 
 
 # mintarikenya.com/portal/manage_stock/
@@ -54,6 +67,8 @@ def manage_stock(request):
 
 # mintarikenya.com/portal/record_order/
 def record_order(request):
+    stock_table = Stock.objects.all()
+
     if request.method == 'POST':
         if request.POST.get('submit') == 'RecordOrder':
 
@@ -65,8 +80,9 @@ def record_order(request):
                 ProductTitle=request.POST['ProductTitle'],
                 DepositPaid=request.POST['DepositPaid'],
             )
+            messages.info(request, "Order recorded successfully", extra_tags="success")
 
-    return render(request, 'portal/record_order.html')
+    return render(request, 'portal/record_order.html', {"StockTable": stock_table})
 
 
 # mintarikenya.com/portal/manage_orders/
