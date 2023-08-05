@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import AuthenticationForm
 from accounts.forms import UserCreationForm
 from django.db import IntegrityError
@@ -66,7 +67,52 @@ def sign_up(request):
 
 # mintarikenya.co.ke/accounts/signin/
 def sign_in(request):
-    return render(request, 'portal/sign_up.html')
+    if request.user.is_authenticated:  # if user is already authenticated
+        return redirect('landing:index')
+    else:
+        form = AuthenticationForm(data=request.POST)
+
+        if request.method == 'POST':
+            if request.POST.get('submit') == 'log_in':
+
+                # # reCAPTCHA validation
+                # ''' Begin reCAPTCHA validation '''
+                # recaptcha_response = request.POST.get('g-recaptcha-response')
+                # url = 'https://www.google.com/recaptcha/api/siteverify'
+                # values = {
+                #     'secret': settings.GOOGLE_RECAPTCHA_SECRET_KEY,
+                #     'response': recaptcha_response
+                # }
+                # data = urllib.parse.urlencode(values).encode("utf-8")
+                # req = urllib.request.Request(url, data)
+                # response = urllib.request.urlopen(req)
+                # result = json.load(response)  # *result* of reCAPTCHA validation
+                # ''' End reCAPTCHA validation '''
+
+                # if result['success']:
+                username = str(request.POST['phone_number'])
+                password = request.POST['password']
+
+                user = authenticate(request, username=username, password=password)
+
+                if user is not None:
+                    if user.is_active:
+                        if user.is_staff:
+                            login(request, user)
+                            return redirect('portal:portal_index')
+                        else:
+                            login(request, user)
+                            return redirect('landing:index')
+                    else:
+                        # if user not active
+                        messages.error(request, 'Please verify your account from the link that was sent to your email.', extra_tags="error")
+                else:
+                    # if user not active (email and password)
+                    messages.error(request, 'There is no account with those details exists, please verify your login details or create an account.', extra_tags="error")
+            else:
+                # if recapture != success
+                messages.error(request, 'reCAPTCHA validation failed. Please reload page and try again.', extra_tags="error")
+        return render(request, 'portal/signin.html', {'form': form})
 
 
 # mintarikenya.co.ke/accounts/forgot_password/

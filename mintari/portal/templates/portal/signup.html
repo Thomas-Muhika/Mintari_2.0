@@ -5,7 +5,7 @@
 {% block title %}Sign Up | Mintari {% endblock %}
 
 {% block body %}
-<div class="lg:w-1/2 w-full flex flex-col items-center justify-center">
+<div class="lg:w-1/2 w-full flex flex-col items-center justify-center" id="sidebar_menus">
     <div class="auth-box-3">
         <div class="mobile-logo text-center mb-6 lg:hidden block">
             <a href="{% url 'landing:index' %}">
@@ -43,46 +43,56 @@
             {% csrf_token %}
             {% if ucf %}
                  <div class="fromGroup">
-                    <label class="block capitalize form-label">First Name*</label>
+                    <label class="block capitalize form-label">First Name</label>
                     <div class="relative ">
                         <input name="first_name" id="first_name" required="required" type="text" class="form-control" placeholder="Enter your first name">
                     </div>
                 </div>
 
                  <div class="fromGroup">
-                    <label class="block capitalize form-label">Last Name*</label>
+                    <label class="block capitalize form-label">Last Name</label>
                     <div class="relative ">
                         <input name="last_name" id="last_name" required="required" type="text" class="form-control" placeholder="Enter your last name">
                     </div>
                 </div>
 
                 <div class="fromGroup">
-                    <label class="block capitalize form-label">Email*</label>
+                    <label class="block capitalize form-label">Email</label>
                     <div class="relative ">
                         <input name="email" id="email" required="required" type="email" class="form-control" placeholder="Enter your email">
                     </div>
                 </div>
 
                  <div class="fromGroup">
-                    <label class="block capitalize form-label">Phone Number*</label>
+                    <label class="block capitalize form-label">Phone Number</label>
                     <div class="relative ">
                         <input name="phone_no" id="phone_no" required="required" type="number" class="form-control" placeholder="Enter your number eg. 0712345678">
                     </div>
                 </div>
 
-                <div class="fromGroup">
-                    <label class="block capitalize form-label">Password*</label>
-                    <div class="relative ">
-                        <input name="password1" id="password" required="required" type="password"  class="form-control" placeholder="Enter your password">
+                <div class="input-area">
+                    <label class="form-label" for="password">Password</label>
+                    <div class="relative">
+                        <input class="form-control pr-9" id="password1" name="password1" placeholder="Password" required="required" type="password">
+                        <button class="passIcon absolute top-2.5 right-3 text-slate-300 text-xl p-0 leading-none" id="passIcon" type="button">
+                            <iconify-icon class="inline-block" icon="heroicons-solid:eye-off" id="passwordhide"></iconify-icon>
+                            <iconify-icon class="hidden" icon="heroicons-outline:eye" id="passwordshow"></iconify-icon>
+                        </button>
                     </div>
                 </div>
 
-                <div class="fromGroup">
-                    <label class="block capitalize form-label">confirm password*</label>
-                    <div class="relative ">
-                        <input name="password2" id="confirm_password" required="required" type="password"  class="form-control" placeholder="Re-enter your password">
+                <div class="input-area">
+                    <label class="form-label" for="confirm_password">Confirm Password</label>
+                    <div class="relative">
+                        <input class="form-control pr-9" id="password2" name="password2" placeholder="Password" required="required" type="password">
+                        <button class="absolute top-2.5 right-3 text-slate-300 text-xl p-0 leading-none" id="ConfirmpassIcon" type="button">
+                            <iconify-icon class="inline-block" icon="heroicons-solid:eye-off" id="passwordhide"></iconify-icon>
+                            <iconify-icon class="hidden" icon="heroicons-outline:eye" id="passwordshow"></iconify-icon>
+                        </button>
                     </div>
+
                 </div>
+
             {% endif %}
 
             <div class="checkbox-area">

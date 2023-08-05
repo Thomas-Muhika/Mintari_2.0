@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.db.models import Sum
@@ -6,6 +7,7 @@ from django.contrib.auth.forms import AuthenticationForm
 
 
 # mintarikenya.com/portal/
+@login_required(login_url="accounts:signup")
 def portal_index(request):
 
     total_deposit = RecordOrder.objects.aggregate(Sum('DepositPaid'))['DepositPaid__sum']
@@ -16,10 +18,12 @@ def portal_index(request):
     return render(request, 'portal/dashboard.html', {'revenue': total_deposit, 'products_sold': products_sold})
 
 
+@login_required(login_url="accounts:signup")
 def calender(request):
     return render(request, 'portal/calender.html')
 
 
+@login_required(login_url="accounts:signup")
 def manage_categories(request):
     if request.method == 'POST':
         if request.POST.get('submit') == 'AddCategory':
@@ -34,6 +38,7 @@ def manage_categories(request):
 
 
 # mintarikenya.com/portal/add_stock/
+@login_required(login_url="accounts:signup")
 def add_stock(request):
 
     categories_table = StockCategories.objects.all()
@@ -60,12 +65,14 @@ def add_stock(request):
 
 
 # mintarikenya.com/portal/manage_stock/
+@login_required(login_url="accounts:signup")
 def manage_stock(request):
     stock_table = Stock.objects.all()
     return render(request, 'portal/manage_stock.html', {"StockTable": stock_table})
 
 
 # mintarikenya.com/portal/record_order/
+@login_required(login_url="accounts:signup")
 def record_order(request):
     stock_table = Stock.objects.all()
 
@@ -86,6 +93,7 @@ def record_order(request):
 
 
 # mintarikenya.com/portal/manage_orders/
+@login_required(login_url="accounts:signup")
 def manage_orders(request):
     records_table = RecordOrder.objects.all()
 

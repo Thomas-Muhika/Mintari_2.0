@@ -471,14 +471,14 @@
         required: true,
         email: true
       },
-      password: {
+      password1: {
         required: true,
         minlength: 6
       },
-      confirm_password: {
+      password2: {
         required: true,
         minlength: 6,
-        equalTo: "#password"
+        equalTo: "#password1"
       }
     },
     messages: {
@@ -487,11 +487,11 @@
         required: "Enter your email",
         email: "Enter a valid email"
       },
-      password: {
+      password1: {
         required: "Enter your password",
         minlength: "Password should contain minimum 6 characters with at-least One Capital and one Number"
       },
-      confirm_password: {
+      password2: {
         required: "Enter your password",
         minlength: "Password should contain minimum 6 character",
         equalTo: "Did not match the password"
