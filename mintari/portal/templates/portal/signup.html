@@ -1,0 +1,147 @@
+<!--extention base-->
+{% extends 'portal/accounts_base.html' %}
+{% load static %}
+<!--page title-->
+{% block title %}Sign Up | Mintari {% endblock %}
+
+{% block body %}
+<div class="lg:w-1/2 w-full flex flex-col items-center justify-center">
+    <div class="auth-box-3">
+        <div class="mobile-logo text-center mb-6 lg:hidden block">
+            <a href="{% url 'landing:index' %}">
+                <img src="{% static 'assets/images/logo/logo.svg' %}" alt="" class="mb-10 dark_logo">
+                <img src="{% static 'assets/images/logo/logo-white.svg' %}" alt="" class="mb-10 white_logo">
+            </a>
+        </div>
+        <div class="text-center 2xl:mb-10 mb-5">
+            <h4 class="font-medium">Sign Up</h4>
+            <div class="text-slate-500 dark:text-slate-400 text-base">
+                Sign Up to Mintari Kenya
+            </div>
+        </div>
+
+        <!-- BEGIN: Feedback Messages -->
+        {% for message in  messages %}
+            {% if 'error' in message.tags %}
+                <div class="py-[18px] px-6 font-normal text-sm rounded-md bg-white text-danger-500 border border-danger-500 dark:bg-slate-800">
+                    <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <iconify-icon class="text-2xl flex-0" icon="system-uicons:target"></iconify-icon>
+                        <p class="flex-1 font-Inter">
+                            {{ message }}
+                        </p>
+                        <div class="flex-0 text-xl cursor-pointer">
+                            <iconify-icon icon="line-md:close"></iconify-icon>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+        <!-- END: Feedback Messages -->
+
+        <!-- BEGIN: Registration Form -->
+        <form id="multipleValidation" class="space-y-4" action="{% url 'accounts:signup' %}" method="post">
+            {% csrf_token %}
+            {% if ucf %}
+                 <div class="fromGroup">
+                    <label class="block capitalize form-label">First Name*</label>
+                    <div class="relative ">
+                        <input name="first_name" id="first_name" required="required" type="text" class="form-control" placeholder="Enter your first name">
+                    </div>
+                </div>
+
+                 <div class="fromGroup">
+                    <label class="block capitalize form-label">Last Name*</label>
+                    <div class="relative ">
+                        <input name="last_name" id="last_name" required="required" type="text" class="form-control" placeholder="Enter your last name">
+                    </div>
+                </div>
+
+                <div class="fromGroup">
+                    <label class="block capitalize form-label">Email*</label>
+                    <div class="relative ">
+                        <input name="email" id="email" required="required" type="email" class="form-control" placeholder="Enter your email">
+                    </div>
+                </div>
+
+                 <div class="fromGroup">
+                    <label class="block capitalize form-label">Phone Number*</label>
+                    <div class="relative ">
+                        <input name="phone_no" id="phone_no" required="required" type="number" class="form-control" placeholder="Enter your number eg. 0712345678">
+                    </div>
+                </div>
+
+                <div class="fromGroup">
+                    <label class="block capitalize form-label">Password*</label>
+                    <div class="relative ">
+                        <input name="password1" id="password" required="required" type="password"  class="form-control" placeholder="Enter your password">
+                    </div>
+                </div>
+
+                <div class="fromGroup">
+                    <label class="block capitalize form-label">confirm password*</label>
+                    <div class="relative ">
+                        <input name="password2" id="confirm_password" required="required" type="password"  class="form-control" placeholder="Re-enter your password">
+                    </div>
+                </div>
+            {% endif %}
+
+            <div class="checkbox-area">
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" class="hidden" name="checkbox">
+                    <span class="h-4 w-4 border flex-none border-slate-100 dark:border-slate-800 rounded inline-flex ltr:mr-3 rtl:ml-3 relative transition-all duration-150 bg-slate-100 dark:bg-slate-900">
+                        <img src="{% static 'assets/images/icon/ck-white.svg' %}" alt="" class="h-[10px] w-[10px] block m-auto opacity-0"></span>
+                    <span class="text-slate-500 dark:text-slate-400 text-sm leading-6">
+                        You accept our Terms and Conditions and Privacy Policy
+                    </span>
+                </label>
+            </div>
+            <button name="submit" type="submit" class="btn btn-dark block w-full text-center" value="sign_up">Sign Up</button>
+        </form>
+        <!-- END: Registration Form -->
+
+<!--        <div class=" relative border-b-[#9AA2AF] border-opacity-[16%] border-b pt-6">-->
+<!--            <div class=" absolute inline-block bg-white dark:bg-slate-800 dark:text-slate-400 left-1/2 top-1/2 transform -translate-x-1/2-->
+<!--                        px-4 min-w-max text-sm text-slate-500 dark:text-slate-400font-normal ">-->
+<!--                Or continue with-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="max-w-[242px] mx-auto mt-8 w-full">-->
+
+<!--            &lt;!&ndash; BEGIN: Social Log in Area &ndash;&gt;-->
+<!--            <ul class="flex">-->
+<!--                <li class="flex-1">-->
+<!--                    <a href="#"-->
+<!--                       class="inline-flex h-10 w-10 bg-[#1C9CEB] text-white text-2xl flex-col items-center justify-center rounded-full">-->
+<!--                        <img src="{% static 'assets/images/icon/tw.svg' %}" alt="">-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="flex-1">-->
+<!--                    <a href="#"-->
+<!--                       class="inline-flex h-10 w-10 bg-[#395599] text-white text-2xl flex-col items-center justify-center rounded-full">-->
+<!--                        <img src="{% static 'assets/images/icon/fb.svg' %}" alt="">-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="flex-1">-->
+<!--                    <a href="#"-->
+<!--                       class="inline-flex h-10 w-10 bg-[#0A63BC] text-white text-2xl flex-col items-center justify-center rounded-full">-->
+<!--                        <img src="{% static 'assets/images/icon/in.svg' %}" alt="">-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="flex-1">-->
+<!--                    <a href="#"-->
+<!--                       class="inline-flex h-10 w-10 bg-[#EA4335] text-white text-2xl flex-col items-center justify-center rounded-full">-->
+<!--                        <img src="{% static 'assets/images/icon/gp.svg' %}" alt="">-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--            &lt;!&ndash; END: Social Log In Area &ndash;&gt;-->
+<!--        </div>-->
+        <div class="mx-auto font-normal text-slate-500 dark:text-slate-400 2xl:mt-12 mt-6 uppercase text-sm text-center">
+            Already registered?
+            <a href="{% url 'accounts:signin' %}" class="text-slate-900 dark:text-white font-medium hover:underline">
+                Sign In
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="">
+
+    <!-- page titles -->
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="icon" type="image/png" href="{% static 'assets/brand/LOGO.png' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" href="{% static 'assets/css/rt-plugins.css' %}">
+<!--    <link href="https://unpkg.com/aos@2.3.0/dist/aos.css" rel="stylesheet">-->
+<!--    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="">-->
+    <link rel="stylesheet" href="{% static 'assets/css/app.css' %}">
+    <!-- End : Theme CSS -->
+
+    <!-- Start : theme-store js -->
+    <script src="{% static 'assets/js/store.js' %}" sync></script>
+    <!-- End : theme-store js -->
+</head>
+
+<body class=" font-inter skin-default">
+    <!-- [if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.
+    </p>
+    <![endif] -->
+
+    <div class="loginwrapper bg-cover bg-no-repeat bg-center" style="background-image:url({% static 'assets/images/all-img/page-bg.png' %})">
+        <div class="lg-inner-column">
+            <div class="left-columns lg:w-1/2 lg:block hidden">
+                <div class="logo-box-3">
+                    <a href="{% url 'landing:index' %}" class="">
+                        <img src="{% static 'assets/images/logo/logo-c.png' %}" alt="">
+                    </a>
+                </div>
+            </div>
+            {% block body %}
+            {% endblock %}
+            <div class="auth-footer3 text-white py-5 px-5 text-xl w-full">
+                Best Of The Furniture World
+            </div>
+        </div>
+    </div>
+
+
+<!-- scripts -->
+
+<script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'assets/js/rt-plugins.js' %}"></script>
+<script src="{% static 'assets/js/app.js' %}"></script>
+
+</body>
+
+</html>

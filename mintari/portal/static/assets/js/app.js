@@ -461,7 +461,10 @@
   $("#multipleValidation").validate({
     errorElement: "span",
     rules: {
-      name: {
+      first_name: {
+        required: true
+      },
+      last_name: {
         required: true
       },
       email: {
@@ -486,7 +489,7 @@
       },
       password: {
         required: "Enter your password",
-        minlength: "Password should contain minimum 6 character"
+        minlength: "Password should contain minimum 6 characters with at-least One Capital and one Number"
       },
       confirm_password: {
         required: "Enter your password",
