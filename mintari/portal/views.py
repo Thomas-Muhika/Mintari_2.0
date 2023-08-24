@@ -59,11 +59,11 @@ def add_stock(request):
                 ProductPrice=request.POST['BasePrice'],
                 ShortDescription=request.POST['ShortDescription'],
                 DetailedDescription=request.POST['DetailedDescription'],
-                ProductBaseImage=request.POST['MainImage'],
-                ProductImageTopView=request.POST['ProductImageTopView'],
-                ProductImageLeftView=request.POST['ProductImageLeftView'],
-                ProductImageRightView=request.POST['ProductImageRightView'],
-                ProductImageFrontView=request.POST['ProductImageFrontView'],
+                ProductBaseImage=request.FILES['MainImage'],
+                ProductImageTopView=request.FILES['ProductImageTopView'],
+                ProductImageLeftView=request.FILES['ProductImageLeftView'],
+                ProductImageRightView=request.FILES['ProductImageRightView'],
+                ProductImageFrontView=request.FILES['ProductImageFrontView'],
             )
             messages.info(request, "Stock item saved successfully", extra_tags="success")
             # messages.error(request, 'Please verify your account from the link that was sent to your email.')

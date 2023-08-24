@@ -23,11 +23,11 @@ class Stock(models.Model):
     ProductPrice = models.FloatField()
     ShortDescription = models.CharField(max_length=250)
     DetailedDescription = models.CharField(max_length=500)
-    ProductBaseImage = models.ImageField(upload_to='stock_images')
-    ProductImageTopView = models.ImageField(upload_to='stock_images', default='media/stock_images/chair1.jpg')
-    ProductImageLeftView = models.ImageField(upload_to='stock_images', default='media/stock_images/chair1.jpg')
-    ProductImageRightView = models.ImageField(upload_to='stock_images', default='media/stock_images/chair1.jpg')
-    ProductImageFrontView = models.ImageField(upload_to='stock_images', default='media/stock_images/chair1.jpg')
+    ProductBaseImage = models.ImageField(upload_to='stock_images/')
+    ProductImageTopView = models.ImageField(upload_to='stock_images/', default='media/stock_images/chair1.jpg')
+    ProductImageLeftView = models.ImageField(upload_to='stock_images/', default='media/stock_images/chair1.jpg')
+    ProductImageRightView = models.ImageField(upload_to='stock_images/', default='media/stock_images/chair1.jpg')
+    ProductImageFrontView = models.ImageField(upload_to='stock_images/', default='media/stock_images/chair1.jpg')
 
     def __str__(self):
         return f"{self.ProductTitle} @ [{self.ProductPrice}]"
