@@ -9,5 +9,7 @@ urlpatterns = [
     re_path(r'^$', views.shop_index, name='shop_index'),
 
     # mintarikenya.co.ke/shop/product/
-    re_path(r'^product/$', views.single_product, name='product'),
+    # re_path(r'^product/$', views.single_product, name='product'),
+
+    path('product/<str:ProdCode>/', views.SingleProduct.as_view(), name='product'),
 ]

@@ -21,10 +21,13 @@ class Stock(models.Model):
     ProductWeight = models.FloatField()
     ProductDimension = models.CharField(max_length=50)
     ProductPrice = models.FloatField()
-    ShortDescription = models.CharField(max_length=100)
-    DetailedDescription = models.CharField(max_length=200)
-    ProductBaseImage = models.ImageField()
-    ProductImages = models.ImageField()
+    ShortDescription = models.CharField(max_length=250)
+    DetailedDescription = models.CharField(max_length=500)
+    ProductBaseImage = models.ImageField(upload_to='stock_images')
+    ProductImageTopView = models.ImageField(upload_to='stock_images')
+    ProductImageLeftView = models.ImageField(upload_to='stock_images')
+    ProductImageRightView = models.ImageField(upload_to='stock_images')
+    ProductImageFrontView = models.ImageField(upload_to='stock_images')
 
     def __str__(self):
         return f"{self.ProductTitle} @ [{self.ProductPrice}]"

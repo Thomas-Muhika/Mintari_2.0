@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+
+<head>
+	{% load static %}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+	<script>document.documentElement.className = document.documentElement.className + ' yes-js js_active js'</script>
+	<meta name='robots' content='max-image-preview:large'/>
+
+	<!-- page titles -->
+	<title>{% block title %}{% endblock %}</title>
+
+	<!-- description -->
+	<meta name="description" content="Powered by Slider Revolution 6.6.5 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface."/>
+	<link rel="icon" href="{% static 'assets/images/LOGO.png' %}" sizes="32x32"/>
+	<link rel="icon" href="{% static 'assets/images/LOGO.png' %}" sizes="192x192"/>
+	<link rel="apple-touch-icon" href="{% static 'assets/images/LOGO.png' %}"/>
+	<meta name="msapplication-TileImage" content="{% static 'assets/images/LOGO.png' %}"/>
+
+	<script data-cfasync="false" data-pagespeed-no-defer>
+			var gtm4wp_datalayer_name = "dataLayer";
+			var dataLayer = dataLayer || [];
+	</script>
+
+	<script type="text/javascript">
+		window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/umea.qodeinteractive.com\/wp-includes\/js\/wp-emoji-release.min.js"}};
+		/*! This file is auto-generated */
+		!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+	</script>
+
+	<style type="text/css">
+		img.wp-smiley,
+		img.emoji {
+			display: inline !important;
+			border: none !important;
+			box-shadow: none !important;
+			height: 1em !important;
+			width: 1em !important;
+			margin: 0 0.07em !important;
+			vertical-align: -0.1em !important;
+			background: none !important;
+			padding: 0 !important;
+		}
+	</style>
+
+	<link rel='stylesheet' id='sbi_styles-css' href="{% static 'assets/wp-content/plugins/instagram-feed/css/sbi-styles.mind42d.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='elegant-icons-css' href="{% static 'assets/wp-content/plugins/umea-core/inc/icons/elegant-icons/assets/css/elegant-icons.min52c7.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='font-awesome-css' href="{% static 'assets/wp-content/plugins/umea-core/inc/icons/font-awesome/assets/css/all.min52c7.css' %}" type='text/css' media='all'/>
+	<style id='font-awesome-inline-css' type='text/css'>
+		[data-font="FontAwesome"]:before {font-family: 'FontAwesome' !important;content: attr(data-icon) !important;speak: none !important;font-weight: normal !important;font-variant: normal !important;text-transform: none !important;line-height: 1 !important;font-style: normal !important;-webkit-font-smoothing: antialiased !important;-moz-osx-font-smoothing: grayscale !important;}
+	</style>
+	<link rel='stylesheet' id='ionicons-css' href="{% static 'assets/wp-content/plugins/umea-core/inc/icons/ionicons/assets/css/ionicons.min52c7.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='wp-block-library-css' href="{% static 'assets/wp-includes/css/dist/block-library/style.min52c7.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='wc-blocks-vendors-style-css' href="{% static 'assets/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style2ff6.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='wc-blocks-style-css' href="{% static 'assets/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style2ff6.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='jquery-selectBox-css' href="{% static 'assets/wp-content/plugins/yith-woocommerce-wishlist/assets/css/jquery.selectBox7359.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='yith-wcwl-font-awesome-css' href="{% static 'assets/wp-content/plugins/yith-woocommerce-wishlist/assets/css/font-awesome1849.css' %}" media='all'/>
+	<link rel='stylesheet' id='woocommerce_prettyPhoto_css-css' href="{% static 'assets/wp-content/plugins/woocommerce/assets/css/prettyPhoto005e.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='yith-wcwl-main-css' href="{% static 'assets/wp-content/plugins/yith-woocommerce-wishlist/assets/css/styledf38.css' %}" type='text/css' media='all'/>
+	<style id='global-styles-inline-css' type='text/css'>
+		body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+	</style>
+	<link rel='stylesheet' id='contact-form-7-css' href="{% static 'assets/wp-content/plugins/contact-form-7/includes/css/styles77e1.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='ctf_styles-css' href="{% static 'assets/wp-content/plugins/custom-twitter-feeds/css/ctf-styles.minb95e.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='rabbit_css-css' href='https://export.qodethemes.com/_toolbar/assets/css/rbt-modules.css' type='text/css' media='all'/>
+	<style id='woocommerce-inline-inline-css' type='text/css'>
+		.woocommerce form .form-row .required { visibility: visible; }
+	</style>
+	<link rel='stylesheet' id='ppress-frontend-css' href="{% static 'assets/wp-content/plugins/wp-user-avatar/assets/css/frontend.minb2f9.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='ppress-flatpickr-css' href="{% static 'assets/wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.minb2f9.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='ppress-select2-css' href="{% static 'assets/wp-content/plugins/wp-user-avatar/assets/select2/select2.min52c7.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='swiper-css' href="{% static 'assets/wp-content/plugins/qi-addons-for-elementor/assets/plugins/swiper/swiper.min52c7.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='qi-addons-for-elementor-grid-style-css' href="{% static 'assets/wp-content/plugins/qi-addons-for-elementor/assets/css/grid.min52c7.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='qi-addons-for-elementor-helper-parts-style-css' href="{% static 'assets/wp-content/plugins/qi-addons-for-elementor/assets/css/helper-parts.min52c7.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='qi-addons-for-elementor-style-css' href="{% static 'assets/wp-content/plugins/qi-addons-for-elementor/assets/css/main.min52c7.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='select2-css' href="{% static 'assets/wp-content/plugins/woocommerce/assets/css/select2823d.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='umea-core-dashboard-style-css' href="{% static 'assets/wp-content/plugins/umea-core/inc/core-dashboard/assets/css/core-dashboard.min52c7.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='perfect-scrollbar-css' href="{% static 'assets/wp-content/plugins/umea-core/assets/plugins/perfect-scrollbar/perfect-scrollbar52c7.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='umea-main-css' href="{% static 'assets/wp-content/themes/umea/assets/css/main.min52c7.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='umea-core-style-css' href="{% static 'assets/wp-content/plugins/umea-core/assets/css/umea-core.min52c7.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='yith-quick-view-css' href="{% static 'assets/wp-content/plugins/yith-woocommerce-quick-view/assets/css/yith-quick-viewb3a6.css' %}" type='text/css' media='all'/>
+	<style id='yith-quick-view-inline-css' type='text/css'>
+			#yith-quick-view-modal .yith-wcqv-main{background:#ffffff;}
+			#yith-quick-view-close{color:#cdcdcd;}
+			#yith-quick-view-close:hover{color:#ff0000;}
+	</style>
+	<link rel='stylesheet' id='magnific-popup-css' href="{% static 'assets/wp-content/themes/umea/assets/plugins/magnific-popup/magnific-popup52c7.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='umea-google-fonts-css' href='https://fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C500%2C600%2C700&amp;subset=latin-ext&amp;display=swap&amp;ver=1.0.0' type='text/css' media='all'/>
+	<link rel='stylesheet' id='umea-style-css' href="{% static 'assets/wp-content/themes/umea/style52c7.css' %}" type='text/css' media='all'/>
+	<style id='umea-style-inline-css' type='text/css'>
+		#qodef-page-outer { margin-top: -140px;}@media only screen and (max-width: 1024px) { #qodef-page-outer { margin-top: -70px;}}#qodef-page-footer-top-area .widget { margin-bottom: 0px;}#qodef-page-footer-bottom-area-inner { border-top-color: #000000;border-top-width: 1px;}#qodef-page-inner { padding: 0px;}@media only screen and (max-width: 1024px) { #qodef-page-inner { padding: 0px;}}#qodef-top-area { background-color: rgba(255,255,255,0);}#qodef-top-area-inner { height: 40px;padding-left: 40px;padding-right: 40px;}.qodef-page-title .qodef-m-content { padding-top: 140px;}@media only screen and (max-width: 1024px) { .qodef-page-title .qodef-m-content { padding-top: 70px;}}.qodef-header--standard #qodef-page-header { background-color: rgba(255,255,255,0);}.qodef-header--standard #qodef-page-header-border { background-color: #ffffff;}
+	</style>
+	<link rel='stylesheet' id='umea-core-elementor-css' href="{% static 'assets/wp-content/plugins/umea-core/inc/plugins/elementor/assets/css/elementor.min52c7.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='elementor-icons-css' href="{% static 'assets/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min91ce.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='elementor-frontend-legacy-css' href="{% static 'assets/wp-content/plugins/elementor/assets/css/frontend-legacy.min3621.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='elementor-frontend-css' href="{% static 'assets/wp-content/plugins/elementor/assets/css/frontend.min3621.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='elementor-post-13-css' href="{% static 'assets/wp-content/uploads/elementor/css/post-130f5e.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='elementor-post-682-css' href="{% static 'assets/wp-content/uploads/elementor/css/post-6820f5e.css' %}" type='text/css' media='all'/>
+	<link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=auto&amp;ver=6.0.5' type='text/css' media='all'/>
+	<script type='text/javascript' src= "{% static 'assets/wp-includes/js/jquery/jquery.minaf6c.js' %}" id='jquery-core-js'></script>
+	<script type='text/javascript' src= "{% static 'assets/wp-includes/js/jquery/jquery-migrate.mind617.js' %}" id='jquery-migrate-js'></script>
+	<script type='text/javascript' src= "{% static 'assets/wp-content/plugins/revslider/public/assets/js/rbtools.min0660.js' %}" id='tp-tools-js'></script>
+	<script type='text/javascript' src= "{% static 'assets/wp-content/plugins/revslider/public/assets/js/rs6.min0660.js' %}" id='revmin-js'></script>
+	<script type='text/javascript' src= "{% static 'assets/wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.minb2f9.js' %}" id='ppress-flatpickr-js'></script>
+	<script type='text/javascript' src= "{% static 'assets/wp-content/plugins/wp-user-avatar/assets/select2/select2.minb2f9.js' %}" id='ppress-select2-js'></script>
+	<link rel="alternate" type="application/json" href="{% static 'assets/wp-json/wp/v2/pages/682.json' %}" />
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.html?rsd"/>
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="{% static 'assets/wp-includes/wlwmanifest.xml' %}" />
+	<meta name="generator" content="WordPress 6.0.5"/>
+	<meta name="generator" content="WooCommerce 7.0.0"/>
+	<meta property='og:site_name' content='Ume&aring;'/>
+	<meta property='og:locale' content='en_US'/>
+	<meta property='og:description' content='Furniture Store'/>
+	<meta property='og:title' content='Ume&aring;'/>
+	<meta property='og:type' content='website'/>
+	<meta property='og:image:width' content='1200'/>
+	<meta property='og:image:height' content='630'/>
+	<meta name='twitter:card' content='summary'/>
+	<meta name='twitter:title' content='Ume&aring;'/>
+	<meta name='twitter:description' content='Furniture Store'/>
+
+	<script type="text/javascript">
+		(function(url){
+			if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+			var addEvent = function(evt, handler) {
+				if (window.addEventListener) {
+					document.addEventListener(evt, handler, false);
+				} else if (window.attachEvent) {
+					document.attachEvent('on' + evt, handler);
+				}
+			};
+			var removeEvent = function(evt, handler) {
+				if (window.removeEventListener) {
+					document.removeEventListener(evt, handler, false);
+				} else if (window.detachEvent) {
+					document.detachEvent('on' + evt, handler);
+				}
+			};
+			var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+			var logHuman = function() {
+				if (window.wfLogHumanRan) { return; }
+				window.wfLogHumanRan = true;
+				var wfscr = document.createElement('script');
+				wfscr.type = 'text/javascript';
+				wfscr.async = true;
+				wfscr.src = url + '&r=' + Math.random();
+				(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+				for (var i = 0; i < evts.length; i++) {
+					removeEvent(evts[i], logHuman);
+				}
+			};
+			for (var i = 0; i < evts.length; i++) {
+				addEvent(evts[i], logHuman);
+			}
+		})('indexdb15.html?wordfence_lh=1&amp;hid=2354B94796BB0E5ECE78FC258A1165C2');
+
+
+	</script>
+
+
+	<script data-cfasync="false" data-pagespeed-no-defer>
+			var dataLayer_content = {"pagePostType":"frontpage","pagePostType2":"single-page","pagePostAuthor":"admin"};
+			dataLayer.push( dataLayer_content );
+	</script>
+	<script data-cfasync="false">
+		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-5T772QJ');
+	</script>
+
+	<noscript>
+		<style>.woocommerce-product-gallery{ opacity: 1 !important; }</style>
+	</noscript>
+
+	<script>function setREVStartSize(e){
+					//window.requestAnimationFrame(function() {
+						window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
+						window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
+						try {
+							var pw = document.getElementById(e.c).parentNode.offsetWidth,
+								newh;
+							pw = pw===0 || isNaN(pw) || (e.l=="fullwidth" || e.layout=="fullwidth") ? window.RSIW : pw;
+							e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+							e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+							e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+							e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+							e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+							e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+							e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
+							if(e.layout==="fullscreen" || e.l==="fullscreen")
+								newh = Math.max(e.mh,window.RSIH);
+							else{
+								e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+								for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
+								e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+								e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+								for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+
+								var nl = new Array(e.rl.length),
+									ix = 0,
+									sl;
+								e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+								e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+								e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+								e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
+								for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+								sl = nl[0];
+								for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
+								var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
+								newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+							}
+							var el = document.getElementById(e.c);
+							if (el!==null && el) el.style.height = newh+"px";
+							el = document.getElementById(e.c+"_wrapper");
+							if (el!==null && el) {
+								el.style.height = newh+"px";
+								el.style.display = "block";
+							}
+						} catch(e){
+							console.log("Failure at Presize of Slider:" + e)
+						}
+					//});
+				  };
+	</script>
+
+	<style type="text/css" id="wp-custom-css">
+					.qodef-blog .qodef-e-media-image {
+		  width: 100%;
+		}
+
+		.page-id-1268 #qodef-page-mobile-header-inner {
+			padding-left: 8%;
+			padding-right: 8%;
+		}
+
+		.page-id-2636 #qodef-subscribe-popup-modal {
+			display: none;
+		}
+
+		.qodef-woo-dropdown-cart .qodef-m-action-link:hover {
+			color: #fff !important;
+		}
+	</style>
+</head>
+
+<body class="page-template page-template-page-full-width page-template-page-full-width-php page page-id-1555 theme-umea qode-framework-1.1.8 woocommerce-no-js qodef-qi--no-touch qi-addons-for-elementor-1.5.4 qodef-back-to-top--enabled  qodef-content-behind-header qodef-header--minimal qodef-header-appearance--none qodef-header--transparent qodef-content--behind-header qodef-mobile-header--minimal qodef-drop-down-second--full-width qodef-drop-down-second--default umea-core-1.2 umea-1.2 qodef-content-grid-1300 elementor-default elementor-kit-13 elementor-page elementor-page-1555" itemscope itemtype="https://schema.org/WebPage">
+    <svg focusable="false" height="0" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" viewBox="0 0 0 0" width="0" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "/>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR tableValues="0 0.49803921568627" type="table"/>
+                    <feFuncG tableValues="0 0.49803921568627" type="table"/>
+                    <feFuncB tableValues="0 0.49803921568627" type="table"/>
+                    <feFuncA tableValues="1 1" type="table"/>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"/>
+            </filter>
+        </defs>
+    </svg>
+    <svg focusable="false" height="0" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" viewBox="0 0 0 0" width="0" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "/>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR tableValues="0 1" type="table"/>
+                    <feFuncG tableValues="0 1" type="table"/>
+                    <feFuncB tableValues="0 1" type="table"/>
+                    <feFuncA tableValues="1 1" type="table"/>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"/>
+            </filter>
+        </defs>
+    </svg>
+    <svg focusable="false" height="0" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" viewBox="0 0 0 0" width="0" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                               values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "/>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR tableValues="0.54901960784314 0.98823529411765" type="table"/>
+                    <feFuncG tableValues="0 1" type="table"/>
+                    <feFuncB tableValues="0.71764705882353 0.25490196078431" type="table"/>
+                    <feFuncA tableValues="1 1" type="table"/>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"/>
+            </filter>
+        </defs>
+    </svg>
+    <svg focusable="false" height="0" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" viewBox="0 0 0 0" width="0" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                               values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "/>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR tableValues="0 1" type="table"/>
+                    <feFuncG tableValues="0 0.27843137254902" type="table"/>
+                    <feFuncB tableValues="0.5921568627451 0.27843137254902" type="table"/>
+                    <feFuncA tableValues="1 1" type="table"/>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"/>
+            </filter>
+        </defs>
+    </svg>
+    <svg focusable="false" height="0" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" viewBox="0 0 0 0" width="0" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                               values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "/>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR tableValues="0 0" type="table"/>
+                    <feFuncG tableValues="0 0.64705882352941" type="table"/>
+                    <feFuncB tableValues="0 1" type="table"/>
+                    <feFuncA tableValues="1 1" type="table"/>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"/>
+            </filter>
+        </defs>
+    </svg>
+    <svg focusable="false" height="0" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" viewBox="0 0 0 0" width="0" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                               values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "/>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR tableValues="0.78039215686275 1" type="table"/>
+                    <feFuncG tableValues="0 0.94901960784314" type="table"/>
+                    <feFuncB tableValues="0.35294117647059 0.47058823529412" type="table"/>
+                    <feFuncA tableValues="1 1" type="table"/>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"/>
+            </filter>
+        </defs>
+    </svg>
+    <svg focusable="false" height="0" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" viewBox="0 0 0 0" width="0" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                               values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "/>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR tableValues="0.65098039215686 0.40392156862745" type="table"/>
+                    <feFuncG tableValues="0 1" type="table"/>
+                    <feFuncB tableValues="0.44705882352941 0.4" type="table"/>
+                    <feFuncA tableValues="1 1" type="table"/>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"/>
+            </filter>
+        </defs>
+    </svg>
+    <svg focusable="false" height="0" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" viewBox="0 0 0 0" width="0" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                               values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "/>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR tableValues="0.098039215686275 1" type="table"/>
+                    <feFuncG tableValues="0 0.66274509803922" type="table"/>
+                    <feFuncB tableValues="0.84705882352941 0.41960784313725" type="table"/>
+                    <feFuncA tableValues="1 1" type="table"/>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"/>
+            </filter>
+        </defs>
+    </svg>
+    <div class="" id="qodef-page-wrapper">
+        <header id="qodef-page-header">
+
+            <div class=" qodef-skin--dark" id="qodef-page-header-inner">
+                <a class="qodef-header-logo-link qodef-height--set" href="{% url 'landing:index' %}" itemprop="url" rel="home" style="height:21px">
+                    <img width="300" height="200" src="{% static 'assets/images/Branding/logo_black.png' %}" class="qodef-header-logo-image qodef--main" alt="logo main" itemprop="image"/>
+					<img width="300" height="200" src="{% static 'assets/images/Branding/logo_black.png' %}" class="qodef-header-logo-image qodef--dark" alt="logo dark" itemprop="image"/>
+					<img width="300" height="200" src="{% static 'assets/images/Branding/logo_black.png' %}" class="qodef-header-logo-image qodef--light" alt="logo light" itemprop="image"/>
+                </a>
+                <div class="qodef-widget-holder qodef--one"></div>
+                <a class="qodef-opener-icon qodef-m qodef-source--predefined qodef-fullscreen-menu-opener" href="javascript:void(0)">
+                    <span class="qodef-m-icon qodef--open">
+                        <svg class="qodef-fullscreen-menu-opener-icon" enable-background="new 0 0 40 40" height="40px" viewBox="0 0 40 40" width="40px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0px"><circle class="qodef-dot" cx="20" cy="20" r="1.647" /><circle class="qodef-arc-1" cx="20" cy="20" r="19"/><circle class="qodef-arc-2" cx="20" cy="20" r="19"/></svg> </span>
+                    <span class="qodef-m-icon qodef--close">
+                        <svg class="qodef-close" enable-background="new 0 0 13 13" height="13px" viewBox="0 0 13 13" width="13px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0px"><line x1="0" x2="13" y1="13" y2="0" /><line x1="0" x2="13" y1="13" y2="0"/><line x1="13" x2="0" y1="13" y2="0"/><line x1="13" x2="0" y1="13" y2="0"/></svg>
+                    </span>
+                </a>
+            </div>
+        </header>
+
+        <header id="qodef-page-mobile-header">
+            <div class="" id="qodef-page-mobile-header-inner">
+                <a class="qodef-mobile-header-logo-link" href="{% url 'landing:index' %}" itemprop="url" rel="home" style="height:21px">
+                    <img alt="logo main" class="qodef-header-logo-image qodef--main" height="42" itemprop="image" src="{% static 'assets/images/Branding/logo_black.png' %}" width="114"/>
+                    <img alt="logo light" class="qodef-header-logo-image qodef--light" height="42" itemprop="image" src="{% static 'assets/images/Branding/logo_black.png' %}" width="114"/></a>
+                <a class="qodef-opener-icon qodef-m qodef-source--predefined qodef-fullscreen-menu-opener" href="javascript:void(0)">
+                    <span class="qodef-m-icon qodef--open">
+                        <svg class="qodef-fullscreen-menu-opener-icon" enable-background="new 0 0 40 40" height="40px" viewBox="0 0 40 40" width="40px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0px"><circle class="qodef-dot" cx="20" cy="20" r="1.647" /><circle class="qodef-arc-1" cx="20" cy="20" r="19"/><circle class="qodef-arc-2" cx="20" cy="20" r="19"/></svg> </span><span class="qodef-m-icon qodef--close">
+                    <svg class="qodef-close" enable-background="new 0 0 13 13" height="13px" viewBox="0 0 13 13" width="13px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0px"><line x1="0" x2="13" y1="13" y2="0" /><line x1="0" x2="13" y1="13" y2="0"/><line x1="13" x2="0" y1="13" y2="0"/><line x1="13" x2="0" y1="13" y2="0"/></svg></span>
+                </a>
+            </div>
+        </header>
+
+        <div id="qodef-page-outer">
+            <div class="qodef-content-full-width" id="qodef-page-inner">
+                <main class="qodef-grid qodef-layout--template " id="qodef-page-content">
+                    <div class="qodef-grid-inner clear">
+                        <div class="qodef-grid-item qodef-page-content-section qodef-col--12">
+                            <div class="elementor elementor-1555" data-elementor-id="1555" data-elementor-type="wp-page">
+                                <div class="elementor-inner">
+                                    <div class="elementor-section-wrap">
+
+                                        <section class="elementor-section elementor-top-section elementor-element elementor-element-8d0c468 elementor-section-full_width elementor-section-height-min-height qodef-elementor-content-grid elementor-section-height-default elementor-section-items-middle" data-element_type="section" data-id="8d0c468" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                            <div class="elementor-container elementor-column-gap-default">
+                                                <div class="elementor-row">
+                                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3ce05b0"
+                                                         data-element_type="column" data-id="3ce05b0">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-076d2f9 elementor-widget__width-initial elementor-widget elementor-widget-umea_core_section_title" data-element_type="widget" data-id="076d2f9" data-widget_type="umea_core_section_title.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="qodef-shortcode qodef-m  qodef-section-title qodef-alignment--left ">
+                                                                            <h6 class="qodef-m-tagline">
+                                                                                New Informations
+                                                                            </h6>
+                                                                            <h2 class="qodef-m-title">
+                                                                                Our shop is coming soon
+                                                                            </h2>
+                                                                            <div class="qodef-m-separator clear">
+                                                                                <div class="qodef-shortcode qodef-m  qodef-separator clear qodef-position--left">
+                                                                                    <div class="qodef-m-line" style="border-color: #000000;border-style: solid;width: 120px;border-bottom-width: 1px;margin-top: 16px;margin-bottom: 17px"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <p class="qodef-m-text">Lorem ipsum dolor sit
+                                                                                amet, consectetur adipiscing elit, sed do
+                                                                                eiusmod tempor incididunt ut labore et
+                                                                                dolore magna aliqua. Arcu odio ut sem nulla
+                                                                                pharetra diam.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-93cdb70 elementor-widget elementor-widget-spacer"
+                                                                     data-element_type="widget" data-id="93cdb70"
+                                                                     data-widget_type="spacer.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-spacer">
+                                                                            <div class="elementor-spacer-inner"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-31567f4 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="31567f4" data-widget_type="text-editor.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-text-editor elementor-clearfix">
+                                                                            <h3>Subscribe to newsletter</h3></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-4fb80f0 elementor-widget__width-initial elementor-widget elementor-widget-shortcode" data-element_type="widget" data-id="4fb80f0" data-widget_type="shortcode.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-shortcode">
+                                                                            <div class="wpcf7" dir="ltr" id="wpcf7-f1025-p1555-o1" lang="en-US" role="form">
+                                                                                <div class="screen-reader-response"><p aria-atomic="true" aria-live="polite" role="status"></p>
+                                                                                    <ul></ul>
+                                                                                </div>
+                                                                                <form action="https://umea.qodeinteractive.com/coming-soon/#wpcf7-f1025-p1555-o1" class="wpcf7-form init demo" data-status="init" method="post" novalidate="novalidate">
+                                                                                    <div style="display: none;">
+                                                                                        <input name="_wpcf7" type="hidden" value="1025"/>
+                                                                                        <input name="_wpcf7_version" type="hidden" value="5.6.4"/>
+                                                                                        <input name="_wpcf7_locale" type="hidden" value="en_US"/>
+                                                                                        <input name="_wpcf7_unit_tag" type="hidden" value="wpcf7-f1025-p1555-o1"/>
+                                                                                        <input name="_wpcf7_container_post" type="hidden" value="1555"/>
+                                                                                        <input name="_wpcf7_posted_data_hash" type="hidden" value=""/>
+                                                                                    </div>
+                                                                                    <div class="qodef-contact-form-7--single-line">
+                                                                                        <span class="wpcf7-form-control-wrap" data-name="your-email"><input aria-invalid="false" aria-required="true" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" name="your-email" placeholder="Your Email" size="40" type="email" value=""/>
+                                                                                        </span>
+                                                                                        <button class="wpcf7-form-control wpcf7-submit qodef-button qodef-size--normal qodef-layout--filled qodef-m" type="submit">
+                                                                                            <span class="qodef-m-text">Submit</span>
+                                                                                        </button>
+                                                                                    </div>
+                                                                                    <div aria-hidden="true" class="wpcf7-response-output"></div>
+                                                                                </form>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <section class="elementor-section elementor-inner-section elementor-element elementor-element-203fd40 elementor-section-full_width elementor-section-height-default elementor-section-height-default qodef-elementor-content-no" data-element_type="section" data-id="203fd40">
+                                                                    <div class="elementor-container elementor-column-gap-default">
+                                                                        <div class="elementor-row">
+                                                                            <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-be4e48a" data-element_type="column" data-id="be4e48a">
+                                                                                <div class="elementor-column-wrap elementor-element-populated">
+                                                                                    <div class="elementor-widget-wrap">
+                                                                                        <div class="elementor-element elementor-element-3a30633 elementor-widget__width-auto elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="3a30633" data-widget_type="text-editor.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <div class="elementor-text-editor elementor-clearfix">
+                                                                                                    <h6>
+                                                                                                        <a href="https://www.facebook.com/QodeInteractive/" rel="noopener" target="_blank">FB.</a>
+                                                                                                    </h6>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="elementor-element elementor-element-d7ccb26 elementor-widget__width-auto elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="d7ccb26" data-widget_type="text-editor.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <div class="elementor-text-editor elementor-clearfix">
+                                                                                                    <h6><a href="#" rel="noopener" target="_blank">Li.</a>
+                                                                                                    </h6></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="elementor-element elementor-element-9b7ba59 elementor-widget__width-auto elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="9b7ba59" data-widget_type="text-editor.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <div class="elementor-text-editor elementor-clearfix">
+                                                                                                    <h6>
+                                                                                                        <a href="https://www.instagram.com/qodeinteractive/" rel="noopener" target="_blank">IN.</a>
+                                                                                                    </h6></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="elementor-element elementor-element-8831457 elementor-widget__width-auto elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="8831457" data-widget_type="text-editor.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <div class="elementor-text-editor elementor-clearfix">
+                                                                                                    <h6>
+                                                                                                        <a href="https://www.behance.net/qode_interactive" rel="noopener" target="_blank">BE.</a>
+                                                                                                    </h6></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="elementor-element elementor-element-0b24e03 elementor-widget__width-auto elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="0b24e03" data-widget_type="text-editor.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <div class="elementor-text-editor elementor-clearfix">
+                                                                                                    <h6>
+                                                                                                        <a href="https://dribbble.com/QodeInteractive" rel="noopener" target="_blank">DR.</a>
+                                                                                                    </h6></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <a href="#" id="qodef-back-to-top">
+            <svg enable-background="new 0 0 40 40" height="40px" viewBox="0 0 40 40" width="40px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0px"><path d="M20.771,27.048V14.379L26,19.607l0.664-0.664l-6.03-6.029c-0.022-0.022-0.054-0.025-0.079-0.042  c-0.026-0.018-0.043-0.047-0.072-0.059c-0.016-0.006-0.033,0-0.048-0.004c-0.043-0.013-0.084-0.013-0.129-0.013  c-0.048,0-0.091,0-0.137,0.014c-0.015,0.005-0.03-0.001-0.044,0.005c-0.029,0.011-0.044,0.039-0.068,0.056  c-0.028,0.018-0.061,0.021-0.085,0.044l-5.697,5.697l0.664,0.665l4.896-4.896v12.668v0.47h0.939V27.048z" />
+                <circle class="qodef-arc-1" cx="20" cy="20" r="19"/>
+                <circle class="qodef-arc-2" cx="20" cy="20" r="19"/></svg>
+        </a>
+        <div class="qodef-alignment--left" id="qodef-side-area">
+            <a class="qodef-opener-icon qodef-m qodef-source--predefined" href="javascript:void(0)" id="qodef-side-area-close">
+    <span class="qodef-m-icon qodef--open">
+    <svg class="qodef-close" enable-background="new 0 0 13 13" height="13px" viewBox="0 0 13 13" width="13px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0px"><line x1="0" x2="13" y1="13" y2="0" /><line x1="0" x2="13" y1="13" y2="0"/><line x1="13" x2="0" y1="13" y2="0"/><line x1="13" x2="0" y1="13" y2="0"/></svg> </span>
+            </a>
+            <div id="qodef-side-area-inner">
+                <div class="widget widget_text" data-area="side-area" id="text-14">
+                    <div class="textwidget">
+                        <div style="margin: 0px 0px -17px 0px;"><a href="../index.html"><img alt="" class="alignnone wp-image-1394" height="19" loading="lazy" src="{% static 'assets/wp-content/uploads/2021/04/umea-logo-sidearea.png' %}" width="74"/></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget widget_umea_core_separator" data-area="side-area" id="umea_core_separator-8">
+                    <div class="qodef-shortcode qodef-m  qodef-separator clear ">
+                        <div class="qodef-m-line" style="border-color: #a1a1a1;width: 70px;border-bottom-width: 1px;margin-top: 0px;margin-bottom: 20px"></div>
+                    </div>
+                </div>
+                <div class="widget widget_text" data-area="side-area" id="text-10">
+                    <div class="textwidget">
+                        <div style="margin: 0px 0px -12px 0px">Amet mattis vulputate enim nulla aliquet. Id porta nibh venenatis cras sed felis dictumst vestibulum rhoncus est.
+                        </div>
+                    </div>
+                </div>
+                <div class="widget_text widget widget_custom_html" data-area="side-area" id="custom_html-4">
+                    <div class="textwidget custom-html-widget">
+                        <a class="qodef-hover-color" href="https://www.facebook.com/QodeInteractive" rel="noopener" target="_blank"><h6 style="font-size:14px;display: inline;margin-right: 2.2%;">FB.</h6></a>
+                        <a class="qodef-hover-color" href="https://twitter.com/QodeInteractive" rel="noopener" target="_blank"><h6 style="font-size:14px;display: inline;margin-right: 2.2%;">TW.</h6></a>
+                        <a class="qodef-hover-color" href="https://www.instagram.com/qodeinteractive/" rel="noopener" target="_blank"><h6 style="font-size:14px;display: inline;margin-right: 2.2%;">IN.</h6></a>
+                        <a class="qodef-hover-color" href="https://www.behance.net/qode_interactive" rel="noopener" target="_blank"><h6 style="font-size:14px;display: inline;margin-right: 2.2%;">BE.</h6></a>
+                        <a class="qodef-hover-color" href="https://dribbble.com/QodeInteractive" rel="noopener" target="_blank"><h6 style="font-size:14px;display: inline;">DR.</h6></a>
+                    </div>
+                </div>
+                <div class="widget widget_umea_core_separator" data-area="side-area" id="umea_core_separator-15">
+                    <div class="qodef-shortcode qodef-m  qodef-separator clear ">
+                        <div class="qodef-m-line" style="width: 1px;border-bottom-width: 1px;margin-top: 0px;margin-bottom: 37px"></div>
+                    </div>
+                </div>
+                <div class="widget widget_text" data-area="side-area" id="text-16">
+                    <div class="textwidget">
+                        <div style="margin-left:-2px;">
+                            <div id="sbi_mod_error">
+                                <span>This error message is only visible to WordPress admins</span><br/>
+                                <p><strong>Error: No feed found.</strong>
+                                <p>Please go to the Instagram Feed settings page to create a feed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget widget_umea_core_separator" data-area="side-area" id="umea_core_separator-9">
+                    <div class="qodef-shortcode qodef-m  qodef-separator clear ">
+                        <div class="qodef-m-line" style="border-color: #ffffff;width: 1px;border-bottom-width: 1px;margin-top: 0px;margin-bottom: 18px"></div>
+                    </div>
+                </div>
+                <div class="widget widget_text" data-area="side-area" id="text-12">
+                    <div class="textwidget">
+                        <h6 style="font-size: 13px; line-height: 28px; margin-bottom: -23px;">Quick links</h6>
+                    </div>
+                </div>
+                <div class="widget widget_nav_menu" data-area="side-area" id="nav_menu-6">
+                    <div class="menu-side-area-container">
+                        <ul class="menu" id="menu-side-area">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1419" id="menu-item-1419"><a href="#">New collections</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1420" id="menu-item-1420"><a href="#">Tailor made</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1421" id="menu-item-1421"><a href="#">Pattern options</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1422" id="menu-item-1422"><a href="#">Wood Recycling</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1423" id="menu-item-1423"><a href="#">Special Vouchers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="qodef-sp-holder qodef-sp-prevent-cookies" id="qodef-subscribe-popup-modal">
+            <div class="qodef-sp-inner">
+                <a class="qodef-sp-close" href="javascript:void(0)">
+                    <span class="qodef-icon-elegant-icons icon_close"></span> </a>
+                <div class="qodef-sp-content-container">
+                    <h4 class="qodef-sp-title">Sign up for our newsletter </h4>
+                    <div class="wpcf7" dir="ltr" id="wpcf7-f1025-o2" lang="en-US" role="form">
+                        <div class="screen-reader-response"><p aria-atomic="true" aria-live="polite" role="status"></p>
+                            <ul></ul>
+                        </div>
+                        <form action="https://umea.qodeinteractive.com/coming-soon/#wpcf7-f1025-o2" class="wpcf7-form init demo" data-status="init" method="post" novalidate="novalidate">
+                            <div style="display: none;">
+                                <input name="_wpcf7" type="hidden" value="1025"/>
+                                <input name="_wpcf7_version" type="hidden" value="5.6.4"/>
+                                <input name="_wpcf7_locale" type="hidden" value="en_US"/>
+                                <input name="_wpcf7_unit_tag" type="hidden" value="wpcf7-f1025-o2"/>
+                                <input name="_wpcf7_container_post" type="hidden" value="0"/>
+                                <input name="_wpcf7_posted_data_hash" type="hidden" value=""/>
+                            </div>
+                            <div class="qodef-contact-form-7--single-line">
+                                <span class="wpcf7-form-control-wrap" data-name="your-email">
+                                <input aria-invalid="false" aria-required="true" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" name="your-email" placeholder="Your Email" size="40" type="email" value=""/></span>
+                                <button class="wpcf7-form-control wpcf7-submit qodef-button qodef-size--normal qodef-layout--filled qodef-m" type="submit">
+                                    <span class="qodef-m-text">Submit</span></button>
+                            </div>
+                            <div aria-hidden="true" class="wpcf7-response-output"></div>
+                        </form>
+                    </div>
+                    <div class="qodef-sp-promo-holder">
+                        <div class="qodef-sp-promo-image-holder">
+                            <img alt="x" class="attachment-full size-full" height="61" loading="lazy" src="{% static 'assets/wp-content/uploads/2020/12/subscribe-img.png' %}" width="70"/></div>
+                        <div class="qodef-sp-promo-info">
+                            <h5 class="qodef-sp-promo-title">Get our special promo </h5>
+                            <p class="qodef-sp-promo-text">Be the first to get notified about all our promos, news &amp; more. </p>
+                        </div>
+                    </div>
+                    <div class="qodef-sp-prevent">
+                        <div class="qodef-sp-prevent-inner">
+                            <span class="qodef-sp-prevent-input" data-value="no">
+                                <svg enable-background="new 0 0 11.6 11.556" height="11.556px" viewBox="0 0 11.6 11.556" width="11.6px" x="0px" xml:space="preserve" y="0px">
+                                    <path d="M11.496,0.624c0.027,0.164-0.005,0.319-0.096,0.465l-5.195,7.52c-0.019,0-0.032,0.009-0.041,0.027  C6.154,8.654,6.15,8.672,6.15,8.69C6.022,8.818,5.867,8.881,5.685,8.881c-0.055,0-0.119-0.009-0.191-0.027L5.466,8.827  C5.412,8.809,5.375,8.791,5.357,8.772c-0.019,0-0.032-0.004-0.041-0.014C5.307,8.75,5.302,8.74,5.302,8.731  c0-0.009-0.009-0.014-0.027-0.014L5.22,8.663C5.184,8.626,5.166,8.599,5.166,8.581L2.951,6.065c-0.128-0.109-0.191-0.25-0.191-0.424  c0-0.173,0.055-0.319,0.164-0.438c0.109-0.118,0.25-0.182,0.424-0.191C3.52,5.003,3.67,5.053,3.798,5.163L5.63,7.268l4.758-6.863  c0.127-0.182,0.301-0.273,0.52-0.273c0.109,0,0.219,0.037,0.328,0.109C11.381,0.332,11.468,0.459,11.496,0.624z" fill="#020202"/>
+                                </svg>
+                            </span>
+                            <label class="qodef-sp-prevent-label">Prevent This Pop-up</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="qodef-fullscreen-area">
+            <div class="qodef-content-grid">
+                <div id="qodef-fullscreen-area-inner">
+                    <nav class="qodef-fullscreen-menu">
+                        <ul class="menu" id="menu-fullscreen-menu">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4454 qodef-menu-item--narrow" id="menu-item-4454">
+                                <a href="#"><span class="qodef-menu-item-text">Home</span>
+                                    <svg class="qodef-menu-item-arrow" enable-background="new 0 0 15.797 13.375" height="13.375px" viewBox="0 0 15.797 13.375" width="15.797px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0px"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
+                                </a>
+                                <div class="qodef-drop-down-second">
+                                    <div class="qodef-drop-down-second-inner">
+                                        <ul class="sub-menu">
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-5953" id="menu-item-5953">
+                                                <a href="../index.html"><span class="qodef-menu-item-text">Main Home</span></a>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4461" id="menu-item-4461">
+                                                <a href="../fullscreen-showcase/index.html"><span class="qodef-menu-item-text">Fullscreen Showcase</span></a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4462" id="menu-item-4462">
+                                                <a href="../floating-products/index.html"><span class="qodef-menu-item-text">Floating Products</span></a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4464" id="menu-item-4464">
+                                                <a href="../handcrafted-furniture/index.html"><span class="qodef-menu-item-text">Handcrafted Furniture</span></a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4465" id="menu-item-4465">
+                                                <a href="../craftsmanship-home/index.html"><span class="qodef-menu-item-text">Craftsmanship Home</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4455 qodef-menu-item--narrow" id="menu-item-4455">
+                                <a href="#"><span class="qodef-menu-item-text">Pages</span>
+                                    <svg class="qodef-menu-item-arrow" enable-background="new 0 0 15.797 13.375" height="13.375px" viewBox="0 0 15.797 13.375" width="15.797px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0px"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
+                                </a>
+                                <div class="qodef-drop-down-second">
+                                    <div class="qodef-drop-down-second-inner">
+                                        <ul class="sub-menu">
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4466" id="menu-item-4466">
+                                                <a href="../about-us/index.html"><span class="qodef-menu-item-text">About Us</span></a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4469" id="menu-item-4469">
+                                                <a href="../our-history/index.html"><span class="qodef-menu-item-text">Our History</span></a>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4468" id="menu-item-4468">
+                                                <a href="../store-locator/index.html"><span class="qodef-menu-item-text">Store Locator</span></a>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4470" id="menu-item-4470">
+                                                <a href="../pricing-plans/index.html"><span class="qodef-menu-item-text">Pricing Plans</span></a>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4467" id="menu-item-4467">
+                                                <a href="../faq-page/index.html"><span class="qodef-menu-item-text">FAQ Page</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4456 qodef-menu-item--narrow" id="menu-item-4456">
+                                <a href="#"><span class="qodef-menu-item-text">Shop</span>
+                                    <svg class="qodef-menu-item-arrow" enable-background="new 0 0 15.797 13.375" height="13.375px" viewBox="0 0 15.797 13.375" width="15.797px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0px"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
+                                </a>
+                                <div class="qodef-drop-down-second">
+                                    <div class="qodef-drop-down-second-inner">
+                                        <ul class="sub-menu">
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4471" id="menu-item-4471">
+                                                <a href="../shop/index.html"><span class="qodef-menu-item-text">Sidebar Right</span></a>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5282" id="menu-item-5282">
+                                                <a href="../divided-slider/index.html"><span class="qodef-menu-item-text">Divided Slider</span></a>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5284" id="menu-item-5284">
+                                                <a href="../asymetric-list/index.html"><span class="qodef-menu-item-text">Asymetric List</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4457 qodef-menu-item--narrow" id="menu-item-4457">
+                                <a href="#"><span class="qodef-menu-item-text">Blog</span>
+                                    <svg class="qodef-menu-item-arrow" enable-background="new 0 0 15.797 13.375" height="13.375px" viewBox="0 0 15.797 13.375" width="15.797px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0px"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
+                                </a>
+                                <div class="qodef-drop-down-second">
+                                    <div class="qodef-drop-down-second-inner">
+                                        <ul class="sub-menu">
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4475" id="menu-item-4475">
+                                                <a href="../right-sidebar/index.html"><span class="qodef-menu-item-text">Right Sidebar</span></a>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5285" id="menu-item-5285">
+                                                <a href="../no-sidebar/index.html"><span class="qodef-menu-item-text">No Sidebar</span></a>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5286" id="menu-item-5286">
+                                                <a href="../slider-list/index.html"><span class="qodef-menu-item-text">Slider List</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4459" id="menu-item-4459">
+                                <a href="../landing/index.html"><span class="qodef-menu-item-text">Landing</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.RS_MODULES = window.RS_MODULES || {};
+        window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+        window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+        window.RS_MODULES.defered = false;
+        window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+        window.RS_MODULES.type = 'compiled';
+
+    </script>
+    <div class="rbt-toolbar" data-button-alt="no" data-button-horizontal="right" data-button-position="25%" data-featured="" data-theme="Umeå"></div>
+
+
+    <noscript>
+        <iframe aria-hidden="true" height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5T772QJ" style="display:none;visibility:hidden" width="0"></iframe>
+    </noscript>
+
+    <script type="text/javascript">
+        var sbiajaxurl = "../wp-admin/admin-ajax.html";
+
+    </script>
+    <div id="yith-quick-view-modal">
+        <div class="yith-quick-view-overlay"></div>
+        <div class="yith-wcqv-wrapper">
+            <div class="yith-wcqv-main">
+                <div class="yith-wcqv-head">
+                    <a class="yith-wcqv-close" href="#" id="yith-quick-view-close">X</a>
+                </div>
+                <div class="woocommerce single-product" id="yith-quick-view-content"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        (function () {
+            var c = document.body.className;
+            c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+            document.body.className = c;
+        })();
+
+    </script>
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button aria-label="Close (Esc)" class="pswp__button pswp__button--close"></button>
+                    <button aria-label="Share" class="pswp__button pswp__button--share"></button>
+                    <button aria-label="Toggle fullscreen" class="pswp__button pswp__button--fs"></button>
+                    <button aria-label="Zoom in/out" class="pswp__button pswp__button--zoom"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button aria-label="Previous (arrow left)" class="pswp__button pswp__button--arrow--left"></button>
+                <button aria-label="Next (arrow right)" class="pswp__button pswp__button--arrow--right"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script id="tmpl-unavailable-variation-template" type="text/template">
+        <p>Sorry, this product is unavailable. Please choose a different combination.</p>
+    </script>
+    <link href='../wp-content/plugins/woocommerce/assets/css/photoswipe/photoswipe.min823d.css?ver=7.0.0' id='photoswipe-css' media='all' rel='stylesheet' type='text/css'/>
+    <link href='../wp-content/plugins/woocommerce/assets/css/photoswipe/default-skin/default-skin.min823d.css?ver=7.0.0' id='photoswipe-default-skin-css' media='all' rel='stylesheet' type='text/css'/>
+    <link href='../wp-content/plugins/elementor/assets/lib/animations/animations.min3621.css?ver=3.7.8' id='e-animations-css' media='all' rel='stylesheet' type='text/css'/>
+    <link href='../wp-content/plugins/revslider/public/assets/css/rs60660.css?ver=6.6.5' id='rs-plugin-settings-css' media='all' rel='stylesheet' type='text/css'/>
+    <style id='rs-plugin-settings-inline-css' type='text/css'>
+        #rs-demo-id {}
+    </style>
+
+
+    <script id='jquery-selectBox-js' src="{% static 'assets/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.selectBox.min7359.js' %}" type='text/javascript'></script>
+    <script id='prettyPhoto-js' src="{% static 'assets/wp-content/plugins/woocommerce/assets/js/prettyPhoto/jquery.prettyPhoto.min005e.js' %}" type='text/javascript'></script>
+    <script id='jquery-yith-wcwl-js-extra' type='text/javascript'>
+        /* <![CDATA[ */
+        var yith_wcwl_l10n = {"ajax_url":"\/wp-admin\/admin-ajax.php","redirect_to_cart":"no","multi_wishlist":"","hide_add_button":"1","enable_ajax_loading":"","ajax_loader_url":"https:\/\/umea.qodeinteractive.com\/wp-content\/plugins\/yith-woocommerce-wishlist\/assets\/images\/ajax-loader-alt.svg","remove_from_wishlist_after_add_to_cart":"1","is_wishlist_responsive":"","time_to_close_prettyphoto":"3000","fragments_index_glue":".","reload_on_found_variation":"1","mobile_media_query":"768","labels":{"cookie_disabled":"We are sorry, but this feature is available only if cookies on your browser are enabled.","added_to_cart_message":"<div class=\"woocommerce-notices-wrapper\"><div class=\"woocommerce-message\" role=\"alert\">Product added to cart successfully<\/div><\/div>"},"actions":{"add_to_wishlist_action":"add_to_wishlist","remove_from_wishlist_action":"remove_from_wishlist","reload_wishlist_and_adding_elem_action":"reload_wishlist_and_adding_elem","load_mobile_action":"load_mobile","delete_item_action":"delete_item","save_title_action":"save_title","save_privacy_action":"save_privacy","load_fragments":"load_fragments"},"nonce":{"add_to_wishlist_nonce":"51ffb74114","remove_from_wishlist_nonce":"277f1e547a","reload_wishlist_and_adding_elem_nonce":"984a75e343","load_mobile_nonce":"ed3207c253","delete_item_nonce":"35310361ab","save_title_nonce":"70c335a9fc","save_privacy_nonce":"5341ee303d","load_fragments_nonce":"121d566c77"}};
+        /* ]]> */
+
+    </script>
+    <script id='jquery-yith-wcwl-js' src="{% static 'assets/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.yith-wcwl.mindf38.js' %}" type='text/javascript'></script>
+    <script id='swv-js' src="{% static 'assets/wp-content/plugins/contact-form-7/includes/swv/js/index77e1.js' %}" type='text/javascript'></script>
+    <script id='contact-form-7-js-extra' type='text/javascript'>
+        /* <![CDATA[ */
+        var wpcf7 = {"api":{"root":"https:\/\/umea.qodeinteractive.com\/wp-json\/","namespace":"contact-form-7\/v1"}};
+        /* ]]> */
+
+    </script>
+    <script id='contact-form-7-js' src="{% static 'assets/wp-content/plugins/contact-form-7/includes/js/index77e1.js' %}" type='text/javascript'></script>
+    <script id='rabbit_js-js' src='https://export.qodethemes.com/_toolbar/assets/js/rbt-modules.js?ver=6.0.5' type='text/javascript'></script>
+    <script id='jquery-blockui-js' src="{% static 'assets/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.mindc32.js' %}" type='text/javascript'></script>
+    <script id='wc-add-to-cart-js-extra' type='text/javascript'>
+        /* <![CDATA[ */
+        var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/umea.qodeinteractive.com\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+        /* ]]> */
+
+    </script>
+    <script id='wc-add-to-cart-js' src="{% static 'assets/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min823d.js' %}" type='text/javascript'></script>
+    <script id='js-cookie-js' src="{% static 'assets/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.minc599.js' %}" type='text/javascript'></script>
+    <script id='woocommerce-js-extra' type='text/javascript'>
+        /* <![CDATA[ */
+        var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+        /* ]]> */
+
+    </script>
+    <script id='woocommerce-js' src="{% static 'assets/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min823d.js' %}" type='text/javascript'></script>
+    <script id='wc-cart-fragments-js-extra' type='text/javascript'>
+        /* <![CDATA[ */
+        var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_94cfd15d6c83b442b3b97dd81a18f8b3","fragment_name":"wc_fragments_94cfd15d6c83b442b3b97dd81a18f8b3","request_timeout":"5000"};
+        /* ]]> */
+
+    </script>
+    <script id='wc-cart-fragments-js' src="{% static 'assets/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min823d.js' %}" type='text/javascript'></script>
+    <script id='ppress-frontend-script-js-extra' type='text/javascript'>
+        /* <![CDATA[ */
+        var pp_ajax_form = {"ajaxurl":"https:\/\/umea.qodeinteractive.com\/wp-admin\/admin-ajax.php","confirm_delete":"Are you sure?","deleting_text":"Deleting...","deleting_error":"An error occurred. Please try again.","nonce":"9d4da1a44d","disable_ajax_form":"false","is_checkout":"0","is_checkout_tax_enabled":"0"};
+        /* ]]> */
+
+    </script>
+    <script id='ppress-frontend-script-js' src="{% static 'assets/wp-content/plugins/wp-user-avatar/assets/js/frontend.minb2f9.js' %}" type='text/javascript'></script>
+    <script id='jquery-ui-core-js' src="{% static 'assets/wp-includes/js/jquery/ui/core.min0028.js' %}" type='text/javascript'></script>
+    <script id='qi-addons-for-elementor-script-js-extra' type='text/javascript'>
+        /* <![CDATA[ */
+        var qodefQiAddonsGlobal = {"vars":{"adminBarHeight":0,"iconArrowLeft":"<svg  xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 34.2 32.3\" xml:space=\"preserve\" style=\"stroke-width: 2;\"><line x1=\"0.5\" y1=\"16\" x2=\"33.5\" y2=\"16\"\/><line x1=\"0.3\" y1=\"16.5\" x2=\"16.2\" y2=\"0.7\"\/><line x1=\"0\" y1=\"15.4\" x2=\"16.2\" y2=\"31.6\"\/><\/svg>","iconArrowRight":"<svg  xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 34.2 32.3\" xml:space=\"preserve\" style=\"stroke-width: 2;\"><line x1=\"0\" y1=\"16\" x2=\"33\" y2=\"16\"\/><line x1=\"17.3\" y1=\"0.7\" x2=\"33.2\" y2=\"16.5\"\/><line x1=\"17.3\" y1=\"31.6\" x2=\"33.5\" y2=\"15.4\"\/><\/svg>","iconClose":"<svg  xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 9.1 9.1\" xml:space=\"preserve\"><g><path d=\"M8.5,0L9,0.6L5.1,4.5L9,8.5L8.5,9L4.5,5.1L0.6,9L0,8.5L4,4.5L0,0.6L0.6,0L4.5,4L8.5,0z\"\/><\/g><\/svg>"}};
+        /* ]]> */
+
+    </script>
+    <script id='qi-addons-for-elementor-script-js' src="{% static 'assets/wp-content/plugins/qi-addons-for-elementor/assets/js/main.min52c7.js' %}" type='text/javascript'></script>
+    <script id='perfect-scrollbar-js' src="{% static 'assets/wp-content/plugins/umea-core/assets/plugins/perfect-scrollbar/perfect-scrollbar.jquery.min52c7.js' %}" type='text/javascript'></script>
+    <script id='hoverIntent-js' src="{% static 'assets/wp-includes/js/hoverIntent.min3e5a.js' %}" type='text/javascript'></script>
+    <script id='jquery-easing-1.3-js' src="{% static 'assets/wp-content/plugins/umea-core/assets/plugins/jquery/jquery.easing.1.352c7.js' %}" type='text/javascript'></script>
+    <script id='modernizr-js' src="{% static 'assets/wp-content/plugins/umea-core/assets/plugins/modernizr/modernizr52c7.js' %}" type='text/javascript'></script>
+    <script id='tweenmax-js' src="{% static 'assets/wp-content/plugins/umea-core/assets/plugins/tweenmax/tweenmax.min52c7.js' %}" type='text/javascript'></script>
+    <script id='umea-main-js-js-extra' type='text/javascript'>
+        /* <![CDATA[ */
+        var qodefGlobal = {"vars":{"adminBarHeight":0,"iconArrowLeft":"<svg  xmlns=\"http:\/\/www.w3.org\/2000\/svg\" x=\"0px\" y=\"0px\" width=\"36px\" height=\"15px\" viewBox=\"0 0 36 15\" enable-background=\"new 0 0 36 15\" xml:space=\"preserve\"><polyline fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" points=\"16.062,0.896 3.351,13.482 33.679,13.482\"\/><\/svg>","iconArrowRight":"<svg  xmlns=\"http:\/\/www.w3.org\/2000\/svg\" x=\"0px\" y=\"0px\" width=\"36px\" height=\"15px\" viewBox=\"0 0 36 15\" enable-background=\"new 0 0 36 15\" xml:space=\"preserve\"><polyline fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" points=\"19.423,14.028 32.134,1.441 1.806,1.441\"\/><\/svg>","iconClose":"<svg  xmlns=\"http:\/\/www.w3.org\/2000\/svg\" x=\"0px\" y=\"0px\" width=\"13px\" height=\"13px\" viewBox=\"0 0 13 13\" enable-background=\"new 0 0 13 13\" xml:space=\"preserve\"><line x1=\"0\" y1=\"13\" x2=\"13\" y2=\"0\"\/><line x1=\"0\" y1=\"13\" x2=\"13\" y2=\"0\"\/><line x1=\"13\" y1=\"13\" x2=\"0\" y2=\"0\"\/><line x1=\"13\" y1=\"13\" x2=\"0\" y2=\"0\"\/><\/svg>","topAreaHeight":0,"restUrl":"https:\/\/umea.qodeinteractive.com\/wp-json\/","restNonce":"79b6001f97","paginationRestRoute":"umea\/v1\/get-posts","headerHeight":100,"mobileHeaderHeight":70}};
+        /* ]]> */
+
+    </script>
+    <script id='umea-main-js-js' src="{% static 'assets/wp-content/themes/umea/assets/js/main.min52c7.js' %}" type='text/javascript'></script>
+    <script id='google-map-api-js' src='http://maps.googleapis.com/maps/api/js?key=AIzaSyC1L2RglodRZeRR21XbW3uxDFUM3136qck&amp;libraries=places&amp;ver=6.0.5' type='text/javascript'></script>
+    <script id='underscore-js' src="{% static 'assets/wp-includes/js/underscore.minb37e.js' %}" type='text/javascript'></script>
+    <script id='umea-core-map-custom-marker-js' src="{% static 'assets/wp-content/plugins/umea-core/inc/maps/assets/js/custom-marker52c7.js' %}" type='text/javascript'></script>
+    <script id='markerclusterer-js' src="{% static 'assets/wp-content/plugins/umea-core/inc/maps/assets/js/markerclusterer52c7.js' %}" type='text/javascript'></script>
+    <script id='umea-core-google-map-js-extra' type='text/javascript'>
+        /* <![CDATA[ */
+        var qodefMapsVariables = {"global":{"mapStyle":[{"featureType":"all","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.neighborhood","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.land_parcel","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"},{"color":"#cee9de"},{"saturation":"2"},{"weight":"0.80"}]},{"featureType":"poi.attraction","elementType":"geometry.fill","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#f5d6d6"}]},{"featureType":"road.highway","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"labels.icon","stylers":[{"hue":"#ff0000"},{"visibility":"on"}]},{"featureType":"road.highway.controlled_access","elementType":"labels.text","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway.controlled_access","elementType":"labels.icon","stylers":[{"visibility":"on"},{"hue":"#0064ff"},{"gamma":"1.44"},{"lightness":"-3"},{"weight":"1.69"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"road.local","elementType":"labels.text","stylers":[{"visibility":"simplified"},{"weight":"0.31"},{"gamma":"1.43"},{"lightness":"-5"},{"saturation":"-22"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"all","stylers":[{"visibility":"on"},{"hue":"#ff0000"}]},{"featureType":"transit.station.airport","elementType":"all","stylers":[{"visibility":"simplified"},{"hue":"#ff0045"}]},{"featureType":"transit.station.bus","elementType":"all","stylers":[{"visibility":"on"},{"hue":"#00d1ff"}]},{"featureType":"transit.station.bus","elementType":"labels.text","stylers":[{"visibility":"simplified"}]},{"featureType":"transit.station.rail","elementType":"all","stylers":[{"visibility":"simplified"},{"hue":"#00cbff"}]},{"featureType":"transit.station.rail","elementType":"labels.text","stylers":[{"visibility":"simplified"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"weight":"1.61"},{"color":"#cde2e5"},{"visibility":"on"}]}],"mapZoom":12,"mapScrollable":false,"mapDraggable":true,"streetViewControl":true,"zoomControl":true,"mapTypeControl":true,"fullscreenControl":true,"geolocationTitle":"Your location is here","pin":"<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\"\n\t x=\"0px\"\n\t y=\"0px\"\n\t width=\"24.942px\"\n\t height=\"35.302px\"\n\t viewBox=\"0 0 24.942 35.302\"\n\t enable-background=\"new 0 0 24.942 35.302\"\n\t xml:space=\"preserve\">\n\t<g>\n\t\t<path d=\"M10.63,33.412c-0.684-0.797-1.563-1.902-2.633-3.315c-1.07-1.412-2.143-2.962-3.213-4.648\n\t\tc-1.07-1.686-2.027-3.565-2.871-5.64c-0.844-2.073-1.355-3.999-1.538-5.776c-0.092-0.547-0.137-1.07-0.137-1.572\n\t\tc0-3.372,1.196-6.255,3.588-8.647s5.287-3.589,8.682-3.589c3.395,0,6.29,1.196,8.682,3.589s3.59,5.275,3.59,8.647\n\t\tc0,0.456-0.047,0.957-0.137,1.504c-0.184,1.823-0.707,3.783-1.572,5.879c-0.867,2.097-1.777,3.931-2.734,5.503\n\t\ts-2.041,3.168-3.248,4.785c-1.207,1.618-2.039,2.7-2.494,3.247c-0.457,0.547-0.82,0.957-1.094,1.23\n\t\tc-0.184,0.182-0.366,0.342-0.547,0.479c-0.137,0.045-0.252,0.068-0.342,0.068c-0.092,0-0.205-0.023-0.342-0.068\n\t\tc-0.229-0.137-0.41-0.297-0.547-0.479C11.677,34.608,11.314,34.209,10.63,33.412z M2.427,12.46c0,0.365,0.021,0.798,0.068,1.299\n\t\tc0.182,1.687,0.693,3.521,1.537,5.503s1.857,3.862,3.043,5.64c1.184,1.777,2.197,3.225,3.041,4.341\n\t\tc0.844,1.117,1.676,2.153,2.496,3.11c0.774-0.957,1.573-1.993,2.393-3.11c0.82-1.116,1.822-2.563,3.008-4.341\n\t\tc1.184-1.777,2.176-3.657,2.973-5.64s1.287-3.816,1.471-5.503c0.09-0.501,0.137-0.934,0.137-1.299c0-2.779-0.992-5.149-2.975-7.109\n\t\tc-1.982-1.959-4.363-2.939-7.143-2.939c-2.781,0-5.15,0.98-7.109,2.939C3.406,7.311,2.427,9.681,2.427,12.46z M6.802,12.494\n\t\tc0-1.572,0.557-2.916,1.674-4.033c1.117-1.116,2.461-1.675,4.033-1.675c1.573,0,2.917,0.559,4.034,1.675\n\t\tc1.117,1.117,1.676,2.461,1.676,4.033s-0.559,2.917-1.676,4.033c-1.117,1.117-2.461,1.675-4.034,1.675\n\t\tc-1.572,0-2.916-0.558-4.033-1.675C7.359,15.411,6.802,14.066,6.802,12.494z M8.99,12.494c0,0.98,0.342,1.812,1.025,2.495\n\t\ts1.514,1.025,2.494,1.025c0.981,0,1.813-0.342,2.497-1.025s1.025-1.515,1.025-2.495c0-0.979-0.342-1.812-1.025-2.495\n\t\ts-1.516-1.025-2.497-1.025c-0.98,0-1.811,0.342-2.494,1.025S8.99,11.515,8.99,12.494z\"\/>\n\t<\/g>\n<\/svg>\n"},"multiple":[]};
+        /* ]]> */
+
+    </script>
+    <script id='umea-core-google-map-js' src="{% static 'assets/wp-content/plugins/umea-core/inc/maps/assets/js/google-map52c7.js' %}" type='text/javascript'></script>
+    <script id='umea-core-script-js' src="{% static 'assets/wp-content/plugins/umea-core/assets/js/umea-core.min52c7.js' %}" type='text/javascript'></script>
+    <script id='yith-wcqv-frontend-js-extra' type='text/javascript'>
+        /* <![CDATA[ */
+        var yith_qv = {"ajaxurl":"\/wp-admin\/admin-ajax.php","loader":"https:\/\/umea.qodeinteractive.com\/wp-content\/plugins\/yith-woocommerce-quick-view\/assets\/image\/qv-loader.gif","lang":""};
+        /* ]]> */
+
+    </script>
+    <script id='yith-wcqv-frontend-js' src="{% static 'assets/wp-content/plugins/yith-woocommerce-quick-view/assets/js/frontend.minb3a6.js' %}" type='text/javascript'></script>
+    <script id='jquery-waitforimages-js' src="{% static 'assets/wp-content/themes/umea/assets/plugins/waitforimages/jquery.waitforimages52c7.js' %}" type='text/javascript'></script>
+    <script id='jquery-appear-js' src="{% static 'assets/wp-content/themes/umea/assets/plugins/appear/jquery.appear52c7.js' %}" type='text/javascript'></script>
+    <script id='swiper-js' src="{% static 'assets/wp-content/plugins/elementor/assets/lib/swiper/swiper.min48f5.js' %}" type='text/javascript'></script>
+    <script id='jquery-magnific-popup-js' src="{% static 'assets/wp-content/themes/umea/assets/plugins/magnific-popup/jquery.magnific-popup.min52c7.js' %}" type='text/javascript'></script>
+    <script id='select2-js' src="{% static 'assets/wp-content/plugins/qode-framework/inc/common/assets/plugins/select2/select2.full.min68b3.js' %}" type='text/javascript'></script>
+    <script id='sbi_scripts-js-extra' type='text/javascript'>
+        /* <![CDATA[ */
+        var sb_instagram_js_options = {"font_method":"svg","resized_url":"https:\/\/umea.qodeinteractive.com\/wp-content\/uploads\/sb-instagram-feed-images\/","placeholder":"https:\/\/umea.qodeinteractive.com\/wp-content\/plugins\/instagram-feed\/img\/placeholder.png","ajax_url":"https:\/\/umea.qodeinteractive.com\/wp-admin\/admin-ajax.php"};
+        /* ]]> */
+
+    </script>
+    <script id='sbi_scripts-js' src="{% static 'assets/wp-content/plugins/instagram-feed/js/sbi-scripts.mind42d.js' %}" type='text/javascript'></script>
+    <script id='wp-util-js-extra' type='text/javascript'>
+        /* <![CDATA[ */
+        var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+        /* ]]> */
+
+    </script>
+    <script id='wp-util-js' src="{% static 'assets/wp-includes/js/wp-util.min52c7.js' %}" type='text/javascript'></script>
+    <script id='wc-add-to-cart-variation-js-extra' type='text/javascript'>
+        /* <![CDATA[ */
+        var wc_add_to_cart_variation_params = {"wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_no_matching_variations_text":"Sorry, no products matched your selection. Please choose a different combination.","i18n_make_a_selection_text":"Please select some product options before adding this product to your cart.","i18n_unavailable_text":"Sorry, this product is unavailable. Please choose a different combination."};
+        /* ]]> */
+
+    </script>
+    <script id='wc-add-to-cart-variation-js' src="{% static 'assets/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart-variation.min823d.js' %}" type='text/javascript'></script>
+    <script id='photoswipe-js' src="{% static 'assets/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe.mine32b.js' %}" type='text/javascript'></script>
+    <script id='photoswipe-ui-default-js' src="{% static 'assets/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe-ui-default.mine32b.js' %}" type='text/javascript'></script>
+    <script id='wc-single-product-js-extra' type='text/javascript'>
+        /* <![CDATA[ */
+        var wc_single_product_params = {"i18n_required_rating_text":"Please select a rating","review_rating_required":"yes","flexslider":{"rtl":false,"animation":"slide","smoothHeight":true,"directionNav":false,"controlNav":"thumbnails","slideshow":false,"animationSpeed":500,"animationLoop":false,"allowOneSlide":false},"zoom_enabled":"","zoom_options":[],"photoswipe_enabled":"1","photoswipe_options":{"shareEl":false,"closeOnScroll":false,"history":false,"hideAnimationDuration":0,"showAnimationDuration":0},"flexslider_enabled":""};
+        /* ]]> */
+
+    </script>
+    <script id='wc-single-product-js' src="{% static 'assets/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min823d.js' %}" type='text/javascript'></script>
+    <script id='elementor-webpack-runtime-js' src="{% static 'assets/wp-content/plugins/elementor/assets/js/webpack.runtime.min3621.js' %}" type='text/javascript'></script>
+    <script id='elementor-frontend-modules-js' src="{% static 'assets/wp-content/plugins/elementor/assets/js/frontend-modules.min3621.js' %}" type='text/javascript'></script>
+    <script id='elementor-waypoints-js' src="{% static 'assets/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min05da.js' %}" type='text/javascript'></script>
+    <script id='share-link-js' src="{% static 'assets/wp-content/plugins/elementor/assets/lib/share-link/share-link.min3621.js' %}" type='text/javascript'></script>
+    <script id='elementor-dialog-js' src="{% static 'assets/wp-content/plugins/elementor/assets/lib/dialog/dialog.mind227.js' %}" type='text/javascript'></script>
+    <script id='elementor-frontend-js-before' type='text/javascript'>
+        var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Extra","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Extra","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.7.8","is_static":false,"experimentalFeatures":{"e_import_export":true,"e_hidden_wordpress_widgets":true,"landing-pages":true,"elements-color-picker":true,"favorite-widgets":true,"admin-top-bar":true},"urls":{"assets":"https:\/\/umea.qodeinteractive.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":1555,"title":"Coming%20Soon%20%E2%80%93%20Ume%C3%A5","excerpt":"","featuredImage":false}};
+
+    </script>
+    <script id='elementor-frontend-js' src="{% static 'assets/wp-content/plugins/elementor/assets/js/frontend.min3621.js' %}" type='text/javascript'></script>
+    <script id='regenerator-runtime-js' src="{% static 'assets/wp-includes/js/dist/vendor/regenerator-runtime.min3937.js' %}" type='text/javascript'></script>
+    <script id='wp-polyfill-js' src="{% static 'assets/wp-includes/js/dist/vendor/wp-polyfill.min2c7c.js' %}" type='text/javascript'></script>
+    <script id='wp-hooks-js' src="{% static 'assets/wp-includes/js/dist/hooks.mincbb5.js' %}" type='text/javascript'></script>
+    <script id='wp-i18n-js' src="{% static 'assets/wp-includes/js/dist/i18n.min771a.js' %}" type='text/javascript'></script>
+    <script id='wp-i18n-js-after' type='text/javascript'>
+        wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+
+    </script>
+    <script id='qi-addons-for-elementor-elementor-js' src="{% static 'assets/wp-content/plugins/qi-addons-for-elementor/inc/plugins/elementor/assets/js/elementor52c7.js' %}" type='text/javascript'></script>
+    <script id='umea-core-elementor-js-extra' type='text/javascript'>
+        /* <![CDATA[ */
+        var qodefElementorGlobal = {"vars":{"elementorSectionHandler":[]}};
+        /* ]]> */
+
+    </script>
+    <script id='umea-core-elementor-js' src="{% static 'assets/wp-content/plugins/umea-core/inc/plugins/elementor/assets/js/elementor52c7.js' %}" type='text/javascript'></script>
+    <script id='preloaded-modules-js' src="{% static 'assets/wp-content/plugins/elementor/assets/js/preloaded-modules.min3621.js' %}" type='text/javascript'></script>
+</body>
+
+</html>

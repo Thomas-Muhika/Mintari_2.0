@@ -104,6 +104,7 @@
                                         <textarea name="DetailedDescription" id="DetailedDescription" class="form-control" rows="5" placeholder="Detailed Description"></textarea>
                                     </div>
 
+                                    <!-- Main Product image -->
                                     <div class="input-area">
                                         <label class="form-label">Select Product Icon</label>
                                         <div class="filePreview">
@@ -120,21 +121,74 @@
                                         </div>
                                     </div>
 
+                                    <!-- Top view image -->
                                     <div class="input-area">
-                                        <label class="form-label">Select Other Product Images</label>
-                                        <div class="multiFilePreview">
+                                        <label class="form-label">Select Top View Product Image</label>
+                                        <div class="topView_filePreview">
                                             <label>
-                                                <input name="AdditionalImages" type="file" class=" w-full hidden" multiple="multiple" accept=".jpg, .jpeg, .png">
+                                                <input name="ProductImageTopView" type="file" class=" w-full hidden" accept=".jpg, .jpeg, .png">
                                                 <span class="w-full h-[40px] file-control flex items-center custom-class">
                                                     <span class="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
-                                                        <span class="text-slate-400">Choose other images and drop them here</span>
+                                                        <span class="text-slate-400">Choose the top view image of the product...</span>
                                                     </span>
                                                     <span class="file-name flex-none cursor-pointer border-l px-4 border-slate-200 dark:border-slate-700 h-full inline-flex items-center bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 text-sm rounded-tr rounded-br font-normal">Browse</span>
                                                 </span>
                                             </label>
-                                            <div id="file-preview"></div>
+                                            <div id="topView-file-preview"></div>
                                         </div>
                                     </div>
+
+                                    <!-- Left view image -->
+                                    <div class="input-area">
+                                        <label class="form-label">Select Left View Product Image</label>
+                                        <div class="leftView_filePreview">
+                                            <label>
+                                                <input name="ProductImageLeftView" type="file" class=" w-full hidden" accept=".jpg, .jpeg, .png">
+                                                <span class="w-full h-[40px] file-control flex items-center custom-class">
+                                                    <span class="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
+                                                        <span class="text-slate-400">Choose the Left view image of the product...</span>
+                                                    </span>
+                                                    <span class="file-name flex-none cursor-pointer border-l px-4 border-slate-200 dark:border-slate-700 h-full inline-flex items-center bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 text-sm rounded-tr rounded-br font-normal">Browse</span>
+                                                </span>
+                                            </label>
+                                            <div id="leftView-file-preview"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Right view image -->
+                                    <div class="input-area">
+                                        <label class="form-label">Select Right View Product Image</label>
+                                        <div class="rightView_filePreview">
+                                            <label>
+                                                <input name="ProductImageRightView" type="file" class=" w-full hidden" accept=".jpg, .jpeg, .png">
+                                                <span class="w-full h-[40px] file-control flex items-center custom-class">
+                                                    <span class="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
+                                                        <span class="text-slate-400">Choose the Right view image of the product...</span>
+                                                    </span>
+                                                    <span class="file-name flex-none cursor-pointer border-l px-4 border-slate-200 dark:border-slate-700 h-full inline-flex items-center bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 text-sm rounded-tr rounded-br font-normal">Browse</span>
+                                                </span>
+                                            </label>
+                                            <div id="rightView-file-preview"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Front view image -->
+                                    <div class="input-area">
+                                        <label class="form-label">Select Front View Product Image</label>
+                                        <div class="frontView_filePreview">
+                                            <label>
+                                                <input name="ProductImageFrontView" type="file" class=" w-full hidden" accept=".jpg, .jpeg, .png">
+                                                <span class="w-full h-[40px] file-control flex items-center custom-class">
+                                                    <span class="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
+                                                        <span class="text-slate-400">Choose the front view image of the product...</span>
+                                                    </span>
+                                                    <span class="file-name flex-none cursor-pointer border-l px-4 border-slate-200 dark:border-slate-700 h-full inline-flex items-center bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 text-sm rounded-tr rounded-br font-normal">Browse</span>
+                                                </span>
+                                            </label>
+                                            <div id="frontView-file-preview"></div>
+                                        </div>
+                                    </div>
+
                                 </div>
 
                                 <button name="submit" type="submit" value="AddStock" class="btn inline-flex justify-center btn-dark">Submit</button>

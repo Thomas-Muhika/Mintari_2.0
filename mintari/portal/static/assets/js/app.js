@@ -718,6 +718,92 @@
       }
     }
   });
+  // top view image
+  $(".topView_filePreview input").on("change", function () {
+    var files = $(this).get(0).files;
+    var preview = $(".topView_filePreview #topView-file-preview");
+    var name = $(".filePreview #placeholder");
+    preview.empty();
+    name.empty();
+    if (files) {
+      for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+        var reader = new FileReader();
+        reader.onload = function () {
+          var img = $("<img>").attr("src", reader.result);
+          preview.append(img);
+        };
+        reader.readAsDataURL(file);
+        var span = $("<span>").text(file.name);
+        name.append(span);
+      }
+    }
+  });
+  // Left view image
+    $(".leftView_filePreview input").on("change", function () {
+    var files = $(this).get(0).files;
+    var preview = $(".leftView_filePreview #leftView-file-preview");
+    var name = $(".filePreview #placeholder");
+    preview.empty();
+    name.empty();
+    if (files) {
+      for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+        var reader = new FileReader();
+        reader.onload = function () {
+          var img = $("<img>").attr("src", reader.result);
+          preview.append(img);
+        };
+        reader.readAsDataURL(file);
+        var span = $("<span>").text(file.name);
+        name.append(span);
+      }
+    }
+  });
+  // Right view image
+    $(".rightView_filePreview input").on("change", function () {
+    var files = $(this).get(0).files;
+    var preview = $(".rightView_filePreview #rightView-file-preview");
+    var name = $(".filePreview #placeholder");
+    preview.empty();
+    name.empty();
+    if (files) {
+      for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+        var reader = new FileReader();
+        reader.onload = function () {
+          var img = $("<img>").attr("src", reader.result);
+          preview.append(img);
+        };
+        reader.readAsDataURL(file);
+        var span = $("<span>").text(file.name);
+        name.append(span);
+      }
+    }
+  });
+  // Front view image
+    $(".frontView_filePreview input").on("change", function () {
+    var files = $(this).get(0).files;
+    var preview = $(".frontView_filePreview #frontView-file-preview");
+    var name = $(".frontView_filePreview #placeholder");
+    preview.empty();
+    name.empty();
+    if (files) {
+      for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+        var reader = new FileReader();
+        reader.onload = function () {
+          var img = $("<img>").attr("src", reader.result);
+          preview.append(img);
+        };
+        reader.readAsDataURL(file);
+        var span = $("<span>").text(file.name);
+        name.append(span);
+      }
+    }
+  });
+
+
   $(".multiFilePreview input").on("change", function () {
     $(".multiFilePreview #file-preview").empty(); // clear any existing previews
     var files = $(this)[0].files;

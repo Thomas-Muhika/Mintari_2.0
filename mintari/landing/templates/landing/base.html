@@ -104,29 +104,20 @@
 	<script type='text/javascript' src= "{% static 'assets/wp-content/plugins/revslider/public/assets/js/rs6.min0660.js' %}" id='revmin-js'></script>
 	<script type='text/javascript' src= "{% static 'assets/wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.minb2f9.js' %}" id='ppress-flatpickr-js'></script>
 	<script type='text/javascript' src= "{% static 'assets/wp-content/plugins/wp-user-avatar/assets/select2/select2.minb2f9.js' %}" id='ppress-select2-js'></script>
-<!--	<link rel="https://api.w.org/" href="wp-json/index.html"/>-->
 	<link rel="alternate" type="application/json" href="{% static 'assets/wp-json/wp/v2/pages/682.json' %}" />
 	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.html?rsd"/>
 	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="{% static 'assets/wp-includes/wlwmanifest.xml' %}" />
 	<meta name="generator" content="WordPress 6.0.5"/>
 	<meta name="generator" content="WooCommerce 7.0.0"/>
-<!--	<link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embed36de.json?url=https%3A%2F%2Fumea.qodeinteractive.com%2F"/>-->
-<!--	<link rel="alternate" type="text/xml+oembed"-->
-<!--		  href="wp-json/oembed/1.0/embed82af?url=https%3A%2F%2Fumea.qodeinteractive.com%2F&amp;format=xml"/>-->
-
-
 	<meta property='og:site_name' content='Ume&aring;'/>
-<!--	<meta property='og:url' content='https://umea.qodeinteractive.com'/>-->
 	<meta property='og:locale' content='en_US'/>
 	<meta property='og:description' content='Furniture Store'/>
 	<meta property='og:title' content='Ume&aring;'/>
 	<meta property='og:type' content='website'/>
-<!--	<meta property='og:image' content='https://umea.qodeinteractive.com/wp-content/uploads/2021/04/umea-social-graph.png'/>-->
 	<meta property='og:image:width' content='1200'/>
 	<meta property='og:image:height' content='630'/>
 	<meta name='twitter:card' content='summary'/>
 	<meta name='twitter:title' content='Ume&aring;'/>
-<!--	<meta name='twitter:image' content='https://umea.qodeinteractive.com/wp-content/uploads/2021/04/umea-social-graph.png'/>-->
 	<meta name='twitter:description' content='Furniture Store'/>
 
 	<script type="text/javascript">
@@ -371,6 +362,8 @@
 	</svg>
 
 	<div id="qodef-page-wrapper" class="">
+
+		<!--START: TOP CONTACT SECTION -->
 		<div id="qodef-top-area">
 			<div id="qodef-top-area-inner" class=" qodef-skin--light">
 				<div class="qodef-widget-holder qodef-top-area-left">
@@ -395,7 +388,10 @@
 				</div>
 			</div>
 		</div>
+		<!--END: TOP CONTACT SECTION -->
 
+
+		<!--START: SECTION- Large screen Header -->
 		<header id="qodef-page-header">
 			<div id="qodef-page-header-border" class=" qodef-skin--light"></div>
 			<div id="qodef-page-header-inner" class=" qodef-skin--light">
@@ -418,17 +414,12 @@
 							</a>
 						</li>
 						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-63 qodef--hide-link qodef-menu-item--wide">
-							<a href="#"><span class="qodef-menu-item-text">About Us</span>
+							<a href="{% url 'landing:aboutUs' %}"><span class="qodef-menu-item-text">About Us</span>
 								<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15.797px" height="13.375px" viewBox="0 0 15.797 13.375" enable-background="new 0 0 15.797 13.375" xml:space="preserve"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
 							</a>
 						</li>
 						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-63 qodef--hide-link qodef-menu-item--wide">
-							<a href="#"><span class="qodef-menu-item-text">Contact Us</span>
-								<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15.797px" height="13.375px" viewBox="0 0 15.797 13.375" enable-background="new 0 0 15.797 13.375" xml:space="preserve"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
-							</a>
-						</li>
-						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-62 qodef--hide-link qodef-menu-item--narrow">
-							<a href="{% url 'landing:contact_us' %}"><span class="qodef-menu-item-text">Blog</span>
+							<a href="{% url 'landing:contact_us' %}"><span class="qodef-menu-item-text">Contact Us</span>
 								<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15.797px" height="13.375px" viewBox="0 0 15.797 13.375" enable-background="new 0 0 15.797 13.375" xml:space="preserve"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
 							</a>
 						</li>
@@ -436,45 +427,10 @@
 				</nav>
 
 				<div class="qodef-widget-holder qodef--one">
-					<div id="umea_core_search_opener-2"
-						 class="widget widget_umea_core_search_opener qodef-header-widget-area-one"
-						 data-area="header-widget-one">
-						<div class="qodef-search-opener-wrapper" style="margin: 0px 0px 0px 4px;">
-							<a href="javascript:void(0)" class="qodef-opener-icon qodef-m qodef-source--predefined qodef-search-opener" style="color: #000000;">
-							<span class="qodef-search-opener-text">Search</span> <span class="qodef-m-icon qodef--open">
-								<svg class="qodef-search-opener-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><g><path d="M15.352,6.588c0,1.639-0.582,3.04-1.744,4.202c-1.162,1.163-2.563,1.744-4.203,1.744c-1.391,0-2.639-0.438-3.745-1.314 l-3.917,3.916c-0.114,0.134-0.262,0.2-0.443,0.2c-0.182,0-0.334-0.062-0.458-0.186c-0.124-0.124-0.186-0.276-0.186-0.457		c0-0.182,0.067-0.329,0.2-0.443l3.917-3.917C3.896,9.229,3.458,7.979,3.458,6.588c0-1.639,0.581-3.04,1.744-4.203		c1.163-1.162,2.563-1.744,4.202-1.744c1.641,0,3.041,0.582,4.203,1.744C14.77,3.548,15.352,4.949,15.352,6.588z M14.438,6.588		c0-1.391-0.492-2.578-1.473-3.56c-0.982-0.981-2.168-1.473-3.561-1.473c-1.391,0-2.577,0.491-3.559,1.473		C4.864,4.01,4.373,5.197,4.373,6.588c0,1.392,0.491,2.578,1.473,3.56c0.981,0.981,2.168,1.472,3.559,1.472		c1.393,0,2.578-0.49,3.561-1.472C13.945,9.166,14.438,7.979,14.438,6.588z" /></g></svg> </span>
-							</a>
-							<form role="search" method="get" class="qodef-search-form" action="https://umea.qodeinteractive.com/">
-								<label for="qodef-search-form-6488b50d8c97a" class="screen-reader-text">Search for:</label>
-								<div class="qodef-search-form-inner clear">
-									<input type="search" id="qodef-search-form-6488b50d8c97a" class="qodef-search-form-field" value="" name="s" placeholder="Search"/>
-									<button type="submit" class="qodef-search-form-button">
-										<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><g><path d="M15.352,6.588c0,1.639-0.582,3.04-1.744,4.202c-1.162,1.163-2.563,1.744-4.203,1.744c-1.391,0-2.639-0.438-3.745-1.314 l-3.917,3.916c-0.114,0.134-0.262,0.2-0.443,0.2c-0.182,0-0.334-0.062-0.458-0.186c-0.124-0.124-0.186-0.276-0.186-0.457		c0-0.182,0.067-0.329,0.2-0.443l3.917-3.917C3.896,9.229,3.458,7.979,3.458,6.588c0-1.639,0.581-3.04,1.744-4.203		c1.163-1.162,2.563-1.744,4.202-1.744c1.641,0,3.041,0.582,4.203,1.744C14.77,3.548,15.352,4.949,15.352,6.588z M14.438,6.588		c0-1.391-0.492-2.578-1.473-3.56c-0.982-0.981-2.168-1.473-3.561-1.473c-1.391,0-2.577,0.491-3.559,1.473		C4.864,4.01,4.373,5.197,4.373,6.588c0,1.392,0.491,2.578,1.473,3.56c0.981,0.981,2.168,1.472,3.559,1.472		c1.393,0,2.578-0.49,3.561-1.472C13.945,9.166,14.438,7.979,14.438,6.588z" /></g></svg>
-									</button>
-								</div>
-							</form>
-						</div>
-					</div>
-					<div id="umea_core_woo_dropdown_cart-2" class="widget widget_umea_core_woo_dropdown_cart qodef-header-widget-area-one" data-area="header-widget-one">
-						<div class="qodef-woo-dropdown-cart qodef-m" style="padding: 3px 11px 0px 10px">
-							<div class="qodef-woo-dropdown-cart-inner qodef-m-inner">
-								<a itemprop="url" class="qodef-m-opener" href="cart/index.html">
-									<span class="qodef-m-opener-text">Cart</span>
-									<span class="qodef-m-opener-icon"><svg class="qodef-woo-dropdown-cart-opener" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="11.438px" height="15px" viewBox="0 0 11.438 15" enable-background="new 0 0 11.438 15" xml:space="preserve"><g><path d="M0.466,14.633c-0.184-0.183-0.274-0.399-0.274-0.649V3.822c0-0.25,0.091-0.466,0.274-0.65 c0.183-0.183,0.399-0.274,0.649-0.274h1.848C2.981,2.128,3.261,1.474,3.8,0.935c0.539-0.539,1.184-0.808,1.934-0.808   c0.751,0,1.395,0.27,1.934,0.808c0.539,0.539,0.818,1.194,0.838,1.963h1.848c0.249,0,0.466,0.091,0.649,0.274   c0.183,0.184,0.274,0.4,0.274,0.65v10.162c0,0.25-0.092,0.467-0.274,0.649c-0.184,0.183-0.4,0.274-0.649,0.274H1.115   C0.865,14.907,0.648,14.815,0.466,14.633z M1.115,3.822v10.162h9.238V3.822H1.115z M3.887,2.898h3.695   c-0.02-0.52-0.207-0.957-0.563-1.313C6.663,1.229,6.234,1.05,5.734,1.05S4.805,1.229,4.449,1.584   C4.093,1.941,3.905,2.378,3.887,2.898z M4.017,5.54c-0.087-0.087-0.13-0.197-0.13-0.332s0.043-0.246,0.13-0.332   c0.086-0.087,0.197-0.13,0.332-0.13h2.771c0.135,0,0.246,0.043,0.333,0.13c0.086,0.086,0.13,0.197,0.13,0.332   S7.538,5.453,7.452,5.54c-0.087,0.086-0.198,0.13-0.333,0.13H4.349C4.213,5.669,4.103,5.626,4.017,5.54z" /></g></svg></span>
-									<span class="qodef-m-opener-count">0</span>
-								</a>
-								<div class="qodef-m-dropdown">
-									<div class="qodef-m-dropdown-inner">
-										<p class="qodef-m-posts-not-found qodef-grid-item">No products in the cart.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 					<div id="umea_core_woo_login-2" class="widget widget_umea_core_woo_login qodef-header-widget-area-one" data-area="header-widget-one">
 						<div class="qodef-woo-login qodef-m">
 							<a class="qodef-opener-icon qodef-m qodef-source--predefined qodef-login-opener" href="{% url 'accounts:signin' %}">
-								<span class="qodef-m-opener-text">Log In	</span>
+								<span class="qodef-m-opener-text">Log In / Register	</span>
 								<span class="qodef-m-opener-icon qodef-source--predefined">
 									<svg class="qodef-woo-login-opener" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="9.75px" height="15px" viewBox="0 0 9.75 15" enable-background="new 0 0 9.75 15" xml:space="preserve"><g><g><path d="M4.876,14.925c-0.327,0-0.658-0.022-0.984-0.066C3.25,14.774,2.65,14.641,2.108,14.46	c-0.585-0.197-1.066-0.486-1.432-0.862c-0.4-0.413-0.604-0.903-0.604-1.459c0-1.602,0.473-3.006,1.405-4.172 c0.863-1.08,1.879-1.679,3.025-1.785C3.829,6.102,3.23,5.805,2.72,5.296C2.118,4.694,1.812,3.968,1.812,3.139 s0.306-1.554,0.907-2.156C3.322,0.38,4.048,0.075,4.876,0.075S6.431,0.38,7.032,0.982c0.603,0.602,0.91,1.327,0.91,2.156	s-0.308,1.555-0.91,2.157C6.522,5.805,5.923,6.102,5.25,6.181c1.146,0.106,2.163,0.706,3.026,1.785	c0.934,1.165,1.405,2.569,1.405,4.172c0,0.556-0.204,1.046-0.604,1.459c-0.368,0.378-0.85,0.668-1.434,0.861 c-0.54,0.182-1.14,0.315-1.782,0.399C5.535,14.902,5.204,14.925,4.876,14.925z M4.876,7.073c-1.024,0-1.904,0.477-2.69,1.46 C1.375,9.549,0.98,10.728,0.98,12.139c0,0.314,0.114,0.585,0.347,0.826c0.264,0.271,0.624,0.483,1.069,0.633 c0.486,0.161,1.03,0.283,1.615,0.36c0.575,0.077,1.156,0.077,1.729,0c0.587-0.077,1.129-0.199,1.616-0.36	c0.444-0.149,0.804-0.362,1.069-0.633c0.236-0.244,0.347-0.507,0.347-0.826c0-1.413-0.395-2.591-1.205-3.605 C6.78,7.55,5.9,7.073,4.876,7.073z M4.876,0.983c-0.587,0-1.083,0.209-1.514,0.642C2.931,2.057,2.721,2.551,2.721,3.139 c0,0.588,0.21,1.083,0.642,1.515c0.432,0.43,0.927,0.641,1.514,0.641c0.586,0,1.083-0.21,1.514-0.641 c0.433-0.432,0.642-0.927,0.642-1.515c0-0.587-0.209-1.082-0.642-1.514C5.959,1.193,5.464,0.983,4.876,0.983z" /></g></g></svg> </span>
 							</a>
@@ -482,492 +438,52 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="qodef-header-sticky qodef-custom-header-layout qodef-appearance--up">
 				<div class="qodef-header-sticky-inner ">
 					<a itemprop="url" class="qodef-header-logo-link qodef-height--set" href="index.html" style="height:21px" rel="home">
-						<img width="114" height="42" src="wp-content/uploads/2021/04/umea-logo-regular.png" class="qodef-header-logo-image qodef--main" alt="logo main" itemprop="image"/>
-						<img width="114" height="42" src="wp-content/uploads/2021/04/umea-logo-regular.png" class="qodef-header-logo-image qodef--dark" alt="logo dark" itemprop="image"/>
-						<img width="114" height="42" src="wp-content/uploads/2021/04/umea-logo-light.png" class="qodef-header-logo-image qodef--light" alt="logo light" itemprop="image"/></a>
+						<img width="300" height="200" src="{% static 'assets/images/Branding/logo_black.png' %}" class="qodef-header-logo-image qodef--main" alt="logo main" itemprop="image"/>
+						<img width="300" height="200" src="{% static 'assets/images/Branding/logo_black.png' %}" class="qodef-header-logo-image qodef--dark" alt="logo dark" itemprop="image"/>
+						<img width="300" height="200" src="{% static 'assets/images/Branding/logo_black.png' %}" class="qodef-header-logo-image qodef--light" alt="logo light" itemprop="image"/>
+					</a>
+
 					<nav class="qodef-header-navigation" role="navigation" aria-label="Top Menu">
 						<ul id="menu-main-menu-2" class="menu">
 							<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-59 qodef--hide-link qodef-menu-item--narrow">
-								<a href="#" onclick="JavaScript: return false;"><span class="qodef-menu-item-text">Home</span>
+								<a href="{% url 'landing:index' %}">
+									<span class="qodef-menu-item-text">Home</span>
 									<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15.797px" height="13.375px" viewBox="0 0 15.797 13.375" enable-background="new 0 0 15.797 13.375" xml:space="preserve"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
 								</a>
-								<div class="qodef-drop-down-second">
-									<div class="qodef-drop-down-second-inner">
-										<ul class="sub-menu">
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-682 current_page_item menu-item-698">
-												<a href="index.html"><span class="qodef-menu-item-text">Main Home</span></a>
-											</li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1099">
-												<a href="shop-metro/index.html"><span class="qodef-menu-item-text">Shop Metro</span></a>
-											</li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2121">
-												<a href="craftsmanship-home/index.html"><span class="qodef-menu-item-text">Craftsmanship Home</span></a>
-											</li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3145">
-												<a href="fullscreen-showcase/index.html"><span class="qodef-menu-item-text">Fullscreen Showcase</span></a>
-											</li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1270">
-												<a href="interior-design-studio/index.html"><span
-														class="qodef-menu-item-text">Interior Design Studio</span></a></li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150">
-												<a href="designer-furniture/index.html"><span class="qodef-menu-item-text">Designer Furniture</span></a>
-											</li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-652">
-												<a href="home-accessories/index.html"><span class="qodef-menu-item-text">Home Accessories</span></a>
-											</li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1098">
-												<a href="handcrafted-furniture/index.html"><span
-														class="qodef-menu-item-text">Handcrafted Furniture</span></a></li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1100">
-												<a href="floating-products/index.html"><span class="qodef-menu-item-text">Floating Products</span></a>
-											</li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3755">
-												<a href="landing/index.html"><span
-														class="qodef-menu-item-text">Landing</span></a></li>
-										</ul>
-									</div>
-								</div>
 							</li>
 							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-60 qodef--hide-link qodef-menu-item--narrow">
-								<a href="#" onclick="JavaScript: return false;"><span
-										class="qodef-menu-item-text">Pages</span>
-									<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-										 width="15.797px" height="13.375px" viewBox="0 0 15.797 13.375"
-										 enable-background="new 0 0 15.797 13.375" xml:space="preserve"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
+								<a href="{% url 'shop:shop_index' %}">
+									<span class="qodef-menu-item-text">Shop</span>
+									<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15.797px" height="13.375px" viewBox="0 0 15.797 13.375" enable-background="new 0 0 15.797 13.375" xml:space="preserve"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
 								</a>
-								<div class="qodef-drop-down-second">
-									<div class="qodef-drop-down-second-inner">
-										<ul class="sub-menu">
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1554">
-												<a href="about-us/index.html"><span
-														class="qodef-menu-item-text">About Us</span></a></li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2618">
-												<a href="our-team/index.html"><span
-														class="qodef-menu-item-text">Our Team</span></a></li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2621">
-												<a href="our-history/index.html"><span class="qodef-menu-item-text">Our History</span></a>
-											</li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2617">
-												<a href="vouchers/index.html"><span
-														class="qodef-menu-item-text">Vouchers</span></a></li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2619">
-												<a href="pricing-plans/index.html"><span class="qodef-menu-item-text">Pricing Plans</span></a>
-											</li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2622">
-												<a href="store-locator/index.html"><span class="qodef-menu-item-text">Store Locator</span></a>
-											</li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1982">
-												<a href="our-locations/index.html"><span class="qodef-menu-item-text">Our Locations</span></a>
-											</li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2141">
-												<a href="contact-us/index.html"><span class="qodef-menu-item-text">Contact Us</span></a>
-											</li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2623">
-												<a href="faq-page/index.html"><span
-														class="qodef-menu-item-text">FAQ Page</span></a></li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1620">
-												<a href="coming-soon/index.html"><span class="qodef-menu-item-text">Coming Soon</span></a>
-											</li>
-											<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2626">
-												<a href="404.html"><span class="qodef-menu-item-text">404 Error Page</span></a>
-											</li>
-										</ul>
-									</div>
-								</div>
 							</li>
 							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-61 qodef--hide-link qodef-menu-item--narrow">
-								<a href="#" onclick="JavaScript: return false;"><span
-										class="qodef-menu-item-text">Shop</span>
-									<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-										 width="15.797px" height="13.375px" viewBox="0 0 15.797 13.375"
-										 enable-background="new 0 0 15.797 13.375" xml:space="preserve"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
+								<a href="{% url 'landing:aboutUs' %}">
+									<span class="qodef-menu-item-text">About Us</span>
+									<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15.797px" height="13.375px" viewBox="0 0 15.797 13.375" enable-background="new 0 0 15.797 13.375" xml:space="preserve"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
 								</a>
-								<div class="qodef-drop-down-second">
-									<div class="qodef-drop-down-second-inner">
-										<ul class="sub-menu">
-											<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-382 qodef--hide-link">
-												<a href="#" onclick="JavaScript: return false;"><span
-														class="qodef-menu-item-text">Shop Types</span>
-													<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg"
-														 x="0px" y="0px" width="15.797px" height="13.375px"
-														 viewBox="0 0 15.797 13.375"
-														 enable-background="new 0 0 15.797 13.375" xml:space="preserve"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
-												</a>
-												<ul class="sub-menu">
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-381">
-														<a href="shop/index.html"><span class="qodef-menu-item-text">Sidebar Right</span></a>
-													</li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2301">
-														<a href="sidebar-left/index.html"><span
-																class="qodef-menu-item-text">Sidebar Left</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2368">
-														<a href="masonry-list/index.html"><span
-																class="qodef-menu-item-text">Masonry List</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2324">
-														<a href="divided-slider/index.html"><span
-																class="qodef-menu-item-text">Divided Slider</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4801">
-														<a href="asymetric-list/index.html"><span
-																class="qodef-menu-item-text">Asymetric List</span></a></li>
-													<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2369">
-														<a href="product-category/decoration/index.html"><span
-																class="qodef-menu-item-text">Filter By Category</span></a>
-													</li>
-												</ul>
-											</li>
-											<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-468 qodef--hide-link">
-												<a href="#" onclick="JavaScript: return false;"><span
-														class="qodef-menu-item-text">Shop Layouts</span>
-													<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg"
-														 x="0px" y="0px" width="15.797px" height="13.375px"
-														 viewBox="0 0 15.797 13.375"
-														 enable-background="new 0 0 15.797 13.375" xml:space="preserve"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
-												</a>
-												<ul class="sub-menu">
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-474">
-														<a href="shop/two-columns/index.html"><span
-																class="qodef-menu-item-text">Two Columns</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-473">
-														<a href="shop/three-columns/index.html"><span
-																class="qodef-menu-item-text">Three Columns</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-472">
-														<a href="shop/four-columns/index.html"><span
-																class="qodef-menu-item-text">Four Columns</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-471">
-														<a href="shop/four-columns-wide/index.html"><span
-																class="qodef-menu-item-text">Four Columns Wide</span></a>
-													</li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-470">
-														<a href="shop/five-columns-wide/index.html"><span
-																class="qodef-menu-item-text">Five Columns Wide</span></a>
-													</li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-469">
-														<a href="shop/six-columns-wide/index.html"><span
-																class="qodef-menu-item-text">Six Columns Wide</span></a>
-													</li>
-												</ul>
-											</li>
-											<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-364 qodef--hide-link">
-												<a href="#" onclick="JavaScript: return false;"><span
-														class="qodef-menu-item-text">Shop Single</span>
-													<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg"
-														 x="0px" y="0px" width="15.797px" height="13.375px"
-														 viewBox="0 0 15.797 13.375"
-														 enable-background="new 0 0 15.797 13.375" xml:space="preserve"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
-												</a>
-												<ul class="sub-menu">
-													<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-366">
-														<a href="product/treated-pine-wood-chair/index.html"><span
-																class="qodef-menu-item-text">Wide</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-368">
-														<a href="product/small-table-decorations/index.html"><span
-																class="qodef-menu-item-text">Wide Two Columns</span></a>
-													</li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-367">
-														<a href="product/self-rotating-shower/index.html"><span
-																class="qodef-menu-item-text">Narrow</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-365">
-														<a href="product/green-sofa/index.html"><span
-																class="qodef-menu-item-text">Simple Product</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-369">
-														<a href="product/our-poster/index.html"><span
-																class="qodef-menu-item-text">Downloadable Product</span></a>
-													</li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-370">
-														<a href="product/simple-vase/index.html"><span
-																class="qodef-menu-item-text">External Product</span></a>
-													</li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-371">
-														<a href="product/umea-coupon/index.html"><span
-																class="qodef-menu-item-text">Virtual Product</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-372">
-														<a href="product/mocca-chair/index.html"><span
-																class="qodef-menu-item-text">Variable Product</span></a>
-													</li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-373">
-														<a href="product/door-knobs/index.html"><span
-																class="qodef-menu-item-text">Grouped Product</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-378">
-														<a href="product/coffee-table/index.html"><span
-																class="qodef-menu-item-text">On Sale Product</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-374">
-														<a href="product/green-plates/index.html"><span
-																class="qodef-menu-item-text">Sold Out Product</span></a>
-													</li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-380">
-														<a href="product/sugar-bowl/index.html"><span
-																class="qodef-menu-item-text">New Product</span></a></li>
-												</ul>
-											</li>
-											<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-646 qodef--hide-link">
-												<a href="#" onclick="JavaScript: return false;"><span
-														class="qodef-menu-item-text">Shop Pages</span>
-													<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg"
-														 x="0px" y="0px" width="15.797px" height="13.375px"
-														 viewBox="0 0 15.797 13.375"
-														 enable-background="new 0 0 15.797 13.375" xml:space="preserve"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
-												</a>
-												<ul class="sub-menu">
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-649">
-														<a href="my-account/index.html"><span class="qodef-menu-item-text">My Account</span></a>
-													</li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-651">
-														<a href="cart/index.html"><span
-																class="qodef-menu-item-text">Cart</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-650">
-														<a href="checkout/index.html"><span class="qodef-menu-item-text">Checkout</span></a>
-													</li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-647">
-														<a href="order-tracking/index.html"><span
-																class="qodef-menu-item-text">Order Tracking</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-648">
-														<a href="wishlist/index.html"><span class="qodef-menu-item-text">Wishlist</span></a>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</div>
-								</div>
 							</li>
 							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-63 qodef--hide-link qodef-menu-item--wide">
-								<a href="#" onclick="JavaScript: return false;"><span
-										class="qodef-menu-item-text">Portfolio</span>
-									<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-										 width="15.797px" height="13.375px" viewBox="0 0 15.797 13.375"
-										 enable-background="new 0 0 15.797 13.375" xml:space="preserve"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
+								<a href="{% url 'landing:contact_us' %}">
+									<span class="qodef-menu-item-text">Contact Us</span>
+									<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15.797px" height="13.375px" viewBox="0 0 15.797 13.375" enable-background="new 0 0 15.797 13.375" xml:space="preserve"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
 								</a>
-								<div class="qodef-drop-down-second">
-									<div class="qodef-drop-down-second-inner qodef-content-grid">
-										<ul class="sub-menu">
-											<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5262 qodef--hide-link">
-												<a href="#" onclick="JavaScript: return false;"><span
-														class="qodef-menu-item-text">List Types</span>
-													<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg"
-														 x="0px" y="0px" width="15.797px" height="13.375px"
-														 viewBox="0 0 15.797 13.375"
-														 enable-background="new 0 0 15.797 13.375" xml:space="preserve"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
-												</a>
-												<ul class="sub-menu">
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3219">
-														<a href="portfolio/standard/index.html"><span
-																class="qodef-menu-item-text">Standard</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3218">
-														<a href="portfolio/gallery/index.html"><span
-																class="qodef-menu-item-text">Gallery</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5362">
-														<a href="portfolio/gallery-joined/index.html"><span
-																class="qodef-menu-item-text">Gallery Joined</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5340">
-														<a href="portfolio/masonry/index.html"><span
-																class="qodef-menu-item-text">Masonry</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5361">
-														<a href="portfolio/masonry-joined/index.html"><span
-																class="qodef-menu-item-text">Masonry Joined</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4737">
-														<a href="portfolio/slider/index.html"><span
-																class="qodef-menu-item-text">Slider</span></a></li>
-												</ul>
-											</li>
-											<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1260 qodef--hide-link">
-												<a href="#" onclick="JavaScript: return false;"><span
-														class="qodef-menu-item-text">List Layouts</span>
-													<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg"
-														 x="0px" y="0px" width="15.797px" height="13.375px"
-														 viewBox="0 0 15.797 13.375"
-														 enable-background="new 0 0 15.797 13.375" xml:space="preserve"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
-												</a>
-												<ul class="sub-menu">
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3225">
-														<a href="portfolio/two-columns/index.html"><span
-																class="qodef-menu-item-text">Two Columns</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3224">
-														<a href="portfolio/three-columns/index.html"><span
-																class="qodef-menu-item-text">Three Columns</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3220">
-														<a href="portfolio/three-columns-wide/index.html"><span
-																class="qodef-menu-item-text">Three Columns Wide</span></a>
-													</li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3223">
-														<a href="portfolio/four-columns/index.html"><span
-																class="qodef-menu-item-text">Four Columns</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3222">
-														<a href="portfolio/four-columns-wide/index.html"><span
-																class="qodef-menu-item-text">Four Columns Wide</span></a>
-													</li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3221">
-														<a href="portfolio/five-columns-wide/index.html"><span
-																class="qodef-menu-item-text">Five Columns Wide</span></a>
-													</li>
-												</ul>
-											</li>
-											<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1261 qodef--hide-link">
-												<a href="#" onclick="JavaScript: return false;"><span
-														class="qodef-menu-item-text">Single Types</span>
-													<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg"
-														 x="0px" y="0px" width="15.797px" height="13.375px"
-														 viewBox="0 0 15.797 13.375"
-														 enable-background="new 0 0 15.797 13.375" xml:space="preserve"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
-												</a>
-												<ul class="sub-menu">
-													<li class="menu-item menu-item-type-post_type menu-item-object-portfolio-item menu-item-1267">
-														<a href="portfolio-item/the-student-hotel-delft/index.html"><span
-																class="qodef-menu-item-text">Big Image</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-portfolio-item menu-item-1264">
-														<a href="portfolio-item/craft-your-needs/index.html"><span
-																class="qodef-menu-item-text">Small Image</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-portfolio-item menu-item-1266">
-														<a href="portfolio-item/modular-tile-collection/index.html"><span
-																class="qodef-menu-item-text">Big Slider</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-portfolio-item menu-item-1263">
-														<a href="portfolio-item/our-top-picks/index.html"><span
-																class="qodef-menu-item-text">Small Slider</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-portfolio-item menu-item-1265">
-														<a href="portfolio-item/minimalist-handmade-picks/index.html"><span
-																class="qodef-menu-item-text">Big Gallery</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-portfolio-item menu-item-1262">
-														<a href="portfolio-item/art-deco-geometric/index.html"><span
-																class="qodef-menu-item-text">Small Gallery</span></a></li>
-												</ul>
-											</li>
-											<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5402">
-												<a href="#"><span class="qodef-menu-item-text">Special Offer</span></a>
-												<div class="qodef-mega-menu-widget-holder">
-													<div class="widget widget_media_image" data-area="menu-dropdown"><a
-															href="index.html"><img width="264" height="157"
-																				   src="wp-content/uploads/2021/03/dropdown-img-300x179.png"
-																				   class="image wp-image-5401  attachment-264x157 size-264x157"
-																				   alt="f" loading="lazy"
-																				   style="max-width: 100%; height: auto;"
-																				   srcset="https://umea.qodeinteractive.com/wp-content/uploads/2021/03/dropdown-img-300x179.png 300w, https://umea.qodeinteractive.com/wp-content/uploads/2021/03/dropdown-img-768x457.png 768w, https://umea.qodeinteractive.com/wp-content/uploads/2021/03/dropdown-img-600x357.png 600w, https://umea.qodeinteractive.com/wp-content/uploads/2021/03/dropdown-img.png 800w"
-																				   sizes="(max-width: 264px) 100vw, 264px"/></a>
-													</div>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</li>
-							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-62 qodef--hide-link qodef-menu-item--narrow">
-								<a href="#" onclick="JavaScript: return false;"><span
-										class="qodef-menu-item-text">Blog</span>
-									<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-										 width="15.797px" height="13.375px" viewBox="0 0 15.797 13.375"
-										 enable-background="new 0 0 15.797 13.375" xml:space="preserve"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
-								</a>
-								<div class="qodef-drop-down-second">
-									<div class="qodef-drop-down-second-inner">
-										<ul class="sub-menu">
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3125">
-												<a href="right-sidebar/index.html"><span class="qodef-menu-item-text">Right Sidebar</span></a>
-											</li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3124">
-												<a href="left-sidebar/index.html"><span class="qodef-menu-item-text">Left Sidebar</span></a>
-											</li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3123">
-												<a href="no-sidebar/index.html"><span class="qodef-menu-item-text">No Sidebar</span></a>
-											</li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4708">
-												<a href="minimal-list/index.html"><span class="qodef-menu-item-text">Minimal List</span></a>
-											</li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4709">
-												<a href="slider-list/index.html"><span class="qodef-menu-item-text">Slider List</span></a>
-											</li>
-											<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2982 qodef--hide-link">
-												<a href="#" onclick="JavaScript: return false;"><span
-														class="qodef-menu-item-text">Post Types</span>
-													<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg"
-														 x="0px" y="0px" width="15.797px" height="13.375px"
-														 viewBox="0 0 15.797 13.375"
-														 enable-background="new 0 0 15.797 13.375" xml:space="preserve"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
-												</a>
-												<ul class="sub-menu">
-													<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2981">
-														<a href="exploring-new-ways-of-decorating/index.html"><span
-																class="qodef-menu-item-text">Standard Post</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2980">
-														<a href="handmade-pieces-that-took-time-to-make/index.html"><span
-																class="qodef-menu-item-text">Gallery Post</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2978">
-														<a href="every-pot-that-is-crafted/index.html"><span
-																class="qodef-menu-item-text">Quote Post</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-4689">
-														<a href="the-minimalist-residence/index.html"><span
-																class="qodef-menu-item-text">Link Post</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2976">
-														<a href="podcast-simon-oberg-wood-crafting/index.html"><span
-																class="qodef-menu-item-text">Audio Post</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2977">
-														<a href="pottery-making-glazes-firing/index.html"><span
-																class="qodef-menu-item-text">Video Post</span></a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2997">
-														<a href="new-ways-of-decorating-your-home/index.html"><span
-																class="qodef-menu-item-text">No Sidebar Post</span></a></li>
-												</ul>
-											</li>
-										</ul>
-									</div>
-								</div>
 							</li>
 						</ul>
 					</nav>
+
 					<div class="qodef-widget-holder qodef--one">
 						<div class="qodef-widget-holder qodef--one">
-							<div id="umea_core_search_opener-3"
-								 class="widget widget_umea_core_search_opener qodef-sticky-right">
-								<div class="qodef-search-opener-wrapper" style="margin: 3px 0px 0px 4px;"><a
-										href="javascript:void(0)"
-										class="qodef-opener-icon qodef-m qodef-source--predefined qodef-search-opener">
-									<span class="qodef-search-opener-text">Search</span> <span
-										class="qodef-m-icon qodef--open">
-				<svg class="qodef-search-opener-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16px"
-					 height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><g><path d="M15.352,6.588c0,1.639-0.582,3.04-1.744,4.202c-1.162,1.163-2.563,1.744-4.203,1.744c-1.391,0-2.639-0.438-3.745-1.314 l-3.917,3.916c-0.114,0.134-0.262,0.2-0.443,0.2c-0.182,0-0.334-0.062-0.458-0.186c-0.124-0.124-0.186-0.276-0.186-0.457		c0-0.182,0.067-0.329,0.2-0.443l3.917-3.917C3.896,9.229,3.458,7.979,3.458,6.588c0-1.639,0.581-3.04,1.744-4.203		c1.163-1.162,2.563-1.744,4.202-1.744c1.641,0,3.041,0.582,4.203,1.744C14.77,3.548,15.352,4.949,15.352,6.588z M14.438,6.588		c0-1.391-0.492-2.578-1.473-3.56c-0.982-0.981-2.168-1.473-3.561-1.473c-1.391,0-2.577,0.491-3.559,1.473		C4.864,4.01,4.373,5.197,4.373,6.588c0,1.392,0.491,2.578,1.473,3.56c0.981,0.981,2.168,1.472,3.559,1.472		c1.393,0,2.578-0.49,3.561-1.472C13.945,9.166,14.438,7.979,14.438,6.588z" /></g></svg> </span>
-								</a>
-									<form role="search" method="get" class="qodef-search-form"
-										  action="https://umea.qodeinteractive.com/">
-										<label for="qodef-search-form-6488b50d975cb" class="screen-reader-text">Search
-											for:</label>
-										<div class="qodef-search-form-inner clear">
-											<input type="search" id="qodef-search-form-6488b50d975cb"
-												   class="qodef-search-form-field" value="" name="s" placeholder="Search"/>
-											<button type="submit" class="qodef-search-form-button">
-												<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16px"
-													 height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16"
-													 xml:space="preserve"><g><path d="M15.352,6.588c0,1.639-0.582,3.04-1.744,4.202c-1.162,1.163-2.563,1.744-4.203,1.744c-1.391,0-2.639-0.438-3.745-1.314 l-3.917,3.916c-0.114,0.134-0.262,0.2-0.443,0.2c-0.182,0-0.334-0.062-0.458-0.186c-0.124-0.124-0.186-0.276-0.186-0.457		c0-0.182,0.067-0.329,0.2-0.443l3.917-3.917C3.896,9.229,3.458,7.979,3.458,6.588c0-1.639,0.581-3.04,1.744-4.203		c1.163-1.162,2.563-1.744,4.202-1.744c1.641,0,3.041,0.582,4.203,1.744C14.77,3.548,15.352,4.949,15.352,6.588z M14.438,6.588		c0-1.391-0.492-2.578-1.473-3.56c-0.982-0.981-2.168-1.473-3.561-1.473c-1.391,0-2.577,0.491-3.559,1.473		C4.864,4.01,4.373,5.197,4.373,6.588c0,1.392,0.491,2.578,1.473,3.56c0.981,0.981,2.168,1.472,3.559,1.472		c1.393,0,2.578-0.49,3.561-1.472C13.945,9.166,14.438,7.979,14.438,6.588z" /></g></svg>
-											</button>
-										</div>
-									</form>
-								</div>
-							</div>
-							<div id="umea_core_woo_dropdown_cart-3"
-								 class="widget widget_umea_core_woo_dropdown_cart qodef-sticky-right">
-								<div class="qodef-woo-dropdown-cart qodef-m" style="padding: 3px 11px 0px 10px">
-									<div class="qodef-woo-dropdown-cart-inner qodef-m-inner">
-										<a itemprop="url" class="qodef-m-opener" href="cart/index.html">
-											<span class="qodef-m-opener-text">Cart</span>
-											<span class="qodef-m-opener-icon"><svg class="qodef-woo-dropdown-cart-opener" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="11.438px" height="15px" viewBox="0 0 11.438 15" enable-background="new 0 0 11.438 15" xml:space="preserve"><g><path d="M0.466,14.633c-0.184-0.183-0.274-0.399-0.274-0.649V3.822c0-0.25,0.091-0.466,0.274-0.65 c0.183-0.183,0.399-0.274,0.649-0.274h1.848C2.981,2.128,3.261,1.474,3.8,0.935c0.539-0.539,1.184-0.808,1.934-0.808   c0.751,0,1.395,0.27,1.934,0.808c0.539,0.539,0.818,1.194,0.838,1.963h1.848c0.249,0,0.466,0.091,0.649,0.274   c0.183,0.184,0.274,0.4,0.274,0.65v10.162c0,0.25-0.092,0.467-0.274,0.649c-0.184,0.183-0.4,0.274-0.649,0.274H1.115   C0.865,14.907,0.648,14.815,0.466,14.633z M1.115,3.822v10.162h9.238V3.822H1.115z M3.887,2.898h3.695   c-0.02-0.52-0.207-0.957-0.563-1.313C6.663,1.229,6.234,1.05,5.734,1.05S4.805,1.229,4.449,1.584   C4.093,1.941,3.905,2.378,3.887,2.898z M4.017,5.54c-0.087-0.087-0.13-0.197-0.13-0.332s0.043-0.246,0.13-0.332   c0.086-0.087,0.197-0.13,0.332-0.13h2.771c0.135,0,0.246,0.043,0.333,0.13c0.086,0.086,0.13,0.197,0.13,0.332   S7.538,5.453,7.452,5.54c-0.087,0.086-0.198,0.13-0.333,0.13H4.349C4.213,5.669,4.103,5.626,4.017,5.54z" /></g></svg></span>
-											<span class="qodef-m-opener-count">0</span>
-										</a>
-										<div class="qodef-m-dropdown">
-											<div class="qodef-m-dropdown-inner">
-												<p class="qodef-m-posts-not-found qodef-grid-item">No products in the
-													cart.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
 							<div id="umea_core_woo_login-3" class="widget widget_umea_core_woo_login qodef-sticky-right">
 								<div class="qodef-woo-login qodef-m">
-									<a class="qodef-opener-icon qodef-m qodef-source--predefined qodef-login-opener"
-									   href="my-account/index.html">
-				<span class="qodef-m-opener-text">
-				Log In	</span>
+									<a class="qodef-opener-icon qodef-m qodef-source--predefined qodef-login-opener" href="{% url 'accounts:signin' %}">
+										<span class="qodef-m-opener-text">Log In / Register	</span>
 										<span class="qodef-m-opener-icon qodef-source--predefined">
-				<svg class="qodef-woo-login-opener" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="9.75px"
-					 height="15px" viewBox="0 0 9.75 15" enable-background="new 0 0 9.75 15" xml:space="preserve"><g><g><path d="M4.876,14.925c-0.327,0-0.658-0.022-0.984-0.066C3.25,14.774,2.65,14.641,2.108,14.46	c-0.585-0.197-1.066-0.486-1.432-0.862c-0.4-0.413-0.604-0.903-0.604-1.459c0-1.602,0.473-3.006,1.405-4.172 c0.863-1.08,1.879-1.679,3.025-1.785C3.829,6.102,3.23,5.805,2.72,5.296C2.118,4.694,1.812,3.968,1.812,3.139 s0.306-1.554,0.907-2.156C3.322,0.38,4.048,0.075,4.876,0.075S6.431,0.38,7.032,0.982c0.603,0.602,0.91,1.327,0.91,2.156	s-0.308,1.555-0.91,2.157C6.522,5.805,5.923,6.102,5.25,6.181c1.146,0.106,2.163,0.706,3.026,1.785	c0.934,1.165,1.405,2.569,1.405,4.172c0,0.556-0.204,1.046-0.604,1.459c-0.368,0.378-0.85,0.668-1.434,0.861 c-0.54,0.182-1.14,0.315-1.782,0.399C5.535,14.902,5.204,14.925,4.876,14.925z M4.876,7.073c-1.024,0-1.904,0.477-2.69,1.46 C1.375,9.549,0.98,10.728,0.98,12.139c0,0.314,0.114,0.585,0.347,0.826c0.264,0.271,0.624,0.483,1.069,0.633 c0.486,0.161,1.03,0.283,1.615,0.36c0.575,0.077,1.156,0.077,1.729,0c0.587-0.077,1.129-0.199,1.616-0.36	c0.444-0.149,0.804-0.362,1.069-0.633c0.236-0.244,0.347-0.507,0.347-0.826c0-1.413-0.395-2.591-1.205-3.605 C6.78,7.55,5.9,7.073,4.876,7.073z M4.876,0.983c-0.587,0-1.083,0.209-1.514,0.642C2.931,2.057,2.721,2.551,2.721,3.139 c0,0.588,0.21,1.083,0.642,1.515c0.432,0.43,0.927,0.641,1.514,0.641c0.586,0,1.083-0.21,1.514-0.641 c0.433-0.432,0.642-0.927,0.642-1.515c0-0.587-0.209-1.082-0.642-1.514C5.959,1.193,5.464,0.983,4.876,0.983z" /></g></g></svg> </span>
+											<svg class="qodef-woo-login-opener" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="9.75px" height="15px" viewBox="0 0 9.75 15" enable-background="new 0 0 9.75 15" xml:space="preserve"><g><g><path d="M4.876,14.925c-0.327,0-0.658-0.022-0.984-0.066C3.25,14.774,2.65,14.641,2.108,14.46	c-0.585-0.197-1.066-0.486-1.432-0.862c-0.4-0.413-0.604-0.903-0.604-1.459c0-1.602,0.473-3.006,1.405-4.172 c0.863-1.08,1.879-1.679,3.025-1.785C3.829,6.102,3.23,5.805,2.72,5.296C2.118,4.694,1.812,3.968,1.812,3.139 s0.306-1.554,0.907-2.156C3.322,0.38,4.048,0.075,4.876,0.075S6.431,0.38,7.032,0.982c0.603,0.602,0.91,1.327,0.91,2.156	s-0.308,1.555-0.91,2.157C6.522,5.805,5.923,6.102,5.25,6.181c1.146,0.106,2.163,0.706,3.026,1.785	c0.934,1.165,1.405,2.569,1.405,4.172c0,0.556-0.204,1.046-0.604,1.459c-0.368,0.378-0.85,0.668-1.434,0.861 c-0.54,0.182-1.14,0.315-1.782,0.399C5.535,14.902,5.204,14.925,4.876,14.925z M4.876,7.073c-1.024,0-1.904,0.477-2.69,1.46 C1.375,9.549,0.98,10.728,0.98,12.139c0,0.314,0.114,0.585,0.347,0.826c0.264,0.271,0.624,0.483,1.069,0.633 c0.486,0.161,1.03,0.283,1.615,0.36c0.575,0.077,1.156,0.077,1.729,0c0.587-0.077,1.129-0.199,1.616-0.36	c0.444-0.149,0.804-0.362,1.069-0.633c0.236-0.244,0.347-0.507,0.347-0.826c0-1.413-0.395-2.591-1.205-3.605 C6.78,7.55,5.9,7.073,4.876,7.073z M4.876,0.983c-0.587,0-1.083,0.209-1.514,0.642C2.931,2.057,2.721,2.551,2.721,3.139 c0,0.588,0.21,1.083,0.642,1.515c0.432,0.43,0.927,0.641,1.514,0.641c0.586,0,1.083-0.21,1.514-0.641 c0.433-0.432,0.642-0.927,0.642-1.515c0-0.587-0.209-1.082-0.642-1.514C5.959,1.193,5.464,0.983,4.876,0.983z" /></g></g></svg> </span>
 									</a>
 								</div>
 							</div>
@@ -976,7 +492,9 @@
 				</div>
 			</div>
 		</header>
+		<!--END: SECTION- Large screen Header -->
 
+		<!--START: SECTION- Mobile Screen Header -->
 		<header id="qodef-page-mobile-header">
 			<div id="qodef-page-mobile-header-inner" class="">
 				<a itemprop="url" class="qodef-mobile-header-logo-link" href="{% url 'landing:index' %}" style="height:21px" rel="home">
@@ -1001,11 +519,10 @@
 					</div>
 				</div>
 				<a href="javascript:void(0)" class="qodef-opener-icon qodef-m qodef-source--predefined qodef-mobile-header-opener">
-			<span class="qodef-m-icon qodef--open">
-			<svg class="qodef-mobile-menu-opener-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve"><circle class="qodef-dot" cx="20" cy="20" r="1.647" /><circle class="qodef-arc-1" cx="20" cy="20" r="19"/><circle class="qodef-arc-2" cx="20" cy="20" r="19"/></svg> </span>
-					<span class="qodef-m-icon qodef--close">
-			<svg class="qodef-close" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13" enable-background="new 0 0 13 13" xml:space="preserve"><line x1="0" y1="13" x2="13" y2="0" /><line x1="0" y1="13" x2="13" y2="0"/><line x1="13" y1="13" x2="0" y2="0"/><line x1="13" y1="13" x2="0" y2="0"/></svg> </span>
+					<span class="qodef-m-icon qodef--open"><svg class="qodef-mobile-menu-opener-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve"><circle class="qodef-dot" cx="20" cy="20" r="1.647" /><circle class="qodef-arc-1" cx="20" cy="20" r="19"/><circle class="qodef-arc-2" cx="20" cy="20" r="19"/></svg> </span>
+					<span class="qodef-m-icon qodef--close"><svg class="qodef-close" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13" enable-background="new 0 0 13 13" xml:space="preserve"><line x1="0" y1="13" x2="13" y2="0" /><line x1="0" y1="13" x2="13" y2="0"/><line x1="13" y1="13" x2="0" y2="0"/><line x1="13" y1="13" x2="0" y2="0"/></svg> </span>
 				</a>
+
 				<nav class="qodef-mobile-header-navigation" role="navigation" aria-label="Mobile Menu">
 					<ul id="menu-main-menu-4" class="qodef-content-grid">
 						<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-59 qodef--hide-link qodef-menu-item--narrow">
@@ -1019,17 +536,12 @@
 							</a>
 						</li>
 						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-63 qodef--hide-link qodef-menu-item--wide">
-							<a href="#"><span class="qodef-menu-item-text">About Us</span>
+							<a href="{% url 'landing:aboutUs' %}"><span class="qodef-menu-item-text">About Us</span>
 								<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15.797px" height="13.375px" viewBox="0 0 15.797 13.375" enable-background="new 0 0 15.797 13.375" xml:space="preserve"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
 							</a>
 						</li>
 						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-63 qodef--hide-link qodef-menu-item--wide">
-							<a href="#"><span class="qodef-menu-item-text">Contact Us</span>
-								<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15.797px" height="13.375px" viewBox="0 0 15.797 13.375" enable-background="new 0 0 15.797 13.375" xml:space="preserve"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
-							</a>
-						</li>
-						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-62 qodef--hide-link qodef-menu-item--narrow">
-							<a href="#" onclick="JavaScript: return false;"><span class="qodef-menu-item-text">Blog</span>
+							<a href="{% url 'landing:contact_us' %}"><span class="qodef-menu-item-text">Contact Us</span>
 								<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15.797px" height="13.375px" viewBox="0 0 15.797 13.375" enable-background="new 0 0 15.797 13.375" xml:space="preserve"><path d="M0.636,6.398h13.371L8.488,0.88l0.7-0.701l6.363,6.364c0.023,0.023,0.027,0.057,0.045,0.084  c0.02,0.027,0.051,0.045,0.063,0.076c0.007,0.017,0,0.034,0.005,0.051c0.014,0.046,0.014,0.089,0.014,0.137  c0,0.051,0,0.096-0.015,0.145c-0.005,0.016,0.001,0.031-0.005,0.047c-0.012,0.031-0.041,0.047-0.059,0.072  c-0.019,0.029-0.023,0.064-0.047,0.09l-6.015,6.013l-0.7-0.701l5.168-5.167H0.636H0.14V6.398H0.636z" /></svg>
 							</a>
 						</li>
@@ -1037,6 +549,7 @@
 				</nav>
 			</div>
 		</header>
+		<!--END: SECTION- Mobile Screen Header -->
 
 		{% block body %}
 		{% endblock %}
@@ -1371,8 +884,6 @@
 
 <script type="text/javascript">
 		var sbiajaxurl = "wp-admin/admin-ajax.html";
-
-
 </script>
 <div id="yith-quick-view-modal">
 	<div class="yith-quick-view-overlay"></div>
