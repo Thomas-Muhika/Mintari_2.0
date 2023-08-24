@@ -118,3 +118,9 @@ def sign_in(request):
 # mintarikenya.co.ke/accounts/forgot_password/
 def forgot_password(request):
     return render(request, 'portal/forgot_password.html')
+
+
+def logout_view(request):
+    if request.method == 'POST':
+        logout(request)
+        return redirect('landing:index')
