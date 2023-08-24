@@ -10,8 +10,12 @@ from django.contrib.auth.forms import AuthenticationForm
 @login_required(login_url="accounts:signup")
 def portal_index(request):
 
-    total_deposit = RecordOrder.objects.aggregate(Sum('DepositPaid'))['DepositPaid__sum']
-    total_deposit = 'Ksh {:,.2f}'.format(total_deposit)
+    try:
+        total_deposit = RecordOrder.objects.aggregate(Sum('DepositPaid'))['DepositPaid__sum']
+        total_deposit = 'Ksh {:,.2f}'.format(total_deposit)
+    except:
+        total_deposit = 0
+        pass
 
     products_sold = len(RecordOrder.objects.all())
 
