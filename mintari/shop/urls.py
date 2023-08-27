@@ -11,5 +11,8 @@ urlpatterns = [
     # mintarikenya.co.ke/shop/product/
     # re_path(r'^product/$', views.single_product, name='product'),
 
+    # mintarikenya.co.ke/shop/ProdCategory
+    path('<str:ProdCategory>/', views.ShopCategory.as_view(), name='shop_category'),
+
     path('product/<str:ProdCode>/', views.SingleProduct.as_view(), name='product'),
 ]

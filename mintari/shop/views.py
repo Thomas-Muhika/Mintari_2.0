@@ -14,6 +14,22 @@ def shop_index(request):
     return render(request, 'shop/shop.html', {"StockTable": stock_table, "CategoryTable": CategoryTable})
 
 
+class ShopCategory(View):
+    def get(self, request, ProdCategory):
+        print("*****************************")
+        try:
+            stock_items = Stock.objects.all().filter(ProductCategory=ProdCategory)
+            if len(stock_items) > 0:
+                CategoryTable = StockCategories.objects.all()
+                print(CategoryTable)
+                return render(request, 'shop/shop.html', {"StockTable": stock_items, "CategoryTable": CategoryTable})
+            else:
+                return HttpResponse('No items in that category')  # TODO: create redirect on invalid link
+
+        except:
+            return HttpResponse('Activation link is invalid!')  # TODO: create redirect on invalid link
+
+
 class SingleProduct(View):
     def get(self, request, ProdCode):
         try:
