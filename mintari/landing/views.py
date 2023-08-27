@@ -1,10 +1,23 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import AuthenticationForm
 
+from portal.models import StockCategories, Stock
+
 
 # mintarikenya.com
 def index(request):
-	return render(request, 'landing/global_index.html')
+	stock_table = Stock.objects.all()
+
+	context = {
+		"sofa_items": Stock.objects.all().filter(ProductCategory='Sofas')[:2],
+		"bed_items": Stock.objects.all().filter(ProductCategory='Beds')[:2],
+		"dining_items": Stock.objects.all().filter(ProductCategory='Dining')[:2],
+		"chair_items": Stock.objects.all().filter(ProductCategory='Chairs')[:1],
+		"stools_items": Stock.objects.all().filter(ProductCategory='Stools')[:1],
+		"accessories_items": Stock.objects.all().filter(ProductCategory='Accessories')[:1]
+	}
+
+	return render(request, 'landing/global_index.html', context)
 
 
 def contact__us(request):
