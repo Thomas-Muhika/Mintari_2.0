@@ -57,12 +57,10 @@ def add_stock(request):
                 ProductWeight=request.POST['ProductWeight'],
                 ProductDimension=request.POST['ProductDimension'],
                 ProductPrice=request.POST['BasePrice'],
-                ShortDescription=request.POST['ShortDescription'],
                 DetailedDescription=request.POST['DetailedDescription'],
                 ProductBaseImage=request.FILES['MainImage'],
                 ProductImageTopView=request.FILES['ProductImageTopView'],
                 ProductImageLeftView=request.FILES['ProductImageLeftView'],
-                ProductImageRightView=request.FILES['ProductImageRightView'],
                 ProductImageFrontView=request.FILES['ProductImageFrontView'],
             )
             messages.info(request, "Stock item saved successfully", extra_tags="success")

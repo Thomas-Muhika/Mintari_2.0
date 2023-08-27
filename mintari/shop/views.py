@@ -16,7 +16,6 @@ def shop_index(request):
 
 class ShopCategory(View):
     def get(self, request, ProdCategory):
-        print("*****************************")
         try:
             stock_items = Stock.objects.all().filter(ProductCategory=ProdCategory)
             if len(stock_items) > 0:
