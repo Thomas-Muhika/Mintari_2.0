@@ -22,7 +22,9 @@ class SingleProduct(View):
             if len(related_items) > 4:
                 related_items = related_items[:4]
 
-            return render(request, 'shop/product.html', {'stock_item': stock_item, 'related_items': related_items})
+            price = '{:,.2f}'.format(stock_item.ProductPrice)
+
+            return render(request, 'shop/product.html', {'stock_item': stock_item, 'related_items': related_items, 'price': price})
 
         except:
             return HttpResponse('Activation link is invalid!')  # TODO: create redirect on invalid link

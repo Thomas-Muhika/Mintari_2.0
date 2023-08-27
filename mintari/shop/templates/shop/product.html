@@ -2,14 +2,13 @@
 {% extends 'shop/base.html' %}
 
 <!--page title-->
-{% block title %} {{ stock_item.ProductTitle }} | Mintari {% endblock %}
+{% block title %}Shop | Mintari {% endblock %}
 
 {% block body %}
 
 {% load static %}
 
 <div id="qodef-page-outer">
-
     <!-- START: SECTION Header Breadcrumb -->
     <div class="qodef-page-title qodef-m qodef-title--standard-with-breadcrumbs qodef-alignment--left qodef-vertical-alignment--header-bottom">
         <div class="qodef-m-inner">
@@ -32,19 +31,20 @@
         </div>
     </div>
     <!-- STOP: SECTION Header Breadcrumb -->
-    
-    <div id="qodef-page-inner" class="qodef-content-grid">
-        <main id="qodef-page-content" class="qodef-grid qodef-layout--template qodef--no-bottom-space ">
+
+    <div class="qodef-content-grid" id="qodef-page-inner">
+        <main class="qodef-grid qodef-layout--template qodef--no-bottom-space " id="qodef-page-content">
             <div class="qodef-grid-inner clear">
-                <div id="qodef-woo-page" class="qodef-grid-item qodef--single qodef-layout--image-with-thumbnails-left qodef-popup--photo-swipe">
+                <div class="qodef-grid-item qodef--single qodef-layout--image-with-thumbnails-left qodef-popup--photo-swipe"
+                     id="qodef-woo-page">
                     <div class="woocommerce-notices-wrapper"></div>
-                    <div id="product-45" class="product type-product post-45 status-publish first instock product_cat-furniture product_tag-furnishing has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                    <div class="product type-product post-45 status-publish first instock product_cat-furniture product_tag-furnishing has-post-thumbnail shipping-taxable purchasable product-type-simple" id="product-45">
                         <div class="qodef-woo-single-inner">
                             <div class="qodef-woo-single-image">
                                 <div class="qodef-woo-product-mark-holder"></div>
                                 <div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-3 images" data-columns="3" style="opacity: 0; transition: opacity .25s ease-in-out;">
                                     <figure class="woocommerce-product-gallery__wrapper">
-                                        <div data-thumb="https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img4-600x600.jpg" data-thumb-alt="a" class="woocommerce-product-gallery__image">
+                                        <div data-thumb="{{ stock_item.ProductBaseImage.url }}" data-thumb-alt="a" class="woocommerce-product-gallery__image">
                                             <a href="{{ stock_item.ProductBaseImage.url }}"><img
                                                 width="800" height="800"
                                                 src="{{ stock_item.ProductBaseImage.url }}"
@@ -129,13 +129,6 @@
                                                 <div class="qodef-m-star qodef--initial">
                                                     <svg class="qodef-m-star-item" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="12.172px" height="11.688px" viewBox="0 0 12.172 11.688" enable-background="new 0 0 12.172 11.688" xml:space="preserve"><g><path d="M12.055,4.484L9.102,7.367l0.68,4.102L6.125,9.547l-3.68,1.922l0.703-4.102L0.172,4.484l4.102-0.609l1.852-3.727	l1.828,3.727L12.055,4.484z" /></g></svg><svg class="qodef-m-star-item" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="12.172px" height="11.688px" viewBox="0 0 12.172 11.688" enable-background="new 0 0 12.172 11.688" xml:space="preserve"><g><path d="M12.055,4.484L9.102,7.367l0.68,4.102L6.125,9.547l-3.68,1.922l0.703-4.102L0.172,4.484l4.102-0.609l1.852-3.727	l1.828,3.727L12.055,4.484z" /></g></svg><svg class="qodef-m-star-item" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="12.172px" height="11.688px" viewBox="0 0 12.172 11.688" enable-background="new 0 0 12.172 11.688" xml:space="preserve"><g><path d="M12.055,4.484L9.102,7.367l0.68,4.102L6.125,9.547l-3.68,1.922l0.703-4.102L0.172,4.484l4.102-0.609l1.852-3.727	l1.828,3.727L12.055,4.484z" /></g></svg><svg class="qodef-m-star-item" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="12.172px" height="11.688px" viewBox="0 0 12.172 11.688" enable-background="new 0 0 12.172 11.688" xml:space="preserve"><g><path d="M12.055,4.484L9.102,7.367l0.68,4.102L6.125,9.547l-3.68,1.922l0.703-4.102L0.172,4.484l4.102-0.609l1.852-3.727	l1.828,3.727L12.055,4.484z" /></g></svg><svg class="qodef-m-star-item" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="12.172px" height="11.688px" viewBox="0 0 12.172 11.688" enable-background="new 0 0 12.172 11.688" xml:space="preserve"><g><path d="M12.055,4.484L9.102,7.367l0.68,4.102L6.125,9.547l-3.68,1.922l0.703-4.102L0.172,4.484l4.102-0.609l1.852-3.727	l1.828,3.727L12.055,4.484z" /></g></svg>
                                                 </div>
-<!--                                                <div class="qodef-m-star qodef&#45;&#45;active" style="width:80%">-->
-<!--                                                    <svg class="qodef-m-star-item" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="12.172px" height="11.688px" viewBox="0 0 12.172 11.688" enable-background="new 0 0 12.172 11.688" xml:space="preserve"><g><path d="M12.055,4.484L9.102,7.367l0.68,4.102L6.125,9.547l-3.68,1.922l0.703-4.102L0.172,4.484l4.102-0.609l1.852-3.727	l1.828,3.727L12.055,4.484z" /></g></svg>-->
-<!--                                                    <svg class="qodef-m-star-item" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="12.172px" height="11.688px" viewBox="0 0 12.172 11.688" enable-background="new 0 0 12.172 11.688" xml:space="preserve"><g><path d="M12.055,4.484L9.102,7.367l0.68,4.102L6.125,9.547l-3.68,1.922l0.703-4.102L0.172,4.484l4.102-0.609l1.852-3.727	l1.828,3.727L12.055,4.484z" /></g></svg>-->
-<!--                                                    <svg class="qodef-m-star-item" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="12.172px" height="11.688px" viewBox="0 0 12.172 11.688" enable-background="new 0 0 12.172 11.688" xml:space="preserve"><g><path d="M12.055,4.484L9.102,7.367l0.68,4.102L6.125,9.547l-3.68,1.922l0.703-4.102L0.172,4.484l4.102-0.609l1.852-3.727	l1.828,3.727L12.055,4.484z" /></g></svg>-->
-<!--                                                    <svg class="qodef-m-star-item" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="12.172px" height="11.688px" viewBox="0 0 12.172 11.688" enable-background="new 0 0 12.172 11.688" xml:space="preserve"><g><path d="M12.055,4.484L9.102,7.367l0.68,4.102L6.125,9.547l-3.68,1.922l0.703-4.102L0.172,4.484l4.102-0.609l1.852-3.727	l1.828,3.727L12.055,4.484z" /></g></svg>-->
-<!--                                                    <svg class="qodef-m-star-item" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="12.172px" height="11.688px" viewBox="0 0 12.172 11.688" enable-background="new 0 0 12.172 11.688" xml:space="preserve"><g><path d="M12.055,4.484L9.102,7.367l0.68,4.102L6.125,9.547l-3.68,1.922l0.703-4.102L0.172,4.484l4.102-0.609l1.852-3.727	l1.828,3.727L12.055,4.484z" /></g></svg>-->
-<!--                                                </div>-->
                                             </div>
                                         </div>
                                         <a href="#reviews" class="woocommerce-review-link" rel="nofollow">(<span class="count"></span> customer reviews)</a>
@@ -190,61 +183,57 @@
                             </div>
                         </div>
 
-
                         <!--START: SECTION RELATED PRODUCTS -->
+                        <section class="related products">
+                            <h2>Related products</h2>
+                            <div class="qodef-woo-product-list qodef-item-layout--info-below qodef-gutter--normal">
+                                <ul class="products columns-4">
 
-<!--                        <section class="related products">-->
+                                    <!-- Shop list item -->
+                                    {% for data in related_items %}
+                                    <li class="product_filter {{ data.ProductCategory }} product type-product post-17 status-publish first outofstock product_cat-dinnerware product_tag-dishware has-post-thumbnail shipping-taxable purchasable product-type-simple" id="{{ data.ProductCategory }}" >
+                                        <div class="qodef-woo-product-inner">
+                                            <div class="qodef-woo-product-image">
+    <!--                                            <div class="qodef-woo-product-mark-holder">-->
+    <!--                                                <span class="qodef-woo-product-mark qodef-out-of-stock">Sold</span>-->
+    <!--                                            </div>-->
+                                                <img width="600" height="600" src= "{{ data.ProductBaseImage.url }}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="a" loading="lazy" srcset="{{ data.ProductBaseImage.url }} 600w, {{ data.ProductBaseImage.url }} 300w, {{ data.ProductBaseImage.url }} 150w, {{ data.ProductBaseImage.url }} 768w, {{ data.ProductBaseImage.url }} 650w, {{ data.ProductBaseImage.url }} 100w, {{ data.ProductBaseImage.url }} 800w" sizes="(max-width: 600px) 100vw, 600px"/>
+                                                <div class="qodef-woo-product-image-inner" style="background-image: url('{{ data.ProductImageTopView.url }}'); background-size: 302px 227px; background-repeat: no-repeat;">
 
-<!--                            <h2>Related products</h2>-->
-<!--                            <div class="qodef-woo-product-list qodef-item-layout&#45;&#45;info-below qodef-gutter&#45;&#45;normal">-->
-<!--                                <ul class="products columns-4">-->
+                                                    <a href="{% url 'shop:product' data.ProductCode %}" data-quantity="1" class="button product_type_simple" data-product_id="17" data-product_sku="000" aria-label="Read more about &ldquo;Green Plates&rdquo;" rel="nofollow">
+                                                        Read more
+                                                    </a>
+                                                    <div class="yith-wcwl-add-to-wishlist add-to-wishlist-17  wishlist-fragment on-first-load" data-fragment-ref="17" data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:17,&quot;parent_product_id&quot;:17,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+                                                        <div class="yith-wcwl-add-button">
+                                                            <a href="indexfbfa.html?add_to_wishlist=17&amp;_wpnonce=51ffb74114" class="add_to_wishlist single_add_to_wishlist" data-product-id="17" data-product-type="simple" data-original-product-id="17" data-title="Add to wishlist" rel="nofollow">
+                                                                <i class="yith-wcwl-icon fa fa-heart-o"></i>
+                                                                <span>Add to wishlist</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="qodef-woo-product-content">
+                                                <div class="qodef-woo-product-title-price-wrapper">
+                                                    <h5 class="qodef-woo-product-title woocommerce-loop-product__title">
+                                                    {{ data.ProductTitle }}
+                                                    </h5>
+                                                    <span class="price"><span class="woocommerce-Price-amount amount"><bdi>
+                                                        <span class="woocommerce-Price-currencySymbol">Ksh </span>{{ data.ProductPrice }}</bdi></span>
+                                                    </span>
+                                                </div>
+                                                <div class="qodef-woo-product-categories">
+                                                    <a href="../product-category/dinnerware/index.html" rel="tag">{{ data.ProductCategory }}</a>
+                                                </div>
+                                            </div>
+                                            <a href="{% url 'shop:product' data.ProductCode %}" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+                                        </div>
+                                    </li>
 
-<!--                                    {% for data in related_items %}-->
-<!--                                        <li class="product type-product post-17 status-publish first product_cat-dinnerware product_tag-dishware has-post-thumbnail shipping-taxable purchasable product-type-simple" id="{{ data.ProductCategory }}" >-->
-<!--                                            <div class="qodef-woo-product-inner">-->
-<!--                                                <div class="qodef-woo-product-image">-->
-<!--&lt;!&ndash;                                                    <div class="qodef-woo-product-mark-holder">&ndash;&gt;-->
-<!--&lt;!&ndash;                                                        <span class="qodef-woo-product-mark qodef-out-of-stock">On </span>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                    </div>&ndash;&gt;-->
-<!--                                                    <img width="600" height="600" src= "{{ data.ProductBaseImage.url }}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="a" loading="lazy" srcset="{{ data.ProductBaseImage.url }} 600w, {{ data.ProductBaseImage.url }} 300w, {{ data.ProductBaseImage.url }} 150w, {{ data.ProductBaseImage.url }} 768w, {{ data.ProductBaseImage.url }} 650w, {{ data.ProductBaseImage.url }} 100w, {{ data.ProductBaseImage.url }} 800w" sizes="(max-width: 600px) 100vw, 600px"/>-->
-<!--                                                    <div class="qodef-woo-product-image-inner">-->
-<!--                                                        <a href="{% url 'shop:product' data.ProductCode %}" data-quantity="1" class="button product_type_simple" data-product_id="17" data-product_sku="000" aria-label="Read more about &ldquo;Green Plates&rdquo;" rel="nofollow">-->
-<!--                                                            Read more-->
-<!--                                                        </a>-->
-<!--                                                        <div class="yith-wcwl-add-to-wishlist add-to-wishlist-17  wishlist-fragment on-first-load" data-fragment-ref="17" data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:17,&quot;parent_product_id&quot;:17,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">-->
-<!--                                                            <div class="yith-wcwl-add-button">-->
-<!--                                                                <a href="indexfbfa.html?add_to_wishlist=17&amp;_wpnonce=51ffb74114" class="add_to_wishlist single_add_to_wishlist" data-product-id="17" data-product-type="simple" data-original-product-id="17" data-title="Add to wishlist" rel="nofollow">-->
-<!--                                                                    <i class="yith-wcwl-icon fa fa-heart-o"></i>-->
-<!--                                                                    <span>Add to wishlist</span>-->
-<!--                                                                </a>-->
-<!--                                                            </div>-->
-<!--                                                        </div>-->
-<!--                                                        <a href="#" class="button yith-wcqv-button" data-product_id="17">-->
-<!--                                                            Quick View-->
-<!--                                                        </a>-->
-<!--                                                    </div>-->
-<!--                                                </div>-->
-<!--                                                <div class="qodef-woo-product-content">-->
-<!--                                                    <div class="qodef-woo-product-title-price-wrapper">-->
-<!--                                                        <h5 class="qodef-woo-product-title woocommerce-loop-product__title">-->
-<!--                                                        {{ data.ProductTitle }}-->
-<!--                                                        </h5>-->
-<!--                                                        <span class="price"><span class="woocommerce-Price-amount amount"><bdi>-->
-<!--                                                            <span class="woocommerce-Price-currencySymbol">Ksh </span>{{ data.ProductPrice }}</bdi></span>-->
-<!--                                                        </span>-->
-<!--                                                    </div>-->
-<!--                                                    <div class="qodef-woo-product-categories">-->
-<!--                                                        <a href="#" rel="tag">{{ data.ProductCategory }}</a>-->
-<!--                                                    </div>-->
-<!--                                                </div>-->
-<!--                                                <a href="{% url 'shop:product' data.ProductCode %}" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>-->
-<!--                                            </div>-->
-<!--                                        </li>-->
-
-<!--                                    {% endfor %}-->
-<!--                                </ul>-->
-<!--                            </div>-->
-<!--                        </section>-->
+                                {% endfor %}
+                                </ul>
+                            </div>
+                        </section>
                         <!--END: SECTION RELATED PRODUCTS -->
 
                     </div>
