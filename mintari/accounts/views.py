@@ -124,3 +124,7 @@ def logout_view(request):
     if request.method == 'POST':
         logout(request)
         return redirect('landing:index')
+    else:
+        logout(request)
+        return redirect('landing:index')
+
