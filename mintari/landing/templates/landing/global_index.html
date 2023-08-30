@@ -576,6 +576,7 @@
 									</section>
 									<!-- END: SECTION SHOP NAVIGATOR -->
 
+									<!-- START: SECTION IDEAL FOR YOUR HOME -->
 									<section class="elementor-section elementor-top-section elementor-element elementor-element-d508474 elementor-section-full_width elementor-section-height-default elementor-section-height-default qodef-elementor-content-no" data-id="d508474" data-element_type="section">
 										<div class="elementor-container elementor-column-gap-default">
 											<div class="elementor-row">
@@ -621,35 +622,15 @@
 																							<img loading="lazy" width="800" height="800"
 																								 src="{{ data.ProductBaseImage.url }}" class="attachment-full size-full wp-post-image" alt="a"
 																								 srcset="{{ data.ProductBaseImage.url }} 800w, {{ data.ProductBaseImage.url }} 300w, {{ data.ProductBaseImage.url }} 150w, {{ data.ProductBaseImage.url }} 768w, {{ data.ProductBaseImage.url }} 650w, {{ data.ProductBaseImage.url }} 600w, {{ data.ProductBaseImage.url }} 100w" sizes="(max-width: 800px) 100vw, 800px"/>
-																							<div class="qodef-woo-product-image-inner">
-																								<a href="index763c.html?add-to-cart=723"
-																								   data-quantity="1"
-																								   class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-																								   data-product_id="723"
-																								   data-product_sku="030"
-																								   aria-label="Add &ldquo;Cupholder&rdquo; to your cart"
-																								   rel="nofollow">Add to cart</a>
-																								<div class="yith-wcwl-add-to-wishlist add-to-wishlist-723  wishlist-fragment on-first-load"
-																									 data-fragment-ref="723"
-																									 data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:723,&quot;parent_product_id&quot;:723,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+																							<div class="qodef-woo-product-image-inner" style="background-image: url('{{ data.ProductImageTopView.url }}'); background-size: 302px 227px; background-repeat: no-repeat;">
+																								<a href="{% url 'shop:product' data.ProductCode %}" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="723" data-product_sku="030" aria-label="Add &ldquo;Cupholder&rdquo; to your cart" rel="nofollow">Add to cart</a>
 
-																									<div class="yith-wcwl-add-button">
-																										<a href="indexf273.html?add_to_wishlist=723&amp;_wpnonce=51ffb74114"
-																										   class="add_to_wishlist single_add_to_wishlist"
-																										   data-product-id="723"
-																										   data-product-type="simple"
-																										   data-original-product-id="723"
-																										   data-title="Add to wishlist"
-																										   rel="nofollow">
-																											<i class="yith-wcwl-icon fa fa-heart-o"></i>
-																											<span>Add to wishlist</span>
-																										</a>
-																									</div>
-
-																								</div>
-																								<a href="#" class="button yith-wcqv-button" data-product_id="723">
-																									Quick View
+																								<a href="{% url 'shop:wishlist' data.ProductCode %}" data-quantity="1" class="product_type_simple" rel="nofollow">
+																									<i class="yith-wcwl-icon fa fa-heart-o"></i>
 																								</a>
+<!--																								<a href="#" class="button yith-wcqv-button" data-product_id="723">-->
+<!--																									Quick View-->
+<!--																								</a>-->
 																							</div>
 																						</div>
 																						<div class="qodef-woo-product-content">
@@ -683,34 +664,11 @@
 																							<img loading="lazy" width="800" height="800"
 																								 src="{{ data.ProductBaseImage.url }}" class="attachment-full size-full wp-post-image" alt="a"
 																								 srcset="{{ data.ProductBaseImage.url }} 800w, {{ data.ProductBaseImage.url }} 300w, {{ data.ProductBaseImage.url }} 150w, {{ data.ProductBaseImage.url }} 768w, {{ data.ProductBaseImage.url }} 650w, {{ data.ProductBaseImage.url }} 600w, {{ data.ProductBaseImage.url }} 100w" sizes="(max-width: 800px) 100vw, 800px"/>
-																							<div class="qodef-woo-product-image-inner">
-																								<a href="index763c.html?add-to-cart=723"
-																								   data-quantity="1"
-																								   class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-																								   data-product_id="723"
-																								   data-product_sku="030"
-																								   aria-label="Add &ldquo;Cupholder&rdquo; to your cart"
-																								   rel="nofollow">Add to cart</a>
-																								<div class="yith-wcwl-add-to-wishlist add-to-wishlist-723  wishlist-fragment on-first-load"
-																									 data-fragment-ref="723"
-																									 data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:723,&quot;parent_product_id&quot;:723,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+																							<div class="qodef-woo-product-image-inner" style="background-image: url('{{ data.ProductImageTopView.url }}'); background-size: 302px 227px; background-repeat: no-repeat;">
+																								<a href="{% url 'shop:product' data.ProductCode %}" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="723" data-product_sku="030" aria-label="Add &ldquo;Cupholder&rdquo; to your cart" rel="nofollow">Add to cart</a>
 
-																									<div class="yith-wcwl-add-button">
-																										<a href="indexf273.html?add_to_wishlist=723&amp;_wpnonce=51ffb74114"
-																										   class="add_to_wishlist single_add_to_wishlist"
-																										   data-product-id="723"
-																										   data-product-type="simple"
-																										   data-original-product-id="723"
-																										   data-title="Add to wishlist"
-																										   rel="nofollow">
-																											<i class="yith-wcwl-icon fa fa-heart-o"></i>
-																											<span>Add to wishlist</span>
-																										</a>
-																									</div>
-
-																								</div>
-																								<a href="#" class="button yith-wcqv-button" data-product_id="723">
-																									Quick View
+																								<a href="{% url 'shop:wishlist' data.ProductCode %}" data-quantity="1" class="product_type_simple" rel="nofollow">
+																									<i class="yith-wcwl-icon fa fa-heart-o"></i>
 																								</a>
 																							</div>
 																						</div>
@@ -745,34 +703,11 @@
 																							<img loading="lazy" width="800" height="800"
 																								 src="{{ data.ProductBaseImage.url }}" class="attachment-full size-full wp-post-image" alt="a"
 																								 srcset="{{ data.ProductBaseImage.url }} 800w, {{ data.ProductBaseImage.url }} 300w, {{ data.ProductBaseImage.url }} 150w, {{ data.ProductBaseImage.url }} 768w, {{ data.ProductBaseImage.url }} 650w, {{ data.ProductBaseImage.url }} 600w, {{ data.ProductBaseImage.url }} 100w" sizes="(max-width: 800px) 100vw, 800px"/>
-																							<div class="qodef-woo-product-image-inner">
-																								<a href="index763c.html?add-to-cart=723"
-																								   data-quantity="1"
-																								   class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-																								   data-product_id="723"
-																								   data-product_sku="030"
-																								   aria-label="Add &ldquo;Cupholder&rdquo; to your cart"
-																								   rel="nofollow">Add to cart</a>
-																								<div class="yith-wcwl-add-to-wishlist add-to-wishlist-723  wishlist-fragment on-first-load"
-																									 data-fragment-ref="723"
-																									 data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:723,&quot;parent_product_id&quot;:723,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+																							<div class="qodef-woo-product-image-inner" style="background-image: url('{{ data.ProductImageTopView.url }}'); background-size: 302px 227px; background-repeat: no-repeat;">
+																								<a href="{% url 'shop:product' data.ProductCode %}" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="723" data-product_sku="030" aria-label="Add &ldquo;Cupholder&rdquo; to your cart" rel="nofollow">Add to cart</a>
 
-																									<div class="yith-wcwl-add-button">
-																										<a href="indexf273.html?add_to_wishlist=723&amp;_wpnonce=51ffb74114"
-																										   class="add_to_wishlist single_add_to_wishlist"
-																										   data-product-id="723"
-																										   data-product-type="simple"
-																										   data-original-product-id="723"
-																										   data-title="Add to wishlist"
-																										   rel="nofollow">
-																											<i class="yith-wcwl-icon fa fa-heart-o"></i>
-																											<span>Add to wishlist</span>
-																										</a>
-																									</div>
-
-																								</div>
-																								<a href="#" class="button yith-wcqv-button" data-product_id="723">
-																									Quick View
+																								<a href="{% url 'shop:wishlist' data.ProductCode %}" data-quantity="1" class="product_type_simple" rel="nofollow">
+																									<i class="yith-wcwl-icon fa fa-heart-o"></i>
 																								</a>
 																							</div>
 																						</div>
@@ -807,34 +742,11 @@
 																							<img loading="lazy" width="800" height="800"
 																								 src="{{ data.ProductBaseImage.url }}" class="attachment-full size-full wp-post-image" alt="a"
 																								 srcset="{{ data.ProductBaseImage.url }} 800w, {{ data.ProductBaseImage.url }} 300w, {{ data.ProductBaseImage.url }} 150w, {{ data.ProductBaseImage.url }} 768w, {{ data.ProductBaseImage.url }} 650w, {{ data.ProductBaseImage.url }} 600w, {{ data.ProductBaseImage.url }} 100w" sizes="(max-width: 800px) 100vw, 800px"/>
-																							<div class="qodef-woo-product-image-inner">
-																								<a href="index763c.html?add-to-cart=723"
-																								   data-quantity="1"
-																								   class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-																								   data-product_id="723"
-																								   data-product_sku="030"
-																								   aria-label="Add &ldquo;Cupholder&rdquo; to your cart"
-																								   rel="nofollow">Add to cart</a>
-																								<div class="yith-wcwl-add-to-wishlist add-to-wishlist-723  wishlist-fragment on-first-load"
-																									 data-fragment-ref="723"
-																									 data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:723,&quot;parent_product_id&quot;:723,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+																							<div class="qodef-woo-product-image-inner" style="background-image: url('{{ data.ProductImageTopView.url }}'); background-size: 302px 227px; background-repeat: no-repeat;">
+																								<a href="{% url 'shop:product' data.ProductCode %}" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="723" data-product_sku="030" aria-label="Add &ldquo;Cupholder&rdquo; to your cart" rel="nofollow">Add to cart</a>
 
-																									<div class="yith-wcwl-add-button">
-																										<a href="indexf273.html?add_to_wishlist=723&amp;_wpnonce=51ffb74114"
-																										   class="add_to_wishlist single_add_to_wishlist"
-																										   data-product-id="723"
-																										   data-product-type="simple"
-																										   data-original-product-id="723"
-																										   data-title="Add to wishlist"
-																										   rel="nofollow">
-																											<i class="yith-wcwl-icon fa fa-heart-o"></i>
-																											<span>Add to wishlist</span>
-																										</a>
-																									</div>
-
-																								</div>
-																								<a href="#" class="button yith-wcqv-button" data-product_id="723">
-																									Quick View
+																								<a href="{% url 'shop:wishlist' data.ProductCode %}" data-quantity="1" class="product_type_simple" rel="nofollow">
+																									<i class="yith-wcwl-icon fa fa-heart-o"></i>
 																								</a>
 																							</div>
 																						</div>
@@ -869,34 +781,11 @@
 																							<img loading="lazy" width="800" height="800"
 																								 src="{{ data.ProductBaseImage.url }}" class="attachment-full size-full wp-post-image" alt="a"
 																								 srcset="{{ data.ProductBaseImage.url }} 800w, {{ data.ProductBaseImage.url }} 300w, {{ data.ProductBaseImage.url }} 150w, {{ data.ProductBaseImage.url }} 768w, {{ data.ProductBaseImage.url }} 650w, {{ data.ProductBaseImage.url }} 600w, {{ data.ProductBaseImage.url }} 100w" sizes="(max-width: 800px) 100vw, 800px"/>
-																							<div class="qodef-woo-product-image-inner">
-																								<a href="index763c.html?add-to-cart=723"
-																								   data-quantity="1"
-																								   class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-																								   data-product_id="723"
-																								   data-product_sku="030"
-																								   aria-label="Add &ldquo;Cupholder&rdquo; to your cart"
-																								   rel="nofollow">Add to cart</a>
-																								<div class="yith-wcwl-add-to-wishlist add-to-wishlist-723  wishlist-fragment on-first-load"
-																									 data-fragment-ref="723"
-																									 data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:723,&quot;parent_product_id&quot;:723,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+																							<div class="qodef-woo-product-image-inner" style="background-image: url('{{ data.ProductImageTopView.url }}'); background-size: 302px 227px; background-repeat: no-repeat;">
+																								<a href="{% url 'shop:product' data.ProductCode %}" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="723" data-product_sku="030" aria-label="Add &ldquo;Cupholder&rdquo; to your cart" rel="nofollow">Add to cart</a>
 
-																									<div class="yith-wcwl-add-button">
-																										<a href="indexf273.html?add_to_wishlist=723&amp;_wpnonce=51ffb74114"
-																										   class="add_to_wishlist single_add_to_wishlist"
-																										   data-product-id="723"
-																										   data-product-type="simple"
-																										   data-original-product-id="723"
-																										   data-title="Add to wishlist"
-																										   rel="nofollow">
-																											<i class="yith-wcwl-icon fa fa-heart-o"></i>
-																											<span>Add to wishlist</span>
-																										</a>
-																									</div>
-
-																								</div>
-																								<a href="#" class="button yith-wcqv-button" data-product_id="723">
-																									Quick View
+																								<a href="{% url 'shop:wishlist' data.ProductCode %}" data-quantity="1" class="product_type_simple" rel="nofollow">
+																									<i class="yith-wcwl-icon fa fa-heart-o"></i>
 																								</a>
 																							</div>
 																						</div>
@@ -931,35 +820,14 @@
 																							<img loading="lazy" width="800" height="800"
 																								 src="{{ data.ProductBaseImage.url }}" class="attachment-full size-full wp-post-image" alt="a"
 																								 srcset="{{ data.ProductBaseImage.url }} 800w, {{ data.ProductBaseImage.url }} 300w, {{ data.ProductBaseImage.url }} 150w, {{ data.ProductBaseImage.url }} 768w, {{ data.ProductBaseImage.url }} 650w, {{ data.ProductBaseImage.url }} 600w, {{ data.ProductBaseImage.url }} 100w" sizes="(max-width: 800px) 100vw, 800px"/>
-																							<div class="qodef-woo-product-image-inner">
-																								<a href="index763c.html?add-to-cart=723"
-																								   data-quantity="1"
-																								   class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-																								   data-product_id="723"
-																								   data-product_sku="030"
-																								   aria-label="Add &ldquo;Cupholder&rdquo; to your cart"
-																								   rel="nofollow">Add to cart</a>
-																								<div class="yith-wcwl-add-to-wishlist add-to-wishlist-723  wishlist-fragment on-first-load"
-																									 data-fragment-ref="723"
-																									 data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:723,&quot;parent_product_id&quot;:723,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+																							<div class="qodef-woo-product-image-inner" style="background-image: url('{{ data.ProductImageTopView.url }}'); background-size: 302px 227px; background-repeat: no-repeat;">
+																								<a href="{% url 'shop:product' data.ProductCode %}" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="723" data-product_sku="030" aria-label="Add &ldquo;Cupholder&rdquo; to your cart" rel="nofollow">Add to cart</a>
 
-																									<div class="yith-wcwl-add-button">
-																										<a href="indexf273.html?add_to_wishlist=723&amp;_wpnonce=51ffb74114"
-																										   class="add_to_wishlist single_add_to_wishlist"
-																										   data-product-id="723"
-																										   data-product-type="simple"
-																										   data-original-product-id="723"
-																										   data-title="Add to wishlist"
-																										   rel="nofollow">
-																											<i class="yith-wcwl-icon fa fa-heart-o"></i>
-																											<span>Add to wishlist</span>
-																										</a>
-																									</div>
+																								<a href="{% url 'shop:wishlist' data.ProductCode %}" data-quantity="1" class="product_type_simple" rel="nofollow">
+																									<i class="yith-wcwl-icon fa fa-heart-o"></i>
+																								</a>
 
 																								</div>
-																								<a href="#" class="button yith-wcqv-button" data-product_id="723">
-																									Quick View
-																								</a>
 																							</div>
 																						</div>
 																						<div class="qodef-woo-product-content">
@@ -995,6 +863,7 @@
 											</div>
 										</div>
 									</section>
+									<!-- END: SECTION IDEAL FOR YOUR HOME -->
 
 									<section class="elementor-section elementor-top-section elementor-element elementor-element-980a566 elementor-section-full_width qodef-elementor-content-grid elementor-section-height-default elementor-section-height-default" data-id="980a566" data-element_type="section">
 										<div class="elementor-container elementor-column-gap-default">
