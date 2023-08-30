@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import AuthenticationForm
-from django.views import View
 from django.http import HttpResponse
+from django.contrib import messages
+from django.views import View
 
 from portal.models import StockCategories, Stock
 
@@ -16,17 +17,22 @@ def shop_index(request):
 
 class ShopCategory(View):
     def get(self, request, ProdCategory):
+
+        stock_table = Stock.objects.all()
+        CategoryTable = StockCategories.objects.all()
+
         try:
-            stock_items = Stock.objects.all().filter(ProductCategory=ProdCategory)
+            stock_items = stock_table.filter(ProductCategory=ProdCategory)
             if len(stock_items) > 0:
-                CategoryTable = StockCategories.objects.all()
-                print(CategoryTable)
                 return render(request, 'shop/shop.html', {"StockTable": stock_items, "CategoryTable": CategoryTable})
             else:
-                return HttpResponse('No items in that category')  # TODO: create redirect on invalid link
+                messages.error(request, 'Category ' + str(ProdCategory) +' is currently missing, Explore other products', extra_tags="error")
+
+                return render(request, 'shop/shop.html', {"StockTable": stock_table, "CategoryTable": CategoryTable})
 
         except:
-            return HttpResponse('Activation link is invalid!')  # TODO: create redirect on invalid link
+            messages.error(request, 'Product Category Invalid: Explore other similar products', extra_tags="error")
+            return render(request, 'shop/shop.html', {"StockTable": stock_table, "CategoryTable": CategoryTable})
 
 
 class SingleProduct(View):
