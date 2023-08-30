@@ -61,14 +61,17 @@ class WishlistProduct(LoginRequiredMixin, View):
             stock_table = Stock.objects.all()
             CategoryTable = StockCategories.objects.all()
 
-            WishList.objects.create(
-                ProductCode=product_code,
-                MintariUser=request.user.username,
-            )
-            messages.success(request, str(Stock.objects.all().filter(ProductCode=product_code)[0].ProductTitle) +
-                           ' has been added to your wishlist')
+            if WishList.objects.all().filter(MintariUser=request.user.username, ProductCode=product_code).exists():
+                messages.info(request, str(Stock.objects.all().filter(ProductCode=product_code)[0].ProductTitle) + ' already exists in your wishlist')
+                return render(request, 'shop/shop.html', {"StockTable": stock_table, "CategoryTable": CategoryTable})
+            else:
+                WishList.objects.create(
+                    ProductCode=product_code,
+                    MintariUser=request.user.username,
+                )
 
-            return render(request, 'shop/shop.html', {"StockTable": stock_table, "CategoryTable": CategoryTable})
+                messages.success(request, str(Stock.objects.all().filter(ProductCode=product_code)[0].ProductTitle) + ' has been added to your wishlist')
+                return render(request, 'shop/shop.html', {"StockTable": stock_table, "CategoryTable": CategoryTable})
 
         except:
             stock_table = Stock.objects.all()

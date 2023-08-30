@@ -63,6 +63,12 @@
                                     <span>SUCCESS:  </span>{{ message }}
                                 </p>
                             </h6>
+                        {% elif 'info' in message.tags %}
+                            <h6>
+                                <p class="qodef-m-text" style="margin-top: 12px; margin-bottom: 12px; color: brown;">
+                                    <span>INFO:  </span>{{ message }}
+                                </p>
+                            </h6>
                         {% endif %}
 
                     {% endfor %}
