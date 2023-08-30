@@ -25,6 +25,7 @@
         </div>
     </div>
 
+
     <div id="qodef-page-inner" class="qodef-content-grid">
         <main id="qodef-page-content" class="qodef-grid qodef-layout--template qodef--no-bottom-space qodef-gutter--normal">
             <div class="qodef-grid-inner clear">
@@ -48,6 +49,16 @@
                             <input type="hidden" name="paged" value="1"/>
                         </form>
                     </div>
+
+                    {% for message in  messages %}
+                        {% if 'error' in message.tags %}
+                            <h6>
+                                <p class="qodef-m-text" style="margin-top: 12px; margin-bottom: 12px; color: red;">
+                                    <span>ERROR:  </span>{{ message }}
+                                </p>
+                            </h6>
+                        {% endif %}
+                    {% endfor %}
 
                     <div class="qodef-woo-product-list qodef-item-layout--info-below qodef-gutter--normal">
                         <ul class="products columns-3">
