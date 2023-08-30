@@ -13,20 +13,20 @@
             <div>
                 <div class="flex justify-between flex-wrap items-center mb-6">
                     <h4 class="font-medium lg:text-2xl text-xl capitalize text-slate-900 inline-block ltr:pr-4 rtl:pl-4 mb-3 sm:mb-0">Mintari Dashboard</h4>
-                    <div class="flex sm:space-x-4 space-x-2 sm:justify-end items-center rtl:space-x-reverse">
-                        <button class="btn inline-flex justify-center bg-white text-slate-700 dark:bg-slate-700 !font-normal dark:text-white ">
-                            <span class="flex items-center">
-                                <iconify-icon class="text-xl ltr:mr-2 rtl:ml-2 font-light" icon="heroicons-outline:calendar"></iconify-icon>
-                                <span>Weekly</span>
-                            </span>
-                        </button>
-                        <button class="btn inline-flex justify-center bg-white text-slate-700 dark:bg-slate-700 !font-normal dark:text-white ">
-                            <span class="flex items-center">
-                                <iconify-icon class="text-xl ltr:mr-2 rtl:ml-2 font-light" icon="heroicons-outline:filter"></iconify-icon>
-                                <span>Select Date</span>
-                            </span>
-                        </button>
-                    </div>
+<!--                    <div class="flex sm:space-x-4 space-x-2 sm:justify-end items-center rtl:space-x-reverse">-->
+<!--                        <button class="btn inline-flex justify-center bg-white text-slate-700 dark:bg-slate-700 !font-normal dark:text-white ">-->
+<!--                            <span class="flex items-center">-->
+<!--                                <iconify-icon class="text-xl ltr:mr-2 rtl:ml-2 font-light" icon="heroicons-outline:calendar"></iconify-icon>-->
+<!--                                <span>Weekly</span>-->
+<!--                            </span>-->
+<!--                        </button>-->
+<!--                        <button class="btn inline-flex justify-center bg-white text-slate-700 dark:bg-slate-700 !font-normal dark:text-white ">-->
+<!--                            <span class="flex items-center">-->
+<!--                                <iconify-icon class="text-xl ltr:mr-2 rtl:ml-2 font-light" icon="heroicons-outline:filter"></iconify-icon>-->
+<!--                                <span>Select Date</span>-->
+<!--                            </span>-->
+<!--                        </button>-->
+<!--                    </div>-->
                 </div>
                 <div class="grid grid-cols-12 gap-5 mb-5">
                     <div class="2xl:col-span-3 lg:col-span-4 col-span-12">
@@ -34,7 +34,7 @@
                             <div class="max-w-[180px]">
                                 <h4 class="text-xl font-medium text-white mb-2">
                                     <span class="block font-normal">Good evening,</span>
-                                    <span class="block">Mr. Muhika</span>
+                                    <span class="block">{{ user.first_name }} 	{{ user.last_name }}</span>
                                 </h4>
                                 <p class="text-sm text-white font-normal">
                                     Welcome to Mintari Kenya
