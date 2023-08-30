@@ -1,10 +1,12 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse
 from django.contrib import messages
 from django.views import View
 
-from portal.models import StockCategories, Stock
+from portal.models import StockCategories, Stock, WishList
 
 
 # mintarikenya.com/shop
@@ -50,4 +52,28 @@ class SingleProduct(View):
         except:
             return HttpResponse('Activation link is invalid!')  # TODO: create redirect on invalid link
 
+
+class WishlistProduct(LoginRequiredMixin, View):
+    login_url = "shop:shop_index"
+
+    def get(self, request, product_code):
+        try:
+            stock_table = Stock.objects.all()
+            CategoryTable = StockCategories.objects.all()
+
+            WishList.objects.create(
+                ProductCode=product_code,
+                MintariUser=request.user.username,
+            )
+            messages.success(request, str(Stock.objects.all().filter(ProductCode=product_code)[0].ProductTitle) +
+                           ' has been added to your wishlist')
+
+            return render(request, 'shop/shop.html', {"StockTable": stock_table, "CategoryTable": CategoryTable})
+
+        except:
+            stock_table = Stock.objects.all()
+            CategoryTable = StockCategories.objects.all()
+
+            messages.error(request,'There is an error adding item to wishlist, try again')
+            return render(request, 'shop/shop.html', {"StockTable": stock_table, "CategoryTable": CategoryTable})
 

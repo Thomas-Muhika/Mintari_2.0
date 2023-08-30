@@ -44,3 +44,12 @@ class RecordOrder(models.Model):
 
     def __str__(self):
         return f"Order: ORD_O{self.OrderNumber} from {self.FirstName} {self.LastName} with a desposit of Ksh {self.DepositPaid}"
+
+
+class WishList(models.Model):
+
+    ProductCode = models.CharField(max_length=50)
+    MintariUser = models.CharField(max_length=50)
+
+    def __str__(self):
+        return f"Product: {self.ProductCode} is in User {self.MintariUser} wishlist"
