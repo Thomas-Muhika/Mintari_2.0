@@ -21,10 +21,10 @@ def shop_index(request):
     wishlist_append = []
     n=0
     for data in wishlist:
-        stock_items = stock_table.filter(ProductCode=data[0])
+        stock_items = stock_table.filter(ProductCode=data[0])[0]
         wishlist_append.append(stock_items)
         n+=1
-        if n == 2:
+        if n == 3:
             break
 
     return render(request, 'shop/shop.html', {"StockTable": stock_table, "CategoryTable": CategoryTable, "wishlist_append": wishlist_append})

@@ -189,21 +189,21 @@
                                         <div class="qodef-woo-product-image">
                                             <a href="../product/green-plates/index.html">
                                                 <img width="600" height="600"
-                                                     src="../wp-content/uploads/2020/11/shop-img1-1-600x600.jpg"
+                                                     src="{{ data.ProductBaseImage.url }}"
                                                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                                      alt="a"
-                                                     srcset="https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-600x600.jpg 600w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-300x300.jpg 300w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-150x150.jpg 150w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-768x768.jpg 768w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-650x650.jpg 650w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-100x100.jpg 100w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1.jpg 800w"
+                                                     srcset="{{ data.ProductBaseImage.url }} 600w, {{ data.ProductBaseImage.url }} 300w, {{ data.ProductBaseImage.url }} 150w, {{ data.ProductBaseImage.url }} 768w, {{ data.ProductBaseImage.url }} 650w, {{ data.ProductBaseImage.url }} 100w, {{ data.ProductBaseImage.url }} 800w"
                                                      sizes="(max-width: 600px) 100vw, 600px"/> </a>
                                         </div>
                                         <div class="qodef-woo-product-content">
                                             <h6 class="qodef-woo-product-title">
-                                                <a itemprop="url" href="../product/green-plates/index.html">
+                                                <a itemprop="url" href="{% url 'shop:product' data.ProductCode %}">
                                                     {{ data.ProductTitle }}
                                                 </a>
                                             </h6>
                                             <div class="qodef-woo-product-price price">
-                                                <span class="woocommerce-Price-amount amount"><bdi><span
-                                                        class="woocommerce-Price-currencySymbol">Ksh </span>60.00</bdi></span>
+                                                <span class="woocommerce-Price-amount amount"><bdi>
+                                                    <span class="woocommerce-Price-currencySymbol">Ksh </span>{{ data.ProductPrice|intcomma }}</bdi></span>
                                             </div>
                                         </div>
                                     </li>
