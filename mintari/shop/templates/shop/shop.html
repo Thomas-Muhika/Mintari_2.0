@@ -85,7 +85,7 @@
 <!--                                                <span class="qodef-woo-product-mark qodef-out-of-stock">Sold</span>-->
 <!--                                            </div>-->
                                             <img width="600" height="600" src= "{{ data.ProductBaseImage.url }}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="a" loading="lazy" srcset="{{ data.ProductBaseImage.url }} 600w, {{ data.ProductBaseImage.url }} 300w, {{ data.ProductBaseImage.url }} 150w, {{ data.ProductBaseImage.url }} 768w, {{ data.ProductBaseImage.url }} 650w, {{ data.ProductBaseImage.url }} 100w, {{ data.ProductBaseImage.url }} 800w" sizes="(max-width: 600px) 100vw, 600px"/>
-                                            <div class="qodef-woo-product-image-inner" style="background-image: url('{{ data.ProductImageTopView.url }}'); background-size: 600px 600px; background-repeat: no-repeat;">
+                                            <div class="qodef-woo-product-image-inner" style="background-image: url('{{ data.ProductImageTopView.url }}'); background-size: contain; background-repeat: no-repeat;">
 
                                                 <a href="{% url 'shop:product' data.ProductCode %}" data-quantity="1" class="button product_type_simple" data-product_id="17" data-product_sku="000" rel="nofollow">
                                                     Read more
