@@ -34,14 +34,13 @@
                     <div class="woocommerce-notices-wrapper"></div>
                     <div class="qodef-woo-results">
                         <p class="woocommerce-result-count">
-                            Showing 1&ndash;12 of 71 results
+                            Showing 1&ndash;{{ StockTable|length }} of {{ StockTable|length }} results
                         </p>
 
-                        <form class="woocommerce-ordering" method="get">
-                            <select name="orderby" class="orderby" aria-label="Shop order">
+                        <form action="" class="woocommerce-ordering" method="get">
+                            <select aria-label="Shop order">
                                 <option value="menu_order" selected='selected'>Default sorting</option>
                                 <option value="popularity">Sort by popularity</option>
-                                <option value="rating">Sort by average rating</option>
                                 <option value="date">Sort by latest</option>
                                 <option value="price">Sort by price: low to high</option>
                                 <option value="price-desc">Sort by price: high to low</option>
