@@ -187,17 +187,13 @@
                                                 <img width="600" height="600" src= "{{ data.ProductBaseImage.url }}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="a" loading="lazy" srcset="{{ data.ProductBaseImage.url }} 600w, {{ data.ProductBaseImage.url }} 300w, {{ data.ProductBaseImage.url }} 150w, {{ data.ProductBaseImage.url }} 768w, {{ data.ProductBaseImage.url }} 650w, {{ data.ProductBaseImage.url }} 100w, {{ data.ProductBaseImage.url }} 800w" sizes="(max-width: 600px) 100vw, 600px"/>
                                                 <div class="qodef-woo-product-image-inner" style="background-image: url('{{ data.ProductImageTopView.url }}'); background-size: 302px 227px; background-repeat: no-repeat;">
 
-                                                    <a href="{% url 'shop:product' data.ProductCode %}" data-quantity="1" class="button product_type_simple" data-product_id="17" data-product_sku="000" aria-label="Read more about &ldquo;Green Plates&rdquo;" rel="nofollow">
+                                                    <a href="{% url 'shop:product' data.ProductCode %}" data-quantity="1" class="button product_type_simple" data-product_id="17" data-product_sku="000" rel="nofollow">
                                                         Read more
                                                     </a>
-                                                    <div class="yith-wcwl-add-to-wishlist add-to-wishlist-17  wishlist-fragment on-first-load" data-fragment-ref="17" data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:17,&quot;parent_product_id&quot;:17,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
-                                                        <div class="yith-wcwl-add-button">
-                                                            <a href="indexfbfa.html?add_to_wishlist=17&amp;_wpnonce=51ffb74114" class="add_to_wishlist single_add_to_wishlist" data-product-id="17" data-product-type="simple" data-original-product-id="17" data-title="Add to wishlist" rel="nofollow">
-                                                                <i class="yith-wcwl-icon fa fa-heart-o"></i>
-                                                                <span>Add to wishlist</span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
+
+                                                    <a href="{% url 'shop:wishlist' data.ProductCode %}" data-quantity="1" class="product_type_simple" rel="nofollow">
+                                                        <i class="yith-wcwl-icon fa fa-heart-o"></i>
+                                                    </a>
                                                 </div>
                                             </div>
                                             <div class="qodef-woo-product-content">
