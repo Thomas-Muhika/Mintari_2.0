@@ -36,14 +36,23 @@ class ShopCategory(View):
         stock_table = Stock.objects.all()
         CategoryTable = StockCategories.objects.all()
 
+        wishlist = WishList.objects.values_list('ProductCode').annotate(truck_count=Count('ProductCode')).order_by('-truck_count')
+        wishlist_append = []
+        n = 0
+        for data in wishlist:
+            stock_items = stock_table.filter(ProductCode=data[0])[0]
+            wishlist_append.append(stock_items)
+            n += 1
+            if n == 3:
+                break
+
         try:
             stock_items = stock_table.filter(ProductCategory=ProdCategory)
             if len(stock_items) > 0:
                 return render(request, 'shop/shop.html', {"StockTable": stock_items, "CategoryTable": CategoryTable})
             else:
-                messages.error(request, 'Category ' + str(ProdCategory) +' is currently missing, Explore other products', extra_tags="error")
-
-                return render(request, 'shop/shop.html', {"StockTable": stock_table, "CategoryTable": CategoryTable})
+                messages.error(request, 'Category ' + str(ProdCategory) + ' is currently missing, Explore other products', extra_tags="error")
+                return render(request, 'shop/shop.html', {"StockTable": stock_table, "CategoryTable": CategoryTable, "wishlist_append": wishlist_append})
 
         except:
             messages.error(request, 'Product Category Invalid: Explore other similar products', extra_tags="error")
@@ -74,9 +83,20 @@ class WishlistProduct(LoginRequiredMixin, View):
             stock_table = Stock.objects.all()
             CategoryTable = StockCategories.objects.all()
 
+            wishlist = WishList.objects.values_list('ProductCode').annotate(truck_count=Count('ProductCode')).order_by('-truck_count')
+            wishlist_append = []
+            n = 0
+
+            for data in wishlist:
+                stock_items = stock_table.filter(ProductCode=data[0])[0]
+                wishlist_append.append(stock_items)
+                n += 1
+                if n == 3:
+                    break
+
             if WishList.objects.all().filter(MintariUser=request.user.username, ProductCode=product_code).exists():
                 messages.info(request, str(Stock.objects.all().filter(ProductCode=product_code)[0].ProductTitle) + ' already exists in your wishlist')
-                return render(request, 'shop/shop.html', {"StockTable": stock_table, "CategoryTable": CategoryTable})
+                return render(request, 'shop/shop.html', {"StockTable": stock_table, "CategoryTable": CategoryTable, "wishlist_append": wishlist_append})
             else:
                 WishList.objects.create(
                     ProductCode=product_code,
@@ -84,12 +104,12 @@ class WishlistProduct(LoginRequiredMixin, View):
                 )
 
                 messages.success(request, str(Stock.objects.all().filter(ProductCode=product_code)[0].ProductTitle) + ' has been added to your wishlist')
-                return render(request, 'shop/shop.html', {"StockTable": stock_table, "CategoryTable": CategoryTable})
+                return render(request, 'shop/shop.html', {"StockTable": stock_table, "CategoryTable": CategoryTable, "wishlist_append": wishlist_append})
 
         except:
             stock_table = Stock.objects.all()
             CategoryTable = StockCategories.objects.all()
 
             messages.error(request,'There is an error adding item to wishlist, try again')
-            return render(request, 'shop/shop.html', {"StockTable": stock_table, "CategoryTable": CategoryTable})
+            return render(request, 'shop/shop.html', {"StockTable": stock_table, "CategoryTable": CategoryTable, "wishlist_append": wishlist_append})
 
