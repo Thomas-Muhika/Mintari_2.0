@@ -202,7 +202,8 @@
                                                     {{ data.ProductTitle }}
                                                     </h5>
                                                     <span class="price"><span class="woocommerce-Price-amount amount"><bdi>
-                                                        <span class="woocommerce-Price-currencySymbol">Ksh </span>{{ data.ProductPrice }}</bdi></span>
+                                                        {% load humanize %}
+                                                        <span class="woocommerce-Price-currencySymbol">Ksh </span>{{ data.ProductPrice|intcomma }}</bdi></span>
                                                     </span>
                                                 </div>
                                                 <div class="qodef-woo-product-categories">

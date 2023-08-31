@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse
 from django.contrib import messages
+from django.db.models import Count
 from django.views import View
 
 from portal.models import StockCategories, Stock, WishList
@@ -14,7 +15,19 @@ def shop_index(request):
     stock_table = Stock.objects.all()
     CategoryTable = StockCategories.objects.all()
 
-    return render(request, 'shop/shop.html', {"StockTable": stock_table, "CategoryTable": CategoryTable})
+    # top 3 products in wishlist
+
+    wishlist = WishList.objects.values_list('ProductCode').annotate(truck_count=Count('ProductCode')).order_by('-truck_count')
+    wishlist_append = []
+    n=0
+    for data in wishlist:
+        stock_items = stock_table.filter(ProductCode=data[0])
+        wishlist_append.append(stock_items)
+        n+=1
+        if n == 2:
+            break
+
+    return render(request, 'shop/shop.html', {"StockTable": stock_table, "CategoryTable": CategoryTable, "wishlist_append": wishlist_append})
 
 
 class ShopCategory(View):

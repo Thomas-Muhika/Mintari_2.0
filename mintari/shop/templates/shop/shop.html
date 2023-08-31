@@ -102,7 +102,8 @@
                                                 {{ data.ProductTitle }}
                                                 </h5>
                                                 <span class="price"><span class="woocommerce-Price-amount amount"><bdi>
-                                                    <span class="woocommerce-Price-currencySymbol">Ksh </span>{{ data.ProductPrice }}</bdi></span>
+                                                    {% load humanize %}
+                                                    <span class="woocommerce-Price-currencySymbol">Ksh </span>{{ data.ProductPrice|intcomma }}</bdi></span>
                                                 </span>
                                             </div>
                                             <div class="qodef-woo-product-categories">
@@ -126,7 +127,7 @@
 <!--                        <a class="page-numbers" href="page/4/index.html">04</a>-->
 <!--                        <a class="page-numbers" href="page/5/index.html">05</a>-->
 <!--                        <a class="page-numbers" href="page/6/index.html">06</a>-->
-                        <a class="next page-numbers" href="page/2/index.html">
+                        <a class="next page-numbers" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="17px" height="14px" viewBox="0 0 17 14" enable-background="new 0 0 17 14" xml:space="preserve"><line fill="none" stroke="#000000" stroke-miterlimit="10" x1="15.83" y1="7.177" x2="1.023" y2="7.193" /><path fill="#876060" d="M7.737,0.81"/>
                                 <polyline fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" points="9.799,0.81 16.113,7.124 10.109,13.19 "/></svg>
                         </a>
@@ -185,69 +186,30 @@
                         <div class="widget woocommerce widget_products" data-area="shop-sidebar"><h4
                                 class="qodef-widget-title">Products</h4>
                             <ul class="product_list_widget">
-                                <li>
-                                    <div class="qodef-woo-product-image">
-                                        <a href="../product/green-plates/index.html">
-                                            <img width="600" height="600"
-                                                 src="../wp-content/uploads/2020/11/shop-img1-1-600x600.jpg"
-                                                 class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                 alt="a"
-                                                 srcset="https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-600x600.jpg 600w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-300x300.jpg 300w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-150x150.jpg 150w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-768x768.jpg 768w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-650x650.jpg 650w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-100x100.jpg 100w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1.jpg 800w"
-                                                 sizes="(max-width: 600px) 100vw, 600px"/> </a>
-                                    </div>
-                                    <div class="qodef-woo-product-content">
-                                        <h6 class="qodef-woo-product-title">
-                                            <a itemprop="url" href="../product/green-plates/index.html">Green
-                                                Plates</a>
-                                        </h6>
-                                        <div class="qodef-woo-product-price price">
-                                            <span class="woocommerce-Price-amount amount"><bdi><span
-                                                    class="woocommerce-Price-currencySymbol">Ksh </span>60.00</bdi></span>
+                                {% for data in wishlist_append %}
+                                    <li>
+                                        <div class="qodef-woo-product-image">
+                                            <a href="../product/green-plates/index.html">
+                                                <img width="600" height="600"
+                                                     src="../wp-content/uploads/2020/11/shop-img1-1-600x600.jpg"
+                                                     class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                     alt="a"
+                                                     srcset="https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-600x600.jpg 600w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-300x300.jpg 300w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-150x150.jpg 150w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-768x768.jpg 768w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-650x650.jpg 650w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1-100x100.jpg 100w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img1-1.jpg 800w"
+                                                     sizes="(max-width: 600px) 100vw, 600px"/> </a>
                                         </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="qodef-woo-product-image">
-                                        <a href="../product/coffee-thermos/index.html">
-                                            <img width="600" height="600"
-                                                 src="../wp-content/uploads/2020/11/shop-img2-600x600.jpg"
-                                                 class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                 alt="a"
-                                                 srcset="https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img2-600x600.jpg 600w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img2-300x300.jpg 300w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img2-150x150.jpg 150w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img2-768x768.jpg 768w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img2-650x650.jpg 650w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img2-100x100.jpg 100w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img2.jpg 800w"
-                                                 sizes="(max-width: 600px) 100vw, 600px"/> </a>
-                                    </div>
-                                    <div class="qodef-woo-product-content">
-                                        <h6 class="qodef-woo-product-title">
-                                            <a itemprop="url" href="../product/coffee-thermos/index.html">Coffee
-                                                Thermos</a>
-                                        </h6>
-                                        <div class="qodef-woo-product-price price">
-                                            <span class="woocommerce-Price-amount amount"><bdi><span
-                                                    class="woocommerce-Price-currencySymbol">Ksh </span>40.00</bdi></span>
+                                        <div class="qodef-woo-product-content">
+                                            <h6 class="qodef-woo-product-title">
+                                                <a itemprop="url" href="../product/green-plates/index.html">
+                                                    {{ data.ProductTitle }}
+                                                </a>
+                                            </h6>
+                                            <div class="qodef-woo-product-price price">
+                                                <span class="woocommerce-Price-amount amount"><bdi><span
+                                                        class="woocommerce-Price-currencySymbol">Ksh </span>60.00</bdi></span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="qodef-woo-product-image">
-                                        <a href="../product/night-table/index.html">
-                                            <img width="600" height="600"
-                                                 src="../wp-content/uploads/2020/11/shop-img3-600x600.jpg"
-                                                 class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                 alt="a"
-                                                 srcset="https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img3-600x600.jpg 600w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img3-300x300.jpg 300w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img3-150x150.jpg 150w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img3-768x768.jpg 768w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img3-650x650.jpg 650w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img3-100x100.jpg 100w, https://umea.qodeinteractive.com/wp-content/uploads/2020/11/shop-img3.jpg 800w"
-                                                 sizes="(max-width: 600px) 100vw, 600px"/> </a>
-                                    </div>
-                                    <div class="qodef-woo-product-content">
-                                        <h6 class="qodef-woo-product-title">
-                                            <a itemprop="url" href="../product/night-table/index.html">
-                                                Night Table
-                                            </a>
-                                        </h6>
-                                        <div class="qodef-woo-product-price price">
-                                            <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Ksh </span>110.00</bdi></span>
-                                        </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                {% endfor %}
                             </ul>
                         </div>
                         <div class="widget widget_umea_core_separator" data-area="shop-sidebar">
