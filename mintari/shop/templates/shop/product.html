@@ -207,7 +207,7 @@
                                                     </span>
                                                 </div>
                                                 <div class="qodef-woo-product-categories">
-                                                    <a href="../product-category/dinnerware/index.html" rel="tag">{{ data.ProductCategory }}</a>
+                                                    <a href="{% url 'shop:shop_category' data.ProductCategory %}" rel="tag">{{ data.ProductCategory }}</a>
                                                 </div>
                                             </div>
                                             <a href="{% url 'shop:product' data.ProductCode %}" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
