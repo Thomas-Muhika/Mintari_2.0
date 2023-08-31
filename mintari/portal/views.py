@@ -7,7 +7,7 @@ from django.contrib.auth.forms import AuthenticationForm
 
 
 # mintarikenya.com/portal/
-@login_required(login_url="accounts:signup")
+@login_required(login_url="accounts:signin")
 def portal_index(request):
 
     try:
@@ -22,12 +22,12 @@ def portal_index(request):
     return render(request, 'portal/dashboard.html', {'revenue': total_deposit, 'products_sold': products_sold})
 
 
-@login_required(login_url="accounts:signup")
+@login_required(login_url="accounts:signin")
 def calender(request):
     return render(request, 'portal/calender.html')
 
 
-@login_required(login_url="accounts:signup")
+@login_required(login_url="accounts:signin")
 def manage_categories(request):
     if request.method == 'POST':
         if request.POST.get('submit') == 'AddCategory':
@@ -42,7 +42,7 @@ def manage_categories(request):
 
 
 # mintarikenya.com/portal/add_stock/
-@login_required(login_url="accounts:signup")
+@login_required(login_url="accounts:signin")
 def add_stock(request):
 
     categories_table = StockCategories.objects.all()
@@ -70,14 +70,14 @@ def add_stock(request):
 
 
 # mintarikenya.com/portal/manage_stock/
-@login_required(login_url="accounts:signup")
+@login_required(login_url="accounts:signin")
 def manage_stock(request):
     stock_table = Stock.objects.all()
     return render(request, 'portal/manage_stock.html', {"StockTable": stock_table})
 
 
 # mintarikenya.com/portal/record_order/
-@login_required(login_url="accounts:signup")
+@login_required(login_url="accounts:signin")
 def record_order(request):
     stock_table = Stock.objects.all()
 
@@ -98,7 +98,7 @@ def record_order(request):
 
 
 # mintarikenya.com/portal/manage_orders/
-@login_required(login_url="accounts:signup")
+@login_required(login_url="accounts:signin")
 def manage_orders(request):
     records_table = RecordOrder.objects.all()
 
