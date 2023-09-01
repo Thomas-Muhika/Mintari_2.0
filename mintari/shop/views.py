@@ -7,7 +7,7 @@ from django.contrib import messages
 from django.db.models import Count
 from django.views import View
 
-from portal.models import StockCategories, Stock, WishList, Cart
+from portal.models import StockCategories, Stock, WishList, Cart, Order
 
 
 # mintarikenya.com/shop
@@ -147,11 +147,17 @@ def cart(request):
     cart_data = Cart.objects.all().filter(MintariUser=request.user.username)
 
     cart_append = []
+    subtotal = 0
     for data in cart_data:
         cart_items = stock_table.filter(ProductCode=data.ProductCode)[0]
         cart_append.append(cart_items)
 
-    return render(request, 'shop/cart.html', {"cart_append": cart_append})
+        amount = cart_items.ProductPrice
+        subtotal = subtotal + amount
+
+    with_vat = '{:,.2f}'.format(subtotal * 1.16)
+
+    return render(request, 'shop/cart.html', {"cart_append": cart_append, "subtotal": subtotal, "withvat": with_vat})
 
 
 class CartRemove(LoginRequiredMixin, View):
@@ -162,3 +168,45 @@ class CartRemove(LoginRequiredMixin, View):
         entry.delete()
 
         return redirect('shop:cart')
+
+
+def checkout(request):
+
+    stock_table = Stock.objects.all()
+    cart_data = Cart.objects.all().filter(MintariUser=request.user.username)
+
+    cart_append = []
+    items_skus = []
+    subtotal = 0
+    for data in cart_data:
+        cart_items = stock_table.filter(ProductCode=data.ProductCode)[0]
+        cart_append.append(cart_items)
+
+        amount = cart_items.ProductPrice
+        subtotal = subtotal + amount
+
+        sku = cart_items.ProductCode
+        items_skus.append(sku)
+
+    with_vat = '{:,.2f}'.format(subtotal * 1.16)
+
+    if request.method == 'POST':
+        if request.POST.get('submit') == 'Place_order':
+            Order.objects.create(
+                FirstName=request.POST['billing_first_name'],
+                LastName=request.POST['billing_last_name'],
+                Company=request.POST['billing_company'],
+                Country=request.POST['billing_country'],
+                BillingAddress1=request.POST['billing_address_1'],
+                BillingAddress2=request.POST['billing_address_2'],
+                City=request.POST['billing_city'],
+                PostCode=request.POST['billing_postcode'],
+                phone_number=request.POST['billing_phone'],
+                email=request.POST['billing_email'],
+                products=items_skus,
+                subtotal=subtotal,
+                MintariUser=request.user.username,
+            )
+
+    return render(request, 'shop/checkout.html', {"cart_append": cart_append, "subtotal": subtotal, "withvat": with_vat})
+

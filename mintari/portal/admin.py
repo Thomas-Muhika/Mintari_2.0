@@ -1,5 +1,5 @@
 from django.contrib import admin
-from portal.models import RecordOrder, StockCategories, Stock, WishList, Cart
+from portal.models import RecordOrder, StockCategories, Stock, WishList, Cart, Order
 
 
 admin.site.register(RecordOrder)
@@ -7,3 +7,4 @@ admin.site.register(StockCategories)
 admin.site.register(Stock)
 admin.site.register(WishList)
 admin.site.register(Cart)
+admin.site.register(Order)

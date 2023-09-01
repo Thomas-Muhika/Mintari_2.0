@@ -62,3 +62,23 @@ class Cart(models.Model):
 
     def __str__(self):
         return f"Product: {self.ProductCode} is in User {self.MintariUser} wishlist"
+
+
+class Order(models.Model):
+    OrderNumber = models.AutoField(primary_key=True, blank=False, null=False, unique=True)
+    FirstName = models.CharField(max_length=50)
+    LastName = models.CharField(max_length=50)
+    Company = models.CharField(max_length=50)
+    Country = models.CharField(max_length=50)
+    BillingAddress1 = models.CharField(max_length=50, default="null address")
+    BillingAddress2 = models.CharField(max_length=50, default="null address")
+    City = models.CharField(max_length=50)
+    PostCode = models.CharField(max_length=50)
+    phone_number = models.CharField(max_length=50)
+    email = models.CharField(max_length=50)
+    products = models.CharField(max_length=600)
+    subtotal = models.FloatField()
+    MintariUser = models.CharField(max_length=50)
+
+    def __str__(self):
+        return f"Product: {self.OrderNumber} for  {self.FirstName}"
