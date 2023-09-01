@@ -35,9 +35,18 @@
     <div class="qodef-content-grid" id="qodef-page-inner">
         <main class="qodef-grid qodef-layout--template qodef--no-bottom-space " id="qodef-page-content">
             <div class="qodef-grid-inner clear">
-                <div class="qodef-grid-item qodef--single qodef-layout--image-with-thumbnails-left qodef-popup--photo-swipe"
-                     id="qodef-woo-page">
-                    <div class="woocommerce-notices-wrapper"></div>
+                <div class="qodef-grid-item qodef--single qodef-layout--image-with-thumbnails-left qodef-popup--photo-swipe" id="qodef-woo-page">
+                    <div class="woocommerce-notices-wrapper">
+                        {% for message in  messages %}
+                            {% if 'success' in message.tags %}
+                                <div class="woocommerce-message" role="alert">
+                                    <a class="button wc-forward" href="{% url 'shop:cart' %}" tabindex="1">View cart</a>
+                                        {{ message }}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+
+                    </div>
                     <div class="product type-product post-45 status-publish first instock product_cat-furniture product_tag-furnishing has-post-thumbnail shipping-taxable purchasable product-type-simple" id="product-45">
                         <div class="qodef-woo-single-inner">
                             <div class="qodef-woo-single-image">
@@ -152,9 +161,9 @@
                                     </div>
 
                                     <!-- Add to Cart -->
-                                    <form class="cart" action="#" method="post" enctype='multipart/form-data'>
-                                        <button type="submit" name="add-to-cart" value="45" class="single_add_to_cart_button button alt">Add to cart
-                                        </button>
+                                    <form class="cart" action="{% url 'shop:product' stock_item.ProductCode %}" method="post" enctype='multipart/form-data'>
+                                        {% csrf_token %}
+                                        <button type="submit" name="add-to-cart" value="add_to_cart" class="single_add_to_cart_button button alt">Add to cart</button>
                                     </form>
 
                                     <!-- Add to Wishlist -->

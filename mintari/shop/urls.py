@@ -17,5 +17,9 @@ urlpatterns = [
     # mintarikenya.co.ke/shop/product_code
     path('product/wishlist/<str:product_code>/', views.WishlistProduct.as_view(), name='wishlist'),
 
+    # mintarikenya.co.ke/shop/cart
+    re_path(r'^checkout/cart/$', views.cart, name='cart'),
 
+    # mintarikenya.co.ke/shop/cart/remove_item
+    path('checkout/cart/remove/<str:product_code>/', views.CartRemove.as_view(), name='cart_remove'),
 ]

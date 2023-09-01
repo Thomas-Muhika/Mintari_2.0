@@ -53,3 +53,12 @@ class WishList(models.Model):
 
     def __str__(self):
         return f"Product: {self.ProductCode} is in User {self.MintariUser} wishlist"
+
+
+class Cart(models.Model):
+
+    ProductCode = models.CharField(max_length=50)
+    MintariUser = models.CharField(max_length=50)
+
+    def __str__(self):
+        return f"Product: {self.ProductCode} is in User {self.MintariUser} wishlist"
