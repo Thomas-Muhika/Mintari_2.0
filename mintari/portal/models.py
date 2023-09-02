@@ -19,7 +19,7 @@ class Stock(models.Model):
     ProductCode = models.CharField(max_length=50, primary_key=True)  # format pot20#1
     ProductCategory = models.CharField(max_length=50)  # filling, inplay, closed
     ProductWeight = models.FloatField()
-    ProductDimension = models.CharField(max_length=50)
+    ProductDimension = models.CharField(max_length=100)
     ProductPrice = models.FloatField()
     DetailedDescription = models.CharField(max_length=500)
     ProductBaseImage = models.ImageField(upload_to='stock_images/')
