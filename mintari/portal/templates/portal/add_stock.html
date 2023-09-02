@@ -59,11 +59,11 @@
                                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
                                     <div class="input-area relative">
                                         <label for="ProductTitle" class="form-label">Product Title</label>
-                                        <input name="ProductTitle" id="ProductTitle" type="text" class="form-control" placeholder="Enter Product Title" required>
+                                        <input name="ProductTitle" id="ProductTitle" type="text" class="form-control" placeholder="Enter Product Title" maxlength="50" required>
                                     </div>
                                     <div class="input-area relative">
                                         <label for="ProductSKU" class="form-label">Product SKU</label>
-                                        <input name="ProductSKU" id="ProductSKU" type="text" class="form-control" placeholder="Enter Product SKU" required>
+                                        <input name="ProductSKU" id="ProductSKU" type="text" class="form-control" placeholder="Enter Product SKU" maxlength="50" required>
                                     </div>
                                     <div class="input-area relative">
                                         <label for="ProductCategory" class="form-label">Product Category</label>
@@ -76,18 +76,18 @@
                                     <div class="input-area relative">
                                         <label for="ProductWeight" class="form-label">Product Weight</label>
                                         <div class="relative" id="ProductWeight">
-                                            <input name="ProductWeight" type="number" class="form-control !pl-12" placeholder="Enter Product Weight" required>
+                                            <input name="ProductWeight" type="number" class="form-control !pl-12" placeholder="Enter Product Weight" maxlength="10" required>
                                             <span class="absolute left-0 top-1/2 -translate-y-1/2 w-9 h-full border-r border-r-slate-200 dark:border-r-slate-700 flex items-center justify-center">Kg </span>
                                         </div>
                                     </div>
                                     <div class="input-area relative">
                                         <label for="ProductDimension" class="form-label">Product Dimension</label>
-                                        <input name="ProductDimension" id="ProductDimension" type="text" class="form-control" placeholder="Product Dimension" required>
+                                        <input name="ProductDimension" id="ProductDimension" type="text" class="form-control" placeholder="Product Dimension" maxlength="100" required>
                                     </div>
                                     <div class="input-area relative">
                                         <label for="BasePrice" class="form-label">Product Base Price</label>
                                         <div class="relative" id="BasePrice">
-                                            <input name="BasePrice" type="number" class="form-control !pl-12" placeholder="Enter Product Base Price" required>
+                                            <input name="BasePrice" type="number" class="form-control !pl-12" placeholder="Enter Product Base Price" maxlength="50" required>
                                             <span class="absolute left-0 top-1/2 -translate-y-1/2 w-9 h-full border-r border-r-slate-200 dark:border-r-slate-700 flex items-center justify-center">Ksh </span>
                                         </div>
                                     </div>
@@ -95,7 +95,7 @@
                                     <!-- product description -->
                                     <div class="input-area relative">
                                         <label for="DetailedDescription" class="form-label">Product Description</label>
-                                        <textarea name="DetailedDescription" id="DetailedDescription" class="form-control" rows="5" placeholder="Detailed Description" required></textarea>
+                                        <textarea name="DetailedDescription" id="DetailedDescription" class="form-control" rows="5" placeholder="Detailed Description" maxlength="500" required></textarea>
                                     </div>
 
                                     <!-- Main Product image -->
