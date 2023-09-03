@@ -52,10 +52,10 @@ def sign_up(request):
                         user.is_active = True
                         user.save()
 
-                        # message = get_template('accounts/WelcomePlayer.html').render({"user_name": user.first_name})
-                        # mail = EmailMessage('Welcome to MASAIMEGA Family', message, to=[user.email], from_email=settings.EMAIL_HOST_USER)
-                        # mail.content_subtype = 'html'
-                        # mail.send()
+                        message = get_template('accounts/welcome.html').render({"user_name": user.first_name})
+                        mail = EmailMessage('Welcome to MINTARI Family', message, to=[user.email], from_email=settings.EMAIL_HOST_USER)
+                        mail.content_subtype = 'html'
+                        mail.send()
 
                     except IntegrityError:
                         messages.error(request, 'A user with that Phone Number is already registered. Try logging in.', extra_tags="error")
