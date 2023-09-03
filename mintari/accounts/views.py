@@ -1,9 +1,17 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
+from django.contrib.sites.shortcuts import get_current_site
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import AuthenticationForm
-from accounts.forms import UserCreationForm
+from django.template.loader import get_template
+from django.contrib.auth.models import User
+from django.core.mail import EmailMessage
 from django.db import IntegrityError
 from django.contrib import messages
+from django.conf import settings
+import random
+import string
+import urllib
+import json
 
 from .forms import UserCreationForm
 
@@ -128,3 +136,40 @@ def logout_view(request):
         logout(request)
         return redirect('landing:index')
 
+
+def reset_password(request):
+    if request.method == 'POST':
+        if request.POST.get('submit') == 'ResetPassword':
+            user_email = request.POST['email']
+            user_objs = User.objects.all().filter(email=user_email)
+
+            hidden_tag = 'hidden'
+
+            if len(user_objs) > 0:
+                # user exists
+
+                def randomString(stringLength):
+                    letters = string.ascii_letters
+                    return ''.join(random.choice(letters) for i in range(stringLength))
+
+                random_password = randomString(8)
+
+                # change user password to a random password
+                this_user = User.objects.get(email=user_email)
+                this_user_fullnames = str(this_user.first_name) + ' ' + str(this_user.last_name)
+                this_user.password = random_password
+                this_user.save()
+
+                message = get_template('accounts/ResetPassword.html').render({"this_user_fullnames": this_user_fullnames, "random_password": random_password})
+                mail = EmailMessage('MASAIMEGA | Password Reset', message, to=[user_email], from_email=settings.EMAIL_HOST_USER)
+                mail.content_subtype = 'html'
+                mail.send()
+
+                messages.success(request, 'An Email has been sent to you. Details of the requested password reset are in the email.', extra_tags="success")
+                return render(request, 'landing/lost_password.html', {"hidden_tag": hidden_tag})
+            else:
+                # user does not exist
+                messages.error(request, 'There is no account linked to that email address. Create an account by following the link *SignUp* beside.', extra_tags="warning")
+                return render(request, 'landing/lost_password.html', {"hidden_tag": hidden_tag})
+
+    return render(request, 'landing/lost_password.html')

@@ -63,7 +63,7 @@
                         <span class="text-slate-500 dark:text-slate-400 text-sm leading-6">Keep me signed in</span>
                     </label>
                 </div>
-                <a class="text-sm text-slate-800 dark:text-slate-400 leading-6 font-medium" href="forget-password-one.html">Forgot Password?</a>
+                <a class="text-sm text-slate-800 dark:text-slate-400 leading-6 font-medium" href="{% url 'accounts:reset_password' %}">Forgot Password?</a>
             </div>
             <button name="submit" type="submit" class="btn btn-dark block w-full text-center" value="log_in">Sign In</button>
         </form>
