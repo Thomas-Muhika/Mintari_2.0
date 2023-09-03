@@ -2,9 +2,13 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.template.loader import get_template
+from django.contrib.auth.models import User
+from django.core.mail import EmailMessage
 from django.http import HttpResponse
 from django.contrib import messages
 from django.db.models import Count
+from django.conf import settings
 from django.views import View
 
 from portal.models import StockCategories, Stock, WishList, Cart, Order
@@ -207,6 +211,10 @@ def checkout(request):
                 subtotal=subtotal,
                 MintariUser=request.user.username,
             )
+            message = get_template('shop/order_confirmation.html').render({"user_name": request.user.first_name})
+            mail = EmailMessage('MINTARI ORDER CONFIRMATION', message, to=[request.POST['billing_email']], from_email=settings.EMAIL_HOST_USER)
+            mail.content_subtype = 'html'
+            mail.send()
 
     return render(request, 'shop/checkout.html', {"cart_append": cart_append, "subtotal": subtotal, "withvat": with_vat})
 
