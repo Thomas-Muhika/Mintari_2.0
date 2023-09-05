@@ -1,7 +1,9 @@
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.db.models import Sum
+from django.views import View
 from portal.models import RecordOrder, StockCategories, Stock
 from django.contrib.auth.forms import AuthenticationForm
 
@@ -74,6 +76,15 @@ def add_stock(request):
 def manage_stock(request):
     stock_table = Stock.objects.all()
     return render(request, 'portal/manage_stock.html', {"StockTable": stock_table})
+
+
+class DeleteStock(LoginRequiredMixin, View):
+    login_url = "accounts:signin"
+
+    def get(self, request, product_code):
+        stock_unit = Stock.objects.get(ProductCode=product_code)
+        stock_unit.delete()
+        return redirect('portal:manage_stock')
 
 
 # mintarikenya.com/portal/record_order/
