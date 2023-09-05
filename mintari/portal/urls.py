@@ -26,6 +26,8 @@ urlpatterns = [
     # mintarikenya.co.ke/portal/manage_orders/
     re_path(r'^manage_orders/$', views.manage_orders, name='manage_orders'),
 
-    path('delete/<str:product_code>/', views.DeleteStock.as_view(), name='delete_stock'),
+    path('delete/stock/<str:product_code>/', views.DeleteStock.as_view(), name='delete_stock'),
+
+    path('delete/order/<str:order_num>/', views.DeleteOrder.as_view(), name='delete_order'),
 
 ]

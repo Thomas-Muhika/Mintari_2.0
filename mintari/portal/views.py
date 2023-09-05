@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.db.models import Sum
 from django.views import View
-from portal.models import RecordOrder, StockCategories, Stock
+from portal.models import RecordOrder, StockCategories, Stock, Order
 from django.contrib.auth.forms import AuthenticationForm
 
 
@@ -111,10 +111,19 @@ def record_order(request):
 # mintarikenya.com/portal/manage_orders/
 @login_required(login_url="accounts:signin")
 def manage_orders(request):
-    records_table = RecordOrder.objects.all()
+    records_table = Order.objects.all()
 
     # print(RecordsTable[0].LastName)
 
     return render(request, "portal/manage_orders.html", {"RecordsTable": records_table})
+
+
+class DeleteOrder(LoginRequiredMixin, View):
+    login_url = "accounts:signin"
+
+    def get(self, request, order_num):
+        order_unit = Order.objects.get(OrderNumber=order_num)
+        order_unit.delete()
+        return redirect('portal:manage_orders')
 
 
