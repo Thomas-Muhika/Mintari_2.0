@@ -30,3 +30,9 @@ def coming_soon(request):
 
 def about_us(request):
 	return render(request, 'landing/aboutUs.html')
+
+
+# custom 404 view
+def custom_404(request, exception):
+	return render(request, 'landing/404.html', status=404)
+
