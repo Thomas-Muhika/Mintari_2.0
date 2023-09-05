@@ -24,12 +24,15 @@ def shop_index(request):
     wishlist = WishList.objects.values_list('ProductCode').annotate(truck_count=Count('ProductCode')).order_by('-truck_count')
     wishlist_append = []
     n=0
-    for data in wishlist:
-        stock_items = stock_table.filter(ProductCode=data[0])[0]
-        wishlist_append.append(stock_items)
-        n+=1
-        if n == 3:
-            break
+    try:
+        for data in wishlist:
+            stock_items = stock_table.filter(ProductCode=data[0])[0]
+            wishlist_append.append(stock_items)
+            n+=1
+            if n == 3:
+                break
+    except:
+        pass
 
     return render(request, 'shop/shop.html', {"StockTable": stock_table, "CategoryTable": CategoryTable, "wishlist_append": wishlist_append})
 
