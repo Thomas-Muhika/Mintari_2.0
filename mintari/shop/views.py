@@ -46,24 +46,27 @@ class ShopCategory(View):
         wishlist = WishList.objects.values_list('ProductCode').annotate(truck_count=Count('ProductCode')).order_by('-truck_count')
         wishlist_append = []
         n = 0
-        for data in wishlist:
-            stock_items = stock_table.filter(ProductCode=data[0])[0]
-            wishlist_append.append(stock_items)
-            n += 1
-            if n == 3:
-                break
+        try:
+            for data in wishlist:
+                stock_items = stock_table.filter(ProductCode=data[0])[0]
+                wishlist_append.append(stock_items)
+                n += 1
+                if n == 3:
+                    break
+        except:
+            pass
 
         try:
             stock_items = stock_table.filter(ProductCategory=ProdCategory)
             if len(stock_items) > 0:
-                return render(request, 'shop/shop.html', {"StockTable": stock_items, "CategoryTable": CategoryTable})
+                return render(request, 'shop/shop.html', {"StockTable": stock_items})
             else:
                 messages.error(request, 'Category ' + str(ProdCategory) + ' is currently missing, Explore other products', extra_tags="error")
-                return render(request, 'shop/shop.html', {"StockTable": stock_table, "CategoryTable": CategoryTable, "wishlist_append": wishlist_append})
+                return render(request, 'shop/shop.html', {"StockTable": stock_table,"wishlist_append": wishlist_append})
 
         except:
             messages.error(request, 'Product Category Invalid: Explore other similar products', extra_tags="error")
-            return render(request, 'shop/shop.html', {"StockTable": stock_table, "CategoryTable": CategoryTable})
+            return render(request, 'shop/shop.html', {"StockTable": stock_table})
 
 
 class SingleProduct(View):
@@ -121,12 +124,15 @@ class WishlistProduct(LoginRequiredMixin, View):
             wishlist_append = []
             n = 0
 
-            for data in wishlist:
-                stock_items = stock_table.filter(ProductCode=data[0])[0]
-                wishlist_append.append(stock_items)
-                n += 1
-                if n == 3:
-                    break
+            try:
+                for data in wishlist:
+                    stock_items = stock_table.filter(ProductCode=data[0])[0]
+                    wishlist_append.append(stock_items)
+                    n += 1
+                    if n == 3:
+                        break
+            except:
+                pass
 
             if WishList.objects.all().filter(MintariUser=request.user.username, ProductCode=product_code).exists():
                 messages.info(request, str(Stock.objects.all().filter(ProductCode=product_code)[0].ProductTitle) + ' already exists in your wishlist')
