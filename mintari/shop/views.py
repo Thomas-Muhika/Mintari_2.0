@@ -211,7 +211,7 @@ def checkout(request):
                 subtotal=subtotal,
                 MintariUser=request.user.username,
             )
-            message = get_template('shop/order_confirmation.html').render({"user_name": request.user.first_name})
+            message = get_template('shop/order_confirmation.html').render({"user_name": request.user.first_name, "email": request.POST['billing_email'], "phone": request.POST['billing_phone']})
             mail = EmailMessage('MINTARI ORDER CONFIRMATION', message, to=[request.POST['billing_email']], from_email=settings.EMAIL_HOST_USER)
             mail.content_subtype = 'html'
             mail.send()
