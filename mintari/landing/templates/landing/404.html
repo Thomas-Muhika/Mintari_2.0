@@ -1,0 +1,30 @@
+<!--extention base-->
+{% extends 'landing/base.html' %}`
+
+<!--page title-->
+{% block title %}Mintari | Home | Best of Us{% endblock %}
+
+<!--index page start-->
+{% block body %}
+
+{% load static %}
+<div id="qodef-page-outer">
+    <div class="qodef-content-full-width" id="qodef-page-inner">
+        <main id="qodef-page-content" style="background-image: url('http://kenyamintari.com/static/assets/wp-content/themes/umea/assets/img/404.png')">
+            <div id="qodef-404-page">
+                <h6 class="qodef-404-tagline">Error Page</h6>
+                <h1 class="qodef-404-title">404</h1>
+                <p class="qodef-404-text">The page you are looking for doesn&#039;t exist. It may have been moved or
+                    removed altogether. Please try searching for some other page, or return to the website&#039;s
+                    homepage to find what you&#039;re looking for.</p>
+                <div class="qodef-404-button">
+                    <a class="qodef-shortcode qodef-m  qodef-button qodef-layout--textual qodef-html--link" href="{% url 'landing:index' %}" target="_self"> <span class="qodef-m-text"> Go Back Home	</span>
+                        <span class="qodef-m-icon"> <svg enable-background="new 0 0 40 40" height="40px" viewBox="0 0 40 40" width="40px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0px"><circle class="qodef-arc-1" cx="20" cy="20" r="19" /><circle class="qodef-arc-2" cx="20" cy="20" r="19"/></svg> </span></a></div>
+            </div>
+        </main>
+    </div>
+</div>
+
+
+
+{% endblock %}
