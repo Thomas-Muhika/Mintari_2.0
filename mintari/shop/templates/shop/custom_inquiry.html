@@ -1,0 +1,501 @@
+<!--extention base-->
+{% extends 'shop/base.html' %}
+
+<!--page title-->
+{% block title %}Shop | Mintari {% endblock %}
+
+{% block body %}
+
+{% load static %}
+<div id="qodef-page-outer">
+    <div class="qodef-page-title qodef-m qodef-title--standard qodef-alignment--left qodef-vertical-alignment--header-bottom qodef--has-image">
+        <div class="qodef-m-inner">
+            <div class="qodef-m-content qodef-content-grid ">
+                <h1 class="qodef-m-title entry-title">Customized Order </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="qodef-content-grid" id="qodef-page-inner">
+        <main class="qodef-grid qodef-layout--template qodef--no-bottom-space " id="qodef-page-content">
+            <div class="qodef-grid-inner clear">
+                <div class="qodef-grid-item qodef-page-content-section qodef-col--12">
+                    <div class="elementor elementor-11" data-elementor-id="11" data-elementor-type="wp-page">
+                        <div class="elementor-inner">
+                            <div class="elementor-section-wrap">
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-469f2428 elementor-section-full_width qodef-elementor-content-grid elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="469f2428">
+                                    <div class="elementor-container elementor-column-gap-default">
+                                        <div class="elementor-row">
+                                            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b673531"
+                                                 data-element_type="column" data-id="b673531">
+                                                <div class="elementor-column-wrap elementor-element-populated">
+                                                    <div class="elementor-widget-wrap">
+                                                        <div class="elementor-element elementor-element-2343bd3f elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="2343bd3f" data-widget_type="text-editor.default">
+                                                            <div class="elementor-widget-container">
+                                                                <div class="elementor-text-editor elementor-clearfix">
+
+                                                                    <div class="woocommerce">
+                                                                        <div class="woocommerce-notices-wrapper"></div>
+                                                                        <div class="qodef--checkout" id="qodef-woo-page">
+
+                                                                            <div class="woocommerce-notices-wrapper"></div>
+
+                                                                            <form action="#" class="checkout woocommerce-checkout" enctype="multipart/form-data" method="post" name="checkout" novalidate="novalidate">
+                                                                                {% csrf_token %}
+
+                                                                                <div class="col2-set" id="customer_details">
+                                                                                    <div class="col-1">
+                                                                                        <div class="woocommerce-billing-fields">
+                                                                                            <h3>Order details</h3>
+                                                                                            <div class="woocommerce-billing-fields__field-wrapper">
+
+                                                                                                <p class="form-row form-row-first validate-required" data-priority="10" id="furniture_type_field">
+                                                                                                    <label class="" for="billing_first_name">Furniture Type&nbsp;<abbr class="required" title="required">*</abbr></label>
+                                                                                                    <span class="woocommerce-input-wrapper">
+                                                                                                        <input required autocomplete="given-name" class="input-text " id="furniture_type" name="billing_first_name" placeholder="eg. dining table, sofa etc" type="text" value="">
+                                                                                                    </span>
+                                                                                                </p>
+
+                                                                                                <p class="form-row form-row-first validate-required" data-priority="10" id="estimate_dimensions_field">
+                                                                                                    <label class="" for="billing_first_name">Estimated dimensions (optional)</label>
+                                                                                                    <span class="woocommerce-input-wrapper">
+                                                                                                        <input required autocomplete="given-name" class="input-text " id="estimate_dimensions" name="billing_first_name" placeholder="length x width x height" type="text" value="">
+                                                                                                    </span>
+                                                                                                </p>
+
+                                                                                                <p class="form-row notes" data-priority="" id="order_comments_field">
+                                                                                                    <label class="" for="order_comments">Order notes&nbsp;<span class="optional">(optional)</span></label>
+                                                                                                    <span class="woocommerce-input-wrapper">
+                                                                                                        <textarea class="input-text " cols="5" id="order_comments" name="order_comments" placeholder="Notes about your order, e.g. special notes for delivery." rows="2"></textarea></span>
+                                                                                                </p>
+
+                                                                                                <div class="input-area">
+                                                                                                    <label class="form-label">Select Sample Image</label>
+                                                                                                    <div class="filePreview">
+                                                                                                        <label>
+                                                                                                            <input name="MainImage" type="file" class=" w-full hidden" accept=".jpg, .jpeg, .png" required>
+                                                                                                            <span class="w-full h-[40px] file-control flex items-center custom-class">
+                                                                                                                <span class="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
+                                                                                                                    <span class="text-slate-400">Choose the main product image...</span>
+                                                                                                                </span>
+                                                                                                                <span class="file-name flex-none cursor-pointer border-l px-4 border-slate-200 dark:border-slate-700 h-full inline-flex items-center bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 text-sm rounded-tr rounded-br font-normal">Browse</span>
+                                                                                                            </span>
+                                                                                                        </label>
+                                                                                                        <div id="file-preview"></div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <br/>
+
+                                                                                                <h3>Client details</h3>
+
+
+                                                                                                <p class="form-row form-row-first validate-required" data-priority="10" id="billing_first_name_field">
+                                                                                                    <label class="" for="billing_first_name">First name&nbsp;<abbr class="required" title="required">*</abbr></label>
+                                                                                                    <span class="woocommerce-input-wrapper">
+                                                                                                        <input required autocomplete="given-name" class="input-text " id="billing_first_name" name="billing_first_name" placeholder="" type="text" value="">
+                                                                                                    </span>
+                                                                                                </p>
+
+                                                                                                <p class="form-row form-row-last validate-required" data-priority="20" id="billing_last_name_field">
+                                                                                                    <label class="" for="billing_last_name">Last name&nbsp;<abbr class="required" title="required">*</abbr></label>
+                                                                                                    <span class="woocommerce-input-wrapper">
+                                                                                                        <input required autocomplete="family-name" class="input-text " id="billing_last_name" name="billing_last_name" placeholder="" type="text" value="">
+                                                                                                    </span>
+                                                                                                </p>
+
+                                                                                                <p class="form-row form-row-wide validate-required validate-phone" data-priority="100" id="billing_phone_field">
+                                                                                                    <label class="" for="billing_phone">Phone&nbsp;<abbr class="required" title="required">*</abbr></label>
+                                                                                                    <span class="woocommerce-input-wrapper">
+                                                                                                        <input required autocomplete="tel" class="input-text " id="billing_phone" name="billing_phone" placeholder="" type="number" value="">
+                                                                                                    </span>
+                                                                                                </p>
+
+                                                                                                <p class="form-row form-row-wide validate-required validate-email" data-priority="110" id="billing_email_field">
+                                                                                                    <label class="" for="billing_email">Email address&nbsp;<abbr class="required" title="required">*</abbr></label>
+                                                                                                    <span class="woocommerce-input-wrapper">
+                                                                                                        <input required autocomplete="email username" class="input-text " id="billing_email" name="billing_email" placeholder="" type="email" value="">
+                                                                                                    </span>
+                                                                                                </p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="col-2">
+                                                                                        <div class="woocommerce-shipping-fields">
+<!--                                                                                            <h3 id="ship-to-different-address">-->
+<!--                                                                                                <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">-->
+<!--                                                                                                    <input class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" id="ship-to-different-address-checkbox" name="ship_to_different_address" type="checkbox" value="1">-->
+<!--                                                                                                    <span>Ship to a different address?</span>-->
+<!--                                                                                                </label>-->
+<!--                                                                                            </h3>-->
+                                                                                            <div class="shipping_address" style="display: none;">
+                                                                                                <div class="woocommerce-shipping-fields__field-wrapper">
+                                                                                                    <p class="form-row form-row-first validate-required" data-priority="10" id="shipping_first_name_field">
+                                                                                                        <label class="" for="shipping_first_name">First name&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper">
+                                                                                                        <input autocomplete="given-name" class="input-text " id="shipping_first_name" name="shipping_first_name" placeholder="" type="text" value=""></span>
+                                                                                                    </p>
+                                                                                                    <p class="form-row form-row-last validate-required" data-priority="20" id="shipping_last_name_field">
+                                                                                                        <label class="" for="shipping_last_name">Last name&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper">
+                                                                                                        <input autocomplete="family-name" class="input-text " id="shipping_last_name" name="shipping_last_name" placeholder="" type="text" value=""></span>
+                                                                                                    </p>
+                                                                                                    <p class="form-row form-row-wide" data-priority="30" id="shipping_company_field">
+                                                                                                        <label class="" for="shipping_company">Company name&nbsp;<span class="optional">(optional)</span></label><span class="woocommerce-input-wrapper">
+                                                                                                        <input autocomplete="organization" class="input-text " id="shipping_company" name="shipping_company" placeholder="" type="text" value=""></span>
+                                                                                                    </p>
+                                                                                                    <p class="form-row form-row-wide address-field update_totals_on_change validate-required" data-priority="40" id="shipping_country_field">
+                                                                                                        <label class="" for="shipping_country">Country / Region&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper">
+                                                                                                        <select aria-hidden="true" autocomplete="country" class="country_to_state country_select select2-hidden-accessible" data-label="Country / Region" data-placeholder="Select a country / region…" id="shipping_country" name="shipping_country" tabindex="-1">
+                                                                                                        <option
+                                                                                                            value="">Select a country / region…</option><option
+                                                                                                            value="AF">Afghanistan</option><option
+                                                                                                            value="AX">Åland Islands</option><option
+                                                                                                            value="AL">Albania</option><option
+                                                                                                            value="DZ">Algeria</option><option
+                                                                                                            value="AS">American Samoa</option><option
+                                                                                                            value="AD">Andorra</option><option
+                                                                                                            value="AO">Angola</option><option
+                                                                                                            value="AI">Anguilla</option><option
+                                                                                                            value="AQ">Antarctica</option><option
+                                                                                                            value="AG">Antigua and Barbuda</option><option
+                                                                                                            value="AR">Argentina</option><option
+                                                                                                            value="AM">Armenia</option><option
+                                                                                                            value="AW">Aruba</option><option
+                                                                                                            value="AU">Australia</option><option
+                                                                                                            value="AT">Austria</option><option
+                                                                                                            value="AZ">Azerbaijan</option><option
+                                                                                                            value="BS">Bahamas</option><option
+                                                                                                            value="BH">Bahrain</option><option
+                                                                                                            value="BD">Bangladesh</option><option
+                                                                                                            value="BB">Barbados</option><option
+                                                                                                            value="BY">Belarus</option><option
+                                                                                                            value="PW">Belau</option><option
+                                                                                                            value="BE">Belgium</option><option
+                                                                                                            value="BZ">Belize</option><option
+                                                                                                            value="BJ">Benin</option><option
+                                                                                                            value="BM">Bermuda</option><option
+                                                                                                            value="BT">Bhutan</option><option
+                                                                                                            value="BO">Bolivia</option><option
+                                                                                                            value="BQ">Bonaire, Saint Eustatius and Saba</option><option
+                                                                                                            value="BA">Bosnia and Herzegovina</option><option
+                                                                                                            value="BW">Botswana</option><option
+                                                                                                            value="BV">Bouvet Island</option><option
+                                                                                                            value="BR">Brazil</option><option
+                                                                                                            value="IO">British Indian Ocean Territory</option><option
+                                                                                                            value="BN">Brunei</option><option
+                                                                                                            value="BG">Bulgaria</option><option
+                                                                                                            value="BF">Burkina Faso</option><option
+                                                                                                            value="BI">Burundi</option><option
+                                                                                                            value="KH">Cambodia</option><option
+                                                                                                            value="CM">Cameroon</option><option
+                                                                                                            value="CA">Canada</option><option
+                                                                                                            value="CV">Cape Verde</option><option
+                                                                                                            value="KY">Cayman Islands</option><option
+                                                                                                            value="CF">Central African Republic</option><option
+                                                                                                            value="TD">Chad</option><option
+                                                                                                            value="CL">Chile</option><option
+                                                                                                            value="CN">China</option><option
+                                                                                                            value="CX">Christmas Island</option><option
+                                                                                                            value="CC">Cocos (Keeling) Islands</option><option
+                                                                                                            value="CO">Colombia</option><option
+                                                                                                            value="KM">Comoros</option><option
+                                                                                                            value="CG">Congo (Brazzaville)</option><option
+                                                                                                            value="CD">Congo (Kinshasa)</option><option
+                                                                                                            value="CK">Cook Islands</option><option
+                                                                                                            value="CR">Costa Rica</option><option
+                                                                                                            value="HR">Croatia</option><option
+                                                                                                            value="CU">Cuba</option><option
+                                                                                                            value="CW">Curaçao</option><option
+                                                                                                            value="CY">Cyprus</option><option
+                                                                                                            value="CZ">Czech Republic</option><option
+                                                                                                            value="DK">Denmark</option><option
+                                                                                                            value="DJ">Djibouti</option><option
+                                                                                                            value="DM">Dominica</option><option
+                                                                                                            value="DO">Dominican Republic</option><option
+                                                                                                            value="EC">Ecuador</option><option
+                                                                                                            value="EG">Egypt</option><option
+                                                                                                            value="SV">El Salvador</option><option
+                                                                                                            value="GQ">Equatorial Guinea</option><option
+                                                                                                            value="ER">Eritrea</option><option
+                                                                                                            value="EE">Estonia</option><option
+                                                                                                            value="SZ">Eswatini</option><option
+                                                                                                            value="ET">Ethiopia</option><option
+                                                                                                            value="FK">Falkland Islands</option><option
+                                                                                                            value="FO">Faroe Islands</option><option
+                                                                                                            value="FJ">Fiji</option><option
+                                                                                                            value="FI">Finland</option><option
+                                                                                                            value="FR">France</option><option
+                                                                                                            value="GF">French Guiana</option><option
+                                                                                                            value="PF">French Polynesia</option><option
+                                                                                                            value="TF">French Southern Territories</option><option
+                                                                                                            value="GA">Gabon</option><option
+                                                                                                            value="GM">Gambia</option><option
+                                                                                                            value="GE">Georgia</option><option
+                                                                                                            value="DE">Germany</option><option
+                                                                                                            value="GH">Ghana</option><option
+                                                                                                            value="GI">Gibraltar</option><option
+                                                                                                            value="GR">Greece</option><option
+                                                                                                            value="GL">Greenland</option><option
+                                                                                                            value="GD">Grenada</option><option
+                                                                                                            value="GP">Guadeloupe</option><option
+                                                                                                            value="GU">Guam</option><option
+                                                                                                            value="GT">Guatemala</option><option
+                                                                                                            value="GG">Guernsey</option><option
+                                                                                                            value="GN">Guinea</option><option
+                                                                                                            value="GW">Guinea-Bissau</option><option
+                                                                                                            value="GY">Guyana</option><option
+                                                                                                            value="HT">Haiti</option><option
+                                                                                                            value="HM">Heard Island and McDonald Islands</option><option
+                                                                                                            value="HN">Honduras</option><option
+                                                                                                            value="HK">Hong Kong</option><option
+                                                                                                            value="HU">Hungary</option><option
+                                                                                                            value="IS">Iceland</option><option
+                                                                                                            value="IN">India</option><option
+                                                                                                            value="ID">Indonesia</option><option
+                                                                                                            value="IR">Iran</option><option
+                                                                                                            value="IQ">Iraq</option><option
+                                                                                                            value="IE">Ireland</option><option
+                                                                                                            value="IM">Isle of Man</option><option
+                                                                                                            value="IL">Israel</option><option
+                                                                                                            value="IT">Italy</option><option
+                                                                                                            value="CI">Ivory Coast</option><option
+                                                                                                            value="JM">Jamaica</option><option
+                                                                                                            value="JP">Japan</option><option
+                                                                                                            value="JE">Jersey</option><option
+                                                                                                            value="JO">Jordan</option><option
+                                                                                                            value="KZ">Kazakhstan</option><option
+                                                                                                            value="KE">Kenya</option><option
+                                                                                                            value="KI">Kiribati</option><option
+                                                                                                            value="KW">Kuwait</option><option
+                                                                                                            value="KG">Kyrgyzstan</option><option
+                                                                                                            value="LA">Laos</option><option
+                                                                                                            value="LV">Latvia</option><option
+                                                                                                            value="LB">Lebanon</option><option
+                                                                                                            value="LS">Lesotho</option><option
+                                                                                                            value="LR">Liberia</option><option
+                                                                                                            value="LY">Libya</option><option
+                                                                                                            value="LI">Liechtenstein</option><option
+                                                                                                            value="LT">Lithuania</option><option
+                                                                                                            value="LU">Luxembourg</option><option
+                                                                                                            value="MO">Macao</option><option
+                                                                                                            value="MG">Madagascar</option><option
+                                                                                                            value="MW">Malawi</option><option
+                                                                                                            value="MY">Malaysia</option><option
+                                                                                                            value="MV">Maldives</option><option
+                                                                                                            value="ML">Mali</option><option
+                                                                                                            value="MT">Malta</option><option
+                                                                                                            value="MH">Marshall Islands</option><option
+                                                                                                            value="MQ">Martinique</option><option
+                                                                                                            value="MR">Mauritania</option><option
+                                                                                                            value="MU">Mauritius</option><option
+                                                                                                            value="YT">Mayotte</option><option
+                                                                                                            value="MX">Mexico</option><option
+                                                                                                            value="FM">Micronesia</option><option
+                                                                                                            value="MD">Moldova</option><option
+                                                                                                            value="MC">Monaco</option><option
+                                                                                                            value="MN">Mongolia</option><option
+                                                                                                            value="ME">Montenegro</option><option
+                                                                                                            value="MS">Montserrat</option><option
+                                                                                                            value="MA">Morocco</option><option
+                                                                                                            value="MZ">Mozambique</option><option
+                                                                                                            value="MM">Myanmar</option><option
+                                                                                                            value="NA">Namibia</option><option
+                                                                                                            value="NR">Nauru</option><option
+                                                                                                            value="NP">Nepal</option><option
+                                                                                                            value="NL">Netherlands</option><option
+                                                                                                            value="NC">New Caledonia</option><option
+                                                                                                            value="NZ">New Zealand</option><option
+                                                                                                            value="NI">Nicaragua</option><option
+                                                                                                            value="NE">Niger</option><option
+                                                                                                            value="NG">Nigeria</option><option
+                                                                                                            value="NU">Niue</option><option
+                                                                                                            value="NF">Norfolk Island</option><option
+                                                                                                            value="KP">North Korea</option><option
+                                                                                                            value="MK">North Macedonia</option><option
+                                                                                                            value="MP">Northern Mariana Islands</option><option
+                                                                                                            value="NO">Norway</option><option
+                                                                                                            value="OM">Oman</option><option
+                                                                                                            value="PK">Pakistan</option><option
+                                                                                                            value="PS">Palestinian Territory</option><option
+                                                                                                            value="PA">Panama</option><option
+                                                                                                            value="PG">Papua New Guinea</option><option
+                                                                                                            value="PY">Paraguay</option><option
+                                                                                                            value="PE">Peru</option><option
+                                                                                                            value="PH">Philippines</option><option
+                                                                                                            value="PN">Pitcairn</option><option
+                                                                                                            value="PL">Poland</option><option
+                                                                                                            value="PT">Portugal</option><option
+                                                                                                            value="PR">Puerto Rico</option><option
+                                                                                                            value="QA">Qatar</option><option
+                                                                                                            value="RE">Reunion</option><option
+                                                                                                            value="RO">Romania</option><option
+                                                                                                            value="RU">Russia</option><option
+                                                                                                            value="RW">Rwanda</option><option
+                                                                                                            value="ST">São Tomé and Príncipe</option><option
+                                                                                                            value="BL">Saint Barthélemy</option><option
+                                                                                                            value="SH">Saint Helena</option><option
+                                                                                                            value="KN">Saint Kitts and Nevis</option><option
+                                                                                                            value="LC">Saint Lucia</option><option
+                                                                                                            value="SX">Saint Martin (Dutch part)</option><option
+                                                                                                            value="MF">Saint Martin (French part)</option><option
+                                                                                                            value="PM">Saint Pierre and Miquelon</option><option
+                                                                                                            value="VC">Saint Vincent and the Grenadines</option><option
+                                                                                                            value="WS">Samoa</option><option
+                                                                                                            value="SM">San Marino</option><option
+                                                                                                            value="SA">Saudi Arabia</option><option
+                                                                                                            value="SN">Senegal</option><option
+                                                                                                            selected="selected"
+                                                                                                            value="RS">Serbia</option><option
+                                                                                                            value="SC">Seychelles</option><option
+                                                                                                            value="SL">Sierra Leone</option><option
+                                                                                                            value="SG">Singapore</option><option
+                                                                                                            value="SK">Slovakia</option><option
+                                                                                                            value="SI">Slovenia</option><option
+                                                                                                            value="SB">Solomon Islands</option><option
+                                                                                                            value="SO">Somalia</option><option
+                                                                                                            value="ZA">South Africa</option><option
+                                                                                                            value="GS">South Georgia/Sandwich Islands</option><option
+                                                                                                            value="KR">South Korea</option><option
+                                                                                                            value="SS">South Sudan</option><option
+                                                                                                            value="ES">Spain</option><option
+                                                                                                            value="LK">Sri Lanka</option><option
+                                                                                                            value="SD">Sudan</option><option
+                                                                                                            value="SR">Suriname</option><option
+                                                                                                            value="SJ">Svalbard and Jan Mayen</option><option
+                                                                                                            value="SE">Sweden</option><option
+                                                                                                            value="CH">Switzerland</option><option
+                                                                                                            value="SY">Syria</option><option
+                                                                                                            value="TW">Taiwan</option><option
+                                                                                                            value="TJ">Tajikistan</option><option
+                                                                                                            value="TZ">Tanzania</option><option
+                                                                                                            value="TH">Thailand</option><option
+                                                                                                            value="TL">Timor-Leste</option><option
+                                                                                                            value="TG">Togo</option><option
+                                                                                                            value="TK">Tokelau</option><option
+                                                                                                            value="TO">Tonga</option><option
+                                                                                                            value="TT">Trinidad and Tobago</option><option
+                                                                                                            value="TN">Tunisia</option><option
+                                                                                                            value="TR">Turkey</option><option
+                                                                                                            value="TM">Turkmenistan</option><option
+                                                                                                            value="TC">Turks and Caicos Islands</option><option
+                                                                                                            value="TV">Tuvalu</option><option
+                                                                                                            value="UG">Uganda</option><option
+                                                                                                            value="UA">Ukraine</option><option
+                                                                                                            value="AE">United Arab Emirates</option><option
+                                                                                                            value="GB">United Kingdom (UK)</option><option
+                                                                                                            value="US">United States (US)</option><option
+                                                                                                            value="UM">United States (US) Minor Outlying Islands</option><option
+                                                                                                            value="UY">Uruguay</option><option
+                                                                                                            value="UZ">Uzbekistan</option><option
+                                                                                                            value="VU">Vanuatu</option><option
+                                                                                                            value="VA">Vatican</option><option
+                                                                                                            value="VE">Venezuela</option><option
+                                                                                                            value="VN">Vietnam</option><option
+                                                                                                            value="VG">Virgin Islands (British)</option><option
+                                                                                                            value="VI">Virgin Islands (US)</option><option
+                                                                                                            value="WF">Wallis and Futuna</option><option
+                                                                                                            value="EH">Western Sahara</option><option
+                                                                                                            value="YE">Yemen</option><option
+                                                                                                            value="ZM">Zambia</option><option
+                                                                                                            value="ZW">Zimbabwe</option>
+                                                                                                        </select>
+                                                                                                        <span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span aria-expanded="false" aria-haspopup="true" aria-label="Country / Region" class="select2-selection select2-selection--single" role="combobox" tabindex="0"><span aria-readonly="true" class="select2-selection__rendered" id="select2-shipping_country-container" role="textbox" title="Serbia">Serbia</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span aria-hidden="true" class="dropdown-wrapper"></span></span><noscript><button name="woocommerce_checkout_update_totals" type="submit" value="Update country / region">Update country / region</button></noscript></span>
+                                                                                                    </p>
+                                                                                                    <p class="form-row address-field validate-required form-row-wide" data-priority="50" id="shipping_address_1_field">
+                                                                                                        <label class="" for="shipping_address_1">Street address&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper">
+                                                                                                        <input autocomplete="address-line1" class="input-text " data-placeholder="House number and street name" id="shipping_address_1" name="shipping_address_1" placeholder="House number and street name" type="text" value=""></span>
+                                                                                                    </p>
+                                                                                                    <p class="form-row address-field form-row-wide" data-priority="60" id="shipping_address_2_field">
+                                                                                                        <label class="screen-reader-text" for="shipping_address_2">Apartment, suite, unit, etc.&nbsp;<span class="optional">(optional)</span></label><span class="woocommerce-input-wrapper">
+                                                                                                        <input autocomplete="address-line2" class="input-text " data-placeholder="Apartment, suite, unit, etc. (optional)" id="shipping_address_2" name="shipping_address_2" placeholder="Apartment, suite, unit, etc. (optional)" type="text" value=""></span>
+                                                                                                    </p>
+                                                                                                    <p class="form-row address-field validate-required form-row-wide" data-o_class="form-row form-row-wide address-field validate-required" data-priority="70" id="shipping_city_field">
+                                                                                                        <label class="" for="shipping_city">Town / City&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper">
+                                                                                                        <input autocomplete="address-level2" class="input-text " id="shipping_city" name="shipping_city" placeholder="" type="text" value=""></span>
+                                                                                                    </p>
+                                                                                                    <p class="form-row address-field validate-state form-row-wide" data-o_class="form-row form-row-wide address-field validate-state" data-priority="80" id="shipping_state_field">
+                                                                                                        <label class="" for="shipping_state">District&nbsp;<span class="optional">(optional)</span></label><span class="woocommerce-input-wrapper">
+                                                                                                        <select aria-hidden="true" autocomplete="address-level1" class="state_select select2-hidden-accessible" data-input-classes="" data-label="District" data-placeholder="Select an option…" id="shipping_state" name="shipping_state" tabindex="-1">
+                                                                                                        <option
+                                                                                                            value="">Select an option…</option><option
+                                                                                                            value="RS00">Belgrade</option><option
+                                                                                                            value="RS14">Bor</option><option
+                                                                                                            value="RS11">Braničevo</option><option
+                                                                                                            value="RS02">Central Banat</option><option
+                                                                                                            value="RS10">Danube</option><option
+                                                                                                            value="RS23">Jablanica</option><option
+                                                                                                            value="RS09">Kolubara</option><option
+                                                                                                            value="RS08">Mačva</option><option
+                                                                                                            value="RS17">Morava</option><option
+                                                                                                            value="RS20">Nišava</option><option
+                                                                                                            value="RS01">North Bačka</option><option
+                                                                                                            value="RS03">North Banat</option><option
+                                                                                                            value="RS24">Pčinja</option><option
+                                                                                                            value="RS22">Pirot</option><option
+                                                                                                            value="RS13">Pomoravlje</option><option
+                                                                                                            value="RS19">Rasina</option><option
+                                                                                                            value="RS18">Raška</option><option
+                                                                                                            value="RS06">South Bačka</option><option
+                                                                                                            value="RS04">South Banat</option><option
+                                                                                                            value="RS07">Srem</option><option
+                                                                                                            value="RS12">Šumadija</option><option
+                                                                                                            value="RS21">Toplica</option><option
+                                                                                                            value="RS05">West Bačka</option><option
+                                                                                                            value="RS15">Zaječar</option><option
+                                                                                                            value="RS16">Zlatibor</option><option
+                                                                                                            value="RS25">Kosovo</option><option
+                                                                                                            value="RS26">Peć</option><option
+                                                                                                            value="RS27">Prizren</option><option
+                                                                                                            value="RS28">Kosovska Mitrovica</option><option
+                                                                                                            value="RS29">Kosovo-Pomoravlje</option><option
+                                                                                                            value="RSKM">Kosovo-Metohija</option><option
+                                                                                                            value="RSVO">Vojvodina</option>
+                                                                                                        </select>
+                                                                                                        <span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span aria-expanded="false" aria-haspopup="true" aria-label="District" class="select2-selection select2-selection--single" role="combobox" tabindex="0"><span aria-readonly="true" class="select2-selection__rendered" id="select2-shipping_state-container" role="textbox" title="Belgrade">Belgrade</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span aria-hidden="true" class="dropdown-wrapper"></span></span></span>
+                                                                                                    </p>
+                                                                                                    <p class="form-row address-field validate-required validate-postcode form-row-wide" data-o_class="form-row form-row-wide address-field validate-required validate-postcode" data-priority="90" id="shipping_postcode_field">
+                                                                                                        <label class="" for="shipping_postcode">Postcode / ZIP&nbsp;<abbr class="required" title="required">*</abbr></label>
+                                                                                                        <span class="woocommerce-input-wrapper"><input autocomplete="postal-code" class="input-text " id="shipping_postcode" name="shipping_postcode" placeholder="" type="text" value=""></span>
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="woocommerce-additional-fields" hidden>
+                                                                                            <div class="woocommerce-additional-fields__field-wrapper">
+                                                                                                <p class="form-row notes" data-priority="" id="order_comment_field">
+                                                                                                    <label class="" for="order_comments">Order notes&nbsp;<span class="optional">(optional)</span></label>
+                                                                                                    <span class="woocommerce-input-wrapper">
+                                                                                                        <textarea class="input-text " cols="5" id="order_comment" name="order_comments" placeholder="Notes about your order, e.g. special notes for delivery." rows="2"></textarea></span>
+                                                                                                </p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <button name="submit" class="button alt" data-value="Place order" id="place_order" type="submit" value="Place_order">Place order</button>
+
+
+                                                                            </form>
+
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+
+{% endblock %}

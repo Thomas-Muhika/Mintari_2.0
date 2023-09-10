@@ -227,3 +227,6 @@ def checkout(request):
 
     return render(request, 'shop/checkout.html', {"cart_append": cart_append, "subtotal": subtotal, "withvat": with_vat})
 
+
+def custom_order(request):
+    return render(request, 'shop/custom_inquiry.html')
