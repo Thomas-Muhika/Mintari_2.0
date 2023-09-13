@@ -29,38 +29,40 @@ def sign_up(request):
 
                 if ucf.is_valid():
 
-                    # # reCAPTCHA validation
-                    # ''' Begin reCAPTCHA validation '''
-                    # recaptcha_response = request.POST.get('g-recaptcha-response')
-                    # url = 'https://www.google.com/recaptcha/api/siteverify'
-                    # values = {
-                    #     'secret': settings.GOOGLE_RECAPTCHA_SECRET_KEY,
-                    #     'response': recaptcha_response
-                    # }
-                    # data = urllib.parse.urlencode(values).encode("utf-8")
-                    # req = urllib.request.Request(url, data)
-                    # response = urllib.request.urlopen(req)
-                    # result = json.load(response)  # *result* of reCAPTCHA validation
-                    # ''' End reCAPTCHA validation '''
+                    # reCAPTCHA validation
+                    ''' Begin reCAPTCHA validation '''
+                    recaptcha_response = request.POST.get('g-recaptcha-response')
+                    url = 'https://www.google.com/recaptcha/api/siteverify'
+                    values = {
+                        'secret': settings.GOOGLE_RECAPTCHA_SECRET_KEY,
+                        'response': recaptcha_response
+                    }
+                    data = urllib.parse.urlencode(values).encode("utf-8")
+                    req = urllib.request.Request(url, data)
+                    response = urllib.request.urlopen(req)
+                    result = json.load(response)  # *result* of reCAPTCHA validation
+                    ''' End reCAPTCHA validation '''
 
-                    # if result['success']:
-                    try:
-                        # save auth from player creation form
-                        user = ucf.save(commit=False)
-                        user_phone = str(request.POST['phone_no'])
-                        user.username = user_phone
-                        user.is_active = True
-                        user.save()
+                    if result['success']:
+                        try:
+                            # save auth from player creation form
+                            user = ucf.save(commit=False)
+                            user_phone = str(request.POST['phone_no'])
+                            user.username = user_phone
+                            user.is_active = True
+                            user.save()
 
-                        message = get_template('accounts/welcome.html').render({"user_name": user.first_name})
-                        mail = EmailMessage('Welcome to MINTARI Family', message, to=[user.email], from_email=settings.EMAIL_HOST_USER)
-                        mail.content_subtype = 'html'
-                        mail.send()
+                            message = get_template('accounts/welcome.html').render({"user_name": user.first_name})
+                            mail = EmailMessage('Welcome to MINTARI Family', message, to=[user.email], from_email=settings.EMAIL_HOST_USER)
+                            mail.content_subtype = 'html'
+                            mail.send()
 
-                    except IntegrityError:
-                        messages.error(request, 'A user with that Phone Number is already registered. Try logging in.', extra_tags="error")
-                        return render(request, 'portal/signup.html', {'form': form, 'ucf': ucf})
-
+                        except IntegrityError:
+                            messages.error(request, 'A user with that Phone Number is already registered. Try logging in.', extra_tags="error")
+                            return render(request, 'portal/signup.html', {'form': form, 'ucf': ucf})
+                    else:
+                        messages.error(request, 'reCAPTCHA validation failed. Please reload page and try again.', extra_tags="error")
+                        return render(request, 'portal/signup.html',{'form': form, 'ucf': ucf})
                     return redirect('landing:index')
 
                 else:
