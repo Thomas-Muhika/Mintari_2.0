@@ -1,5 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import AuthenticationForm
+from django.core.mail import EmailMessage
+from django.contrib import messages
+from django.conf import settings
 
 from portal.models import StockCategories, Stock
 
@@ -21,11 +24,31 @@ def index(request):
 
 
 def contact__us(request):
+	if request.method == 'POST':
+		if request.POST.get('submit') == 'contact_form':
+
+			try:
+				message = request.POST['your_message']
+				print(message)
+				name = request.POST['your_name']
+				email = request.POST['your_email']
+
+				# mail structure
+				client_message = message + "\n\n client name:  " + str(name) + "\nclient email:  " + str(email)
+
+				# sending mail
+				mail = EmailMessage('CONTACT FORM', client_message, to=['tommuhika@outlook.com'], from_email=settings.EMAIL_HOST_USER)
+				mail.send()
+
+				messages.success(request,'Your email has been sent successfully, we will look into it and provide you a response soon.',)
+			except:
+				messages.error(request,'There is a problem sending your information, kindly call us or try again.')
+
 	return render(request, 'landing/contact_us.html')
 
 
 def coming_soon(request):
-	return render(request, 'landing/coming_soon.html')
+	return render(request, 'landing/404.html')
 
 
 def about_us(request):

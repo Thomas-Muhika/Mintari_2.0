@@ -74,33 +74,28 @@
                                                                         <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p>
                                                                             <ul></ul>
                                                                         </div>
-                                                                        <form action="#" method="post" class="wpcf7-form init demo" novalidate="novalidate" data-status="init">
-                                                                            <div style="display: none;">
-                                                                                <input type="hidden" name="_wpcf7" value="1027"/>
-                                                                                <input type="hidden" name="_wpcf7_version" value="5.6.4"/>
-                                                                                <input type="hidden" name="_wpcf7_locale" value="en_US"/>
-                                                                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f1027-p1993-o1"/>
-                                                                                <input type="hidden" name="_wpcf7_container_post" value="1993"/>
-                                                                                <input type="hidden" name="_wpcf7_posted_data_hash" value=""/>
-                                                                            </div>
+                                                                        <form action="{% url 'landing:contact_us' %}" method="post" class="wpcf7-form init">
+                                                                            {% csrf_token %}
                                                                             <div class="qodef-contact-form-7--two-columns">
-                                                                                <div><span class="wpcf7-form-control-wrap" data-name="your-message">
-                                                                                    <textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span>
+                                                                                <div>
+                                                                                    <span class="wpcf7-form-control-wrap" data-name="your-message">
+                                                                                        <textarea name="your_message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea>
+                                                                                    </span>
                                                                                 </div>
                                                                                 <div class="qodef-grid qodef-layout--columns qodef-col-num--2 qodef-responsive--predefined">
                                                                                     <div class="qodef-grid-inner">
                                                                                         <div class="qodef-grid-item">
                                                                                             <span class="wpcf7-form-control-wrap" data-name="your-name">
-                                                                                                <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your Name"/></span>
+                                                                                                <input type="text" name="your_name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your Name"/></span>
                                                                                         </div>
                                                                                         <div class="qodef-grid-item">
                                                                                             <span class="wpcf7-form-control-wrap" data-name="your-email">
-                                                                                                <input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Your Email"/></span>
+                                                                                                <input type="email" name="your_email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Your Email"/></span>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div>
-                                                                                    <button type="submit" class="wpcf7-form-control wpcf7-submit qodef-button qodef-size--normal qodef-layout--filled qodef-m">
+                                                                                    <button name="submit" type="submit" value="contact_form" class="wpcf7-form-control wpcf7-submit qodef-button qodef-size--normal qodef-layout--filled qodef-m">
                                                                                         <span class="qodef-m-text">Submit</span>
                                                                                     </button>
                                                                                 </div>
