@@ -30,4 +30,7 @@ urlpatterns = [
 
     path('delete/order/<str:order_num>/', views.DeleteOrder.as_view(), name='delete_order'),
 
+    # mintarikenya.co.ke/portal/users/tracking/
+    re_path(r'^users/tracking/$', views.users_tracking, name='users_tracking'),
+
 ]

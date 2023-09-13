@@ -2,7 +2,7 @@
 {% extends 'portal/base.html' %}
 {% load static %}
 <!--page title-->
-{% block title %}Manage Categories | Mintari {% endblock %}
+{% block title %}User Tracker | Mintari {% endblock %}
 
 {% block body %}
 <div class="content-wrapper transition-all duration-150 xl:ltr:ml-[248px] xl:rtl:mr-[248px]" id="content_wrapper">
@@ -19,7 +19,7 @@
                         </a>
                     </li>
                     <li class="inline-block relative text-sm text-slate-500 font-Inter dark:text-white">
-                        Manage Categories
+                        Track Users
                     </li>
                 </ul>
             </div>
@@ -30,11 +30,8 @@
                 <!-- BEGIN: Striped Tables -->
                 <div class="card">
                     <header class=" card-header noborder">
-                        <h4 class="card-title">Categories Table
+                        <h4 class="card-title">Users Table
                         </h4>
-                        <button data-bs-toggle="modal" data-bs-target="#form_modal" class="btn inline-flex justify-center btn-outline-dark capitalize">
-                            Add Category
-                        </button>
                     </header>
 
                     <div class="card-body px-6 pb-6">
@@ -46,21 +43,31 @@
                                         <tr>
 
                                             <th scope="col" class=" table-th ">
-                                                NȰ
+                                                First Name
                                             </th>
 
                                             <th scope="col" class=" table-th ">
-                                                Categories
+                                                Last Name
+                                            </th>
+
+                                            <th scope="col" class=" table-th ">
+                                                Phone Number
+                                            </th>
+
+                                            <th scope="col" class=" table-th ">
+                                                Email
                                             </th>
 
                                         </tr>
                                         </thead>
                                         <tbody class="bg-white divide-y divide-slate-100 dark:bg-slate-800 dark:divide-slate-700">
 
-                                        {% for data in CategoriesTable %}
+                                        {% for data in users_table %}
                                             <tr class="even:bg-slate-50 dark:even:bg-slate-700">
-                                                <td class="table-td">{{ data.category_id }}</td>
-                                                <td class="table-td">{{ data.category }}</td>
+                                                <td class="table-td">{{ data.first_name }}</td>
+                                                <td class="table-td">{{ data.last_name }}</td>
+                                                <td class="table-td">{{ data.username }}</td>
+                                                <td class="table-td">{{ data.email }}</td>
                                             </tr>
                                         {% endfor %}
 

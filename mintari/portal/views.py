@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.db.models import Sum
 from django.views import View
+from django.contrib.auth.models import User
 from portal.models import RecordOrder, StockCategories, Stock, Order
 from django.contrib.auth.forms import AuthenticationForm
 
@@ -125,5 +126,12 @@ class DeleteOrder(LoginRequiredMixin, View):
         order_unit = Order.objects.get(OrderNumber=order_num)
         order_unit.delete()
         return redirect('portal:manage_orders')
+
+
+@login_required(login_url="accounts:signin")
+def users_tracking(request):
+    users_table = User.objects.all()
+    return render(request, 'portal/users_tracking.html', {"users_table": users_table})
+
 
 
