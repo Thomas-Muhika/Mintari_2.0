@@ -15,6 +15,6 @@ function initMap() {
   new google.maps.Marker({
     position: myLatLng,
     map,
-    title: "My location"
+    title: "Mintari Kenya"
   });
 }
