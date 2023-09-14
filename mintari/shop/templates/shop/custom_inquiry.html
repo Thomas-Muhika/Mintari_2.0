@@ -40,7 +40,7 @@
 
                                                                             <div class="woocommerce-notices-wrapper"></div>
 
-                                                                            <form action="#" class="checkout woocommerce-checkout" enctype="multipart/form-data" method="post" name="checkout" novalidate="novalidate">
+                                                                            <form action="{% url 'shop:custom_order' %}" class="checkout woocommerce-checkout" enctype="multipart/form-data" method="post" name="checkout" novalidate="novalidate">
                                                                                 {% csrf_token %}
 
                                                                                 <div class="col2-set" id="customer_details">
@@ -52,28 +52,29 @@
                                                                                                 <p class="form-row form-row-first validate-required" data-priority="10" id="furniture_type_field">
                                                                                                     <label class="" for="billing_first_name">Furniture Type&nbsp;<abbr class="required" title="required">*</abbr></label>
                                                                                                     <span class="woocommerce-input-wrapper">
-                                                                                                        <input required autocomplete="given-name" class="input-text " id="furniture_type" name="billing_first_name" placeholder="eg. dining table, sofa etc" type="text" value="">
+                                                                                                        <input required autocomplete="given-name" class="input-text " id="furniture_type" name="furniture_type" placeholder="eg. dining table, sofa etc" type="text" value="">
                                                                                                     </span>
                                                                                                 </p>
 
                                                                                                 <p class="form-row form-row-first validate-required" data-priority="10" id="estimate_dimensions_field">
                                                                                                     <label class="" for="billing_first_name">Estimated dimensions (optional)</label>
                                                                                                     <span class="woocommerce-input-wrapper">
-                                                                                                        <input required autocomplete="given-name" class="input-text " id="estimate_dimensions" name="billing_first_name" placeholder="length x width x height" type="text" value="">
+                                                                                                        <input required autocomplete="given-name" class="input-text " id="estimate_dimensions" name="estimated_dimensions" placeholder="length x width x height" type="text" value="">
                                                                                                     </span>
                                                                                                 </p>
 
                                                                                                 <p class="form-row notes" data-priority="" id="order_comments_field">
                                                                                                     <label class="" for="order_comments">Order notes&nbsp;<span class="optional">(optional)</span></label>
                                                                                                     <span class="woocommerce-input-wrapper">
-                                                                                                        <textarea class="input-text " cols="5" id="order_comments" name="order_comments" placeholder="Notes about your order, e.g. special notes for delivery." rows="2"></textarea></span>
+                                                                                                        <textarea class="input-text " cols="5" id="order_comments" name="order_comments" placeholder="Notes about your order, e.g. special notes for delivery." rows="2"></textarea>
+                                                                                                    </span>
                                                                                                 </p>
 
                                                                                                 <div class="input-area">
                                                                                                     <label class="form-label">Select Sample Image</label>
                                                                                                     <div class="filePreview">
                                                                                                         <label>
-                                                                                                            <input name="MainImage" type="file" class=" w-full hidden" accept=".jpg, .jpeg, .png" required>
+                                                                                                            <input name="sample_image" type="file" class=" w-full hidden" accept=".jpg, .jpeg, .png" required>
                                                                                                             <span class="w-full h-[40px] file-control flex items-center custom-class">
                                                                                                                 <span class="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
                                                                                                                     <span class="text-slate-400">Choose the main product image...</span>
@@ -92,28 +93,28 @@
                                                                                                 <p class="form-row form-row-first validate-required" data-priority="10" id="billing_first_name_field">
                                                                                                     <label class="" for="billing_first_name">First name&nbsp;<abbr class="required" title="required">*</abbr></label>
                                                                                                     <span class="woocommerce-input-wrapper">
-                                                                                                        <input required autocomplete="given-name" class="input-text " id="billing_first_name" name="billing_first_name" placeholder="" type="text" value="">
+                                                                                                        <input required autocomplete="given-name" class="input-text " id="billing_first_name" name="client_first_name" placeholder="" type="text" value="">
                                                                                                     </span>
                                                                                                 </p>
 
                                                                                                 <p class="form-row form-row-last validate-required" data-priority="20" id="billing_last_name_field">
                                                                                                     <label class="" for="billing_last_name">Last name&nbsp;<abbr class="required" title="required">*</abbr></label>
                                                                                                     <span class="woocommerce-input-wrapper">
-                                                                                                        <input required autocomplete="family-name" class="input-text " id="billing_last_name" name="billing_last_name" placeholder="" type="text" value="">
+                                                                                                        <input required autocomplete="family-name" class="input-text " id="billing_last_name" name="client_last_name" placeholder="" type="text" value="">
                                                                                                     </span>
                                                                                                 </p>
 
                                                                                                 <p class="form-row form-row-wide validate-required validate-phone" data-priority="100" id="billing_phone_field">
                                                                                                     <label class="" for="billing_phone">Phone&nbsp;<abbr class="required" title="required">*</abbr></label>
                                                                                                     <span class="woocommerce-input-wrapper">
-                                                                                                        <input required autocomplete="tel" class="input-text " id="billing_phone" name="billing_phone" placeholder="" type="number" value="">
+                                                                                                        <input required autocomplete="tel" class="input-text " id="billing_phone" name="client_phone" placeholder="" type="number" value="">
                                                                                                     </span>
                                                                                                 </p>
 
                                                                                                 <p class="form-row form-row-wide validate-required validate-email" data-priority="110" id="billing_email_field">
                                                                                                     <label class="" for="billing_email">Email address&nbsp;<abbr class="required" title="required">*</abbr></label>
                                                                                                     <span class="woocommerce-input-wrapper">
-                                                                                                        <input required autocomplete="email username" class="input-text " id="billing_email" name="billing_email" placeholder="" type="email" value="">
+                                                                                                        <input required autocomplete="email username" class="input-text " id="billing_email" name="client_email" placeholder="" type="email" value="">
                                                                                                     </span>
                                                                                                 </p>
                                                                                             </div>
@@ -457,15 +458,6 @@
                                                                                                         <span class="woocommerce-input-wrapper"><input autocomplete="postal-code" class="input-text " id="shipping_postcode" name="shipping_postcode" placeholder="" type="text" value=""></span>
                                                                                                     </p>
                                                                                                 </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="woocommerce-additional-fields" hidden>
-                                                                                            <div class="woocommerce-additional-fields__field-wrapper">
-                                                                                                <p class="form-row notes" data-priority="" id="order_comment_field">
-                                                                                                    <label class="" for="order_comments">Order notes&nbsp;<span class="optional">(optional)</span></label>
-                                                                                                    <span class="woocommerce-input-wrapper">
-                                                                                                        <textarea class="input-text " cols="5" id="order_comment" name="order_comments" placeholder="Notes about your order, e.g. special notes for delivery." rows="2"></textarea></span>
-                                                                                                </p>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>

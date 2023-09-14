@@ -229,4 +229,27 @@ def checkout(request):
 
 
 def custom_order(request):
+    if request.method == 'POST':
+        if request.POST.get('submit') == 'Place_order':
+            furniture_type = request.POST['furniture_type']
+            estimated_dimensions = request.POST['estimated_dimensions']
+            order_comments = request.POST['order_comments']
+            # sample_image = request.FILES['sample_image']
+            client_first_name = request.POST['client_first_name']
+            client_last_name = request.POST['client_last_name']
+            client_phone = request.POST['client_phone']
+            client_email = request.POST['client_email']
+
+            client_message = ("We have received a custom order with the following details.\n\nComments: " +
+                              str(order_comments) + "\n\nFurniture Type:  " + str(furniture_type) +
+                              "\nEstimate Dimensions:  " + str(estimated_dimensions) +
+                              "\n\nFrom the clients with the details below\nClient Name: " + str(client_first_name) +
+                              " " + str(client_last_name) + "\nPhone Number: " + str(client_phone) + "\nEmail: " +
+                              str(client_email))
+
+            # sending mail
+            mail = EmailMessage('CUSTOM MADE ORDER', client_message, to=['sales@mintarikenya.com'],
+                                from_email=settings.EMAIL_HOST_USER)
+            mail.send()
+
     return render(request, 'shop/custom_inquiry.html')
