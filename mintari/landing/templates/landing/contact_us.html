@@ -70,10 +70,18 @@
                                                         <div class="elementor-element elementor-element-3876daf elementor-widget elementor-widget-shortcode" data-id="3876daf" data-element_type="widget" data-widget_type="shortcode.default">
                                                             <div class="elementor-widget-container">
                                                                 <div class="elementor-shortcode">
-                                                                    <div role="form" class="wpcf7" id="wpcf7-f1027-p1993-o1" lang="en-US" dir="ltr">
-                                                                        <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p>
-                                                                            <ul></ul>
+                                                                    <div role="form" class="wpcf7" lang="en-US" dir="ltr">
+                                                                        <div class="woocommerce-notices-wrapper">
+                                                                            {% for message in  messages %}
+                                                                                {% if 'info' in message.tags %}
+                                                                                    <div class="woocommerce-message" role="alert">
+                                                                                            {{ message }}
+                                                                                    </div>
+                                                                                {% endif %}
+                                                                            {% endfor %}
+
                                                                         </div>
+
                                                                         <form action="{% url 'landing:contact_us' %}" method="post" class="wpcf7-form init">
                                                                             {% csrf_token %}
                                                                             <div class="qodef-contact-form-7--two-columns">
@@ -100,7 +108,7 @@
                                                                                     </button>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="wpcf7-response-output" aria-hidden="true"></div>
+<!--                                                                            <div class="wpcf7-response-output" aria-hidden="true"></div>-->
                                                                         </form>
                                                                     </div>
                                                                 </div>

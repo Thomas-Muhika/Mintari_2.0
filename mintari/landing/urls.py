@@ -9,7 +9,7 @@ urlpatterns = [
     re_path(r'^$', views.index, name='index'),
 
     # mintarikenya.co.ke/contact&us/
-    re_path(r'^contact&us/$', views.contact__us, name='contact_us'),
+    re_path(r'^contact&us/$', views.contact_us, name='contact_us'),
 
     # mintarikenya.co.ke/aboutUs/
     re_path(r'^aboutUs/$', views.about_us, name='aboutUs'),

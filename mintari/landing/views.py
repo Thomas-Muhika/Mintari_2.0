@@ -23,26 +23,24 @@ def index(request):
 	return render(request, 'landing/global_index.html', context)
 
 
-def contact__us(request):
+def contact_us(request):
 	if request.method == 'POST':
 		if request.POST.get('submit') == 'contact_form':
-
 			try:
 				message = request.POST['your_message']
-				print(message)
 				name = request.POST['your_name']
 				email = request.POST['your_email']
 
 				# mail structure
-				client_message = message + "\n\n client name:  " + str(name) + "\nclient email:  " + str(email)
+				client_message = message + "\n\nclient name:  " + str(name) + "\nclient email:  " + str(email)
 
 				# sending mail
-				mail = EmailMessage('CONTACT FORM', client_message, to=['tommuhika@outlook.com'], from_email=settings.EMAIL_HOST_USER)
+				mail = EmailMessage('CONTACT FORM', client_message, to=['sales@mintarikenya.com'], from_email=settings.EMAIL_HOST_USER)
 				mail.send()
 
-				messages.success(request,'Your email has been sent successfully, we will look into it and provide you a response soon.',)
+				messages.info(request,'Your email has been sent successfully, we will look into it and provide you a response soon.',)
 			except:
-				messages.error(request,'There is a problem sending your information, kindly call us or try again.')
+				messages.info(request,'There is a problem sending your information, kindly call us or try again.')
 
 	return render(request, 'landing/contact_us.html')
 
