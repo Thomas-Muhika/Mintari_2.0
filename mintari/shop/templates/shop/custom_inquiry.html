@@ -38,7 +38,15 @@
                                                                         <div class="woocommerce-notices-wrapper"></div>
                                                                         <div class="qodef--checkout" id="qodef-woo-page">
 
-                                                                            <div class="woocommerce-notices-wrapper"></div>
+                                                                            <div class="woocommerce-notices-wrapper">
+                                                                                {% for message in  messages %}
+                                                                                    {% if 'info' in message.tags %}
+                                                                                        <div class="woocommerce-message" role="alert">
+                                                                                                {{ message }}
+                                                                                        </div>
+                                                                                    {% endif %}
+                                                                                {% endfor %}
+                                                                            </div>
 
                                                                             <form action="{% url 'shop:custom_order' %}" class="checkout woocommerce-checkout" enctype="multipart/form-data" method="post" name="checkout" novalidate="novalidate">
                                                                                 {% csrf_token %}
