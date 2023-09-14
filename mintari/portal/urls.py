@@ -26,8 +26,13 @@ urlpatterns = [
     # mintarikenya.co.ke/portal/manage_orders/
     re_path(r'^manage_orders/$', views.manage_orders, name='manage_orders'),
 
+    # delete stock
     path('delete/stock/<str:product_code>/', views.DeleteStock.as_view(), name='delete_stock'),
 
+    # edit stock
+    path('edit/stock/<str:product_code>/', views.EditStock.as_view(), name='edit_stock'),
+
+    # delete order
     path('delete/order/<str:order_num>/', views.DeleteOrder.as_view(), name='delete_order'),
 
     # mintarikenya.co.ke/portal/users/tracking/

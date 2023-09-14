@@ -88,6 +88,37 @@ class DeleteStock(LoginRequiredMixin, View):
         return redirect('portal:manage_stock')
 
 
+class EditStock(LoginRequiredMixin, View):
+    login_url = "accounts:signin"
+
+    def post(self, request, product_code):
+        categories_table = StockCategories.objects.all()
+
+        try:
+            if request.POST.get('submit') == 'EditStock':
+                stock_unit = Stock.objects.all().filter(ProductCode=product_code)[0]
+                stock_unit.ProductTitle = request.POST['ProductTitle']
+                stock_unit.ProductWeight = request.POST['ProductWeight']
+                stock_unit.ProductDimension = request.POST['ProductDimension']
+                stock_unit.ProductPrice = request.POST['BasePrice']
+                stock_unit.DetailedDescription = request.POST['DetailedDescription']
+                stock_unit.save()
+
+                stock_table = Stock.objects.all()
+                messages.success(request, "Stock updated successfully")
+                return render(request, 'portal/manage_stock.html', {"StockTable": stock_table})
+        except:
+            messages.error(request, "Stock update failed, try again or contact the system administrator")
+            stock_unit = Stock.objects.all().filter(ProductCode=product_code)[0]
+            return render(request, 'portal/edit_stock.html',{"CategoriesTable": categories_table, "stock_unit": stock_unit})
+
+    def get(self, request, product_code):
+        categories_table = StockCategories.objects.all()
+        stock_unit = Stock.objects.all().filter(ProductCode=product_code)[0]
+
+        return render(request, 'portal/edit_stock.html', {"CategoriesTable": categories_table, "stock_unit": stock_unit})
+
+
 # mintarikenya.com/portal/record_order/
 @login_required(login_url="accounts:signin")
 def record_order(request):

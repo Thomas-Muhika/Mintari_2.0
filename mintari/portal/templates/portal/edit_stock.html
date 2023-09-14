@@ -1,0 +1,226 @@
+<!--extention base-->
+{% extends 'portal/base.html' %}
+{% load static %}
+<!--page title-->
+{% block title %}Add Stock | Mintari {% endblock %}
+
+{% block body %}
+
+<div class="content-wrapper transition-all duration-150 xl:ltr:ml-[248px] xl:rtl:mr-[248px]" id="content_wrapper">
+    <div class="page-content">
+        <div id="content_layout">
+
+            <!-- BEGIN: Breadcrumb -->
+            <div class="mb-5">
+                <ul class="m-0 p-0 list-none">
+                    <li class="inline-block relative top-[3px] text-base text-primary-500 font-Inter ">
+                        <a href="{% url 'portal:portal_index' %}">
+                            <iconify-icon icon="heroicons-outline:home"></iconify-icon>
+                            <iconify-icon icon="heroicons-outline:chevron-right" class="relative text-slate-500 text-sm rtl:rotate-180"></iconify-icon>
+                        </a>
+                    </li>
+                    <li class="inline-block relative text-sm text-slate-500 font-Inter dark:text-white">
+                        Edit Stock
+                    </li>
+                </ul>
+            </div>
+            <!-- END: BreadCrumb -->
+
+            <div class="space-y-6">
+
+                <div class="card xl:col-span-2">
+                    <div class="card-body flex flex-col p-6">
+                        <header class="flex mb-5 items-center border-b border-slate-100 dark:border-slate-700 pb-5 -mx-6 px-6">
+                            <div class="flex-1">
+                                <div class="card-title text-slate-900 dark:text-white">Edit Product</div>
+                            </div>
+                        </header>
+
+                        {% for message in  messages %}
+                            {% if 'error' in message.tags %}
+                                <div class="py-[18px] px-6 font-normal text-sm rounded-md bg-white text-success-500 border border-success-500 dark:bg-slate-800">
+                                    <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                                        <iconify-icon class="text-2xl flex-0" icon="system-uicons:target"></iconify-icon>
+                                        <p class="flex-1 font-Inter">
+                                            {{ message }}
+                                        </p>
+                                        <div class="flex-0 text-xl cursor-pointer">
+                                            <iconify-icon icon="line-md:close"></iconify-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+
+                        <div class="card-text h-full ">
+
+                            <form class="space-y-4" action="{% url 'portal:edit_stock' stock_unit.ProductCode %}" method="POST" enctype='multipart/form-data'>
+                                {% csrf_token %}
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                                    <div class="input-area relative">
+                                        <label for="ProductTitle" class="form-label">Product Title</label>
+                                        <input value="{{ stock_unit.ProductTitle }}" name="ProductTitle" id="ProductTitle" type="text" class="form-control" placeholder="Enter Product Title" maxlength="50" required>
+                                    </div>
+                                    <div class="input-area relative">
+                                        <label for="ProductSKU" class="form-label">Product SKU</label>
+                                        <input value="{{ stock_unit.ProductCode }}" contenteditable="false" name="ProductSKU" id="ProductSKU" type="text" class="form-control" placeholder="Enter Product SKU" maxlength="50" readonly>
+                                    </div>
+                                    <div class="input-area relative">
+                                        <label for="ProductCategory" class="form-label">Product Category</label>
+                                        <input value="{{ stock_unit.ProductCategory }}" contenteditable="false" name="ProductCategory" id="ProductCategory" type="text" class="form-control" placeholder="Enter Product SKU" maxlength="50" readonly>
+                                    </div>
+                                    <div class="input-area relative">
+                                        <label for="ProductWeight" class="form-label">Product Weight</label>
+                                        <div class="relative" id="ProductWeight">
+                                            <input value="{{ stock_unit.ProductWeight }}" name="ProductWeight" type="number" class="form-control !pl-12" placeholder="Enter Product Weight" maxlength="10" required>
+                                            <span class="absolute left-0 top-1/2 -translate-y-1/2 w-9 h-full border-r border-r-slate-200 dark:border-r-slate-700 flex items-center justify-center">Kg </span>
+                                        </div>
+                                    </div>
+                                    <div class="input-area relative">
+                                        <label for="ProductDimension" class="form-label">Product Dimension</label>
+                                        <input value="{{ stock_unit.ProductDimension }}" name="ProductDimension" id="ProductDimension" type="text" class="form-control" placeholder="Product Dimension" maxlength="100" required>
+                                    </div>
+                                    <div class="input-area relative">
+                                        <label for="BasePrice" class="form-label">Product Base Price</label>
+                                        <div class="relative" id="BasePrice">
+                                            <input value="{{ stock_unit.ProductPrice }}" name="BasePrice" type="number" class="form-control !pl-12" placeholder="Enter Product Base Price" maxlength="50" required>
+                                            <span class="absolute left-0 top-1/2 -translate-y-1/2 w-9 h-full border-r border-r-slate-200 dark:border-r-slate-700 flex items-center justify-center">Ksh </span>
+                                        </div>
+                                    </div>
+
+                                    <!-- product description -->
+                                    <div class="input-area relative">
+                                        <label for="DetailedDescription" class="form-label">Product Description</label>
+                                        <textarea name="DetailedDescription" id="DetailedDescription" class="form-control" rows="5" maxlength="500" required>{{ stock_unit.DetailedDescription }}</textarea>
+                                    </div>
+
+                                    <!-- Main Product image -->
+                                    <div class="input-area">
+                                        <label class="form-label">Select Main Product Image</label>
+                                        <div class="filePreview">
+                                            <label>
+                                                <input name="MainImage" type="file" class=" w-full hidden" accept=".jpg, .jpeg, .png">
+                                                <span class="w-full h-[40px] file-control flex items-center custom-class">
+                                                    <span class="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
+                                                        <span class="text-slate-400">Choose the main product image...</span>
+                                                    </span>
+                                                    <span class="file-name flex-none cursor-pointer border-l px-4 border-slate-200 dark:border-slate-700 h-full inline-flex items-center bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 text-sm rounded-tr rounded-br font-normal">Browse</span>
+                                                </span>
+                                            </label>
+                                            <span class="text-slate-400">This is the currently used image</span>
+                                            <img
+                                                width="200" height="200"
+                                                src="{{ stock_unit.ProductBaseImage.url }}"
+                                                class="wp-post-image" alt="a" loading="lazy" title="shop-img4"
+                                                data-caption=""
+                                                data-src="{{ stock_unit.ProductBaseImage.url }}"
+                                                data-large_image="{{ stock_unit.ProductBaseImage.url }}"
+                                                data-large_image_width="800" data-large_image_height="800"
+                                                srcset="{{ stock_unit.ProductBaseImage.url }} 800w, {{ stock_unit.ProductBaseImage.url }} 300w, {{ stock_unit.ProductBaseImage.url }} 150w, {{ stock_unit.ProductBaseImage.url }} 768w, {{ stock_unit.ProductBaseImage.url }} 650w, {{ stock_unit.ProductBaseImage.url }} 600w, {{ stock_unit.ProductBaseImage.url }} 100w"
+                                                sizes="(max-width: 800px) 100vw, 800px"/>
+
+                                            <div id="file-preview">
+                                                <span class="text-slate-400">This Set image is as below</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Top view image -->
+                                    <div class="input-area">
+                                        <label class="form-label">Select Top View Product Image</label>
+                                        <div class="topView_filePreview">
+                                            <label>
+                                                <input name="ProductImageTopView" type="file" class=" w-full hidden" accept=".jpg, .jpeg, .png">
+                                                <span class="w-full h-[40px] file-control flex items-center custom-class">
+                                                    <span class="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
+                                                        <span class="text-slate-400">Choose the top view image of the product...</span>
+                                                    </span>
+                                                    <span class="file-name flex-none cursor-pointer border-l px-4 border-slate-200 dark:border-slate-700 h-full inline-flex items-center bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 text-sm rounded-tr rounded-br font-normal">Browse</span>
+                                                </span>
+                                            </label>
+                                            <span class="text-slate-400">This is the currently used image</span>
+                                            <img
+                                                width="200" height="200"
+                                                src="{{ stock_unit.ProductImageTopView.url }}"
+                                                class="wp-post-image" alt="a" loading="lazy" title="shop-img4"
+                                                data-caption=""
+                                                data-src="{{ stock_unit.ProductImageTopView.url }}"
+                                                data-large_image="{{ stock_unit.ProductImageTopView.url }}"
+                                                data-large_image_width="800" data-large_image_height="800"
+                                                srcset="{{ stock_unit.ProductImageTopView.url }} 800w, {{ stock_unit.ProductImageTopView.url }} 300w, {{ stock_unit.ProductImageTopView.url }} 150w, {{ stock_unit.ProductImageTopView.url }} 768w, {{ stock_unit.ProductImageTopView.url }} 650w, {{ stock_unit.ProductImageTopView.url }} 600w, {{ stock_unit.ProductImageTopView.url }} 100w"
+                                                sizes="(max-width: 800px) 100vw, 800px"/>
+                                            <div id="topView-file-preview"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Side view image -->
+                                    <div class="input-area">
+                                        <label class="form-label">Select Side View Product Image</label>
+                                        <div class="leftView_filePreview">
+                                            <label>
+                                                <input name="ProductImageLeftView" type="file" class=" w-full hidden" accept=".jpg, .jpeg, .png">
+                                                <span class="w-full h-[40px] file-control flex items-center custom-class">
+                                                    <span class="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
+                                                        <span class="text-slate-400">Choose the Side view image of the product...</span>
+                                                    </span>
+                                                    <span class="file-name flex-none cursor-pointer border-l px-4 border-slate-200 dark:border-slate-700 h-full inline-flex items-center bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 text-sm rounded-tr rounded-br font-normal">Browse</span>
+                                                </span>
+                                            </label>
+                                            <span class="text-slate-400">This is the currently used image</span>
+                                            <img
+                                                width="200" height="200"
+                                                src="{{ stock_unit.ProductImageLeftView.url }}"
+                                                class="wp-post-image" alt="a" loading="lazy" title="shop-img4"
+                                                data-caption=""
+                                                data-src="{{ stock_unit.ProductImageLeftView.url }}"
+                                                data-large_image="{{ stock_unit.ProductImageLeftView.url }}"
+                                                data-large_image_width="800" data-large_image_height="800"
+                                                srcset="{{ stock_unit.ProductImageLeftView.url }} 800w, {{ stock_unit.ProductImageLeftView.url }} 300w, {{ stock_unit.ProductImageLeftView.url }} 150w, {{ stock_unit.ProductImageLeftView.url }} 768w, {{ stock_unit.ProductImageLeftView.url }} 650w, {{ stock_unit.ProductImageLeftView.url }} 600w, {{ stock_unit.ProductImageLeftView.url }} 100w"
+                                                sizes="(max-width: 800px) 100vw, 800px"/>
+                                            <div id="leftView-file-preview"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Front view image -->
+                                    <div class="input-area">
+                                        <label class="form-label">Select Front View Product Image</label>
+                                        <div class="frontView_filePreview">
+                                            <label>
+                                                <input name="ProductImageFrontView" type="file" class=" w-full hidden" accept=".jpg, .jpeg, .png">
+                                                <span class="w-full h-[40px] file-control flex items-center custom-class">
+                                                    <span class="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
+                                                        <span class="text-slate-400">Choose the front view image of the product...</span>
+                                                    </span>
+                                                    <span class="file-name flex-none cursor-pointer border-l px-4 border-slate-200 dark:border-slate-700 h-full inline-flex items-center bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 text-sm rounded-tr rounded-br font-normal">Browse</span>
+                                                </span>
+                                            </label>
+                                            <span class="text-slate-400">This is the currently used image</span>
+                                            <img
+                                                width="200" height="200"
+                                                src="{{ stock_unit.ProductImageFrontView.url }}"
+                                                class="wp-post-image" alt="a" loading="lazy" title="shop-img4"
+                                                data-caption=""
+                                                data-src="{{ stock_unit.ProductImageFrontView.url }}"
+                                                data-large_image="{{ stock_unit.ProductImageFrontView.url }}"
+                                                data-large_image_width="800" data-large_image_height="800"
+                                                srcset="{{ stock_unit.ProductImageFrontView.url }} 800w, {{ stock_unit.ProductImageFrontView.url }} 300w, {{ stock_unit.ProductImageFrontView.url }} 150w, {{ stock_unit.ProductImageFrontView.url }} 768w, {{ stock_unit.ProductImageFrontView.url }} 650w, {{ stock_unit.ProductImageFrontView.url }} 600w, {{ stock_unit.ProductImageFrontView.url }} 100w"
+                                                sizes="(max-width: 800px) 100vw, 800px"/>
+                                            <div id="frontView-file-preview"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <button name="submit" type="submit" value="EditStock" class="btn inline-flex justify-center btn-dark">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
