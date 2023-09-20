@@ -66,7 +66,10 @@ def sign_up(request):
                     return redirect('landing:index')
 
                 else:
-                    messages.error(request, 'reCAPTCHA validation failed. Please reload page and try again.', extra_tags="error")
+                    messages.error(request,
+                                   'The password you entered is too simple and can easily be guessed, please try again with a different password.',
+                                   extra_tags="error")
+                    # messages.error(request, 'reCAPTCHA validation failed. Please reload page and try again.', extra_tags="error")
                     return render(request, 'portal/signup.html', {'form': form, 'ucf': ucf})
 
             else:
