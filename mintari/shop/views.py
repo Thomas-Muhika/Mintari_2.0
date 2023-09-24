@@ -11,7 +11,14 @@ from django.db.models import Count
 from django.conf import settings
 from django.views import View
 
-from portal.models import StockCategories, Stock, WishList, Cart, Order
+import imghdr
+import os
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
+from email.mime.multipart import MIMEMultipart
+
+from portal.models import StockCategories, Stock, WishList, Cart, Order, CustomOrder
 
 
 # mintarikenya.com/shop
@@ -235,11 +242,16 @@ def custom_order(request):
                 furniture_type = request.POST['furniture_type']
                 estimated_dimensions = request.POST['estimated_dimensions']
                 order_comments = request.POST['order_comments']
-                # sample_image = request.FILES['sample_image']
+                sample_image = request.FILES['sample_image']
                 client_first_name = request.POST['client_first_name']
                 client_last_name = request.POST['client_last_name']
                 client_phone = request.POST['client_phone']
                 client_email = request.POST['client_email']
+
+                CustomOrder.objects.create(
+                    name=client_phone,
+                    avatar=sample_image
+                )
 
                 client_message = ("We have received a custom order with the following details.\n\nComments: " +
                                   str(order_comments) + "\n\nFurniture Type:  " + str(furniture_type) +
@@ -251,11 +263,20 @@ def custom_order(request):
                 # sending mail
                 mail = EmailMessage('CUSTOM MADE ORDER', client_message, to=['sales@mintarikenya.com'],
                                     from_email=settings.EMAIL_HOST_USER)
+
+                filepath = CustomOrder.objects.all().filter(name=client_phone)[0].avatar.url
+                # filepath = ('/home/akin/Hive/Website Projects/Mintari_2.0/mintari/' + str(filepath))  # local
+                filepath = ('/opt/bitnami/projects/Mintari_2.0/mintari/' + str(filepath))  # live
+                mail.attach_file(filepath)
                 mail.send()
+
                 messages.info(request, 'Email sent successfully, we will contact you for more information.')
                 return render(request, 'shop/custom_inquiry.html')
 
-            except:
+            except Exception as err:
+                print("********************************")
+                print(err)
+
                 messages.info(request, 'We have a problem sending the message, kindly refresh the page and try again.')
                 return render(request, 'shop/custom_inquiry.html')
 

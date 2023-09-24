@@ -82,3 +82,8 @@ class Order(models.Model):
 
     def __str__(self):
         return f"Product: {self.OrderNumber} for  {self.FirstName}"
+
+
+class CustomOrder(models.Model):
+    name = models.CharField(max_length=50)
+    avatar = models.ImageField(upload_to='custom_images/')
