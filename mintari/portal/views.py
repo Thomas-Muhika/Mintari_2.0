@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.db.models import Sum
 from django.views import View
 from django.contrib.auth.models import User
-from portal.models import RecordOrder, StockCategories, Stock, Order
+from portal.models import RecordOrder, StockCategories, Stock, Order, BlogArticle
 from django.contrib.auth.forms import AuthenticationForm
 
 
@@ -164,5 +164,28 @@ def users_tracking(request):
     users_table = User.objects.all()
     return render(request, 'portal/users_tracking.html', {"users_table": users_table})
 
+# mintarikenya.com/portal/add_article/  ... blog article add
+@login_required(login_url="accounts:signin")
+def add_article(request):
 
+    if request.method == 'POST':
+        if request.POST.get('submit') == 'AddArticle':
+
+            BlogArticle.objects.create(
+                BlogMainImage=request.FILES['MainArticleImage'],
+                ArticleTitle=request.POST['ArticleTitle'],
+                ArticlePreface=request.POST['ArticlePreface'],
+                SupportiveImage=request.FILES['SupportImage'],
+                ArticleBody=request.POST['ArticleBody'],
+                ArticleSubTitle=request.POST['ArticleSubTitle'],
+                ArticleContinuation=request.POST['SubBody'],
+                AdjournmentImage=request.FILES['AdjImage'],
+                AdjournmentBody=request.POST['AdjournmentBody'],
+                ArticleTag=request.POST['ArticleTag'],
+                ArticleArtist=request.POST['Artist'],
+            )
+            messages.info(request, "Article saved successfully", extra_tags="success")
+            # messages.error(request, 'Please verify your account from the link that was sent to your email.')
+
+    return render(request, 'portal/add_article.html')
 

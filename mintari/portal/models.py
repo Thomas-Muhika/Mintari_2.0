@@ -87,3 +87,22 @@ class Order(models.Model):
 class CustomOrder(models.Model):
     name = models.CharField(max_length=50)
     avatar = models.ImageField(upload_to='custom_images/')
+
+
+# Blog Artile
+class BlogArticle(models.Model):
+    BlogMainImage = models.ImageField(upload_to='blog_images/', default='media/blog_images/default_main.jpg')
+    ArticleTitle = models.CharField(max_length=50)
+    ArticlePreface = models.CharField(max_length=500)
+    SupportiveImage = models.ImageField(upload_to='stock_images/')
+    ArticleBody = models.CharField(max_length=500)
+    ArticleSubTitle = models.CharField(max_length=50)
+    ArticleContinuation = models.CharField(max_length=500)
+    AdjournmentImage = models.ImageField(upload_to='stock_images/')
+    AdjournmentBody = models.CharField(max_length=500)
+    ArticleTag = models.CharField(max_length=50)
+    ArticleArtist = models.CharField(max_length=50)
+    date_created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.ArticleTitle} by [{self.ArticleArtist}]"

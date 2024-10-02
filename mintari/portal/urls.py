@@ -38,4 +38,6 @@ urlpatterns = [
     # mintarikenya.co.ke/portal/users/tracking/
     re_path(r'^users/tracking/$', views.users_tracking, name='users_tracking'),
 
+    # mintarikenya.co.ke/portal/add_article/
+    re_path(r'^add_article/$', views.add_article, name='add_article'),
 ]
