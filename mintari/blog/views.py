@@ -28,6 +28,16 @@ class BlogDetails(View):
 		}
 		return render(request, 'blog/blog-details.html', context)
 
+# /blog/<blog category>
+class BlogCategory(View):
+	def get(self, request, blog_category):
+
+		context = {
+			"blog_category_articles": BlogArticle.objects.all().filter(ArticleTag=blog_category),
+			"blog_category": blog_category,
+		}
+		return render(request, 'blog/blog-category.html', context)
+
 
 # /blog/blog-details/
 def blog_details(request):
