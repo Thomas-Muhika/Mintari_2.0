@@ -10,8 +10,8 @@ def index(request):
 
 	context = {
 		"blog_articles": BlogArticle.objects.all()[:3],
-		"lifestyle_article_main": BlogArticle.objects.all().filter(ArticleTag='Lifestyle')[:1],
-		"lifestyle_articles": BlogArticle.objects.all().filter(ArticleTag='Lifestyle')[:4],
+		"lifestyle_article_main": BlogArticle.objects.all().filter(ArticleTag='LifeStyle')[:1],
+		"lifestyle_articles": BlogArticle.objects.all().filter(ArticleTag='LifeStyle')[:4],
 		"artspace_articles_main": BlogArticle.objects.all().filter(ArticleTag='Art Space')[:1],
 		"artspace_articles_left": BlogArticle.objects.all().filter(ArticleTag='Art Space')[:4],
 		"artspace_articles_right": BlogArticle.objects.all().filter(ArticleTag='Art Space')[4:8],
