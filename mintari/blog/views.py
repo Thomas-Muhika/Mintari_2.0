@@ -12,6 +12,9 @@ def index(request):
 		"blog_articles": BlogArticle.objects.all()[:3],
 		"lifestyle_article_main": BlogArticle.objects.all().filter(ArticleTag='Lifestyle')[:1],
 		"lifestyle_articles": BlogArticle.objects.all().filter(ArticleTag='Lifestyle')[:4],
+		"artspace_articles_main": BlogArticle.objects.all().filter(ArticleTag='Art Space')[:1],
+		"artspace_articles_left": BlogArticle.objects.all().filter(ArticleTag='Art Space')[:4],
+		"artspace_articles_right": BlogArticle.objects.all().filter(ArticleTag='Art Space')[4:8],
 		"upholstery_articles_main": BlogArticle.objects.all().filter(ArticleTag='upholstery')[:3],
 		"upholstery_articles": BlogArticle.objects.all().filter(ArticleTag='upholstery')[:4],
 
