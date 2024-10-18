@@ -77,7 +77,7 @@
                         <div class="swiper-slide">
                             <div class="category-wrapper area-4">
                                 <div class="image-area">
-                                    <a href="{% url 'blog:blog-category' 'Life Style' %}">
+                                    <a href="{% url 'blog:blog_category' 'LifeStyle' %}">
                                         <img src="{% static 'assets/images/category/category-25.png' %}" alt="">
                                     </a>
                                     <div class="content-area">
@@ -166,7 +166,7 @@
                             <div class="featured-post football tp-section-gapBottom">
                                 <div class="section-title-area d-flex align-items-center justify-content-between">
                                     <h3 class="section-title">Lifestyle</h3>
-                                    <a href="#" class="text-btn d-block">Read Continue</a>
+                                    <a href="{% url 'blog:blog_category' 'LifeStyle' %}" class="text-btn d-block">Read Continue</a>
                                 </div>
                                 <div class="post-section-inner d-block">
                                     <div class="row g-5">
@@ -276,7 +276,7 @@
                             <div class="featured-post body-builder tp-section-gapBottom">
                                 <div class="section-title-area d-flex align-items-center justify-content-between">
                                     <h3 class="section-title">Upholstery</h3>
-                                    <a href="#" class="text-btn d-block">Read Continue</a>
+                                    <a href="{% url 'blog:blog_category' 'upholstery' %}" class="text-btn d-block">Read Continue</a>
                                 </div>
                                 <div class="post-section-top">
                                     <div class="row g-5">
@@ -355,7 +355,7 @@
                             <div class="featured-post tennis tp-section-gapBottom">
                                 <div class="section-title-area d-flex align-items-center justify-content-between">
                                     <h3 class="section-title text-uppercase">Art Space</h3>
-                                    <a href="#" class="text-btn d-block">Read Continue</a>
+                                    <a href="{% url 'blog:blog_category' 'Art Space' %}" class="text-btn d-block">Read Continue</a>
                                 </div>
                                 <div class="post-section-top">
                                     <div class="row">
@@ -490,7 +490,7 @@
 
                                         <div class="col-lg-12">
                                             <div class="button-area">
-                                                <a href="#" class="tp-btn btn-secondary m-auto">Load More</a>
+                                                <a href="{% url 'blog:blog_categories' %}" class="tp-btn btn-secondary m-auto">Load More</a>
                                             </div>
                                         </div>
                                     </div>
@@ -646,7 +646,7 @@
                                     <ul class="category-wrapper">
                                         <li>
                                             <div class="image-area">
-                                                <a href="#"><img src="{% static 'assets/images/category/category-34.jpg' %}" alt=""></a>
+                                                <a href="{% url 'blog:blog_category' 'LifeStyle' %}"><img src="{% static 'assets/images/category/category-34.jpg' %}" alt=""></a>
                                                 <p class="text"><a href="#">Lifestyle</a></p>
                                             </div>
                                         </li>

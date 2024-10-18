@@ -50,3 +50,10 @@ class BlogCategory(View):
 # /blog/blog-details/
 def blog_details(request):
 	return render(request, 'blog/blog-details.html')
+
+
+def blog_categories(request):
+	context = {
+		"blog_category_articles": BlogArticle.objects.all(),
+	}
+	return render(request, 'blog/blog-category.html', context)
