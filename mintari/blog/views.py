@@ -29,7 +29,8 @@ class BlogDetails(View):
 	def get(self, request, blog_title):
 
 		context = {
-			"blog_article": BlogArticle.objects.all().filter(ArticleTitle=blog_title)[:1]
+			"blog_article": BlogArticle.objects.all().filter(ArticleTitle=blog_title)[:1],
+			"featured_article": BlogArticle.objects.all().filter(ArticleTag='Featured')[:1],
 		}
 		return render(request, 'blog/blog-details.html', context)
 
