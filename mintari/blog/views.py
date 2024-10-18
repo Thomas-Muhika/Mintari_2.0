@@ -18,7 +18,8 @@ def index(request):
 		"upholstery_articles_main": BlogArticle.objects.all().filter(ArticleTag='upholstery')[:3],
 		"upholstery_articles": BlogArticle.objects.all().filter(ArticleTag='upholstery')[:4],
 		"latest_articles": BlogArticle.objects.all().order_by('-date_created')[:3],
-
+		"popular_articles": BlogArticle.objects.all().order_by('date_created')[:4],
+		"featured_article": BlogArticle.objects.all().filter(ArticleTag='featured')[:1],
 	}
 
 	return render(request, 'blog/index.html', context)
