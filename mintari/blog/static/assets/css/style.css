@@ -25,11 +25,11 @@
   --color-primary-2: #B66A25;
   --color-primary-3: #FF6E3A;
   --color-primary-4: #BF1F1F;
-  --title-font:"ClashDisplay";
-  --title-font-2:"URW Imperial W01 Regular";
-  --title-font-3:"Teko", sans-serif;
-  --body-font: "Rubik", sans-serif;
-  --body-font-2: "OpticianSans";
+  --title-font:monospace;
+  --title-font-2:monospace;
+  --title-font-3:monospace;
+  --body-font: monospace;
+  --body-font-2: monospace;
   --home-5-body-color:#EBEBEB;
   --color-body:#5E5E5E;
   --dark-color-body:rgba(255, 255, 255, .8);
@@ -105,7 +105,7 @@ body {
   font-weight: var(--p-regular);
   position: relative;
   overflow-x: hidden;
-  font-family: "Rubik", sans-serif;
+  font-family: monospace;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   body {
@@ -524,7 +524,7 @@ cite,
 }
 
 var {
-  font-family: "Manrope", sans-serif;
+  font-family: monospace;
 }
 
 /*---------------------------
