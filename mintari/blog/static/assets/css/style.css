@@ -69,9 +69,9 @@
   --s-extra-bold: 800;
   --s-black: 900;
   --transition: all 0.3s;
-  --font-size-b1: 16px;
-  --font-size-b2: 16px;
-  --font-size-b3: 22px;
+  --font-size-b1: 12px;
+  --font-size-b2: 12px;
+  --font-size-b3: 26px;
   --line-height-b1: 26px;
   --line-height-b2: 26px;
   --line-height-b3: 1.7;
@@ -366,45 +366,45 @@ h6 a,
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   h1,
   .h1 {
-    font-size: 38px;
+    font-size: 32px;
   }
   h2,
   .h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
   h3,
   .h3 {
-    font-size: 28px;
+    font-size: 22px;
   }
   h4,
   .h4 {
-    font-size: 24px;
+    font-size: 20px;
   }
   h5,
   .h5 {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 @media only screen and (max-width: 767px) {
   h1,
   .h1 {
-    font-size: 34px;
+    font-size: 30px;
   }
   h2,
   .h2 {
-    font-size: 28px;
+    font-size: 24px;
   }
   h3,
   .h3 {
-    font-size: 24px;
+    font-size: 20px;
   }
   h4,
   .h4 {
-    font-size: 20px;
+    font-size: 16px;
   }
   h5,
   .h5 {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 h1,
@@ -438,7 +438,7 @@ p {
 @media only screen and (max-width: 767px) {
   p {
     margin: 0 0 20px;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 28px;
   }
 }
@@ -452,14 +452,14 @@ p.b3 {
 }
 p.has-large-font-size {
   line-height: 1.5;
-  font-size: 36px;
+  font-size: 32px;
 }
 p.has-medium-font-size {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 36px;
 }
 p.has-small-font-size {
-  font-size: 13px;
+  font-size: 10px;
 }
 p.has-very-light-gray-color {
   color: var(--color-white);
