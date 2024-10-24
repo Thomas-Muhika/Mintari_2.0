@@ -15316,23 +15316,23 @@ body.sal-disabled [data-sal|=flip] {
   }
 }
 .eblog-trending-news-area-2 .eblog-featured-news .image-area .blog-content .heading-title a {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 30px;
   background-size: 201% 1px;
 }
 @media (max-width: 1399px) {
   .eblog-trending-news-area-2 .eblog-featured-news .image-area .blog-content .heading-title a {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 @media (max-width: 575px) {
   .eblog-trending-news-area-2 .eblog-featured-news .image-area .blog-content .heading-title a {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media (max-width: 480px) {
   .eblog-trending-news-area-2 .eblog-featured-news .image-area .blog-content .heading-title a {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 28px;
   }
 }
@@ -15490,19 +15490,19 @@ body.sal-disabled [data-sal|=flip] {
 }
 @media (max-width: 1199px) {
   .eblog-featured-post-area .left-side-post-area .featured-post.latest-news .small-post .eblog-post-list-style .blog-content .heading-title a {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 34px;
   }
 }
 @media (max-width: 767px) {
   .eblog-featured-post-area .left-side-post-area .featured-post.latest-news .small-post .eblog-post-list-style .blog-content .heading-title a {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
   }
 }
 @media (max-width: 575px) {
   .eblog-featured-post-area .left-side-post-area .featured-post.latest-news .small-post .eblog-post-list-style .blog-content .heading-title a {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 28px;
   }
 }
@@ -16265,7 +16265,7 @@ body.sal-disabled [data-sal|=flip] {
 }
 @media (max-width: 1399px) {
   .eblog-featured-post-area .left-side-post-area .featured-post.tennis .eblog-post-list-style .blog-content .heading-title a {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 @media (max-width: 991px) {
@@ -16282,7 +16282,7 @@ body.sal-disabled [data-sal|=flip] {
   margin-bottom: 15px;
 }
 .eblog-featured-post-area .left-side-post-area .featured-post.tennis .style-sm .blog-content .heading-title a {
-  font-size: 26px;
+  font-size: 20px;
   line-height: 26px;
 }
 .eblog-featured-post-area .left-side-post-area .featured-post.area-3 .section-title-area .section-title {
@@ -16301,7 +16301,7 @@ body.sal-disabled [data-sal|=flip] {
 }
 @media (max-width: 1440px) and (min-width: 1200px) {
   .eblog-featured-post-area .left-side-post-area .featured-post.area-3 .eblog-featured-news .blog-content .heading-title {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 32px;
   }
 }
@@ -16312,18 +16312,18 @@ body.sal-disabled [data-sal|=flip] {
   }
 }
 .eblog-featured-post-area .left-side-post-area .featured-post.area-3 .eblog-featured-news .blog-content .heading-title a {
-  font-size: 32px;
+  font-size: 20px;
   line-height: 36px;
 }
 @media (max-width: 1399px) {
   .eblog-featured-post-area .left-side-post-area .featured-post.area-3 .eblog-featured-news .blog-content .heading-title a {
-    font-size: 26px;
+    font-size: 20px;
     line-height: 32px;
   }
 }
 @media (max-width: 767px) {
   .eblog-featured-post-area .left-side-post-area .featured-post.area-3 .eblog-featured-news .blog-content .heading-title a {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 28px;
   }
 }
@@ -16750,22 +16750,22 @@ body.sal-disabled [data-sal|=flip] {
 }
 .eblog-featured-news.style-three .blog-content .heading-title a {
   line-height: 36px;
-  font-size: 32px;
+  font-size: 20px;
 }
 @media (max-width: 1366px) and (min-width: 1200px) {
   .eblog-featured-news.style-three .blog-content .heading-title a {
-    font-size: 30px;
+    font-size: 20px;
     line-height: 34px;
   }
 }
 @media (max-width: 991px) {
   .eblog-featured-news.style-three .blog-content .heading-title a {
-    font-size: 26px;
+    font-size: 20px;
   }
 }
 @media (max-width: 480px) {
   .eblog-featured-news.style-three .blog-content .heading-title a {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 30px;
   }
 }
