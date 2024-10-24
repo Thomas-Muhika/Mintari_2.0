@@ -75,12 +75,12 @@
   --line-height-b1: 26px;
   --line-height-b2: 26px;
   --line-height-b3: 1.7;
-  --h1: 66px;
-  --h2: 48px;
-  --h3: 36px;
-  --h4: 28px;
-  --h5: 24px;
-  --h6: 20px;
+  --h1: 50px;
+  --h2: 36px;
+  --h3: 24px;
+  --h4: 16px;
+  --h5: 12px;
+  --h6: 12px;
 }
 
 * {
@@ -15852,7 +15852,7 @@ body.sal-disabled [data-sal|=flip] {
 }
 .eblog-featured-post-area .left-side-post-area .featured-post.football .section-title-area .section-title {
   margin-bottom: 0;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 46px;
   font-weight: 500;
   text-transform: uppercase;
@@ -15929,7 +15929,7 @@ body.sal-disabled [data-sal|=flip] {
   }
 }
 .eblog-featured-post-area .left-side-post-area .featured-post.football .big-post .blog-content .heading-title a {
-  font-size: 40px;
+  font-size: 24px;
   line-height: 40px;
   font-weight: 400;
 }
@@ -16019,19 +16019,19 @@ body.sal-disabled [data-sal|=flip] {
 }
 @media (max-width: 1399px) {
   .eblog-featured-post-area .left-side-post-area .featured-post.football .bottom-post .small-post .blog-content .heading-title a {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.1;
   }
 }
 @media (max-width: 991px) {
   .eblog-featured-post-area .left-side-post-area .featured-post.football .bottom-post .small-post .blog-content .heading-title a {
-    font-size: 24px;
+    font-size: 25px;
     line-height: 1.1;
   }
 }
 @media (max-width: 480px) {
   .eblog-featured-post-area .left-side-post-area .featured-post.football .bottom-post .small-post .blog-content .heading-title a {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.1;
   }
 }
@@ -16073,7 +16073,7 @@ body.sal-disabled [data-sal|=flip] {
 }
 .eblog-featured-post-area .left-side-post-area .featured-post.body-builder .section-title-area .section-title {
   margin-bottom: 0;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 46px;
   font-weight: 500;
   text-transform: uppercase;
@@ -16207,7 +16207,7 @@ body.sal-disabled [data-sal|=flip] {
 .eblog-featured-post-area .left-side-post-area .featured-post.tennis .section-title-area .section-title {
   margin-bottom: 0;
   font-weight: 500;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 46px;
 }
 .eblog-featured-post-area .left-side-post-area .featured-post.tennis .section-title-area .section-title::after {
@@ -16962,7 +16962,7 @@ body.sal-disabled [data-sal|=flip] {
 }
 @media (max-width: 1366px) and (min-width: 1200px) {
   .eblog-right-sidebar .eblog-right-side-post .eblog-post-list-style .blog-content .heading-title a {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 @media (max-width: 450px) {
