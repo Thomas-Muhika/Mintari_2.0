@@ -23,13 +23,5 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('landing.urls')),
-    path('accounts/', include('accounts.urls')),
-    path('shop/', include('shop.urls')),
-    path('portal/', include('portal.urls')),
-    path('blog/', include('blog.urls')),
-    path('tracking/', include('tracking.urls')),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler404 = 'landing.views.custom_404'
+]
