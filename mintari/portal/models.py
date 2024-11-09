@@ -102,7 +102,7 @@ class BlogArticle(models.Model):
     AdjournmentBody = models.CharField(max_length=500)
     ArticleTag = models.CharField(max_length=50)
     ArticleArtist = models.CharField(max_length=50)
-    date_created = models.DateTimeField(auto_now_add=True)
+    date_created = models.DateField(auto_now_add=True)
 
     def __str__(self):
         return f"{self.ArticleTitle} by [{self.ArticleArtist}]"
