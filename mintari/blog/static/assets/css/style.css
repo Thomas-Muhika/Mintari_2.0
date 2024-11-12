@@ -34,7 +34,7 @@
   --color-body:#5E5E5E;
   --dark-color-body:rgba(255, 255, 255, .8);
   --color-title-af-bf: #F9F9F9;
-  --color-heading-1: #1E1E1E;
+  /* --color-heading-1: #1E1E1E; */
   --dark-color-heading-1: #ffffff;
   --bg-dark-one: #27272e;
   --bg-dark-two: #212121;
@@ -14363,7 +14363,7 @@ body.sal-disabled [data-sal|=flip] {
 .eblog-site-main-logo-menu-social ul.eblog-desktop-menu {
   padding: 0;
   margin: 0;
-  text-align: center;
+  text-align: left;
 }
 .eblog-site-main-logo-menu-social ul.eblog-desktop-menu li.eblog-has-dropdown {
   display: inline-block;
