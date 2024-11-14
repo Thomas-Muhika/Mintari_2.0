@@ -106,3 +106,12 @@ class BlogArticle(models.Model):
 
     def __str__(self):
         return f"{self.ArticleTitle} by [{self.ArticleArtist}]"
+
+
+class BlogCategories(models.Model):
+
+    blog_category_id = models.AutoField(primary_key=True, blank=False, null=False, unique=True)
+    blog_category = models.CharField(max_length=50, blank=False, null=False, unique=True)
+
+    def __str__(self):
+        return f"Category: {self.blog_category}"

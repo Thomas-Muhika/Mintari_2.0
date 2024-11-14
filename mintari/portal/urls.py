@@ -40,4 +40,7 @@ urlpatterns = [
 
     # mintarikenya.co.ke/portal/add_article/
     re_path(r'^add_article/$', views.add_article, name='add_article'),
+
+    # mintarikenya.co.ke/portal/manage_blog_categories/
+    re_path(r'^manage_blog_categories/$', views.manage_blog_categories, name='manage_blog_categories'),
 ]

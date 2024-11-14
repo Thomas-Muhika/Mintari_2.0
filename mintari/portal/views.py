@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.db.models import Sum
 from django.views import View
 from django.contrib.auth.models import User
-from portal.models import RecordOrder, StockCategories, Stock, Order, BlogArticle
+from portal.models import RecordOrder, StockCategories, Stock, Order, BlogArticle, BlogCategories
 from django.contrib.auth.forms import AuthenticationForm
 
 
@@ -189,3 +189,15 @@ def add_article(request):
 
     return render(request, 'portal/add_article.html')
 
+@login_required(login_url="accounts:signin")
+def manage_blog_categories(request):
+    if request.method == 'POST':
+        if request.POST.get('submit') == 'AddBlogCategory':
+
+            BlogCategories.objects.create(
+                blog_category=request.POST['CategoryName'],
+            )
+
+    blog_categories_table = BlogCategories.objects.all()
+
+    return render(request, 'portal/manage_blog_categories.html', {"BlogCategoriesTable": blog_categories_table})
