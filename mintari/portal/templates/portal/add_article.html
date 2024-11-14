@@ -227,10 +227,9 @@
                     <div class="input-area relative">
                         <label for="ArticleTag" class="form-label">Article Tag</label>
                         <select name="ArticleTag" id="ArticleTag" class="form-control">
-                            <option value="LifeStyle" class="dark:bg-slate-700">LifeStyle</option>
-                            <option value="Art Space" class="dark:bg-slate-700">Art Space</option>
-                            <option value="upholstery" class="dark:bg-slate-700">Upholstery</option>
-                            <option value="Featured" class="dark:bg-slate-700">Featured</option>
+                            {% for data in CategoriesTable %}
+                                <option value="{{ data.blog_category }}" class="dark:bg-slate-700">{{ data.blog_category }}</option>
+                            {% endfor %}
                         </select>
                     </div>
                     <!-- END: Article Tag -->

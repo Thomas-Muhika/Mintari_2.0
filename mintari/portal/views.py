@@ -168,6 +168,8 @@ def users_tracking(request):
 @login_required(login_url="accounts:signin")
 def add_article(request):
 
+    categories_table = BlogCategories.objects.all()
+
     if request.method == 'POST':
         if request.POST.get('submit') == 'AddArticle':
 
@@ -187,7 +189,7 @@ def add_article(request):
             messages.info(request, "Article saved successfully", extra_tags="success")
             # messages.error(request, 'Please verify your account from the link that was sent to your email.')
 
-    return render(request, 'portal/add_article.html')
+    return render(request, 'portal/add_article.html', {"CategoriesTable": categories_table})
 
 @login_required(login_url="accounts:signin")
 def manage_blog_categories(request):
