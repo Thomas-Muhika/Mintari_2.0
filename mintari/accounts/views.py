@@ -60,7 +60,7 @@ def sign_up(request):
                         except:
                             pass
 
-                        messages.error(request, 'Your account has been created, please sign in',
+                        messages.success(request, 'Your account has been created, please sign in',
                                        extra_tags="error")
                         return redirect('accounts:signin')
 
