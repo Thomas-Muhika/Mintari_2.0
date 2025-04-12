@@ -57,12 +57,14 @@ def sign_up(request):
                             mail = EmailMessage('Welcome to MINTARI Family', message, to=[user.email], from_email=settings.EMAIL_HOST_USER)
                             mail.content_subtype = 'html'
                             mail.send()
-                        except:
-                            pass
 
-                        messages.success(request, 'Your account has been created, please sign in',
-                                       extra_tags="error")
-                        return redirect('accounts:signin')
+                            messages.success(request, 'Your account has been created, and an email has been sent to you, please sign in',
+                                             extra_tags="error")
+                            return redirect('accounts:signin')
+                        except:
+                            messages.success(request, 'Your account has been created, please sign in',
+                                             extra_tags="error")
+                            return redirect('accounts:signin')
 
                     except IntegrityError:
                         messages.error(request, 'A user with that Phone Number is already registered. Try logging in.', extra_tags="error")
