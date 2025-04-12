@@ -52,18 +52,21 @@ def sign_up(request):
                         user.is_active = True
                         user.save()
 
-                        message = get_template('accounts/welcome.html').render({"user_name": user.first_name})
-                        mail = EmailMessage('Welcome to MINTARI Family', message, to=[user.email], from_email=settings.EMAIL_HOST_USER)
-                        mail.content_subtype = 'html'
-                        mail.send()
+                        try:
+                            message = get_template('accounts/welcome.html').render({"user_name": user.first_name})
+                            mail = EmailMessage('Welcome to MINTARI Family', message, to=[user.email], from_email=settings.EMAIL_HOST_USER)
+                            mail.content_subtype = 'html'
+                            mail.send()
+                        except:
+                            pass
+
+                        messages.error(request, 'Your account has been created, please sign in',
+                                       extra_tags="error")
+                        return redirect('accounts:signin')
 
                     except IntegrityError:
                         messages.error(request, 'A user with that Phone Number is already registered. Try logging in.', extra_tags="error")
                         return render(request, 'portal/signup.html', {'form': form, 'ucf': ucf})
-                    # else:
-                    #     messages.error(request, 'reCAPTCHA validation failed. Please reload page and try again.', extra_tags="error")
-                    #     return render(request, 'portal/signup.html',{'form': form, 'ucf': ucf})
-                    return redirect('landing:index')
 
                 else:
                     messages.error(request,
