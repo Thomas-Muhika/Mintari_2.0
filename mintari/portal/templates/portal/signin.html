@@ -21,7 +21,19 @@
 
         <!-- BEGIN: Feedback Messages -->
         {% for message in  messages %}
-            {% if 'error' in message.tags %}
+            {% if 'success' in message.tags %}
+                <div class="py-[18px] px-6 font-normal text-sm rounded-md bg-white text-success-500 border border-success-500 dark:bg-slate-800">
+                    <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <iconify-icon class="text-2xl flex-0" icon="system-uicons:target"></iconify-icon>
+                        <p class="flex-1 font-Inter">
+                            {{ message }}
+                        </p>
+                        <div class="flex-0 text-xl cursor-pointer">
+                            <iconify-icon icon="line-md:close"></iconify-icon>
+                        </div>
+                    </div>
+                </div>
+            {% elif 'error' in message.tags %}
                 <div class="py-[18px] px-6 font-normal text-sm rounded-md bg-white text-danger-500 border border-danger-500 dark:bg-slate-800">
                     <div class="flex items-center space-x-3 rtl:space-x-reverse">
                         <iconify-icon class="text-2xl flex-0" icon="system-uicons:target"></iconify-icon>
