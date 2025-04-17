@@ -23,7 +23,15 @@ from portal.models import StockCategories, Stock, WishList, Cart, Order, CustomO
 
 # mintarikenya.com/shop
 def shop_index(request):
-    stock_table = Stock.objects.all()
+    sort_option = request.GET.get('sort', 'default')
+
+    if sort_option == 'price_asc':
+        stock_table = Stock.objects.all().order_by('ProductPrice')
+    elif sort_option == 'price_desc':
+        stock_table = Stock.objects.all().order_by('-ProductPrice')
+    else:
+        stock_table = Stock.objects.all()
+
     CategoryTable = StockCategories.objects.all()
 
     # top 3 products in wishlist

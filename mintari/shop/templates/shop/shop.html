@@ -37,12 +37,11 @@
                             Showing 1&ndash;{{ StockTable|length }} of {{ StockTable|length }} results
                         </p>
 
-                        <form action="" class="woocommerce-ordering" method="get">
-                            <select aria-label="Shop order">
-                                <option value="menu_order" selected='selected'>Default sorting</option>
-                                <option value="popularity">Sort by popularity</option>
-                                <option value="price">Sort by price: low to high</option>
-                                <option value="price-desc">Sort by price: high to low</option>
+                        <form id="sortForm" class="woocommerce-ordering" method="get">
+                            <select aria-label="Shop order" name="sort" id="sort" onchange="document.getElementById('sortForm').submit()">
+                                <option value="default" {% if selected_sort == 'default' %}selected{% endif %}>Default</option>
+                                <option value="price_asc" {% if selected_sort == 'price_asc' %}selected{% endif %}>Price Low to High</option>
+                                <option value="price_desc" {% if selected_sort == 'price_desc' %}selected{% endif %}>Price High to Low</option>
                             </select>
                             <input type="hidden" name="paged" value="1"/>
                         </form>
@@ -72,11 +71,11 @@
                     {% endfor %}
 
                     <div class="qodef-woo-product-list qodef-item-layout--info-below qodef-gutter--normal">
-                        <ul class="products columns-3">
+                        <ul class="products columns-3" id="productTable">
 
                             <!-- Shop list item -->
                             {% for data in StockTable %}
-                                <li class="product_filter {{ data.ProductCategory }} product type-product post-17 status-publish first outofstock product_cat-dinnerware product_tag-dishware has-post-thumbnail shipping-taxable purchasable product-type-simple" id="{{ data.ProductCategory }}" >
+                                <li data-price="{{ data.ProductPrice }}" class="product_filter {{ data.ProductCategory }} product type-product post-17 status-publish first outofstock product_cat-dinnerware product_tag-dishware has-post-thumbnail shipping-taxable purchasable product-type-simple" id="{{ data.ProductCategory }}" >
                                     <div class="qodef-woo-product-inner">
                                         <div class="qodef-woo-product-image">
 <!--                                            <div class="qodef-woo-product-mark-holder">-->
